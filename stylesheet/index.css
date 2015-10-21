@@ -3,7 +3,12 @@
 	margin: 0px;
 }
 body{
-	background-color: yellow;
+	background-color: #CCFFCC;
 	width: 100%;
 	height: 100%;
+}
+#top{
+	width: 100%;
+	height: 150px;
+	border: 1px dotted red;
 }
