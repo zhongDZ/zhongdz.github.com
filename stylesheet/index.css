@@ -53,7 +53,7 @@ top: 42%;}
 #menu ul li a { display:block; width:87px; height:28px; line-height:28px; text-align:center; font-size:14px;}
 #menu ul li a:hover {}
 #menu ul li a#current { font-weight:bold; color:yellow;}
-#menu ul li ul { border:1px solid #ccc; display:none; position:absolute;}
+#menu ul li ul { border:1px solid #ccc; display:none; position:absolute;z-index: 100;}
 #menu ul li ul li { float:none; width:87px; background:#eee; margin:0;}
 #menu ul li ul li a { background:none;}
 #menu ul li ul li a:hover { background:#333; color:#fff;}
