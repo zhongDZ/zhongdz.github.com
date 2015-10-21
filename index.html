@@ -6,6 +6,8 @@
     <meta http-equiv="expires">
     <title>钟德宗</title>
     <link rel="stylesheet" type="text/css" href="stylesheet/index.css" />
+
+    <script type="text/javascript" src="lib/jquery/r1.9/jquery.js" charset="UTF-8"></script>
 </head>
 <body>
   <!-- 头部 -->
@@ -40,6 +42,64 @@
       <li><a href="#">个人简历</a></li>
     </ul>
   </div>
+  <div id="banner">
+    <div id="img1">
+      <img src="images/img1.png" width="100%" height="100%">
+    </div>
+    <div id="img2">
+      <img src="images/img2.png" width="100%" height="100%">
+    </div>
+    <div id="img3">
+      <img src="images/img3.png" width="100%" height="100%">
+    </div>
+  </div>
+  <div id="bottom">
+    @2015 zhongdezong
+  </div>
+  <script type="text/javascript">
+    window.onload = function(){
+      var num = 0;
+      var check = 0;
+      setInterval(function(){
+        check+=2;
+        if(check%60==0){
+          if(num>=3){
+            num = 0;
+          }
+          num++;
+          check = 0;
+          console.log(num)
+          
+          switch(num){
+            case 1:{
+              $("#img1").animate({'left':'-50%'},1000,function(){
+                this.style.left = "150%"
+              });
+              $("#img2").animate({'left':'50%'},1000,function(){
+                
+              });
+            };break;
+            case 2:{
+              $("#img2").animate({'left':'-50%'},1000,function(){
+                this.style.left = "150%"
+              });
+              $("#img3").animate({'left':'50%'},1000,function(){
+
+              });
+            };break;
+            case 3:{
+              $("#img3").animate({'left':'-50%'},1000,function(){
+                this.style.left = "150%"
+              });
+              $("#img1").animate({'left':'50%'},1000,function(){
+
+              });
+            };break;
+          }
+        }
+      },100);
+    }
+  </script>
 </body>
 
 </html>
