@@ -9,7 +9,7 @@ body{
 	overflow: hidden;
 }
 #top{
-	width: 100%;
+	width: 99%;
 	height: 150px;
 	border: 1px red;
 	border-style:dotted solid double dashed;
