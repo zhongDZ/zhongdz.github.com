@@ -1,1 +1,765 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('d 1t=c.1P.L({5u:n,2y:0,3f:0,1r:n,5t:"1t",2P:f(){d s=a;d 5s=5r;d 3k=3l;d 1C=s.2D=c.5q.X(c.1V(32,32,32,1p));1C.u(c.5p.5n);s.o(1C,0);d 3B=24,5m=-3k/2+r;d E=c.18.2k();d 1Y=c.C.X(5i);1Y.u(E.j/2,E.m/2);1Y.1g(2);1C.o(1Y,0);d 2f=s.1r=c.2e.X("26... 0%","2b",3B);2f.u(E.j/2,E.m/2-3l);2f.5g(c.1V(1p,1p,1p));1C.o(a.1r,10);A w},5f:f(3d,2a){d s=a;d 1K=s.5e=g c.5b();1K.59(3d);1K.58();d 1G=s.57=c.C.X(1K);1G.1g(c.52());1G.x=2a.x;1G.y=2a.y;s.2D.o(1G,10)},1y:f(){d s=a;c.2A.2B.1y.2C(s);s.1a(s.29,0.3)},2Y:f(){c.2A.2B.2Y.2C(a);d 33="26... r%";a.1r.23(33)},3c:f(S,1i){k(4W S=="4U")S=[S];a.S=S||[];a.1i=1i},29:f(){d s=a;s.1h(s.29);d h=s.S;c.4T.4R(h,f(4Q,1J,3D){d 16=(3D/1J*r)|0;16=1q.2u(16,r);s.1r.23("26... "+16+"%")},f(){k(s.1i)s.1i()})},2v:f(){d s=a;d 1J=s.3f;d 2t=s.2y;d 16=(1J/2t*r)|0;16=1q.2u(16,r);s.1r.23("26... "+16+"%");k(1J>=2t)s.1h(s.2v)}});1t.2x=f(S,1i){d 1b=n;k(!1b){1b=g 1t();1b.2P()}1b.3c(S,1i);c.18.1F(1b);A 1b};d 1W=1d;k(/4P.*4O/i.2G(2H.2O)||(/4N|4M|4L|4K|4J|4I|4H|4F|4B|4A|4z|4y|4w|4u|4t-|4s|4r|4q-|4p|4o/.2G(2H.2O))){1W=w}Q{1W=1d}f 4n(){c.3m.4m=f(){c.1O.4l(w);k(1W){c.1O.3q(3r,3s,c.3u.4k)}Q{c.1O.3q(3r,3s,c.3u.4j)}c.1O.4i(w);1t.2x(4h,f(){c.18.1F(g 2s())},a)};c.3m.4g("4f")}d 3H=c.2j.L({3K:f(){c.18.1F(g 2s())},1k:f(O){a.Y();d E=c.18.2k();d t=g c.C(h.4e);t.j=l(1);t.m=q(1);t.G(0.5,0.5);t.u(l(0.5),q(0.5));a.o(t,0);d 1L=g c.1z(h.2F,h.2F,a.3K,a);d V=g c.1x(1L);V.u(l(0.5),q(0.5));a.o(V,2);d 2I=g c.1z(h.2J,h.2J,f(){4d.42.41=3Z},a);d 17=g c.1x(2I);17.u(l(0.5),q(0.3));a.o(17,2);d 1u=g c.2e(""+O+"分",\'2b\',36);1u.x=E.j/2;1u.y=E.m/2+2Q;1u.3O=c.1V(0,0,0,1p)a.o(1u,2S);A w}});d 2T=c.1P.L({O:0,2U:f(2V){a.O=2V;A a},1y:f(){a.Y();d 1j=g 3H(a.O);a.o(1j)}});d 1D=0.3Y;d 1T=[h.3X,h.3W,h.3V,h.3U,h.3T,h.3S];d 38=5;f l(J){A c.3a.j*J}f q(J){A c.3a.m*J}d 3b=c.C.L({1Z:n,Z:n,3R:n,22:n,R:n,3Q:n,2c:n,F:20,1c:0,1o:1,1w:0,1f:1d,27:5,v:5,1k:f(j,m){a.Y(h.4C);d 1l=[];d 1m=[];d P=c.2h.2i(h.3P);a.2c=g c.K(P,c.H(r*0,0,r,U));1l[0]=g c.K(P,c.H(r*0,0,r,U));1l[1]=g c.K(P,c.H(r*1,0,r,U));1l[2]=g c.K(P,c.H(r*0,0,r,U));1l[3]=g c.K(P,c.H(r*1,0,r,U));1m[0]=g c.K(P,c.H(r*0,0,r,U));1m[1]=g c.K(P,c.H(r*1,0,r,U));1m[2]=g c.K(P,c.H(r*0,0,r,U));1m[3]=g c.K(P,c.H(r*1,0,r,U));a.1Z=c.3x.X(g c.3y(1l,0.1));a.1Z.3z();a.22=c.3x.X(g c.3y(1m,0.1));a.22.3z();a.y=q(0.7);d 1s=a.3C();d 1R=j/1s.j;d 1Q=m/1s.m;a.G(c.p(0.5,0.5));a.1g(1R,1Q);a.3G(j,m);a.1a(a.2q,1D/2)},3I:f(){k(a.R){a.1N(a.R);a.R=n;a.1h(a.1M)}k(!a.Z){a.Z=a.3L(c.3M.X(a.1Z));a.1a(a.28,1D)}},28:f(){k(a.x-a.F>=a.j/2){a.x-=a.F}},3t:f(){k(a.Z){a.1N(a.Z);a.Z=n;a.1h(a.28)}k(!a.R){a.R=a.3L(c.3M.X(a.22));a.1a(a.1M,1D)}},1M:f(){k(a.x+a.F<=l(1)-a.j/2){a.x+=a.F}},3n:f(){k(a.R){a.1N(a.R);a.R=n;a.1h(a.1M)}k(a.Z){a.1N(a.Z);a.Z=n;a.1h(a.28)}a.2d(a.2c)},2q:f(){k(a.1f){a.y+=a.1w}Q{a.1c+=a.1o;a.y-=a.1c}k(a.y+a.m/2>=q(0.9)){a.y-=51;a.1X(1)}Q k(a.y<=q(0.1)){a.1X(a.27)}},35:f(){a.1h(a.2q);a.1c=0;a.1o=0;a.1f=1d;a.x=-r;c.18.1F((g 2T()).2U(34(a.B().O)));a.B().e=n;a.B().14(a)},1X:f(J){a.v-=J;k(a.v<=0){a.35()}Q{a.B().11.2N(1T[a.v]);a.B().11.G(c.p(0,1))}},2M:f(J){a.v+=J;k(a.v>a.27){a.v=a.27}a.B().11.2N(1T[a.v]);a.B().11.G(c.p(0,1))}});d 2L=[h.43,h.44,h.45,h.46,h.47,h.48,h.49,h.4a,h.4b,h.4c,]d 2K=c.C.L({F:7.5,M:0,1k:f(j,m,3F,3E,2r){a.Y(2L[2r]);d 1s=a.3C();d 1R=j/1s.j;d 1Q=m/1s.m;a.G(c.p(0.5,0.5));a.1g(1R,1Q);a.3G(j,m);a.u(3F,3E);a.1a(a.3A,1D/2);a.M=2r},3A:f(){d b=a.B().1v;d e=a.B().e;k(e!=n&&e.v>0&&(b==n||b==a)){k(e.x+e.j/2>=a.x-a.j/2&&e.x-e.j/2<=a.x+a.j/2&&1q.3p(e.y-e.m/2-(a.y+a.m/2))<=50){k(a.M!=3&&a.M!=7||(a.M==3&&e.1c>0)||(a.M==7&&e.1o>0)){e.y=a.y+a.m/2+e.m/2;e.1c=0}d 2p=a.B();d 1e=a;k(!e.1f){3i(a.M){T 1:a.2o(f(){2p.14(1e);k(e!=n&&e.v>0&&e.x+e.j/2>=1e.x-a.j/2&&e.x-e.j/2<=1e.x+1e.j/2&&1q.3p(e.y-e.m/2-(1e.y+1e.m/2))<=50){e.1f=1d;e.1w=0;2p.1v=n}},1.5);W;T 2:e.1X(1);W;T 3:e.1c=-25;W;T 6:a.F=12;W;T 7:e.1o=-1;a.2o(f(){k(e!=n&&e.v>0){e.1o=1}},0.3e);W;T 8:e.2M(2);W;T 9:e.F=40;a.2o(f(){k(e!=n&&e.v>0){e.F=20}},0.3e);W}}Q{3i(a.M){T 4:e.x-=5;W;T 5:e.x+=5;W}}k(a.M!=3&&a.M!=7){e.1f=w;e.1w=a.F;a.B().1v=a}}Q{k(b==a){e.1f=1d;e.1w=0;a.B().1v=n}}}k(a.y+a.F<=a.B().m+a.m/2){a.y+=a.F}Q{a.B().14(a)}}});d 4v=c.C.L({1E:n,1k:f(){a.Y();a.j=l(1);a.m=q(1);a.x=l(1);a.y=q(1);a.1E=g 4x();2n(d i=0;i<5;i++){d N=g c.C(h.37);N.1g(l(0.1B)/N.j,l(0.1B)/N.j);N.j=l(0.1B);N.m=q(0.1B);N.G(0.5,0.5);N.u(l(0.1B)*i+l(0.5v),0);a.1E.4D(N);a.o(N,1)}},4E:f(J){d 31=c.2h.2i(h.4G);d 30=c.2h.2i(h.37);a.2Z=g c.K(31,c.H(1S*0,0,1S,2X));a.2W=g c.K(30,c.H(1S*0,0,1S,2X));d i=0;2n(i=0;i<J;i++){a.1E[i].2d(a.2W)}2n(i=J;i<5;i++){a.1E[i].2d(a.2Z)}}});d 2R=c.2j.L({1v:n,e:n,O:0,1H:1d,11:n,1U:f(){a.O=0;a.e=g 3b(l(0.1),q(0.1));a.o(a.e,1);a.1H=w;a.e.x=a.2l().x;a.1a(a.2l,2);a.1a(a.3w,7)},2l:f(){d 2g=g 2K(l(0.25),q(0.4S),l(1q.3o()),q(0),34(1q.3o()*10));a.o(2g,1);A 2g},3w:f(){k(a.e!=n&&a.e.v>0){a.O++;a.1n.23(a.O)}},1k:f(){a.Y();d E=c.18.2k();d t=g c.C(h.4V);t.j=l(1);t.m=q(1);t.G(0.5,0.5);t.u(l(0.5),q(0.5));a.o(t,0);d 15=g c.C(h.4X);15.1g(l(1)/15.j,1);15.j=l(1);15.m=q(0.4Y);15.G(0.5,0.5);15.u(l(0.5),q(0.4Z));a.o(15,2);d 13=g c.C(h.53);13.1g(l(1)/13.j,1);13.j=l(1);13.m=q(0.54);13.G(0.5,0.5);13.u(l(0.5),q(0.55));a.o(13,2);a.11=g c.C(1T[38]);a.11.G(c.p(0,1));a.11.u(c.p(E.j/2,E.m-2Q));a.o(a.11,1);a.1n=g c.2e("56",\'2b\',36);a.1n.x=r;a.1n.y=E.m-r;a.1n.3O=c.1V(0,0,0,1p)a.o(a.1n,2S);d 3J=c.3v.X({z:c.3v.5a,1A:0,5c:w,5d:f(1I,z){k(!z.D().1H||z.D().e==n||z.D().e.v<=0){A w}a.1A=1I.2z().x;A w},5h:f(1I,z){k(!z.D().1H||z.D().e==n||z.D().e.v<=0){A w}d 21=1I.2z().x;k(21>a.1A+2.5){z.D().e.3t()}Q k(21<a.1A-2.5){z.D().e.3I()}a.1A=21;A w},5j:f(1I,z){k(!z.D().1H||z.D().e==n||z.D().e.v<=0){A w}z.D().e.3n();A w}});c.5k.5l(3J,a);a.1U();A w}});d 2w=c.1P.L({1y:f(){a.Y();d 1j=g 2R();a.o(1j)}});d 3N=c.2j.L({1U:f(){c.18.1F(g 2w())},1k:f(){a.Y();d I=a;d t=g c.C(h.5o);t.j=l(1);t.m=q(1);t.G(0.5,0.5);t.u(l(0.5),q(0.5));a.o(t,0);d 19=g c.C(h.19);19.j=l(1);19.m=q(1);19.G(0.5,0.5);19.u(l(0.5),q(0.5));d 1L=g c.1z(h.2E,h.2E,a.1U,a);d V=g c.1x(1L);V.u(l(0.5),q(0.5));a.o(V,2);d 3j=g c.1z(h.3h,h.3h,f(){I.o(19,0);I.o(2m,2);I.14(t);I.14(V);I.14(17)},a);d 17=g c.1x(3j);17.u(l(0.5),q(0.3));a.o(17,2);d 39=g c.1z(h.3g,h.3g,f(){I.14(19);I.14(2m);I.o(t);I.o(V);I.o(17)},a);d 2m=g c.1x(39);V.u(l(0.5),q(0.5));A w}});d 2s=c.1P.L({1y:f(){a.Y();d 1j=g 3N();a.o(1j)}});',62,342,'||||||||||this||cc|var|man|function|new|res||width|if|pW|height|null|addChild||pH|100|self|bg|setPosition|hp|true|||event|return|getParent|Sprite|getCurrentTarget|size|speed|setAnchorPoint|rect|_this|arg|SpriteFrame|extend|block_index|hpsprite|score|texture|else|rightAction|resources|case|148|menu|break|create|_super|leftAction||lblLives||score_top|removeChild|knife_bottom|percent|menu1|director|guizeBg|schedule|_myLoaderScene|g_speed|false|that|blocking|setScale|unschedule|cb|layer|ctor|left_frames|right_frames|DistanceLabel|g_aspeed|255|Math|_label|content_size|MyLoaderScene|endScore|man_block|block_speed|Menu|onEnter|MenuItemImage|lastX|05|bgLayer|GAME_SPEED|hp_blocks|runScene|logo|gaming|touch|count|texture2d|menuItemPlay|moveRight|stopAction|view|Scene|scale_y|scale_x|64|livesArr|startNewGame|color|thisismobile|damage|beginbackground|leftAnimate||cur_x|rightAnimate|setString|||Loading|max_hp|moveLeft|_startLoading|centerPos|Arial|standFrame|setSpriteFrame|LabelTTF|label|block|textureCache|addImage|Layer|getWinSize|createBlocks|menu2|for|scheduleOnce|parent|fallingDown|index|StartScene|length|min|_updatePercent|GameScene|preload|_length|getLocation|Node|prototype|call|_bgLayer|beginbut|again|test|navigator|moreItem|more|BlockSprite|blockArr|recovery|initWithFile|userAgent|init|300|GameLayer|1000|EndScene|setScore|sc|standFrame1|180|onExit|standFrame0|texture1|texture0||tmpStr|parseInt|die||hp_1|g_lives|backItemPlay|winSize|ManSprite|initWithResources|img|75|_count|back|guize|switch|guizeItemPlay|logoHeight|200|game|stopWalk|random|abs|setDesignResolutionSize|720|1280|walkRight|ResolutionPolicy|EventListener|updateScore|Animate|Animation|retain|moveUp|fontSize|getContentSize|loadedCount|ty|tx|setContentSize|EndLayer|walkLeft|flip_listener|restartGame|runAction|RepeatForever|StartLayer|fillStyle|ani|rightTimer|leftTimer|lives5|lives4|lives3|lives2|lives1|lives0|06|g_link||href|location|block0|block1|block2|block3|block4|block5|block6|block7|block8|block9|window|endBg|gameCanvas|run|g_resources|resizeWithBrowserSize|SHOW_ALL|EXACT_FIT|adjustViewPort|onStart|resourceCallBack|ZTE|Amoi|SIE|SonyEricsson|Nokia|MOT|LENOVO|HPSprite|HAIER|Array|PHILIPS|Dopod|DBTEL|BIRD|ani1|push|changeHP|Alcatel|hp_0|TCL|NEC|LG|SAMSUNG|NOKIA|SymbianOS|MIDP|Mobile|AppleWebKit|result|load|03|loader|string|gameBg|typeof|knife|02|91|||contentScaleFactor|topBar|08|975|000|_logo|handleLoadedTexture|initWithElement|TOUCH_ONE_BY_ONE|Texture2D|swallowTouches|onTouchBegan|_texture2d|_initStage|setColor|onTouchMoved|g_loadingPage|onTouchEnded|eventManager|addListener|lblHeight|bottomLeft|beginBg|visibleRect|LayerColor|160|logoWidth|_className|_interval|025'.split('|'),0,{}))
+window.onload = function(){
+        resourceCallBack();
+    }
+var MyLoaderScene = cc.Scene.extend({
+    _interval : null,
+    _length : 0,
+    _count : 0,
+    _label : null,
+    _className:"MyLoaderScene",
+    init : function(){
+        var self = this;
+
+        //logo
+        var logoWidth = 160;
+        var logoHeight = 200;
+
+        // bg
+        var bgLayer = self._bgLayer = cc.LayerColor.create(cc.color(32, 32, 32, 255));
+        bgLayer.setPosition(cc.visibleRect.bottomLeft);
+        self.addChild(bgLayer, 0);
+
+        //image move to CCSceneFile.js
+        var fontSize = 24, lblHeight =  -logoHeight / 2 + 100;
+        var size = cc.director.getWinSize();
+        var beginbackground = cc.Sprite.create(g_loadingPage);
+        beginbackground.setPosition(size.width / 2, size.height / 2);
+        beginbackground.setScale(2);
+        bgLayer.addChild(beginbackground, 0);
+        //loading percent
+
+        var label = self._label = cc.LabelTTF.create("Loading... 0%", "Arial", fontSize);
+        label.setPosition(size.width / 2, size.height / 2-200);
+        label.setColor(cc.color(255, 255, 255));
+        bgLayer.addChild(this._label, 10);
+        return true;
+    },
+
+    _initStage: function (img, centerPos) {
+        var self = this;
+        var texture2d = self._texture2d = new cc.Texture2D();
+        texture2d.initWithElement(img);
+        texture2d.handleLoadedTexture();
+        var logo = self._logo = cc.Sprite.create(texture2d);
+        logo.setScale(cc.contentScaleFactor());
+        logo.x = centerPos.x;
+        logo.y = centerPos.y;
+        self._bgLayer.addChild(logo, 10);
+    },
+
+    onEnter: function () {
+        var self = this;
+        cc.Node.prototype.onEnter.call(self);
+        self.schedule(self._startLoading, 0.3);
+    },
+
+    onExit: function () {
+        cc.Node.prototype.onExit.call(this);
+        var tmpStr = "Loading... 100%";
+        this._label.setString(tmpStr);
+    },
+
+    /**
+     * init with resources
+     * @param {Array} resources
+     * @param {Function|String} cb
+     */
+    initWithResources: function (resources, cb) {
+        if(typeof resources == "string") resources = [resources];
+        this.resources = resources || [];
+        this.cb = cb;
+    },
+
+    _startLoading: function () {
+        var self = this;
+        self.unschedule(self._startLoading);
+        var res = self.resources;
+        cc.loader.load(res,
+            function (result, count, loadedCount) {
+                var percent = (loadedCount / count * 100) | 0;
+                percent = Math.min(percent, 100);
+                self._label.setString("Loading... " + percent + "%");
+            }, function () {
+                if (self.cb)
+                    self.cb();
+            });
+    },
+
+    _updatePercent: function () {
+        var self = this;
+        var count = self._count;
+        var length = self._length;
+        var percent = (count / length * 100) | 0;
+        percent = Math.min(percent, 100);
+        self._label.setString("Loading... " + percent + "%");
+        if(count >= length) self.unschedule(self._updatePercent);
+    }
+});
+MyLoaderScene.preload = function(resources, cb){
+    var _myLoaderScene = null;
+    if(!_myLoaderScene) {
+        _myLoaderScene = new MyLoaderScene();
+        _myLoaderScene.init();
+    }
+    _myLoaderScene.initWithResources(resources, cb);
+
+    cc.director.runScene(_myLoaderScene);
+    return _myLoaderScene;
+};
+var thisismobile = false;
+if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+    thisismobile = true;
+
+}else{
+    thisismobile = false;
+}
+
+
+function resourceCallBack(){
+    cc.game.onStart = function(){
+        cc.view.adjustViewPort(true);
+        if(thisismobile){
+            cc.view.setDesignResolutionSize(720, 1280, cc.ResolutionPolicy.EXACT_FIT);
+        }else{
+            cc.view.setDesignResolutionSize(720, 1280, cc.ResolutionPolicy.SHOW_ALL);
+        }
+        cc.view.resizeWithBrowserSize(true);
+        //load resources
+        MyLoaderScene.preload(g_resources, function () {
+            cc.director.runScene(new StartScene());
+        }, this);
+    };
+    cc.game.run("gameCanvas");
+}
+
+var EndLayer = cc.Layer.extend({
+    restartGame: function()
+    {
+        cc.director.runScene(new StartScene());
+    },
+
+    ctor: function(score)
+    {
+        this._super();
+
+        var size = cc.director.getWinSize();
+
+        var bg = new cc.Sprite(res.endBg);
+        bg.width = pW(1);
+        bg.height = pH(1);
+        bg.setAnchorPoint(0.5, 0.5);
+        bg.setPosition(pW(0.5), pH(0.5));
+        this.addChild(bg, 0);
+
+        var menuItemPlay= new cc.MenuItemImage(res.again,res.again,
+            this.restartGame
+        ,this);
+        var menu = new cc.Menu(menuItemPlay);
+        menu.setPosition(pW(0.5), pH(0.5));
+        this.addChild(menu, 2);
+
+
+        var moreItem= new cc.MenuItemImage(res.more,res.more,function(){
+            window.location.href = g_link;
+        },this);
+        var menu1 = new cc.Menu(moreItem);
+        menu1.setPosition(pW(0.5), pH(0.3));
+        this.addChild(menu1, 2);
+
+        var endScore = new cc.LabelTTF(""+score+"分",'Arial',36);
+        endScore.x = size.width/2;
+        endScore.y = size.height/2 + 300;
+        endScore.fillStyle = cc.color(0,0,0,255)
+        this.addChild(endScore,1000);
+
+        return true;
+    }
+});
+
+var EndScene = cc.Scene.extend({
+    score: 0,
+    
+    setScore: function(sc)
+    {
+        this.score = sc;
+        return this;
+    },
+    
+    onEnter: function()
+    {
+        this._super();
+        var layer = new EndLayer(this.score);
+        this.addChild(layer);
+    }
+});
+
+var GAME_SPEED = 0.06;
+var livesArr = [res.lives0,res.lives1,res.lives2,res.lives3,res.lives4,res.lives5];
+var g_lives = 5;
+function pW(arg)
+{
+    return cc.winSize.width * arg;
+}
+
+function pH(arg)
+{
+    return cc.winSize.height * arg;
+}
+
+var ManSprite = cc.Sprite.extend({
+    leftAnimate: null,
+    leftAction: null,
+    leftTimer: null,
+    rightAnimate: null,
+    rightAction: null,
+    rightTimer: null,
+    standFrame: null,
+    speed: 20,
+    g_speed: 0,
+    g_aspeed: 1,
+    block_speed: 0,
+    blocking: false,
+    max_hp: 5,
+    hp: 5,
+    
+    ctor: function(width, height)
+    {
+        this._super(res.ani1);
+
+
+        var left_frames = [];
+        var right_frames = [];
+
+        var texture = cc.textureCache.addImage(res.ani);//添加纹理到缓存
+
+        this.standFrame = new cc.SpriteFrame(texture,cc.rect(100 * 0,0,100,148));
+
+        left_frames[0] = new cc.SpriteFrame(texture,cc.rect(100 * 0,0,100,148));
+        left_frames[1] = new cc.SpriteFrame(texture,cc.rect(100 * 1,0,100,148));
+        left_frames[2] = new cc.SpriteFrame(texture,cc.rect(100 * 0,0,100,148));
+        left_frames[3] = new cc.SpriteFrame(texture,cc.rect(100 * 1,0,100,148));
+
+        right_frames[0] = new cc.SpriteFrame(texture,cc.rect(100 * 0,0,100,148));
+        right_frames[1] = new cc.SpriteFrame(texture,cc.rect(100 * 1,0,100,148));
+        right_frames[2] = new cc.SpriteFrame(texture,cc.rect(100 * 0,0,100,148));
+        right_frames[3] = new cc.SpriteFrame(texture,cc.rect(100 * 1,0,100,148));
+
+        this.leftAnimate = cc.Animate.create(new cc.Animation(left_frames, 0.1));
+        this.leftAnimate.retain();
+        this.rightAnimate = cc.Animate.create(new cc.Animation(right_frames, 0.1));
+        this.rightAnimate.retain();
+        this.y = pH(0.7);
+        var content_size = this.getContentSize();
+        var scale_x = width / content_size.width;
+        var scale_y = height / content_size.height;
+        this.setAnchorPoint(cc.p(0.5, 0.5));
+        this.setScale(scale_x, scale_y);
+        this.setContentSize(width, height);
+        this.schedule(this.fallingDown, GAME_SPEED / 2);
+    },
+
+    walkLeft: function()
+    {
+        if(this.rightAction)
+        {
+            this.stopAction(this.rightAction);
+            this.rightAction = null;
+            this.unschedule(this.moveRight);
+        }
+        if(!this.leftAction)
+        {
+            this.leftAction = this.runAction(cc.RepeatForever.create(this.leftAnimate));
+            this.schedule(this.moveLeft, GAME_SPEED);
+        }
+    },
+    
+    moveLeft: function()
+    {
+        if(this.x - this.speed >= this.width / 2)
+        {
+            this.x -= this.speed;
+        }
+    },
+    
+    walkRight: function()
+    {
+        if(this.leftAction)
+        {
+            this.stopAction(this.leftAction);
+            this.leftAction = null;
+            this.unschedule(this.moveLeft);
+        }
+        if(!this.rightAction)
+        {
+            this.rightAction = this.runAction(cc.RepeatForever.create(this.rightAnimate));
+            this.schedule(this.moveRight, GAME_SPEED);
+        }
+    },
+    
+    moveRight: function()
+    {
+        if(this.x + this.speed <= pW(1) - this.width / 2)
+        {
+            this.x += this.speed;
+        }
+    },
+    
+    stopWalk: function()
+    {
+        if(this.rightAction)
+        {
+            this.stopAction(this.rightAction);
+            this.rightAction = null;
+            this.unschedule(this.moveRight);
+        }
+        if(this.leftAction)
+        {
+            this.stopAction(this.leftAction);
+            this.leftAction = null;
+            this.unschedule(this.moveLeft);
+        }
+        this.setSpriteFrame(this.standFrame);
+    },
+    
+    fallingDown: function()
+    {
+        if(this.blocking)
+        {
+            this.y += this.block_speed;
+        }
+        else
+        {
+            this.g_speed += this.g_aspeed;
+            this.y -= this.g_speed;
+        }
+        if(this.y + this.height / 2 >= pH(0.9))
+        {
+            this.y -= 51;
+            this.damage(1);
+        }
+        else if(this.y <= pH(0.1))
+        {
+            this.damage(this.max_hp);
+        }
+    },
+    
+    die: function()
+    {
+        this.unschedule(this.fallingDown);
+        this.g_speed = 0;
+        this.g_aspeed = 0;
+        this.blocking = false;
+        this.x = -100;
+        cc.director.runScene((new EndScene()).setScore(parseInt(this.getParent().score)));
+        this.getParent().man = null;
+        this.getParent().removeChild(this);
+    },
+    
+    damage: function(arg)
+    {
+        this.hp -= arg;
+        if(this.hp <= 0)
+        {
+            this.die();
+        }
+        else
+        {
+            this.getParent().lblLives.initWithFile(livesArr[this.hp]);
+            this.getParent().lblLives.setAnchorPoint(cc.p(0,1));
+        }
+    },
+    
+    recovery: function(arg)
+    {
+        this.hp += arg;
+        if(this.hp > this.max_hp)
+        {
+            this.hp = this.max_hp;
+        }
+        this.getParent().lblLives.initWithFile(livesArr[this.hp]);
+        this.getParent().lblLives.setAnchorPoint(cc.p(0,1));
+    }
+});
+
+var blockArr = [res.block0,res.block1,res.block2,res.block3,res.block4,res.block5,res.block6,res.block7,res.block8,res.block9,]
+var BlockSprite = cc.Sprite.extend
+({
+    speed: 7.5,
+    block_index: 0,
+    
+    ctor: function(width, height, tx, ty, index)
+    {
+        this._super(blockArr[index]);
+        var content_size = this.getContentSize();
+        var scale_x = width / content_size.width;
+        var scale_y = height / content_size.height;
+        this.setAnchorPoint(cc.p(0.5, 0.5));
+        this.setScale(scale_x, scale_y);
+        this.setContentSize(width, height);
+        this.setPosition(tx, ty);
+        this.schedule(this.moveUp, GAME_SPEED / 2);
+        this.block_index = index;
+    },
+    
+    moveUp: function()
+    {
+        var b = this.getParent().man_block;
+        var man = this.getParent().man;
+        if(man != null && man.hp > 0 && (b == null || b == this))
+        {
+            if(man.x + man.width / 2 >= this.x - this.width / 2 && man.x - man.width / 2 <= this.x + this.width / 2 && Math.abs(man.y - man.height / 2 - (this.y + this.height / 2)) <= 50)
+            {
+                if(this.block_index != 3 && this.block_index != 7 || (this.block_index == 3 && man.g_speed > 0) || (this.block_index == 7 && man.g_aspeed > 0))
+                {
+                    man.y = this.y + this.height / 2 + man.height / 2;
+                    man.g_speed = 0;
+                }
+                var parent = this.getParent();
+                var that = this;
+                if(!man.blocking)
+                {
+                    switch(this.block_index)
+                    {
+                    case 1:
+                        this.scheduleOnce(
+                                function()
+                                {
+                                    parent.removeChild(that);
+                                    if(man != null && man.hp > 0 && man.x + man.width / 2 >= that.x - this.width / 2 && man.x - man.width / 2 <= that.x + that.width / 2 && Math.abs(man.y - man.height / 2 - (that.y + that.height / 2)) <= 50)
+                                    {
+                                        man.blocking = false;
+                                        man.block_speed = 0;
+                                        parent.man_block = null;
+                                    }
+                                }, 1.5);
+                        break;
+                    case 2:
+                        man.damage(1);
+                        break;
+                    case 3:
+                        man.g_speed = -25;
+                        break;
+                    case 6:
+                        this.speed = 12;
+                        break;
+                    case 7:
+                        man.g_aspeed = -1;
+                        this.scheduleOnce(
+                                function()
+                                {
+                                    if(man != null && man.hp > 0)
+                                    {
+                                        man.g_aspeed = 1;
+                                    }
+                                }, 0.75);
+                        break;
+                    case 8:
+                        man.recovery(2);
+                        break;
+                    case 9:
+                        man.speed = 40;
+                        this.scheduleOnce(
+                                function()
+                                {
+                                    if(man != null && man.hp > 0)
+                                    {
+                                        man.speed = 20;
+                                    }
+                                }, 0.75);
+                        break;
+                    }
+                }
+                else
+                {
+                    switch(this.block_index)
+                    {
+                    case 4:
+                        man.x -= 5;
+                        break;
+                    case 5:
+                        man.x += 5;
+                        break;
+                    }
+                }
+                if(this.block_index != 3 && this.block_index != 7)
+                {
+                    man.blocking = true;
+                    man.block_speed = this.speed;
+                    this.getParent().man_block = this;
+                }
+            }
+            else
+            {
+                if(b == this)
+                {
+                    man.blocking = false;
+                    man.block_speed = 0;
+                    this.getParent().man_block = null;
+                }
+            }
+        }
+        
+        if(this.y + this.speed <= this.getParent().height + this.height / 2)
+        {
+            this.y += this.speed;
+        }
+        else
+        {
+            this.getParent().removeChild(this);
+        }
+    }
+});
+
+var HPSprite = cc.Sprite.extend
+({
+    hp_blocks: null,
+    
+    ctor: function()
+    {
+        this._super();
+        this.width = pW(1);
+        this.height = pH(1);
+        this.x = pW(1);
+        this.y = pH(1);
+        this.hp_blocks = new Array();
+        for(var i = 0; i < 5; i++)
+        {
+            var hpsprite = new cc.Sprite(res.hp_1);
+            hpsprite.setScale(pW(0.05)/ hpsprite.width, pW(0.05)/ hpsprite.width);
+            hpsprite.width = pW(0.05);
+            hpsprite.height = pH(0.05);
+            hpsprite.setAnchorPoint(0.5, 0.5);
+            hpsprite.setPosition(pW(0.05) * i + pW(0.025), 0);
+            this.hp_blocks.push(hpsprite);
+            this.addChild(hpsprite, 1);
+        }
+    },
+    
+    changeHP: function(arg)
+    {
+        var texture0 = cc.textureCache.addImage(res.hp_0);//添加纹理到缓存
+        var texture1 = cc.textureCache.addImage(res.hp_1);//添加纹理到缓存
+
+        this.standFrame0 = new cc.SpriteFrame(texture0,cc.rect(64 * 0,0,64,180));
+        this.standFrame1 = new cc.SpriteFrame(texture1,cc.rect(64 * 0,0,64,180));
+
+        var i = 0;
+        for(i = 0; i < arg; i++)
+        {
+            this.hp_blocks[i].setSpriteFrame(this.standFrame1);
+        }
+        for(i = arg; i < 5; i++)
+        {
+            this.hp_blocks[i].setSpriteFrame(this.standFrame0);
+        }
+    }
+});
+
+var GameLayer = cc.Layer.extend
+({
+    man_block: null,
+    man: null,
+    score: 0,
+    gaming: false,
+    lblLives:null,
+
+    
+    startNewGame: function()
+    {
+        this.score = 0;
+        this.man = new ManSprite(pW(0.1), pH(0.1));
+        this.addChild(this.man, 1);
+        this.gaming = true;
+        this.man.x = this.createBlocks().x;
+        this.schedule(this.createBlocks, 2);
+        this.schedule(this.updateScore, 7);
+    },
+    
+    createBlocks: function()
+    {
+        var block = new BlockSprite(pW(0.25), pH(0.03), pW(Math.random()), pH(0), parseInt(Math.random() * 10));
+        this.addChild(block, 1);
+        return block;
+    },
+    
+    updateScore: function()
+    {
+        if(this.man != null && this.man.hp > 0)
+        {
+            this.score++;
+            this.DistanceLabel.setString(this.score)
+        }
+    },
+    
+    ctor: function()
+    {
+        this._super();
+
+        var size = cc.director.getWinSize();
+        
+        var bg = new cc.Sprite(res.gameBg);
+        bg.width = pW(1);
+        bg.height = pH(1);
+        bg.setAnchorPoint(0.5, 0.5);
+        bg.setPosition(pW(0.5), pH(0.5));
+        this.addChild(bg, 0);
+
+        var knife_bottom = new cc.Sprite(res.knife);
+        knife_bottom.setScale(pW(1)/knife_bottom.width, 1);
+        knife_bottom.width = pW(1);
+        knife_bottom.height = pH(0.02);
+        knife_bottom.setAnchorPoint(0.5, 0.5);
+        knife_bottom.setPosition(pW(0.5), pH(0.91));
+        this.addChild(knife_bottom, 2);
+        
+        
+        var score_top = new cc.Sprite(res.topBar);
+        score_top.setScale(pW(1)/score_top.width, 1);
+        score_top.width = pW(1);
+        score_top.height = pH(0.08);
+        score_top.setAnchorPoint(0.5, 0.5);
+        score_top.setPosition(pW(0.5), pH(0.975));
+        this.addChild(score_top, 2);
+
+        //生命
+        this.lblLives = new cc.Sprite(livesArr[g_lives]);
+        this.lblLives.setAnchorPoint(cc.p(0,1));
+        this.lblLives.setPosition(cc.p(size.width/2,size.height - 300));
+        this.addChild(this.lblLives,1);
+
+        this.DistanceLabel = new cc.LabelTTF("000",'Arial',36);
+        this.DistanceLabel.x = 100;
+        this.DistanceLabel.y = size.height - 100;
+        this.DistanceLabel.fillStyle = cc.color(0,0,0,255)
+        this.addChild(this.DistanceLabel,1000);
+        
+        var flip_listener = cc.EventListener.create
+        ({
+            event: cc.EventListener.TOUCH_ONE_BY_ONE,
+            lastX: 0,
+            swallowTouches: true,
+
+            onTouchBegan: function(touch, event)
+            {
+                if(!event.getCurrentTarget().gaming || event.getCurrentTarget().man == null || event.getCurrentTarget().man.hp <= 0)
+                {
+                    return true;
+                }
+                this.lastX = touch.getLocation().x;
+                return true;
+            },
+
+            onTouchMoved: function(touch, event)
+            {
+                if(!event.getCurrentTarget().gaming || event.getCurrentTarget().man == null || event.getCurrentTarget().man.hp <= 0)
+                {
+                    return true;
+                }
+                var cur_x = touch.getLocation().x;
+                if(cur_x > this.lastX + 2.5)
+                {
+                    event.getCurrentTarget().man.walkRight();
+                }
+                else if(cur_x < this.lastX - 2.5)
+                {
+                    
+                    event.getCurrentTarget().man.walkLeft();
+                }
+                this.lastX = cur_x;
+                return true;
+            },
+
+            onTouchEnded: function(touch, event)
+            {
+                if(!event.getCurrentTarget().gaming || event.getCurrentTarget().man == null || event.getCurrentTarget().man.hp <= 0)
+                {
+                    return true;
+                }
+                event.getCurrentTarget().man.stopWalk();
+                return true;
+            }
+        });
+        
+        cc.eventManager.addListener(flip_listener, this);
+        
+        this.startNewGame();
+        return true;
+    }
+});
+
+var GameScene = cc.Scene.extend
+({
+    onEnter: function()
+    {
+        this._super();
+        var layer = new GameLayer();
+        this.addChild(layer);
+    }
+});
+
+var StartLayer = cc.Layer.extend
+({
+    startNewGame: function()
+    {
+        cc.director.runScene(new GameScene());
+    },
+    
+    ctor: function()
+    {
+        this._super();
+        var _this = this;
+
+        var bg = new cc.Sprite(res.beginBg);
+        bg.width = pW(1);
+        bg.height = pH(1);
+        bg.setAnchorPoint(0.5, 0.5);
+        bg.setPosition(pW(0.5), pH(0.5));
+        this.addChild(bg, 0);
+
+        var guizeBg = new cc.Sprite(res.guizeBg);
+        guizeBg.width = pW(1);
+        guizeBg.height = pH(1);
+        guizeBg.setAnchorPoint(0.5, 0.5);
+        guizeBg.setPosition(pW(0.5), pH(0.5));
+        
+        var menuItemPlay= new cc.MenuItemImage(res.beginbut,res.beginbut,
+            this.startNewGame,
+        this);
+        var menu = new cc.Menu(menuItemPlay);
+        menu.setPosition(pW(0.5), pH(0.5));
+        this.addChild(menu, 2);
+
+        var guizeItemPlay= new cc.MenuItemImage(res.guize,res.guize,function(){
+            _this.addChild(guizeBg, 0);
+            _this.addChild(menu2, 2);
+            _this.removeChild(bg);
+            _this.removeChild(menu);
+            _this.removeChild(menu1);
+        },this);
+        var menu1 = new cc.Menu(guizeItemPlay);
+        menu1.setPosition(pW(0.5), pH(0.3));
+        this.addChild(menu1, 2);
+
+        var backItemPlay= new cc.MenuItemImage(res.back,res.back,function(){
+            _this.removeChild(guizeBg);
+            _this.removeChild(menu2);
+            _this.addChild(bg);
+            _this.addChild(menu);
+            _this.addChild(menu1);
+        },this);
+        var menu2 = new cc.Menu(backItemPlay);
+        menu.setPosition(pW(0.5), pH(0.5));
+        
+        return true;
+    }
+});
+
+var StartScene = cc.Scene.extend
+({
+    onEnter: function()
+    {
+        this._super();
+        var layer = new StartLayer();
+        this.addChild(layer);
+    }
+});
