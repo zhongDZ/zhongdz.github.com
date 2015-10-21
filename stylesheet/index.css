@@ -9,8 +9,51 @@ body{
 	overflow: hidden;
 }
 #top{
-	width: 99%;
-	height: 150px;
-	border: 1px red;
-	border-style:dotted solid double dashed;
+	width: 98%;
+	height: 250px;
+	border: 1px dashed red;
+	position: absolute;
+	margin-left: -49%;
+	left: 50%;
+	top: 0%;
 }
+.headVIew{
+	width: 150px;
+	height: 150px;
+	margin-left: 60px;
+	margin-top: 50px;
+	border: 1px solid red;
+}
+.headContent{
+	width: 150px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 32px;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 60px;
+}
+#lead{
+	width: 98%;
+	height: 30px;
+	border: 1px dashed red;
+	position: absolute;
+	margin-left: -49%;
+	left: 50%;
+	top: 43%;
+}
+a { color: #000; text-decoration: none; }
+a:hover { color: #F00; }
+#menu { width:380px; height:28px; border-bottom:3px solid #E10001;position: absolute;margin-left: -190px;left: 50%;
+top: 42%;}
+#menu ul { list-style: none; margin: 0px; padding: 0px; }
+#menu ul li { float:left; margin-left:2px;}
+#menu ul li a { display:block; width:87px; height:28px; line-height:28px; text-align:center; font-size:14px;}
+#menu ul li a:hover {}
+#menu ul li a#current { font-weight:bold; color:yellow;}
+#menu ul li ul { border:1px solid #ccc; display:none; position:absolute;}
+#menu ul li ul li { float:none; width:87px; background:#eee; margin:0;}
+#menu ul li ul li a { background:none;}
+#menu ul li ul li a:hover { background:#333; color:#fff;}
+#menu ul li:hover ul { display:block;}
+#menu ul li.sfhover ul { display:block;}
