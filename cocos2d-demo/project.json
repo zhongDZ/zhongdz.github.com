@@ -1,0 +1,7 @@
+{
+    "debugMode"     : 1,
+    "frameRate"     : 60,
+    "id"            : "gameCanvas",
+    "renderMode"    : 1,
+    "jsList"        : ["js/res.js","js/config.js","js/loading.js","js/sprite.js","js/event.js","js/particle.js","res/demo/demo.js","res/demo/rocker.js"]
+}
