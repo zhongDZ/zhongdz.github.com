@@ -34,7 +34,7 @@ var MainScene = cc.Scene.extend({
           var layer = new SoundLayer();
         }
 
-        if(!true){//Event demo
+        if(true){//Event demo
           //需要在loadScene.js  修改一下舞台大小
           var layer = new EventDemoLayer();
         }
