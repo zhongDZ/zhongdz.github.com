@@ -17,7 +17,7 @@ var MainScene = cc.Scene.extend({
         if(!true){
           //添加精灵以及精灵的动画的layer  详见sprite.js
           var layer = new SpriteMyLayer();
-        }
+        } 
 
         if(!true){
           //精灵添加事件以及各种eventType 详见event.js
