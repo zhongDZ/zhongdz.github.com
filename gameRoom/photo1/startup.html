@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>find</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body  style="background-color:#000">
+
+    <audio id="audio1">
+        <source src="" type="audio/mp3">
+    </audio>
+    <audio id="audio2">
+        <source src="" type="audio/mp3">
+    </audio>
+
+    <canvas id="gameCanvas" width="480" height="800"></canvas>
+
+    <script type="text/javascript" src="js/lib/cocos2d-js-v3.1-lite.js" charset="UTF-8"></script>
+    
+    <script type="text/javascript">
+        var g_resources = [];
+        var res = {
+            gameBg:"res/gameBg.png",
+            beginBtn:"res/beginBtn.png",
+            reStart:"res/reStart.png",
+            spr2:"res/spr2.png",
+            flower:"res/flower.png",
+
+            begin:"res/begin.png",
+            beginBg:"res/beginBg.png",
+            guizeBg:"res/guize.jpg",
+            guize:"res/guize.png",
+            back:"res/back.png",
+            more:"res/more.png",
+
+            num_1:"res/1.png",
+            num_2:"res/2.png",
+            num_3:"res/3.png",
+
+            rocket:"res/rocket.png",
+            share:"res/share.png",
+
+            loadingpage:"res/loadingpage.jpg"
+        };
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+        var au1 = document.getElementById('audio1');
+        au1.src = "./res/cameras.mp3";
+
+        var au2 = document.getElementById('audio2');
+        au2.src = "./res/333.mp3";
+        au2.loop = true;
+
+        var g_loadingPage = "res/loadingpage.jpg";
+        var g_link = "#";
+        window.onload = function(){
+            resourceCallBack();
+            au2.play();
+        }
+    </script>
+
+    <script type="text/javascript" src="js/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/gameScene.js" charset="UTF-8"></script>
+</body>
+</html>
