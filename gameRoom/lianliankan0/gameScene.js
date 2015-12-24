@@ -10,33 +10,58 @@ var MapCol = 4;
 var checkResult = false;
 var lineArr = [];
 var starArr = [];
+var sceneLayer = null;
 
-var _X_1 = 100,_X_2 = 250,_X_3 = 400,_X_4 = 550;
-var _Y_1 = 300,_Y_2 = 450,_Y_3 = 600,_Y_4 = 750;
+var _X_0 = 50,_X_1 = 160,_X_2 = 280,_X_3 = 400,_X_4 = 510,_X_5 = 620;
+var _Y_0 = 240,_Y_1 = 360,_Y_2 = 480,_Y_3 = 600,_Y_4 = 710,_Y_5 = 820;
 var XY = [
     [
+        {"x":_X_0,"y":_Y_0,"tag":0},
+        {"x":_X_1,"y":_Y_0,"tag":0},
+        {"x":_X_2,"y":_Y_0,"tag":0},
+        {"x":_X_3,"y":_Y_0,"tag":0},
+        {"x":_X_4,"y":_Y_0,"tag":0},
+        {"x":_X_5,"y":_Y_0,"tag":0}
+    ],
+    [   
+        {"x":_X_0,"y":_Y_1,"tag":0},
         {"x":_X_1,"y":_Y_1,"tag":1},
         {"x":_X_2,"y":_Y_1,"tag":2},
         {"x":_X_3,"y":_Y_1,"tag":3},
-        {"x":_X_4,"y":_Y_1,"tag":4}
+        {"x":_X_4,"y":_Y_1,"tag":4},
+        {"x":_X_5,"y":_Y_1,"tag":0}
     ],
     [
+        {"x":_X_0,"y":_Y_2,"tag":0},
         {"x":_X_1,"y":_Y_2,"tag":5},
         {"x":_X_2,"y":_Y_2,"tag":6},
         {"x":_X_3,"y":_Y_2,"tag":7},
-        {"x":_X_4,"y":_Y_2,"tag":8}
+        {"x":_X_4,"y":_Y_2,"tag":8},
+        {"x":_X_5,"y":_Y_2,"tag":0},
     ],
     [
+        {"x":_X_0,"y":_Y_3,"tag":0},
         {"x":_X_1,"y":_Y_3,"tag":9},
         {"x":_X_2,"y":_Y_3,"tag":10},
         {"x":_X_3,"y":_Y_3,"tag":11},
-        {"x":_X_4,"y":_Y_3,"tag":12}
+        {"x":_X_4,"y":_Y_3,"tag":12},
+        {"x":_X_5,"y":_Y_3,"tag":0}
     ],
-    [
+    [   
+        {"x":_X_0,"y":_Y_4,"tag":0},
         {"x":_X_1,"y":_Y_4,"tag":13},
         {"x":_X_2,"y":_Y_4,"tag":14},
         {"x":_X_3,"y":_Y_4,"tag":15},
-        {"x":_X_4,"y":_Y_4,"tag":16}
+        {"x":_X_4,"y":_Y_4,"tag":16},
+        {"x":_X_5,"y":_Y_4,"tag":0},
+    ],
+    [
+        {"x":_X_0,"y":_Y_5,"tag":0},
+        {"x":_X_1,"y":_Y_5,"tag":0},
+        {"x":_X_2,"y":_Y_5,"tag":0},
+        {"x":_X_3,"y":_Y_5,"tag":0},
+        {"x":_X_4,"y":_Y_5,"tag":0},
+        {"x":_X_5,"y":_Y_5,"tag":0}
     ]
 ];
 var info = [
@@ -92,21 +117,21 @@ for(var i=0;i<len/2;i++){
 //     info[3],info[5],info[5],info[3],
 //     info[6],info[0],info[6],info[4],
 // ];
-randomArr = [
-    info[0],info[1],info[2],info[4],
-    info[5],info[1],info[2],info[5],
-    info[7],info[3],info[6],info[7],
-    info[0],info[3],info[6],info[4],
-];
 // randomArr = [
-//     info[4],info[1],info[1],info[4],
-//     info[5],info[2],info[2],info[5],
-//     info[7],info[3],info[3],info[7],
-//     info[0],info[6],info[6],info[0],
+//     info[0],info[1],info[2],info[4],
+//     info[5],info[1],info[2],info[5],
+//     info[7],info[3],info[6],info[7],
+//     info[0],info[3],info[6],info[4],
+// ];
+// randomArr = [
+//     info[5],info[1],info[1],info[4],
+//     info[5],info[2],info[2],info[4],
+//     info[0],info[3],info[3],info[7],
+//     info[0],info[6],info[6],info[7],
 // ];
 
 var sprArr = [];
-for(var i = 0;i<MapRow;i++){
+for(var i = 0;i<MapRow + 2;i++){
     sprArr[i] = [];
 }
 
@@ -115,9 +140,11 @@ var gameScene = cc.Scene.extend({
     ctor:function(){
         this._super();
 
-        // randomArr.shuffle();
+        randomArr.shuffle();
 
         this.init();
+
+        sceneLayer = this;
     },
     init:function(){
         this.PipeSpriteList = [];
@@ -129,11 +156,16 @@ var gameScene = cc.Scene.extend({
 
         var sum = 0;
         var num = 0;
-        for(var i = 0;i<MapRow;i++){
-            for(var j = 0;j<MapCol;j++){
-                num = sum++;
-                sprArr[i][j] = new touchSprite(randomArr[num].res,randomArr[num].type,XY[i][j].tag,XY[i][j].x,XY[i][j].y,j,i,1);
-                this.addChild(sprArr[i][j]);
+        for(var i = 0;i<MapRow + 2;i++){
+            for(var j = 0;j<MapCol + 2;j++){
+                if(i==0 || i==5 || j==0 || j==5){
+                    sprArr[i][j] = new touchSprite(res.stay,0,XY[i][j].tag,XY[i][j].x,XY[i][j].y,j,i,0,false);
+                    this.addChild(sprArr[i][j]);
+                }else{
+                    num = sum++;
+                    sprArr[i][j] = new touchSprite(randomArr[num].res,randomArr[num].type,XY[i][j].tag,XY[i][j].x,XY[i][j].y,j,i,1,true);
+                    this.addChild(sprArr[i][j]);    
+                }
             }
         }
 
@@ -201,13 +233,19 @@ var checkClick = function(){
 
                             var mt = cc.moveTo(1,cc.p(x_2,y_2));
                             var mtCall = cc.callFunc(function(){
-                                // console.log('success');
                                 starArr[0].visible = false;
 
                                 lineArr.splice(0,lineArr.length);
 
                                 s1.visible = false;
                                 s2.visible = false;
+
+                                console.log(s1.tag)
+                                sceneLayer.removeChild(sceneLayer.getChildByTag(s1.tag));
+                                sceneLayer.removeChild(sceneLayer.getChildByTag(s2.tag));
+
+                                // s1.removeFromParent(true);
+                                // s2.removeFromParent(true);
                             },this);
                             var seq = cc.sequence(mt,mtCall);
                             starArr[0].runAction(seq);
@@ -227,7 +265,6 @@ var checkClick = function(){
                             var mt = cc.moveTo(1,cc.p(x_2,y_2));
                             var mt1 = cc.moveTo(1,cc.p(x_3,y_3));
                             var mtCall = cc.callFunc(function(){
-                                console.log('success');
                                 starArr[0].visible = false;
 
                                 lineArr.splice(0,lineArr.length);
@@ -256,7 +293,6 @@ var checkClick = function(){
                             var mt1 = cc.moveTo(1,cc.p(x_3,y_3));
                             var mt2 = cc.moveTo(1,cc.p(x_4,y_4));
                             var mtCall = cc.callFunc(function(){
-                                console.log('success');
                                 starArr[0].visible = false;
 
                                 lineArr.splice(0,lineArr.length);
@@ -355,7 +391,7 @@ var checkRow = function(x1, y1, x2, y2){
 }
 
 var checkCol = function(x1, y1, x2, y2){
-    console.log(x1, y1, x2, y2)
+    // console.log(x1, y1, x2, y2)
     var CR = false;
     if(x1>sprArr.length)return CR;
     if(x1 != x2){
@@ -370,7 +406,6 @@ var checkCol = function(x1, y1, x2, y2){
     for(var i = Math.min(y1,y2)+1;i<Math.max(y1,y2);i++){
         if(i>sprArr.length)continue;
         if(sprArr[i][x1]._index == 0){
-            console.log(i,x1)
             CR = true;
         }else{
             CR = false;
@@ -380,8 +415,8 @@ var checkCol = function(x1, y1, x2, y2){
 
     if(CR){
         lineArr.splice(0,sprArr.length);
-        lineArr.push(sprArr[x1][y1]);
-        lineArr.push(sprArr[x2][y2]);
+        lineArr.push(sprArr[y1][x1]);
+        lineArr.push(sprArr[y2][x2]);
     }
 
     
@@ -456,9 +491,8 @@ var checkOnce = function(x1, y1, x2, y2){
 var checkTwiceRow = function (x1, y1, x2, y2){
     var CR = false;
     if(x1 == x2) return false;
-    // for(var i = 0; i<MapCol; i++){
-    for(var i = 0; i<4; i++){
-        if(x1 <= x2){//!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    for(var i = 0; i<MapCol + 2; i++){
+        if(x1 <= x2){
             if(checkRow(x1-1, i, x2+1, i)){
                 if(checkCol(x1, y1, x1, i) && checkCol(x2, y2, x2, i)){
                     CR = true;
@@ -490,8 +524,9 @@ var checkTwiceRow = function (x1, y1, x2, y2){
 var checkTwiceCol = function(x1,y1,x2,y2){
     var CR = false;
     if(y1 == y2)return false;
-    for(var i = 0;i<4;i++){     
+    for(var i = 0;i<MapRow + 2;i++){
         if(y1 <= y2){
+            console.log(checkCol(i,y1-1,i,y2+1))
             if(checkCol(i,y1-1,i,y2+1)){
                 if(checkRow(x1,y1,i,y1)&&checkRow(x2,y2,i,y2)){
                     CR = true;
@@ -505,7 +540,6 @@ var checkTwiceCol = function(x1,y1,x2,y2){
             }
         }else{
             if(checkCol(i,y2-1,i,y1+1)){
-                console.log('>')
                 if(checkRow(x1,y1,i,y1)&&checkRow(x2,y2,i,y2)){
                     CR = true;
                     lineArr.splice(0, lineArr.length); 
@@ -522,8 +556,8 @@ var checkTwiceCol = function(x1,y1,x2,y2){
 };
 
 var touchSprite = cc.Sprite.extend({
-    ctor:function(RES, TYPE, TAG, X, Y, ROW, COL, INDEX){
-        this._super(RES, TAG, TYPE, ROW, COL, INDEX);
+    ctor:function(RES, TYPE, TAG, X, Y, ROW, COL, INDEX, EVENT_FLAG){
+        this._super(RES, TAG, TYPE, ROW, COL, INDEX, EVENT_FLAG);
 
         this.initWithFile(RES);
         this.row = ROW;
@@ -534,7 +568,9 @@ var touchSprite = cc.Sprite.extend({
         this.y = Y;
         this._index = INDEX;
 
-        this.loadListener();
+        if(EVENT_FLAG){
+            this.loadListener();    
+        }
     },
     loadListener : function(){
         var listener = cc.EventListener.create({
@@ -565,7 +601,7 @@ var touchSprite = cc.Sprite.extend({
         var target = event.getCurrentTarget();
         // var tag = target.tag;
 
-        console.log(target.row,target.col);
+        // console.log(target.row,target.col);
 
         target.opacity = 200;
         clickArr.push(target);
