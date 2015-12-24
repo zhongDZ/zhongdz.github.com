@@ -271,6 +271,9 @@ var checkClick = function(){
 
                                 s1.visible = false;
                                 s2.visible = false;
+
+                                sceneLayer.removeChild(sceneLayer.getChildByTag(s1.tag));
+                                sceneLayer.removeChild(sceneLayer.getChildByTag(s2.tag));
                             },this);
                             var seq = cc.sequence(mt, mt1, mtCall);
                             starArr[0].runAction(seq);
@@ -299,6 +302,9 @@ var checkClick = function(){
 
                                 s1.visible = false;
                                 s2.visible = false;
+
+                                sceneLayer.removeChild(sceneLayer.getChildByTag(s1.tag));
+                                sceneLayer.removeChild(sceneLayer.getChildByTag(s2.tag));
                             },this);
                             var seq = cc.sequence(mt, mt1, mt2, mtCall);
                             starArr[0].runAction(seq);
@@ -568,6 +574,8 @@ var touchSprite = cc.Sprite.extend({
         this.y = Y;
         this._index = INDEX;
 
+
+
         if(EVENT_FLAG){
             this.loadListener();    
         }
@@ -602,6 +610,8 @@ var touchSprite = cc.Sprite.extend({
         // var tag = target.tag;
 
         // console.log(target.row,target.col);
+
+        console.log(target._index)
 
         target.opacity = 200;
         clickArr.push(target);
