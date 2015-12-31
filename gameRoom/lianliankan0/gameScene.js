@@ -188,10 +188,46 @@ var gameScene = cc.Scene.extend({
 });
 
 var isSolvable = function(){
-    return true;
+    var spr1, spr2;
+    for(var i=1;i<MapRow+1;i++){
+        for(var j=1;j<MapCol+1;j++){
+            if(sprArr[i][j]._index == 0)continue;
+            spr1 = sprArr[i][j];
+
+            for( var m=1;m<MapRow+1;m++){
+                for(var n=1;n<MapCol+1;n++){
+                    if(sprArr[m][n]._index == 0)continue;
+                    spr2 = sprArr[m][n];
+
+                    if(spr1._index == spr2._index){
+                        console.log('true');
+                        return true;
+                    }
+                }
+            }
+        }
+    }
 }
 var resetSpr = function(){
-    console.log('reset')
+    console.log('reset');
+    // var aliveSprArr = [];
+    // var spr_index = [];
+    // var temp = null;
+
+    // for(var i=1;i<MapRow+1;i++){
+    //     for(var j=1;j<MapCol+1;j++){
+    //         temp = sprArr[i][j];
+    //         if(temp._index != 0){
+    //             aliveSprArr.push(temp);
+    //             spr_index.push(temp._index);
+    //         }
+    //     }
+    // }
+
+    // spr_index.shuffle();
+    // for(var i=0;i<aliveSprArr.length;i++){
+    //     aliveSprArr[i].initWithFile = 
+    // }
 }
 
 var checkClick = function(){
@@ -240,16 +276,12 @@ var checkClick = function(){
                                 s1.visible = false;
                                 s2.visible = false;
 
-                                console.log(s1.tag)
                                 sceneLayer.removeChild(sceneLayer.getChildByTag(s1.tag));
                                 sceneLayer.removeChild(sceneLayer.getChildByTag(s2.tag));
-
-                                // s1.removeFromParent(true);
-                                // s2.removeFromParent(true);
                             },this);
                             var seq = cc.sequence(mt,mtCall);
                             starArr[0].runAction(seq);
-                        }return;
+                        }break;
                         case 3:{
                             x_1 = lineArr[0].x;
                             y_1 = lineArr[0].y;
@@ -277,7 +309,7 @@ var checkClick = function(){
                             },this);
                             var seq = cc.sequence(mt, mt1, mtCall);
                             starArr[0].runAction(seq);
-                        }return;
+                        }break;
                         case 4:{
                             x_1 = lineArr[0].x;
                             y_1 = lineArr[0].y;
@@ -308,7 +340,7 @@ var checkClick = function(){
                             },this);
                             var seq = cc.sequence(mt, mt1, mt2, mtCall);
                             starArr[0].runAction(seq);
-                        }return;
+                        }break;
                     }
                 }else{
                     clickArr[0].opacity = 255;
@@ -610,8 +642,6 @@ var touchSprite = cc.Sprite.extend({
         // var tag = target.tag;
 
         // console.log(target.row,target.col);
-
-        console.log(target._index)
 
         target.opacity = 200;
         clickArr.push(target);
