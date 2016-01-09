@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<script type="text/javascript">
+    document.ccConfig = {
+        "debugMode"     : 1,
+        "frameRate"     : 60,
+        "id"            : "gameCanvas",
+        "renderMode"    : 1,
+        "jsList"        : []
+    };
+</script>
+<body style="padding:0; margin: 0;text-align: center;background: #f2f6f8;">
+    <canvas id="gameCanvas" width="720" height="1280"></canvas>
+</body>
+
+    
+<script type="text/javascript" src="./cocos2d.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./main.js"></script>
+<script type="text/javascript" src="./gameScene.js"></script>
+
+<script type="text/javascript">
+    var g_resources = [];
+    var res = {
+        bg: "res/bg.jpg",
+        bird: "res/bird.png",
+        up: "res/up.png",
+        down: "res/down.png",
+        ground: "res/ground.png",
+        flappy_packer: "res/flappy_packer.plist",
+        flappy_packer_png: "res/flappy_packer.png",
+        number: "res/number.png"
+    };
+    for (var i in res) {
+        g_resources.push(res[i]);
+    }
+
+    window.onload = function(){
+        resourceCallBack();
+    }
+</script>
+</html>
+
+    
