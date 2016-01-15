@@ -29,6 +29,19 @@ var res = {
     control_knob:'res/demo/control_knob.png',
     shadow2:'res/demo/shadow.png',
 
+    icon:"res/icon.png",
+
+    green_edit:"res/green_edit.png",
+    orange_edit:"res/orange_edit.png",
+
+    car1:"res/car1.png",
+    center:"res/center.png",
+    test:"res/test.jpg",
+
+    game_title:"res/game_title.png",
+    spark:"res/spark.png",
+    layerBg:"res/layerBg.png",
+
     loadingpage:"res/loadingpage.jpg"
 };
 for (var i in res) {

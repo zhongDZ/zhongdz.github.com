@@ -119,8 +119,8 @@ function resourceCallBack(){
         if(thisismobile){
             cc.view.setDesignResolutionSize(640, 1024, cc.ResolutionPolicy.EXACT_FIT);
         }else{
-            // cc.view.setDesignResolutionSize(640, 1024, cc.ResolutionPolicy.SHOW_ALL);
-            cc.view.setDesignResolutionSize(960,640, cc.ResolutionPolicy.SHOW_ALL);
+            cc.view.setDesignResolutionSize(640, 1024, cc.ResolutionPolicy.SHOW_ALL);
+            // cc.view.setDesignResolutionSize(960,640, cc.ResolutionPolicy.SHOW_ALL);
         }
         cc.view.resizeWithBrowserSize(true);
         //load resources
