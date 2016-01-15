@@ -11,13 +11,13 @@ var MyLoaderScene = cc.Scene.extend({
         //logo
         var logoWidth = 160;
         var logoHeight = 200;
-
+   
         // bg
         var bgLayer = self._bgLayer = cc.LayerColor.create(cc.color(32, 32, 32, 255));
         bgLayer.setPosition(cc.visibleRect.bottomLeft);
         self.addChild(bgLayer, 0);
 
-        //image move to CCSceneFile.js
+        //image move to CCSceneFile.js 
         var fontSize = 24, lblHeight =  -logoHeight / 2 + 100;
         var size = cc.director.getWinSize();
         
