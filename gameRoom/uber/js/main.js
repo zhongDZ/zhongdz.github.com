@@ -120,12 +120,12 @@ function resourceCallBack(){
         if(thisismobile){
             cc.view.setDesignResolutionSize(640, 1136, cc.ResolutionPolicy.NO_BORDER);
         }else{
-            cc.view.setDesignResolutionSize(640, 1136, cc.ResolutionPolicy.NO_BORDER);
+            cc.view.setDesignResolutionSize(640, 1136, cc.ResolutionPolicy.SHOW_ALL);
         }
         cc.view.resizeWithBrowserSize(true);
         //load resources
         MyLoaderScene.preload(g_resources, function () {
-            cc.director.runScene(new gameScene());
+            cc.director.runScene(new gameScene2());
         }, this);
     };
     cc.game.run("gameCanvas");
