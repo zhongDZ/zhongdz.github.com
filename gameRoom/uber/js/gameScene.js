@@ -2,7 +2,18 @@ var size = {
     "width" : 640,
     "height" : 1136
 }
+var imgArr = [
+    res.img1,res.img2,res.img3,res.img4,
+    res.img5,res.img6,res.img7,res.img8,
+    res.img9,res.img10,res.img11,res.img12
+];
+var tipArr = [
+    res.tip1,res.tip2,res.tip3,res.tip4,
+    res.tip5,res.tip6,res.tip7,res.tip8,
+    res.tip9,res.tip10,res.tip11,res.tip12
+];
 
+//page2
 var gameScene = cc.Scene.extend({
     ctor:function(){
         this._super();
@@ -19,11 +30,11 @@ var gameScene = cc.Scene.extend({
         this.initOther();
     },
     initOther:function(){
-        this.roundSpr = new cc.Sprite(res.img1);
+        this.roundSpr = new cc.Sprite(imgArr[(G_Obj.constellation - 1)]);
         this.roundSpr.x = size.width/2 - 155;
         this.roundSpr.y = size.height/2 + 35;
 
-        this.tip = new cc.Sprite(res.tip1);
+        this.tip = new cc.Sprite(tipArr[(G_Obj.constellation - 1)]);
         this.tip.x = size.width/2 + 30;
         this.tip.y = size.height/2 + 30;
 
@@ -31,7 +42,7 @@ var gameScene = cc.Scene.extend({
         this.round2.x = size.width - 202;
         this.round2.y = 221;
 
-        this.cc = new cc.LabelTTF("北京", "Arial", 36);
+        this.cc = new cc.LabelTTF(G_Obj.address, "Arial", 36);
         this.cc.x = size.width/2 - 30;
         this.cc.y = 250;
         this.cc.fillStyle = new cc.color(31,186,214);
@@ -62,7 +73,7 @@ var gameScene = cc.Scene.extend({
         var seq = new cc.sequence(delayTime1,st1,st2,call1);
         this.round.runAction(seq)
 
-        this.aa = new cc.LabelTTF("2015.09.28", "Arial", 36);
+        this.aa = new cc.LabelTTF(G_Obj.timeString, "Arial", 36);
         this.aa.x = size.width/2;
         this.aa.y = size.height - 200;
         this.aa.fillStyle = new cc.color(31,186,214);
@@ -86,7 +97,7 @@ var gameScene = cc.Scene.extend({
 
             //添加星座
             this.addChild(this.roundSpr);
-            var rt = new cc.rotateBy(3,360);
+            var rt = new cc.rotateBy(2,360);
             var rtCall = new cc.callFunc(function(){
                 //添加星座文案
                 this.addChild(this.tip);
@@ -94,7 +105,7 @@ var gameScene = cc.Scene.extend({
             var act1 = new cc.sequence(rt,rtCall);
             this.roundSpr.runAction(act1);
         },this);
-        var mt2 = new cc.moveTo(5,cc.p(size.width - 202, 221));
+        var mt2 = new cc.moveTo(3,cc.p(size.width - 202, 221));
         var mt2Call = new cc.callFunc(function(){
             this.addChild(this.round2);
 
@@ -129,7 +140,7 @@ var gameScene = cc.Scene.extend({
         this.removeAllChildrenWithCleanup(true);
     }
 });
-
+//page3
 var gameScene1 = cc.Scene.extend({
     rotationTemp1:265,
     rotationTemp2:0,
@@ -162,7 +173,7 @@ var gameScene1 = cc.Scene.extend({
         this.round1.x = 150;
         this.round1.y = size.height - 175;
 
-        this.txt1 = new cc.LabelTTF("888", "Arial", 48);
+        this.txt1 = new cc.LabelTTF(G_Obj.cs, "Arial", 48);
         this.txt1.x = size.width/2 - 35;
         this.txt1.y = size.height - 250;
         this.txt1.fillStyle = new cc.color(31,186,214);
@@ -205,14 +216,14 @@ var gameScene1 = cc.Scene.extend({
     initOTxt2:function(){
         this.round2 = new cc.Sprite(res.round);
         this.round2.x = size.width/2 - 50;
-        this.round2.y = size.height/2 + 160;
+        this.round2.y = size.height/2 + 170;
         
-        this.txt22 = new cc.LabelTTF("888", "Arial", 48);
+        this.txt22 = new cc.LabelTTF(G_Obj.hour, "Arial", 48);
         this.txt22.x = size.width/2 + 75;
         this.txt22.y = size.height/2 + 160;
         this.txt22.fillStyle = new cc.color(31,186,214);
         
-        this.txt222 = new cc.LabelTTF("888", "Arial", 44);
+        this.txt222 = new cc.LabelTTF(G_Obj.kilometer, "Arial", 44);
         this.txt222.x = size.width/2 + 210;
         this.txt222.y = size.height/2 + 110;
         this.txt222.fillStyle = new cc.color(31,186,214);
@@ -259,10 +270,10 @@ var gameScene1 = cc.Scene.extend({
     },
     initOTxt3:function(){
         this.round3 = new cc.Sprite(res.round);
-        this.round3.x = size.width/2 + 70;
+        this.round3.x = size.width/2 + 75;
         this.round3.y = size.height/2 - 160;
 
-        this.txt33 = new cc.LabelTTF("8888", "Arial", 48);
+        this.txt33 = new cc.LabelTTF(G_Obj.money, "Arial", 48);
         this.txt33.x = size.width/2 + 125;
         this.txt33.y = size.height/2 - 220;
         this.txt33.fillStyle = new cc.color(31,186,214);
@@ -307,9 +318,9 @@ var gameScene1 = cc.Scene.extend({
         this.round4.x = size.width/2 - 150;
         this.round4.y = 120;
 
-        this.txt44 = new cc.LabelTTF("888", "Arial", 48);
+        this.txt44 = new cc.LabelTTF(G_Obj.city, "Arial", 48);
         this.txt44.x = size.width/2 - 30;
-        this.txt44.y = 100;
+        this.txt44.y = 170;
         this.txt44.fillStyle = new cc.color(31,186,214);
 
         var arr = [
@@ -318,7 +329,7 @@ var gameScene1 = cc.Scene.extend({
             "下一个会是哪里呢?"
         ];
         var X = size.width/2 + 50;
-        var Y = 50;
+        var Y = 120;
         var xy = [
             {"x":X,"y":Y + 100},
             {"x":X - 10,"y":Y + 50},
@@ -435,7 +446,7 @@ var gameScene1 = cc.Scene.extend({
         }
     }
 });
-
+//page4
 var gameScene2 = cc.Scene.extend({
     rotationTemp0:0,
     showLayer:false,
@@ -460,9 +471,27 @@ var gameScene2 = cc.Scene.extend({
         this.initShare();
     },
     initTop:function(){
+        var temp1 = 0,
+            temp2 = 0,
+            temp3 = 0;
+
+        if(G_Obj.card == 1){
+            temp1 = res.card1;
+            temp2 = res.card11;
+            temp3 = res.card111;
+        }else if(G_Obj.card == 2){
+            temp1 = res.card3;
+            temp2 = res.card33;
+            temp3 = res.card333;
+        }else{
+            temp1 = res.card2;
+            temp2 = res.card22;
+            temp3 = res.card222;
+        }
+
         var card1X = size.width/2 - 80;
         var card1Y = size.height/2 + 350;
-        this.card1 = new cc.Sprite(res.card3);
+        this.card1 = new cc.Sprite(temp1);
         this.card1.x = card1X;
         this.card1.y = card1Y;
         this.addChild(this.card1);
@@ -473,12 +502,12 @@ var gameScene2 = cc.Scene.extend({
         var seqRepeat = new cc.RepeatForever(seq);
         this.card1.runAction(seqRepeat)
 
-        this.card11 = new cc.Sprite(res.card33);
+        this.card11 = new cc.Sprite(temp2);
         this.card11.x = size.width/2;
         this.card11.y = size.height/2 + 350;
         this.addChild(this.card11);
 
-        this.card111 = new cc.Sprite(res.card333);
+        this.card111 = new cc.Sprite(temp3);
         this.card111.x = size.width/2 + 5;
         this.card111.y = size.height/2 + 302;
         this.addChild(this.card111);
@@ -508,7 +537,7 @@ var gameScene2 = cc.Scene.extend({
             "现在起至                ,再完成    个搭乘",
             "即可迅速升级为    卡会员"
         ];
-        var Ytemp = size.height/2 + 150;
+        var Ytemp = size.height/2 + 170;
         var txtArrY = [Ytemp , Ytemp - 50, Ytemp - 100, Ytemp - 150];
         var txtSpr = [];
         for(var i=0;i<txtArr.length;i++){
@@ -521,14 +550,33 @@ var gameScene2 = cc.Scene.extend({
             this.addChild(txtSpr[i]);
         }
         /*******************上为静态,下为动态********************/
+        var index1 = null;
+        var index2 = G_Obj.timeEnd;
+        var index3 = G_Obj.num;
+        var index4 = null;
+
+
+        if(G_Obj.card == 1){
+            index1 = "铂金";
+            index4 = "铂";
+        }else if(G_Obj.card == 2){
+            index1 = "金卡";
+            index4 = "金";
+        }else{
+            index1 = "银卡";
+            index4 = "银";
+        }
+        
+            
+
         var inputArr = [
-            "金卡",
-            "12月12日",
-            "99",
-            "金"
+            index1,
+            index2,
+            index3,
+            index4
         ];
         var centerX = size.width/2;
-        var centerY = size.height/2 + 30;
+        var centerY = size.height/2 + 50;
         var xy = [
             {"x":centerX + 70,"y":centerY + 70},
             {"x":centerX - 55,"y":centerY + 20},
@@ -550,15 +598,15 @@ var gameScene2 = cc.Scene.extend({
     initBottom:function(){
         this.txt = new cc.Sprite(res.txt);
         this.txt.x = size.width/2;
-        this.txt.y = 250;
+        this.txt.y = 280;
         this.addChild(this.txt);
 
         var car1X0 = size.width/2 + 180;
         var car1X1 = size.width/2 + 265;
         var car1X2 = size.width/2 - 265;
         var car1X3 = size.width/2 - 180;
-        var car1Y0 = 440;
-        var car1Y1 = 45;
+        var car1Y0 = 470;
+        var car1Y1 = 75;
 
         this.car1 = new cc.Sprite(res.car1);
         this.car1.x = car1X0;
@@ -605,7 +653,7 @@ var gameScene2 = cc.Scene.extend({
         var btnItem = new cc.MenuItemImage(res.share,res.share,this.btnCallFun,this);
         var btnMenu = new cc.Menu(btnItem);
         btnMenu.x = size.width/2;
-        btnMenu.y = size.height/2 - 60;
+        btnMenu.y = size.height/2 - 40;
         this.addChild(btnMenu,10);
     },
     btnCallFun:function(){
@@ -617,20 +665,22 @@ var gameScene2 = cc.Scene.extend({
         this.cLayer = new cc.LayerColor(cc.color(125,125,125,200), 640, 1136);
         this.addChild(this.cLayer,1000);
 
-        this.center = new cc.Sprite(res.center);
-        this.center.x = size.width;
-        this.center.y = size.height/2 + 200;
+        // this.center = new cc.Sprite(res.center);
+        // this.center.x = size.width;
+        // this.center.y = size.height/2 + 200;
 
-        this.car11 = new cc.Sprite(res.car1);
-        this.car11.x = -300;
-        this.car11.y = 0;
-        this.car11.rotation = 180;
-        this.center.addChild(this.car11);
-        this.cLayer.addChild(this.center);
+        // this.car11 = new cc.Sprite(res.car1);
+        // this.car11.x = -300;
+        // this.car11.y = 0;
+        // this.car11.rotation = 180;
+        // this.center.addChild(this.car11);
+        // this.cLayer.addChild(this.center);
 
         var roade = new cc.Sprite(res.roade);
         roade.x = size.width;
         roade.y = size.height;
+        roade.anchorX = 1;
+        roade.anchorY = 1;
         this.cLayer.addChild(roade);
 
         this.showLayer = true;
@@ -639,11 +689,11 @@ var gameScene2 = cc.Scene.extend({
     },
     update:function(){
         if(this.showLayer){
-            if(this.rotationTemp0 == 90){
-                this.rotationTemp0 = 0;
-            }
-            this.rotationTemp0 += 0.5;
-            this.center.rotation = this.rotationTemp0; 
+            // if(this.rotationTemp0 == 90){
+            //     this.rotationTemp0 = 0;
+            // }
+            // this.rotationTemp0 += 0.5;
+            // this.center.rotation = this.rotationTemp0; 
         }
     },
     loadListener : function(){
@@ -677,12 +727,12 @@ var gameScene2 = cc.Scene.extend({
         if(self.showLayer){
             self.showLayer = false;
             self.removeChild(self.cLayer);
-            self.center.rotation = 0;
-            self.rotationTemp0 = 0;
+            // self.center.rotation = 0;
+            // self.rotationTemp0 = 0;
         }
     }
 });
-
+//page1
 var gameScene3 = cc.Scene.extend({
     canTouch:false,
     check1:false,
@@ -723,7 +773,7 @@ var gameScene3 = cc.Scene.extend({
 
         clipper.setStencil(drawNode);
 
-        var sprite = new cc.Sprite(res.test);
+        var sprite = new cc.Sprite(G_Obj.head);
         clipper.addChild(sprite);
         clipper.x = size.width/2 - 3;
         clipper.y = size.height/2 + 115;
@@ -818,9 +868,9 @@ var gameScene3 = cc.Scene.extend({
         this.addChild(this.round3);
     },
     initBottomTips:function(){
-        var txt = new cc.LabelTTF("还没使用过Uber?\n输入新用户代码\"优步年终奖\"领取30元优惠!", "Arial", 24);
+        var txt = new cc.LabelTTF("还没使用过Uber?\n输入新用户代码\"优步年终奖\"领取30元优惠!", "Arial", 20);
         txt.x = size.width/2;
-        txt.y = 50;
+        txt.y = 120;
         txt.textAlign = cc.TEXT_ALIGNMENT_CENTER;
         this.addChild(txt)
     },
