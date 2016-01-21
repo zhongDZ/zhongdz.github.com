@@ -42,6 +42,8 @@ var res = {
     spark:"res/spark.png",
     layerBg:"res/layerBg.png",
 
+    test1:"res/test.png",
+
     loadingpage:"res/loadingpage.jpg"
 };
 for (var i in res) {

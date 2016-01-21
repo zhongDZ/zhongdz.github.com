@@ -67,6 +67,8 @@ var diySprRectLayer =  cc.Layer.extend({
 	}
 });
 
+
+//自定义精灵模板
 var diySprRectLayer1 = cc.Layer.extend({
 	ctor:function(){
 		this._super();
@@ -81,7 +83,7 @@ var diySprRectLayer1 = cc.Layer.extend({
 
 		var spark = new cc.Sprite(res.spark);
 		var gameTitle = new cc.Sprite(res.game_title);
-		
+
 		clip.addChild(gameTitle, 1);//先添加标题,会完全显示出来,因为跟模板一样大小
 		spark.x = -winSize.width / 2;
 		spark.y = 0;

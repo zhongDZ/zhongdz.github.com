@@ -52,11 +52,17 @@ var MainScene = cc.Scene.extend({
             var layer = new UIScrollViewTest_Vertical_Multiple();
         }
 
-        if(true){//自定义节点形状(裁剪)
+        if(!true){//自定义节点形状(裁剪)
           // var layer = new diySprRectLayer();
           var layer = new diySprRectLayer1();
         }
 
+        if(!true){
+          //winSize(320,480)
+          // var layer = new TestLayer();
+
+          var layer = new TestListView();
+        }
 
         this.addChild(layer);
 
