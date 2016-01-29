@@ -1,0 +1,815 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/****************************************************************************
+<span class='line'>  2</span>  Copyright (c) 2011-2012 cocos2d-x.org
+<span class='line'>  3</span>  Copyright (c) 2013-2014 Chukong Technologies Inc.
+<span class='line'>  4</span> 
+<span class='line'>  5</span>  http://www.cocos2d-x.org
+<span class='line'>  6</span> 
+<span class='line'>  7</span>  Permission is hereby granted, free of charge, to any person obtaining a copy
+<span class='line'>  8</span>  of this software and associated documentation files (the "Software"), to deal
+<span class='line'>  9</span>  in the Software without restriction, including without limitation the rights
+<span class='line'> 10</span>  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+<span class='line'> 11</span>  copies of the Software, and to permit persons to whom the Software is
+<span class='line'> 12</span>  furnished to do so, subject to the following conditions:
+<span class='line'> 13</span> 
+<span class='line'> 14</span>  The above copyright notice and this permission notice shall be included in
+<span class='line'> 15</span>  all copies or substantial portions of the Software.
+<span class='line'> 16</span> 
+<span class='line'> 17</span>  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+<span class='line'> 18</span>  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+<span class='line'> 19</span>  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+<span class='line'> 20</span>  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+<span class='line'> 21</span>  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+<span class='line'> 22</span>  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+<span class='line'> 23</span>  THE SOFTWARE.
+<span class='line'> 24</span>  ****************************************************************************/</span><span class="WHIT">
+<span class='line'> 25</span> 
+<span class='line'> 26</span> </span><span class="COMM">//BlendType</span><span class="WHIT">
+<span class='line'> 27</span> </span><span class="COMM">/**
+<span class='line'> 28</span>  * The value of the blend type of normal
+<span class='line'> 29</span>  * @constant
+<span class='line'> 30</span>  * @type Number
+<span class='line'> 31</span>  */</span><span class="WHIT">
+<span class='line'> 32</span> </span><span class="NAME">ccs.BLEND_TYPE_NORMAL</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 33</span> 
+<span class='line'> 34</span> </span><span class="COMM">/**
+<span class='line'> 35</span>  * The value of the blend type of layer
+<span class='line'> 36</span>  * @constant
+<span class='line'> 37</span>  * @type Number
+<span class='line'> 38</span>  */</span><span class="WHIT">
+<span class='line'> 39</span> </span><span class="NAME">ccs.BLEND_TYPE_LAYER</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 40</span> 
+<span class='line'> 41</span> </span><span class="COMM">/**
+<span class='line'> 42</span>  * The value of the blend type of darken
+<span class='line'> 43</span>  * @constant
+<span class='line'> 44</span>  * @type Number
+<span class='line'> 45</span>  */</span><span class="WHIT">
+<span class='line'> 46</span> </span><span class="NAME">ccs.BLEND_TYPE_DARKEN</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 47</span> 
+<span class='line'> 48</span> </span><span class="COMM">/**
+<span class='line'> 49</span>  * The value of the blend type of multiply
+<span class='line'> 50</span>  * @constant
+<span class='line'> 51</span>  * @type Number
+<span class='line'> 52</span>  */</span><span class="WHIT">
+<span class='line'> 53</span> </span><span class="NAME">ccs.BLEND_TYPE_MULTIPLY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">3</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 54</span> 
+<span class='line'> 55</span> </span><span class="COMM">/**
+<span class='line'> 56</span>  * The value of the blend type of lighten
+<span class='line'> 57</span>  * @constant
+<span class='line'> 58</span>  * @type Number
+<span class='line'> 59</span>  */</span><span class="WHIT">
+<span class='line'> 60</span> </span><span class="NAME">ccs.BLEND_TYPE_LIGHTEN</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">4</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 61</span> 
+<span class='line'> 62</span> </span><span class="COMM">/**
+<span class='line'> 63</span>  * The value of the blend type of screen
+<span class='line'> 64</span>  * @constant
+<span class='line'> 65</span>  * @type Number
+<span class='line'> 66</span>  */</span><span class="WHIT">
+<span class='line'> 67</span> </span><span class="NAME">ccs.BLEND_TYPE_SCREEN</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">5</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 68</span> 
+<span class='line'> 69</span> </span><span class="COMM">/**
+<span class='line'> 70</span>  * The value of the blend type of overlay
+<span class='line'> 71</span>  * @constant
+<span class='line'> 72</span>  * @type Number
+<span class='line'> 73</span>  */</span><span class="WHIT">
+<span class='line'> 74</span> </span><span class="NAME">ccs.BLEND_TYPE_OVERLAY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">6</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 75</span> 
+<span class='line'> 76</span> </span><span class="COMM">/**
+<span class='line'> 77</span>  * The value of the blend type of highlight
+<span class='line'> 78</span>  * @constant
+<span class='line'> 79</span>  * @type Number
+<span class='line'> 80</span>  */</span><span class="WHIT">
+<span class='line'> 81</span> </span><span class="NAME">ccs.BLEND_TYPE_HIGHLIGHT</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">7</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 82</span> 
+<span class='line'> 83</span> </span><span class="COMM">/**
+<span class='line'> 84</span>  * The value of the blend type of add
+<span class='line'> 85</span>  * @constant
+<span class='line'> 86</span>  * @type Number
+<span class='line'> 87</span>  */</span><span class="WHIT">
+<span class='line'> 88</span> </span><span class="NAME">ccs.BLEND_TYPE_ADD</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">8</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 89</span> 
+<span class='line'> 90</span> </span><span class="COMM">/**
+<span class='line'> 91</span>  * The value of the blend type of subtract
+<span class='line'> 92</span>  * @constant
+<span class='line'> 93</span>  * @type Number
+<span class='line'> 94</span>  */</span><span class="WHIT">
+<span class='line'> 95</span> </span><span class="NAME">ccs.BLEND_TYPE_SUBTRACT</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">9</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 96</span> 
+<span class='line'> 97</span> </span><span class="COMM">/**
+<span class='line'> 98</span>  * The value of the blend type of difference
+<span class='line'> 99</span>  * @constant
+<span class='line'>100</span>  * @type Number
+<span class='line'>101</span>  */</span><span class="WHIT">
+<span class='line'>102</span> </span><span class="NAME">ccs.BLEND_TYPE_DIFFERENCE</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">10</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>103</span> 
+<span class='line'>104</span> </span><span class="COMM">/**
+<span class='line'>105</span>  * The value of the blend type of invert
+<span class='line'>106</span>  * @constant
+<span class='line'>107</span>  * @type Number
+<span class='line'>108</span>  */</span><span class="WHIT">
+<span class='line'>109</span> </span><span class="NAME">ccs.BLEND_TYPE_INVERT</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">11</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>110</span> 
+<span class='line'>111</span> </span><span class="COMM">/**
+<span class='line'>112</span>  * The value of the blend type of alpha
+<span class='line'>113</span>  * @constant
+<span class='line'>114</span>  * @type Number
+<span class='line'>115</span>  */</span><span class="WHIT">
+<span class='line'>116</span> </span><span class="NAME">ccs.BLEND_TYPE_ALPHA</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">12</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>117</span> 
+<span class='line'>118</span> </span><span class="COMM">/**
+<span class='line'>119</span>  * The value of the blend type of erase
+<span class='line'>120</span>  * @constant
+<span class='line'>121</span>  * @type Number
+<span class='line'>122</span>  */</span><span class="WHIT">
+<span class='line'>123</span> </span><span class="NAME">ccs.BLEND_TYPE_ERASE</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">13</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>124</span> 
+<span class='line'>125</span> </span><span class="COMM">//DisplayType</span><span class="WHIT">
+<span class='line'>126</span> </span><span class="COMM">/**
+<span class='line'>127</span>  * The Sprite flag of display render type.
+<span class='line'>128</span>  * @constant
+<span class='line'>129</span>  * @type Number
+<span class='line'>130</span>  */</span><span class="WHIT">
+<span class='line'>131</span> </span><span class="NAME">ccs.DISPLAY_TYPE_SPRITE</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>132</span> </span><span class="COMM">/**
+<span class='line'>133</span>  * The Armature flag of display render type.
+<span class='line'>134</span>  * @constant
+<span class='line'>135</span>  * @type Number
+<span class='line'>136</span>  */</span><span class="WHIT">
+<span class='line'>137</span> </span><span class="NAME">ccs.DISPLAY_TYPE_ARMATURE</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>138</span> </span><span class="COMM">/**
+<span class='line'>139</span>  * The Particle flag of display render type.
+<span class='line'>140</span>  * @constant
+<span class='line'>141</span>  * @type Number
+<span class='line'>142</span>  */</span><span class="WHIT">
+<span class='line'>143</span> </span><span class="NAME">ccs.DISPLAY_TYPE_PARTICLE</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>144</span> </span><span class="NAME">ccs.DISPLAY_TYPE_MAX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">3</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>145</span> 
+<span class='line'>146</span> </span><span class="COMM">/**
+<span class='line'>147</span>  * &lt;p>
+<span class='line'>148</span>  *     The base data class for Armature. it contains position, zOrder, skew, scale, color datas.                                       &lt;br/>
+<span class='line'>149</span>  *     x y skewX skewY scaleX scaleY used to calculate transform matrix                                                                &lt;br/>
+<span class='line'>150</span>  *     skewX, skewY can have rotation effect                                                                                           &lt;br/>
+<span class='line'>151</span>  *     To get more matrix information, you can have a look at this pape : http://www.senocular.com/flash/tutorials/transformmatrix/    &lt;br/>
+<span class='line'>152</span>  * &lt;/p>
+<span class='line'>153</span>  * @class
+<span class='line'>154</span>  * @extends ccs.Class
+<span class='line'>155</span>  *
+<span class='line'>156</span>  * @property {Number}         x                - x
+<span class='line'>157</span>  * @property {Number}         y                - y
+<span class='line'>158</span>  * @property {Number}         zOrder           - zOrder
+<span class='line'>159</span>  * @property {Number}         skewX            - skewX
+<span class='line'>160</span>  * @property {Number}         skewY            - skewY
+<span class='line'>161</span>  * @property {Number}         scaleX           - scaleX
+<span class='line'>162</span>  * @property {Number}         scaleY           - scaleY
+<span class='line'>163</span>  * @property {Number}         tweenRotate      - tween Rotate
+<span class='line'>164</span>  * @property {Number}         isUseColorInfo   - is Use Color Info
+<span class='line'>165</span>  * @property {Number}         r                - r of color
+<span class='line'>166</span>  * @property {Number}         g                - g of color
+<span class='line'>167</span>  * @property {Number}         b                - b of color
+<span class='line'>168</span>  * @property {Number}         a                - a of color
+<span class='line'>169</span>  */</span><span class="WHIT">
+<span class='line'>170</span> </span><span class="NAME">ccs.BaseData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.Class.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.BaseData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>171</span> </span><span class="WHIT">    </span><span class="NAME">x</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>172</span> </span><span class="WHIT">    </span><span class="NAME">y</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>173</span> </span><span class="WHIT">    </span><span class="NAME">zOrder</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>174</span> </span><span class="WHIT">    </span><span class="NAME">skewX</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>175</span> </span><span class="WHIT">    </span><span class="NAME">skewY</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>176</span> </span><span class="WHIT">    </span><span class="NAME">scaleX</span><span class="PUNC">:</span><span class="NUMB">1</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>177</span> </span><span class="WHIT">    </span><span class="NAME">scaleY</span><span class="PUNC">:</span><span class="NUMB">1</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>178</span> </span><span class="WHIT">    </span><span class="NAME">tweenRotate</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">                               </span><span class="COMM">//! SkewX, SkewY, and TweenRotate effect the rotation</span><span class="WHIT">
+<span class='line'>179</span> </span><span class="WHIT">    </span><span class="NAME">isUseColorInfo</span><span class="PUNC">:</span><span class="KEYW">false</span><span class="PUNC">,</span><span class="WHIT">                       </span><span class="COMM">//! Whether or not this frame have the color changed Info</span><span class="WHIT">
+<span class='line'>180</span> </span><span class="WHIT">    </span><span class="NAME">r</span><span class="PUNC">:</span><span class="NUMB">255</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>181</span> </span><span class="WHIT">    </span><span class="NAME">g</span><span class="PUNC">:</span><span class="NUMB">255</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>182</span> </span><span class="WHIT">    </span><span class="NAME">b</span><span class="PUNC">:</span><span class="NUMB">255</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>183</span> </span><span class="WHIT">    </span><span class="NAME">a</span><span class="PUNC">:</span><span class="NUMB">255</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>184</span> 
+<span class='line'>185</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>186</span>      * Construction of ccs.BaseData
+<span class='line'>187</span>      */</span><span class="WHIT">
+<span class='line'>188</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>189</span> </span><span class="WHIT">        </span><span class="NAME">this.x</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>190</span> </span><span class="WHIT">        </span><span class="NAME">this.y</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>191</span> </span><span class="WHIT">        </span><span class="NAME">this.zOrder</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>192</span> </span><span class="WHIT">        </span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>193</span> </span><span class="WHIT">        </span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>194</span> </span><span class="WHIT">        </span><span class="NAME">this.scaleX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>195</span> </span><span class="WHIT">        </span><span class="NAME">this.scaleY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>196</span> </span><span class="WHIT">        </span><span class="NAME">this.tweenRotate</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>197</span> </span><span class="WHIT">        </span><span class="NAME">this.isUseColorInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>198</span> </span><span class="WHIT">        </span><span class="NAME">this.r</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">255</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>199</span> </span><span class="WHIT">        </span><span class="NAME">this.g</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">255</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>200</span> </span><span class="WHIT">        </span><span class="NAME">this.b</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">255</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>201</span> </span><span class="WHIT">        </span><span class="NAME">this.a</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">255</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>202</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>203</span> 
+<span class='line'>204</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>205</span>      * Copy data from node
+<span class='line'>206</span>      * @function
+<span class='line'>207</span>      * @param {ccs.BaseData} node
+<span class='line'>208</span>      */</span><span class="WHIT">
+<span class='line'>209</span> </span><span class="WHIT">    </span><span class="NAME">copy</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">node</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>210</span> </span><span class="WHIT">        </span><span class="NAME">this.x</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.x</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>211</span> </span><span class="WHIT">        </span><span class="NAME">this.y</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.y</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>212</span> </span><span class="WHIT">        </span><span class="NAME">this.zOrder</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.zOrder</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>213</span> 
+<span class='line'>214</span> </span><span class="WHIT">        </span><span class="NAME">this.scaleX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.scaleX</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>215</span> </span><span class="WHIT">        </span><span class="NAME">this.scaleY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.scaleY</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>216</span> </span><span class="WHIT">        </span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.skewX</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>217</span> </span><span class="WHIT">        </span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.skewY</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>218</span> 
+<span class='line'>219</span> </span><span class="WHIT">        </span><span class="NAME">this.tweenRotate</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.tweenRotate</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>220</span> 
+<span class='line'>221</span> </span><span class="WHIT">        </span><span class="NAME">this.isUseColorInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.isUseColorInfo</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>222</span> </span><span class="WHIT">        </span><span class="NAME">this.r</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.r</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>223</span> </span><span class="WHIT">        </span><span class="NAME">this.g</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.g</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>224</span> </span><span class="WHIT">        </span><span class="NAME">this.b</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.b</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>225</span> </span><span class="WHIT">        </span><span class="NAME">this.a</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">node.a</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>226</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>227</span> 
+<span class='line'>228</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>229</span>      * Sets color to base data.
+<span class='line'>230</span>      * @function
+<span class='line'>231</span>      * @param {cc.Color} color
+<span class='line'>232</span>      */</span><span class="WHIT">
+<span class='line'>233</span> </span><span class="WHIT">    </span><span class="NAME">setColor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">color</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>234</span> </span><span class="WHIT">        </span><span class="NAME">this.r</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">color.r</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>235</span> </span><span class="WHIT">        </span><span class="NAME">this.g</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">color.g</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>236</span> </span><span class="WHIT">        </span><span class="NAME">this.b</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">color.b</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>237</span> </span><span class="WHIT">        </span><span class="NAME">this.a</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">color.a</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>238</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>239</span> 
+<span class='line'>240</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>241</span>      * Returns the color of ccs.BaseData
+<span class='line'>242</span>      * @function
+<span class='line'>243</span>      * @returns {cc.Color}
+<span class='line'>244</span>      */</span><span class="WHIT">
+<span class='line'>245</span> </span><span class="WHIT">    </span><span class="NAME">getColor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>246</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">cc.color</span><span class="PUNC">(</span><span class="NAME">this.r</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.g</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.b</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.a</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>247</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>248</span> 
+<span class='line'>249</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>250</span>      * Calculate two baseData's between value(to - from) and set to self
+<span class='line'>251</span>      * @function
+<span class='line'>252</span>      * @param {ccs.BaseData} from
+<span class='line'>253</span>      * @param {ccs.BaseData} to
+<span class='line'>254</span>      * @param {Boolean} limit
+<span class='line'>255</span>      */</span><span class="WHIT">
+<span class='line'>256</span> </span><span class="WHIT">    </span><span class="NAME">subtract</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">from</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">to</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">limit</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>257</span> </span><span class="WHIT">        </span><span class="NAME">this.x</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.x</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.x</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>258</span> </span><span class="WHIT">        </span><span class="NAME">this.y</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.y</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.y</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>259</span> </span><span class="WHIT">        </span><span class="NAME">this.scaleX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.scaleX</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.scaleX</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>260</span> </span><span class="WHIT">        </span><span class="NAME">this.scaleY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.scaleY</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.scaleY</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>261</span> </span><span class="WHIT">        </span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.skewX</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.skewX</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>262</span> </span><span class="WHIT">        </span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.skewY</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.skewY</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>263</span> 
+<span class='line'>264</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.isUseColorInfo</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="NAME">from.isUseColorInfo</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="NAME">to.isUseColorInfo</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>265</span> </span><span class="WHIT">            </span><span class="NAME">this.a</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.a</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.a</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>266</span> </span><span class="WHIT">            </span><span class="NAME">this.r</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.r</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.r</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>267</span> </span><span class="WHIT">            </span><span class="NAME">this.g</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.g</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.g</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>268</span> </span><span class="WHIT">            </span><span class="NAME">this.b</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.b</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NAME">from.b</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>269</span> </span><span class="WHIT">            </span><span class="NAME">this.isUseColorInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>270</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT"> </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>271</span> </span><span class="WHIT">            </span><span class="NAME">this.a</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">this.r</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">this.g</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">this.b</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>272</span> </span><span class="WHIT">            </span><span class="NAME">this.isUseColorInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>273</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>274</span> 
+<span class='line'>275</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">limit</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>276</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">></span><span class="WHIT"> </span><span class="NAME">ccs.M_PI</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>277</span> </span><span class="WHIT">                </span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DOUBLE_PI</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>278</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">&lt;</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="NAME">ccs.M_PI</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>279</span> </span><span class="WHIT">                </span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DOUBLE_PI</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>280</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">></span><span class="WHIT"> </span><span class="NAME">ccs.M_PI</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>281</span> </span><span class="WHIT">                </span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DOUBLE_PI</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>282</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">&lt;</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="NAME">ccs.M_PI</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>283</span> </span><span class="WHIT">                </span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DOUBLE_PI</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>284</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>285</span> 
+<span class='line'>286</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">to.tweenRotate</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>287</span> </span><span class="WHIT">            </span><span class="NAME">this.skewX</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.tweenRotate</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NAME">ccs.PI</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>288</span> </span><span class="WHIT">            </span><span class="NAME">this.skewY</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">to.tweenRotate</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NAME">ccs.PI</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>289</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>290</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>291</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>292</span> 
+<span class='line'>293</span> </span><span class="COMM">/**
+<span class='line'>294</span>  * The class use for save display data.
+<span class='line'>295</span>  * @class
+<span class='line'>296</span>  * @extends ccs.Class
+<span class='line'>297</span>  *
+<span class='line'>298</span>  * @property {Number}         displayType                - the display type
+<span class='line'>299</span>  * @property {String}         displayName                - the display name
+<span class='line'>300</span>  */</span><span class="WHIT">
+<span class='line'>301</span> </span><span class="NAME">ccs.DisplayData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.Class.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.DisplayData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>302</span> </span><span class="WHIT">    </span><span class="NAME">displayType</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">ccs.DISPLAY_TYPE_MAX</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>303</span> </span><span class="WHIT">    </span><span class="NAME">displayName</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>304</span> 
+<span class='line'>305</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>306</span>      * Construction of ccs.DisplayData
+<span class='line'>307</span>      */</span><span class="WHIT">
+<span class='line'>308</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>309</span> </span><span class="WHIT">        </span><span class="NAME">this.displayType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DISPLAY_TYPE_MAX</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>310</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>311</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>312</span>      * Changes display name to texture type
+<span class='line'>313</span>      * @function
+<span class='line'>314</span>      * @param {String} displayName
+<span class='line'>315</span>      * @returns {String}
+<span class='line'>316</span>      */</span><span class="WHIT">
+<span class='line'>317</span> </span><span class="WHIT">    </span><span class="NAME">changeDisplayToTexture</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">displayName</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>318</span> </span><span class="WHIT">        </span><span class="COMM">// remove .xxx</span><span class="WHIT">
+<span class='line'>319</span> </span><span class="WHIT">        </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">textureName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">displayName</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>320</span> </span><span class="WHIT">        </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">startPos</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">textureName.lastIndexOf</span><span class="PUNC">(</span><span class="STRN">"."</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>321</span> 
+<span class='line'>322</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">startPos</span><span class="WHIT"> </span><span class="PUNC">!=</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="NUMB">1</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>323</span> </span><span class="WHIT">            </span><span class="NAME">textureName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">textureName.substring</span><span class="PUNC">(</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">startPos</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>324</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">textureName</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>325</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>326</span> 
+<span class='line'>327</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>328</span>      * copy data
+<span class='line'>329</span>      * @function
+<span class='line'>330</span>      * @param {ccs.DisplayData} displayData
+<span class='line'>331</span>      */</span><span class="WHIT">
+<span class='line'>332</span> </span><span class="WHIT">    </span><span class="NAME">copy</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">displayData</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>333</span> </span><span class="WHIT">        </span><span class="NAME">this.displayName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">displayData.displayName</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>334</span> </span><span class="WHIT">        </span><span class="NAME">this.displayType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">displayData.displayType</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>335</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>336</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>337</span> 
+<span class='line'>338</span> </span><span class="COMM">/**
+<span class='line'>339</span>  * The sprite display data class.
+<span class='line'>340</span>  * @class
+<span class='line'>341</span>  * @extends ccs.DisplayData
+<span class='line'>342</span>  *
+<span class='line'>343</span>  * @property {ccs.BaseData}         skinData                - the skin data
+<span class='line'>344</span>  */</span><span class="WHIT">
+<span class='line'>345</span> </span><span class="NAME">ccs.SpriteDisplayData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DisplayData.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.SpriteDisplayData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>346</span> </span><span class="WHIT">    </span><span class="NAME">skinData</span><span class="PUNC">:</span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>347</span> 
+<span class='line'>348</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>349</span>      * Construction of ccs.SpriteDisplayData
+<span class='line'>350</span>      */</span><span class="WHIT">
+<span class='line'>351</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>352</span> </span><span class="WHIT">        </span><span class="NAME">this.skinData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">ccs.BaseData</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>353</span> </span><span class="WHIT">        </span><span class="NAME">this.displayType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DISPLAY_TYPE_SPRITE</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>354</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>355</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>356</span>      * copy data
+<span class='line'>357</span>      * @function
+<span class='line'>358</span>      * @param {ccs.SpriteDisplayData} displayData
+<span class='line'>359</span>      */</span><span class="WHIT">
+<span class='line'>360</span> </span><span class="WHIT">    </span><span class="NAME">copy</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">displayData</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>361</span> </span><span class="WHIT">        </span><span class="NAME">ccs.DisplayData.prototype.copy.call</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="NAME">displayData</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>362</span> </span><span class="WHIT">        </span><span class="NAME">this.skinData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">displayData.skinData</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>363</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>364</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>365</span> 
+<span class='line'>366</span> </span><span class="COMM">/**
+<span class='line'>367</span>  * The armature display data class
+<span class='line'>368</span>  * @class ccs.ArmatureDisplayData
+<span class='line'>369</span>  * @extends ccs.DisplayData
+<span class='line'>370</span>  */</span><span class="WHIT">
+<span class='line'>371</span> </span><span class="NAME">ccs.ArmatureDisplayData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DisplayData.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.ArmatureDisplayData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>372</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>373</span>      * Construction of ccs.ArmatureDisplayData
+<span class='line'>374</span>      */</span><span class="WHIT">
+<span class='line'>375</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>376</span> </span><span class="WHIT">        </span><span class="NAME">this.displayName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>377</span> </span><span class="WHIT">        </span><span class="NAME">this.displayType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DISPLAY_TYPE_ARMATURE</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>378</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>379</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>380</span> 
+<span class='line'>381</span> </span><span class="COMM">/**
+<span class='line'>382</span>  * The particle display data class.
+<span class='line'>383</span>  * @class ccs.ParticleDisplayData
+<span class='line'>384</span>  * @extends ccs.DisplayData
+<span class='line'>385</span>  */</span><span class="WHIT">
+<span class='line'>386</span> </span><span class="NAME">ccs.ParticleDisplayData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DisplayData.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.ParticleDisplayData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>387</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>388</span>      * Construction of ccs.ParticleDisplayData
+<span class='line'>389</span>      */</span><span class="WHIT">
+<span class='line'>390</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>391</span> </span><span class="WHIT">        </span><span class="NAME">this.displayType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.DISPLAY_TYPE_PARTICLE</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>392</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>393</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>394</span> 
+<span class='line'>395</span> </span><span class="COMM">/**
+<span class='line'>396</span>  * &lt;p>
+<span class='line'>397</span>  *      BoneData used to init a Bone.                                                               &lt;br/>
+<span class='line'>398</span>  *      BoneData keeps a DisplayData list, a Bone can have many display to change.                  &lt;br/>
+<span class='line'>399</span>  *      The display information saved in the DisplayData                                            &lt;br/>
+<span class='line'>400</span>  * &lt;/p>
+<span class='line'>401</span>  * @class ccs.BoneData
+<span class='line'>402</span>  * @extends ccs.BaseData
+<span class='line'>403</span>  *
+<span class='line'>404</span>  * @property {Array}                    displayDataList                - the display data list
+<span class='line'>405</span>  * @property {String}                   name                           - the name of Bone
+<span class='line'>406</span>  * @property {String}                   parentName                     - the parent name of bone
+<span class='line'>407</span>  * @property {cc.AffineTransform}       boneDataTransform              - the bone transform data
+<span class='line'>408</span>  */</span><span class="WHIT">
+<span class='line'>409</span> </span><span class="NAME">ccs.BoneData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.BaseData.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.BoneData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>410</span> </span><span class="WHIT">    </span><span class="NAME">displayDataList</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>411</span> </span><span class="WHIT">    </span><span class="NAME">name</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>412</span> </span><span class="WHIT">    </span><span class="NAME">parentName</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>413</span> </span><span class="WHIT">    </span><span class="NAME">boneDataTransform</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>414</span> 
+<span class='line'>415</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>416</span>      * Construction of ccs.BoneData
+<span class='line'>417</span>      */</span><span class="WHIT">
+<span class='line'>418</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>419</span> </span><span class="WHIT">        </span><span class="NAME">this.displayDataList</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>420</span> </span><span class="WHIT">        </span><span class="NAME">this.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>421</span> </span><span class="WHIT">        </span><span class="NAME">this.parentName</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>422</span> </span><span class="WHIT">        </span><span class="NAME">this.boneDataTransform</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>423</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>424</span> 
+<span class='line'>425</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>426</span>      * Initializes a ccs.BoneData
+<span class='line'>427</span>      * @returns {boolean}
+<span class='line'>428</span>      */</span><span class="WHIT">
+<span class='line'>429</span> </span><span class="WHIT">    </span><span class="NAME">init</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>430</span> </span><span class="WHIT">        </span><span class="NAME">this.displayDataList.length</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>431</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>432</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>433</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>434</span>      * Adds display data to list
+<span class='line'>435</span>      * @function
+<span class='line'>436</span>      * @param {ccs.DisplayData} displayData
+<span class='line'>437</span>      */</span><span class="WHIT">
+<span class='line'>438</span> </span><span class="WHIT">    </span><span class="NAME">addDisplayData</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">displayData</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>439</span> </span><span class="WHIT">        </span><span class="NAME">this.displayDataList.push</span><span class="PUNC">(</span><span class="NAME">displayData</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>440</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>441</span> 
+<span class='line'>442</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>443</span>      * Returns display data with index.
+<span class='line'>444</span>      * @function
+<span class='line'>445</span>      * @param {Number} index
+<span class='line'>446</span>      * @returns {ccs.DisplayData}
+<span class='line'>447</span>      */</span><span class="WHIT">
+<span class='line'>448</span> </span><span class="WHIT">    </span><span class="NAME">getDisplayData</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">index</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>449</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.displayDataList</span><span class="PUNC">[</span><span class="NAME">index</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>450</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>451</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>452</span> 
+<span class='line'>453</span> </span><span class="COMM">/**
+<span class='line'>454</span>  * &lt;p>
+<span class='line'>455</span>  * ArmatureData saved the Armature name and BoneData needed for the CCBones in this Armature      &lt;br/>
+<span class='line'>456</span>  * When we create a Armature, we need to get each Bone's BoneData as it's init information.       &lt;br/>
+<span class='line'>457</span>  * So we can get a BoneData from the Dictionary saved in the ArmatureData.                        &lt;br/>
+<span class='line'>458</span>  * &lt;/p>
+<span class='line'>459</span>  * @class ccs.ArmatureData
+<span class='line'>460</span>  * @extends ccs.Class
+<span class='line'>461</span>  *
+<span class='line'>462</span>  * @property {Object}                    boneDataDic                - the bone data dictionary
+<span class='line'>463</span>  * @property {String}                    name                       - the name of armature data
+<span class='line'>464</span>  * @property {Number}                    dataVersion                - the data version of armature data
+<span class='line'>465</span>  */</span><span class="WHIT">
+<span class='line'>466</span> </span><span class="NAME">ccs.ArmatureData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.Class.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.ArmatureData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>467</span> </span><span class="WHIT">    </span><span class="NAME">boneDataDic</span><span class="PUNC">:</span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>468</span> </span><span class="WHIT">    </span><span class="NAME">name</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>469</span> </span><span class="WHIT">    </span><span class="NAME">dataVersion</span><span class="PUNC">:</span><span class="NUMB">0.1</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>470</span> 
+<span class='line'>471</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>472</span>      * Construction of ccs.ArmatureData
+<span class='line'>473</span>      */</span><span class="WHIT">
+<span class='line'>474</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>475</span> </span><span class="WHIT">        </span><span class="NAME">this.boneDataDic</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>476</span> </span><span class="WHIT">        </span><span class="NAME">this.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>477</span> </span><span class="WHIT">        </span><span class="NAME">this.dataVersion</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0.1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>478</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>479</span> 
+<span class='line'>480</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>481</span>      * Initializes a ccs.ArmatureData
+<span class='line'>482</span>      * @returns {boolean}
+<span class='line'>483</span>      */</span><span class="WHIT">
+<span class='line'>484</span> </span><span class="WHIT">    </span><span class="NAME">init</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>485</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>486</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>487</span> 
+<span class='line'>488</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>489</span>      * Adds bone data to dictionary
+<span class='line'>490</span>      * @param {ccs.BoneData} boneData
+<span class='line'>491</span>      */</span><span class="WHIT">
+<span class='line'>492</span> </span><span class="WHIT">    </span><span class="NAME">addBoneData</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">boneData</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>493</span> </span><span class="WHIT">        </span><span class="NAME">this.boneDataDic</span><span class="PUNC">[</span><span class="NAME">boneData.name</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">boneData</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>494</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>495</span> 
+<span class='line'>496</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>497</span>      * Gets bone data dictionary
+<span class='line'>498</span>      * @returns {Object}
+<span class='line'>499</span>      */</span><span class="WHIT">
+<span class='line'>500</span> </span><span class="WHIT">    </span><span class="NAME">getBoneDataDic</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>501</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.boneDataDic</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>502</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>503</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>504</span>      * Gets bone data by bone name
+<span class='line'>505</span>      * @function
+<span class='line'>506</span>      * @param {String} boneName
+<span class='line'>507</span>      * @returns {ccs.BoneData}
+<span class='line'>508</span>      */</span><span class="WHIT">
+<span class='line'>509</span> </span><span class="WHIT">    </span><span class="NAME">getBoneData</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">boneName</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>510</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.boneDataDic</span><span class="PUNC">[</span><span class="NAME">boneName</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>511</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>512</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>513</span> 
+<span class='line'>514</span> </span><span class="COMM">/**
+<span class='line'>515</span>  * FrameData saved the frame data needed for armature animation in this Armature.
+<span class='line'>516</span>  * @class ccs.FrameData
+<span class='line'>517</span>  * @extends ccs.BaseData
+<span class='line'>518</span>  *
+<span class='line'>519</span>  * @property {Number}                    duration                - the duration of frame
+<span class='line'>520</span>  * @property {Number}                    tweenEasing             - the easing type of frame
+<span class='line'>521</span>  * @property {Number}                    easingParamNumber       - the count of easing parameters.
+<span class='line'>522</span>  * @property {Object}                    easingParams            - the dictionary of easing parameters.
+<span class='line'>523</span>  * @property {Number}                    displayIndex            - the display renderer index.
+<span class='line'>524</span>  * @property {String}                    movement                - the movement name.
+<span class='line'>525</span>  * @property {String}                    event                   - the event name
+<span class='line'>526</span>  * @property {String}                    sound                   - the sound path.
+<span class='line'>527</span>  * @property {String}                    soundEffect             - the sound effect path.
+<span class='line'>528</span>  * @property {Object}                    blendFunc               - the blendFunc of frame.
+<span class='line'>529</span>  * @property {Number}                    frameID                 - the frame ID of frame
+<span class='line'>530</span>  * @property {Boolean}                   isTween                 - the flag which frame whether is tween.
+<span class='line'>531</span>  */</span><span class="WHIT">
+<span class='line'>532</span> </span><span class="NAME">ccs.FrameData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.BaseData.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.FrameData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>533</span> </span><span class="WHIT">        </span><span class="NAME">duration</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>534</span> </span><span class="WHIT">        </span><span class="NAME">tweenEasing</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>535</span> </span><span class="WHIT">        </span><span class="NAME">easingParamNumber</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>536</span> </span><span class="WHIT">        </span><span class="NAME">easingParams</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>537</span> </span><span class="WHIT">        </span><span class="NAME">displayIndex</span><span class="PUNC">:</span><span class="PUNC">-</span><span class="NUMB">1</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>538</span> </span><span class="WHIT">        </span><span class="NAME">movement</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>539</span> </span><span class="WHIT">        </span><span class="NAME">event</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>540</span> </span><span class="WHIT">        </span><span class="NAME">sound</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>541</span> </span><span class="WHIT">        </span><span class="NAME">soundEffect</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>542</span> </span><span class="WHIT">        </span><span class="NAME">blendFunc</span><span class="PUNC">:</span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>543</span> </span><span class="WHIT">        </span><span class="NAME">frameID</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>544</span> </span><span class="WHIT">        </span><span class="NAME">isTween</span><span class="PUNC">:</span><span class="KEYW">true</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>545</span> 
+<span class='line'>546</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>547</span>          * Construction of ccs.FrameData.
+<span class='line'>548</span>          */</span><span class="WHIT">
+<span class='line'>549</span> </span><span class="WHIT">        </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>550</span> </span><span class="WHIT">            </span><span class="NAME">ccs.BaseData.prototype.ctor.call</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>551</span> </span><span class="WHIT">            </span><span class="NAME">this.duration</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>552</span> </span><span class="WHIT">            </span><span class="NAME">this.tweenEasing</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.TweenType.linear</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>553</span> </span><span class="WHIT">            </span><span class="NAME">this.easingParamNumber</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>554</span> </span><span class="WHIT">            </span><span class="NAME">this.easingParams</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>555</span> </span><span class="WHIT">            </span><span class="NAME">this.displayIndex</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>556</span> </span><span class="WHIT">            </span><span class="NAME">this.movement</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>557</span> </span><span class="WHIT">            </span><span class="NAME">this.event</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>558</span> </span><span class="WHIT">            </span><span class="NAME">this.sound</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>559</span> </span><span class="WHIT">            </span><span class="NAME">this.soundEffect</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>560</span> </span><span class="WHIT">            </span><span class="NAME">this.blendFunc</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">cc.BlendFunc</span><span class="PUNC">(</span><span class="NAME">cc.BLEND_SRC</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">cc.BLEND_DST</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>561</span> </span><span class="WHIT">            </span><span class="NAME">this.frameID</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>562</span> </span><span class="WHIT">            </span><span class="NAME">this.isTween</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>563</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>564</span> 
+<span class='line'>565</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>566</span>          * copy data
+<span class='line'>567</span>          * @function
+<span class='line'>568</span>          * @param frameData
+<span class='line'>569</span>          */</span><span class="WHIT">
+<span class='line'>570</span> </span><span class="WHIT">        </span><span class="NAME">copy</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">frameData</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>571</span> </span><span class="WHIT">            </span><span class="NAME">ccs.BaseData.prototype.copy.call</span><span class="PUNC">(</span><span class="KEYW">this</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">frameData</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>572</span> </span><span class="WHIT">            </span><span class="NAME">this.duration</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">frameData.duration</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>573</span> </span><span class="WHIT">            </span><span class="NAME">this.displayIndex</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">frameData.displayIndex</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>574</span> 
+<span class='line'>575</span> </span><span class="WHIT">            </span><span class="NAME">this.tweenEasing</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">frameData.tweenEasing</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>576</span> </span><span class="WHIT">            </span><span class="NAME">this.easingParamNumber</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">frameData.easingParamNumber</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>577</span> 
+<span class='line'>578</span> </span><span class="COMM">//            this.movement = frameData.movement;</span><span class="WHIT">
+<span class='line'>579</span> </span><span class="COMM">//            this.event = frameData.event;</span><span class="WHIT">
+<span class='line'>580</span> </span><span class="COMM">//            this.sound = frameData.sound;</span><span class="WHIT">
+<span class='line'>581</span> </span><span class="COMM">//            this.soundEffect = frameData.soundEffect;</span><span class="WHIT">
+<span class='line'>582</span> </span><span class="COMM">//            this.easingParams.length = 0;</span><span class="WHIT">
+<span class='line'>583</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.easingParamNumber</span><span class="WHIT"> </span><span class="PUNC">!=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>584</span> </span><span class="WHIT">                </span><span class="NAME">this.easingParams.length</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>585</span> </span><span class="WHIT">                </span><span class="KEYW">for</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">i</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">&lt;</span><span class="NAME">this.easingParamNumber</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="PUNC">++</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>586</span> </span><span class="WHIT">                    </span><span class="NAME">this.easingParams</span><span class="PUNC">[</span><span class="NAME">i</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">frameData.easingParams</span><span class="PUNC">[</span><span class="NAME">i</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>587</span> </span><span class="WHIT">                </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>588</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>589</span> </span><span class="WHIT">            </span><span class="NAME">this.blendFunc</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">frameData.blendFunc</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>590</span> </span><span class="WHIT">            </span><span class="NAME">this.isTween</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">frameData.isTween</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>591</span> 
+<span class='line'>592</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>593</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>594</span> </span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>595</span> 
+<span class='line'>596</span> </span><span class="COMM">/**
+<span class='line'>597</span>  * MovementBoneData saved the name, delay, frame list of Bone's movement.
+<span class='line'>598</span>  * @class ccs.MovementBoneData
+<span class='line'>599</span>  * @extends ccs.Class
+<span class='line'>600</span>  *
+<span class='line'>601</span>  * @property {Number}                    delay             - the delay of bone's movement.
+<span class='line'>602</span>  * @property {Number}                    scale             - the scale of bone's movement.
+<span class='line'>603</span>  * @property {Number}                    duration          - the duration of bone's movement.
+<span class='line'>604</span>  * @property {Array}                     frameList         - the frame list of bone's movement.
+<span class='line'>605</span>  * @property {String}                    name              - the name of bone's movement.
+<span class='line'>606</span>  */</span><span class="WHIT">
+<span class='line'>607</span> </span><span class="NAME">ccs.MovementBoneData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.Class.extend</span><span class="PUNC">(</span><span class="COMM">/** @lends ccs.MovementBoneData# */</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>608</span> </span><span class="WHIT">    </span><span class="NAME">delay</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>609</span> </span><span class="WHIT">    </span><span class="NAME">scale</span><span class="PUNC">:</span><span class="NUMB">1</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>610</span> </span><span class="WHIT">    </span><span class="NAME">duration</span><span class="PUNC">:</span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>611</span> </span><span class="WHIT">    </span><span class="NAME">frameList</span><span class="PUNC">:</span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>612</span> </span><span class="WHIT">    </span><span class="NAME">name</span><span class="PUNC">:</span><span class="STRN">""</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>613</span> 
+<span class='line'>614</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>615</span>      * Construction of ccs.MovementBoneData.
+<span class='line'>616</span>      */</span><span class="WHIT">
+<span class='line'>617</span> </span><span class="WHIT">    </span><span class="NAME">ctor</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>618</span> </span><span class="WHIT">        </span><span class="NAME">this.delay</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>619</span> </span><span class="WHIT">        </span><span class="NAME">this.scale</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>620</span> </span><span class="WHIT">        </span><span class="NAME">this.duration</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>621</span> </span><span class="WHIT">        </span><span class="NAME">this.frameList</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>622</span> </span><span class="WHIT">        </span><span class="NAME">this.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>623</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>624</span> 
+<span class='line'>625</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>626</span>      * Initializes a ccs.MovementBoneData.
+<span class='line'>627</span>      * @returns {boolean}
+<span class='line'>628</span>      */</span><span class="WHIT">
+<span class='line'>629</span> </span><span class="WHIT">    </span><span class="NAME">init</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>630</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>631</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>632</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>633</span>      * Adds frame data to frame list.
+<span class='line'>634</span>      * @param {ccs.FrameData} frameData
+<span class='line'>635</span>      */</span><span class="WHIT">
+<span class='line'>636</span> </span><span class="WHIT">    </span><span class="NAME">addFrameData</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">frameData</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>637</span> </span><span class="WHIT">        </span><span class="NAME">this.frameList.push</span><span class="PUNC">(</span><span class="NAME">frameData</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>638</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>639</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>640</span>      * Gets frame data by Index.
+<span class='line'>641</span>      * @function
+<span class='line'>642</span>      * @param {Number} index
+<span class='line'>643</span>      * @returns {ccs.FrameData}
+<span class='line'>644</span>      */</span><span class="WHIT">
+<span class='line'>645</span> </span><span class="WHIT">    </span><span class="NAME">getFrameData</span><span class="PUNC">:</span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">index</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>646</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.frameList</span><span class="PUNC">[</span><span class="NAME">index</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>647</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>648</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>649</span> 
+<span class='line'>650</span> </span><span class="COMM">/**
+<span class='line'>651</span>  * The movement data information of Cocos Armature.
+<span class='line'>652</span>  * @class ccs.MovementData
+<span class='line'>653</span>  * @constructor
+<span class='line'>654</span>  */</span><span class="WHIT">
+<span class='line'>655</span> </span><span class="NAME">ccs.MovementData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>656</span> </span><span class="WHIT">    </span><span class="NAME">this.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>657</span> </span><span class="WHIT">    </span><span class="NAME">this.duration</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>658</span> </span><span class="WHIT">    </span><span class="NAME">this.scale</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">1</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>659</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>660</span>      * Change to this movement will last durationTo frames. Use this effect can avoid too suddenly changing.
+<span class='line'>661</span>      *
+<span class='line'>662</span>      * Example : current movement is "stand", we want to change to "run", then we fill durationTo frames before
+<span class='line'>663</span>      * change to "run" instead of changing to "run" directly.
+<span class='line'>664</span>      */</span><span class="WHIT">
+<span class='line'>665</span> </span><span class="WHIT">    </span><span class="NAME">this.durationTo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>666</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>667</span>      * This is different from duration, durationTween contain tween effect.
+<span class='line'>668</span>      * duration is the raw time that the animation will last, it's the same with the time you edit in the Action Editor.
+<span class='line'>669</span>      * durationTween is the actual time you want this animation last.
+<span class='line'>670</span>      * Example : If we edit 10 frames in the flash, then duration is 10. When we set durationTween to 50, the movement will last 50 frames, the extra 40 frames will auto filled with tween effect
+<span class='line'>671</span>      */</span><span class="WHIT">
+<span class='line'>672</span> </span><span class="WHIT">    </span><span class="NAME">this.durationTween</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>673</span> </span><span class="WHIT">    </span><span class="NAME">this.loop</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">                            </span><span class="COMM">//! whether the movement was looped</span><span class="WHIT">
+<span class='line'>674</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>675</span>      * Which tween easing effect the movement use
+<span class='line'>676</span>      * TWEEN_EASING_MAX : use the value from MovementData get from flash design panel
+<span class='line'>677</span>      */</span><span class="WHIT">
+<span class='line'>678</span> </span><span class="WHIT">    </span><span class="NAME">this.tweenEasing</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">ccs.TweenType.linear</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>679</span> </span><span class="WHIT">    </span><span class="NAME">this.movBoneDataDic</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>680</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>681</span> 
+<span class='line'>682</span> </span><span class="COMM">/**
+<span class='line'>683</span>  * add a movement bone data to dictionary
+<span class='line'>684</span>  * @param {ccs.MovementBoneData} movBoneData
+<span class='line'>685</span>  */</span><span class="WHIT">
+<span class='line'>686</span> </span><span class="NAME">ccs.MovementData.prototype.addMovementBoneData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">movBoneData</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>687</span> </span><span class="WHIT">    </span><span class="NAME">this.movBoneDataDic</span><span class="PUNC">[</span><span class="WHIT"> </span><span class="NAME">movBoneData.name</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">movBoneData</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>688</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>689</span> 
+<span class='line'>690</span> </span><span class="COMM">/**
+<span class='line'>691</span>  * add a movement bone data from dictionary by name
+<span class='line'>692</span>  * @param boneName
+<span class='line'>693</span>  * @returns {ccs.MovementBoneData}
+<span class='line'>694</span>  */</span><span class="WHIT">
+<span class='line'>695</span> </span><span class="NAME">ccs.MovementData.prototype.getMovementBoneData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">boneName</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>696</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT">  </span><span class="NAME">this.movBoneDataDic</span><span class="PUNC">[</span><span class="NAME">boneName</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>697</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>698</span> 
+<span class='line'>699</span> </span><span class="COMM">/**
+<span class='line'>700</span>  * &lt;p>
+<span class='line'>701</span>  * The animation data information of Cocos Armature. It include all movement information for the Armature.         &lt;br/>
+<span class='line'>702</span>  * The struct is AnimationData -> MovementData -> MovementBoneData -> FrameData                                    &lt;br/>
+<span class='line'>703</span>  *                                              -> MovementFrameData                                               &lt;br/>
+<span class='line'>704</span>  * &lt;/p>
+<span class='line'>705</span>  * @class ccs.AnimationData
+<span class='line'>706</span>  * @extends ccs.Class
+<span class='line'>707</span>  */</span><span class="WHIT">
+<span class='line'>708</span> </span><span class="NAME">ccs.AnimationData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>709</span> </span><span class="WHIT">    </span><span class="NAME">this.movementDataDic</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>710</span> </span><span class="WHIT">    </span><span class="NAME">this.movementNames</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>711</span> </span><span class="WHIT">    </span><span class="NAME">this.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>712</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>713</span> 
+<span class='line'>714</span> </span><span class="COMM">/**
+<span class='line'>715</span>  * adds movement data to the movement data dictionary
+<span class='line'>716</span>  * @param {ccs.MovementData} moveData
+<span class='line'>717</span>  */</span><span class="WHIT">
+<span class='line'>718</span> </span><span class="NAME">ccs.AnimationData.prototype.addMovement</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">moveData</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>719</span> </span><span class="WHIT">    </span><span class="NAME">this.movementDataDic</span><span class="PUNC">[</span><span class="NAME">moveData.name</span><span class="PUNC">]</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">moveData</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>720</span> </span><span class="WHIT">    </span><span class="NAME">this.movementNames.push</span><span class="PUNC">(</span><span class="NAME">moveData.name</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>721</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>722</span> 
+<span class='line'>723</span> </span><span class="COMM">/**
+<span class='line'>724</span>  * gets movement data from movement data dictionary
+<span class='line'>725</span>  * @param {String} moveName
+<span class='line'>726</span>  * @returns {ccs.MovementData}
+<span class='line'>727</span>  */</span><span class="WHIT">
+<span class='line'>728</span> </span><span class="NAME">ccs.AnimationData.prototype.getMovement</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">moveName</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>729</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.movementDataDic</span><span class="PUNC">[</span><span class="NAME">moveName</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>730</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>731</span> 
+<span class='line'>732</span> </span><span class="COMM">/**
+<span class='line'>733</span>  * gets the count of movement data dictionary
+<span class='line'>734</span>  * @returns {Number}
+<span class='line'>735</span>  */</span><span class="WHIT">
+<span class='line'>736</span> </span><span class="NAME">ccs.AnimationData.prototype.getMovementCount</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>737</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">Object.keys</span><span class="PUNC">(</span><span class="NAME">this.movementDataDic</span><span class="PUNC">)</span><span class="PUNC">.</span><span class="NAME">length</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>738</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>739</span> 
+<span class='line'>740</span> </span><span class="COMM">/**
+<span class='line'>741</span>  * contour vertex
+<span class='line'>742</span>  * @class ccs.ContourVertex2
+<span class='line'>743</span>  * @param {Number} x
+<span class='line'>744</span>  * @param {Number} y
+<span class='line'>745</span>  * @constructor
+<span class='line'>746</span>  */</span><span class="WHIT">
+<span class='line'>747</span> </span><span class="NAME">ccs.ContourVertex2</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">x</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">y</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>748</span> </span><span class="WHIT">    </span><span class="NAME">this.x</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">x</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>749</span> </span><span class="WHIT">    </span><span class="NAME">this.y</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">y</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>750</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>751</span> 
+<span class='line'>752</span> </span><span class="COMM">/**
+<span class='line'>753</span>  * The Contour data information of Cocos Armature.
+<span class='line'>754</span>  * @class ccs.ContourData
+<span class='line'>755</span>  * @constructor
+<span class='line'>756</span>  */</span><span class="WHIT">
+<span class='line'>757</span> </span><span class="NAME">ccs.ContourData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>758</span> </span><span class="WHIT">    </span><span class="NAME">this.vertexList</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>759</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>760</span> 
+<span class='line'>761</span> </span><span class="NAME">ccs.ContourData.prototype.init</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>762</span> </span><span class="WHIT">    </span><span class="NAME">this.vertexList.length</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>763</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>764</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>765</span> 
+<span class='line'>766</span> </span><span class="COMM">/**
+<span class='line'>767</span>  * add a vertex object to vertex list
+<span class='line'>768</span>  * @param {cc.Point} p
+<span class='line'>769</span>  */</span><span class="WHIT">
+<span class='line'>770</span> </span><span class="NAME">ccs.ContourData.prototype.addVertex</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">p</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>771</span> </span><span class="WHIT">    </span><span class="COMM">//var v = new ccs.ContourVertex2(p.x, p.y);              //ccs.ContourVertex2 is same as cc.Point, so we needn't create a ccs.ContourVertex2 object</span><span class="WHIT">
+<span class='line'>772</span> </span><span class="WHIT">    </span><span class="NAME">this.vertexList.push</span><span class="PUNC">(</span><span class="NAME">p</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>773</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>774</span> 
+<span class='line'>775</span> </span><span class="COMM">/**
+<span class='line'>776</span>  * The texture data information of Cocos Armature
+<span class='line'>777</span>  * @class ccs.TextureData
+<span class='line'>778</span>  */</span><span class="WHIT">
+<span class='line'>779</span> </span><span class="NAME">ccs.TextureData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>780</span> </span><span class="WHIT">    </span><span class="NAME">this.height</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>781</span> </span><span class="WHIT">    </span><span class="NAME">this.width</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>782</span> </span><span class="WHIT">    </span><span class="NAME">this.pivotX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0.5</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>783</span> </span><span class="WHIT">    </span><span class="NAME">this.pivotY</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0.5</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>784</span> </span><span class="WHIT">    </span><span class="NAME">this.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">""</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>785</span> </span><span class="WHIT">    </span><span class="NAME">this.contourDataList</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>786</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>787</span> 
+<span class='line'>788</span> </span><span class="NAME">ccs.TextureData.prototype.init</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>789</span> </span><span class="WHIT">    </span><span class="NAME">this.contourDataList.length</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>790</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>791</span> 
+<span class='line'>792</span> </span><span class="COMM">/**
+<span class='line'>793</span>  * Adds a contourData to contourDataList
+<span class='line'>794</span>  * @param {ccs.ContourData} contourData
+<span class='line'>795</span>  */</span><span class="WHIT">
+<span class='line'>796</span> </span><span class="NAME">ccs.TextureData.prototype.addContourData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">contourData</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>797</span> </span><span class="WHIT">    </span><span class="NAME">this.contourDataList.push</span><span class="PUNC">(</span><span class="NAME">contourData</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>798</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>799</span> 
+<span class='line'>800</span> </span><span class="COMM">/**
+<span class='line'>801</span>  * gets a contourData from contourDataList by index
+<span class='line'>802</span>  * @param {Number} index
+<span class='line'>803</span>  * @returns {ccs.ContourData}
+<span class='line'>804</span>  */</span><span class="WHIT">
+<span class='line'>805</span> </span><span class="NAME">ccs.TextureData.prototype.getContourData</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">index</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>806</span> </span><span class="WHIT">    </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">this.contourDataList</span><span class="PUNC">[</span><span class="NAME">index</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>807</span> </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>808</span> </span></pre></body></html>

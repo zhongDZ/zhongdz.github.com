@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>jsb.reflection | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="../css/all.css" media="all" />
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)" />
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+
+<div class="content">
+	<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle">
+					
+					Class <span>jsb.reflection</span>
+				</h1>
+				
+				<div class="intro">
+					<p class="description summary">
+						
+					</p>
+						
+					
+						<ul class="summary">
+							
+							
+							
+								<li>Defined in: <a href="../symbols/src/_Users_panda_StudyWork_Cocos_cocos2d-js_frameworks_cocos2d-html5_jsb_apis.js.html">jsb_apis.js</a></li>
+							
+							
+						</ul>
+					
+				</div>
+			</header>
+			
+			
+				<section>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class jsb.reflection.">
+							<caption class="sectionTitle">Class Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Constructor Attributes</th>
+									<th scope="col">Constructor Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription" >
+										<div class="fixedFont">
+											<b><a href="../symbols/jsb.reflection.html#constructor">jsb.reflection</a></b>()
+										</div>
+										<div class="description">jsb.reflection is a bridge to let you invoke Java static functions.</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			
+			
+			
+	<!--
+	#### METHODS SUMMARY
+	-->
+			
+				<section>
+					
+					
+					<div class="props">
+						<h2 class="sectionTitle">Method Summary</h2>
+						
+						
+							<nav>
+								<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class jsb.reflection.">
+									<thead>
+										<tr>
+											<th scope="col">Method Attributes</th>
+											<th scope="col">Method Name and Description</th>
+										</tr>
+									</thead>
+									
+									<tbody>
+										
+										
+											<tr
+												 class='item0'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/jsb.reflection.html#callStaticMethod">callStaticMethod</a></b>()
+													</div>
+													<div class="description"></div>
+												</td>
+											</tr>
+										
+									</tbody>
+								</table>
+							</nav>
+						
+					
+						
+					</div>
+				</section>
+			
+			
+	<!--
+	#### EVENTS SUMMARY
+	-->
+			
+	<!--
+	#### CONSTRUCTOR DETAILS
+	-->
+			
+				<section>
+					<div class="details props">
+						<div class="innerProps">
+							<h2 class="sectionTitle" id="constructor">
+								Class Detail
+							</h2>
+							
+							<div class="fixedFont">
+								<b>jsb.reflection</b>()
+							</div>
+							
+							<div class="description">
+								jsb.reflection is a bridge to let you invoke Java static functions.
+please refer to this document to know how to use it: http://www.cocos2d-x.org/docs/manual/framework/html5/v3/reflection/en
+Only available on iOS/Mac/Android platform
+								
+							</div>
+							
+							
+						
+							
+							
+							
+						</div>
+					</div>
+				</section>
+			
+	<!--
+	#### FIELD DETAILS
+	-->
+			
+	<!--
+	#### METHOD DETAILS
+	-->		
+			
+				<section>
+					<div class="details props">
+						<div class="innerProps">
+							<h2 class="sectionTitle">
+								Method Detail
+							</h2>
+							
+							<ul class="methodDetail" id="MethodDetail">
+								
+								
+									<li 
+										 class='item0'
+									>
+										<div class="fixedFont heading" id="callStaticMethod">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>callStaticMethod</b>()
+										</div>
+										
+										<div class="description">
+											
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+										
+										
+										
+									</li>
+								
+							</ul>
+						</div>
+					</div>
+				</section>
+			
+			
+	<!--
+	#### EVENT DETAILS
+	-->		
+			
+		</article>
+	</div>
+</div>
+
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660);
+			codeview.classFilter.Init();
+
+
+
+            //class tree by Hao Wu
+            var theList = document.getElementById("ClassList");
+            var child, parent;
+            for(var i=0; i < theList.children.length; i++)
+            {
+                child = theList.children[i];
+                extendedFrom = child.getAttribute('extends');
+                if(extendedFrom)
+                {
+                    parent = document.querySelector("[self='"+extendedFrom+"']");
+                    if(parent)
+                    {
+                        if(!parent.ul)
+                        {
+                            var ul = document.createElement('ul');
+                            //ul.style.marginLeft = "0";
+                            parent.appendChild(ul);
+                            parent.ul = ul;
+                        }
+                        parent.ul.appendChild(child);
+                        //console.log(child.getAttribute('self')+" extends "+ extendedFrom);
+                        i--;
+                    }
+                }
+            }
+
+            //expandable list
+            /*
+
+             CollapsibleLists.js
+
+             An object allowing lists to dynamically expand and collapse
+
+             Created by Stephen Morley - http://code.stephenmorley.org/ - and released under
+             the terms of the CC0 1.0 Universal legal code:
+
+             http://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+             */
+
+            // create the CollapsibleLists object
+            var CollapsibleLists =
+                    new function(){
+
+                        /* Makes all lists with the class 'collapsibleList' collapsible. The
+                         * parameter is:
+                         *
+                         * doNotRecurse - true if sub-lists should not be made collapsible
+                         */
+                        this.apply = function(doNotRecurse){
+
+                            // loop over the unordered lists
+                            var uls = document.getElementsByTagName('ul');
+                            for (var index = 0; index < uls.length; index ++){
+
+                                // check whether this list should be made collapsible
+                                if (uls[index].className.match(/(^| )collapsibleList( |$)/)){
+
+                                    // make this list collapsible
+                                    this.applyTo(uls[index], true);
+
+                                    // check whether sub-lists should also be made collapsible
+                                    if (!doNotRecurse){
+
+                                        // add the collapsibleList class to the sub-lists
+                                        var subUls = uls[index].getElementsByTagName('ul');
+                                        for (var subIndex = 0; subIndex < subUls.length; subIndex ++){
+                                            subUls[subIndex].className += ' collapsibleList';
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        };
+
+                        /* Makes the specified list collapsible. The parameters are:
+                         *
+                         * node         - the list element
+                         * doNotRecurse - true if sub-lists should not be made collapsible
+                         */
+                        this.applyTo = function(node, doNotRecurse){
+
+                            // loop over the list items within this node
+                            var lis = node.getElementsByTagName('li');
+                            for (var index = 0; index < lis.length; index ++){
+
+                                // check whether this list item should be collapsible
+                                if (!doNotRecurse || node == lis[index].parentNode){
+
+                                    // prevent text from being selected unintentionally
+                                    if (lis[index].addEventListener){
+                                        lis[index].addEventListener(
+                                                'mousedown', function (e){ e.preventDefault(); }, false);
+                                    }else{
+                                        lis[index].attachEvent(
+                                                'onselectstart', function(){ event.returnValue = false; });
+                                    }
+
+                                    // add the click listener
+                                    if (lis[index].addEventListener){
+                                        lis[index].addEventListener(
+                                                'click', createClickListener(lis[index]), false);
+                                    }else{
+                                        lis[index].attachEvent(
+                                                'onclick', createClickListener(lis[index]));
+                                    }
+
+                                    // close the unordered lists within this list item
+                                    toggle(lis[index]);
+
+                                }
+
+                            }
+                            prettify(node);
+                        };
+
+                        /* Returns a function that toggles the display status of any unordered
+                         * list elements within the specified node. The parameter is:
+                         *
+                         * node - the node containing the unordered list elements
+                         */
+                        function createClickListener(node){
+
+                            // return the function
+                            return function(e){
+
+                                // ensure the event object is defined
+                                if (!e) e = window.event;
+
+                                // find the list item containing the target of the event
+                                var li = (e.target ? e.target : e.srcElement);
+                                while (li.nodeName != 'LI') li = li.parentNode;
+
+                                // toggle the state of the node if it was the target of the event
+                                if (li == node) toggle(node);
+
+                            };
+
+                        }
+
+                        /* Opens or closes the unordered list elements directly within the
+                         * specified node. The parameter is:
+                         *
+                         * node - the node containing the unordered list elements
+                         */
+                        function toggle(node){
+
+                            // determine whether to open or close the unordered lists
+                            var open = node.className.match(/(^| )collapsibleListClosed( |$)/);
+
+                            // loop over the unordered list elements with the node
+                            var uls = node.getElementsByTagName('ul');
+                            for (var index = 0; index < uls.length; index ++){
+
+                                // find the parent list item of this unordered list
+                                var li = uls[index];
+                                while (li.nodeName != 'LI') li = li.parentNode;
+
+                                // style the unordered list if it is directly within this node
+                                if (li == node) uls[index].style.display = (open ? 'block' : 'none');
+
+                            }
+
+                            // remove the current class from the node
+                            node.className =
+                                    node.className.replace(
+                                            /(^| )collapsibleList(Open|Closed)( |$)/, '');
+
+                            // if the node contains unordered lists, set its class
+                            if (uls.length > 0){
+                                node.className += ' collapsibleList' + (open ? 'Open' : 'Closed');
+                            }
+                            prettify(node);
+
+                        }
+                        function prettify(node)
+                        {
+                            /*//find all last child and applie the .lastchild
+                            var test = node.querySelector('li:last-child');
+                            if(test)
+                            {
+                                if(test.className.indexOf('lastChild') == -1)
+                                {
+                                    test.className += " lastChild";
+                                    test.className.replace('contents','');
+                                }
+                            }
+                            if(node.parentNode.className == "classList")
+                            {
+                                if(node.className.indexOf('contents') == -1)
+                                {
+                                    node.className += " contents";
+                                }
+                                if(node.parentNode.lastChild == node)
+                                {
+                                    if(node.className.indexOf('lastChild') == -1)
+                                    {
+                                        node.className += " lastChild";
+                                        node.className.replace('contents', '');
+                                    }
+                                }
+
+                            }*/
+                        }
+                        //prettify(node);
+                        window.mytoggle = toggle;
+                    }();
+
+            CollapsibleLists.applyTo(document.getElementsByClassName('classList')[0]);
+            mytoggle(document.querySelector("li[self='cc.Class']"));//.className = "collapsibleListOpen";
+            //document.querySelector('.classList>li:last-child').className += " none";
+            //document.querySelector('.classList>li:last-child').className.replace('contents', '');
+            //document.querySelector('.classList>li:first-child').className += " root";
+        </script>
+	</body>
+</html>
+
