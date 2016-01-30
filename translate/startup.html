@@ -60,11 +60,74 @@ document.close();
   #main{
     width: 100%;
     height: 100%;
-    background: url(./test.jpg) no-repeat;
+    background: url(./test.jpg) no-repeat center center;
     /*background: url(./test.jpg) no-repeat center center;*/
     background-size: cover;
     background-color: rgba(231,40,73,1);
   }
+  /** ipad / ipad mini **/
+  @media screen and (max-height: 1024px) {
+      .wrapper{
+          -webkit-transform: scale(0.98) translate(-50%, -50%);
+                  transform: scale(0.98) translate(-50%, -50%);
+      }
+  }
+  /** nexus 6 **/
+  @media screen and (max-height: 960px) {
+      .wrapper{
+          -webkit-transform: scale(0.92) translate(-50%, -50%);
+                  transform: scale(0.92) translate(-50%, -50%);
+      }
+  }
+  /** iphone 6s **/
+  @media screen and (max-height: 736px) {
+      .wrapper{
+          -webkit-transform: scale(0.698) translate(-50%, -50%);
+                  transform: scale(0.698) translate(-50%, -50%);
+      }
+  }
+  /** nexus 6 **/
+  @media screen and (max-height: 659px) {
+      .wrapper{
+          -webkit-transform: scale(0.622) translate(-50%, -50%);
+                  transform: scale(0.622) translate(-50%, -50%);
+      }
+  }
+  /** iphone 6 **/
+  @media screen and (max-height: 627px) {
+      .wrapper{
+          -webkit-transform: scale(0.59) translate(-50%, -50%);
+                  transform: scale(0.59) translate(-50%, -50%);
+      }
+  }
+  /** iphone 5 **/
+  @media screen and (max-height: 568px) {
+      .wrapper{
+          -webkit-transform: scale(0.50) translate(-50%, -50%);
+                  transform: scale(0.50) translate(-50%, -50%);
+      }
+  }
+  /** nexus 4 **/
+  @media screen and (max-height: 567px) {
+      .wrapper{
+          -webkit-transform: scale(0.53) translate(-50%, -50%);
+                  transform: scale(0.53) translate(-50%, -50%);
+      }
+  }
+  @media screen and (max-height: 533px) {
+      .wrapper{
+          -webkit-transform: scale(0.49) translate(-50%, -50%);
+                  transform: scale(0.49) translate(-50%, -50%);
+      }
+  }
+  /** iphone 4 **/
+  @media screen and (max-height: 480px) {
+      .wrapper{
+          -webkit-transform: scale(0.44) translate(-50%, -50%);
+                  transform: scale(0.44) translate(-50%, -50%);
+      }
+  }
+
 </style>
 <!-- <div class="mainbox" style="background:url(./test.jpg) no-repeat center center; width:640px; height:1024px;"></div> -->
 <div class="f-popup">
