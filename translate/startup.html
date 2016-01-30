@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>findLogo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script>
+(function(design, selectors){
+var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var scale = width / design;
+
+var style = '<style type="text/css">\n';
+
+for(var i = 0; i < selectors.length; i++){
+    style += selectors[i].selector + '{\n'
+          + '     -moz-transform-origin: ' + selectors[i].origin + ';\n'
+          + '  -webkit-transform-origin: ' + selectors[i].origin + ';\n'
+          + '          transform-origin: ' + selectors[i].origin + ';\n'
+          + '     -moz-transform: scale(' + scale + ');\n'
+          + '  -webkit-transform: scale(' + scale + ');\n'
+          + '          transform: scale(' + scale + ');\n'
+          + '}\n';
+}
+
+style += '</style>\n';
+
+document.open();
+document.write(style);
+document.close();
+})(640, [{"selector": ".f-popup .f-popup-box", "origin": "50% 50% 0"}, {"selector": ".mainbox", "origin": "0 0 0"}]);
+</script>
+</head>
+<body id="main">
+<!-- <img src="./test.jpg" width="100%" height="100%"> -->
+<style type="text/css">
+  *{
+    padding: 0px;
+    margin: 0px;
+  }
+  .f-popup {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0,0,0,.5);*/
+  }
+  .f-popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    overflow:hidden;
+    width:556px;
+    height:920px;
+    margin:-460px 0 0 -278px;
+    /*border:1px solid red;*/
+    background:url(./contentBg1.png) no-repeat;
+  }
+  #main{
+    width: 100%;
+    height: 100%;
+    background: url(./test.jpg) no-repeat center center;
+    background-size: cover;
+    background-color: rgba(231,40,73,1);
+  }
+</style>
+<!-- <div class="mainbox" style="background:url(./test.jpg) no-repeat center center; width:640px; height:1024px;"></div> -->
+<div class="f-popup">
+  <div class="f-popup-box">
+  </div>
+</div>
+
+<script type="text/javascript">
+var _dom = document.getElementById('main');
+_dom.style.width = 
+</script>
+</body>
+</html>
