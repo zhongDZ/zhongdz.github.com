@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>shejian</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body  style="background-color:#000">
+    <canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+    <script type="text/javascript" src="js/lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+    
+    <script type="text/javascript">
+        var g_resources = [];
+        var res = {
+            gameBg:"res/gameBg.jpg",
+            beginBtn:"res/beginBtn.png",
+
+            ruleBg:"res/ruleBg.jpg",
+            knowBtn:"res/knowBtn.png",
+
+            bow_1:"res/bow_1.png",
+            bow_2:"res/bow_2.png",
+
+            pack:"res/pack.png",
+            packPlist:"res/pack.plist",
+
+            loadingpage:"res/loadingpage.jpg"
+        };
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+
+        var g_loadingPage = "res/loadingpage.jpg";
+        window.onload = function(){
+            resourceCallBack();
+        }
+    </script>
+
+    <script type="text/javascript" src="js/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/gameScene.js" charset="UTF-8"></script>
+</body>
+</html>
