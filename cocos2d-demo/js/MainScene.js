@@ -24,9 +24,10 @@ var MainScene = cc.Scene.extend({
           var layer = new EventMyLayer();
         }
 
-        if(!true){
+        if(true){
           //粒子系统
-          var layer = new DemoSnow();
+          // var layer = new DemoSnow();
+          var layer = new DemoExplosion();
         }
 
         if(!true){

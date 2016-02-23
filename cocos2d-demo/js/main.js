@@ -125,7 +125,8 @@ function resourceCallBack(){
         cc.view.resizeWithBrowserSize(true);
         //load resources
         MyLoaderScene.preload(g_resources, function () {
-            cc.director.runScene(new testScene());
+            // cc.director.runScene(new testScene());
+            cc.director.runScene(new MainScene());
         }, this);
     };
     cc.game.run("gameCanvas");
