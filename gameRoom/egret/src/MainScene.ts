@@ -120,8 +120,8 @@ class mainScene extends egret.DisplayObjectContainer {
                 this.addLeftBox();
             }
 
-            this.checkHit(_left);
-            this.checkHit(_right);
+            this.checkHit(_left,_right);
+//            this.checkHit(_right);
         },this);
     }
 
@@ -170,16 +170,19 @@ class mainScene extends egret.DisplayObjectContainer {
         }
     }
 
-    private  checkHit(obj2){
+    private  checkHit(obj2,obj3){
         for(var i in this.boxArr){
             var obj1 = this.boxArr[i];
             var rect1:egret.Rectangle = obj1.getBounds();
             var rect2:egret.Rectangle = obj2.getBounds();
+            var rect3:egret.Rectangle = obj3.getBounds();
             rect1.x = obj1.x;
             rect1.y = obj1.y;
             rect2.x = obj2.x;
             rect2.y = obj2.y;
-            if(rect1.intersects(rect2)){
+            rect3.x = obj3.x;
+            rect3.y = obj3.y;
+            if(rect1.intersects(rect2) || rect1.intersects(rect3)){
                 console.log('game over');
 
                 this.beginGame = false;

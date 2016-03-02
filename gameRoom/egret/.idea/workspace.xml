@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RESOURCES.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RESOURCES.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resource/RESOURCES.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="28" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.6488764" vertical-offset="813" max-vertical-offset="1525">
+            <state line="55" column="1" selection-start="1179" selection-end="1179" vertical-scroll-proportion="-40.441177" vertical-offset="0" max-vertical-offset="1525">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainScene.ts" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainScene.ts" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainScene.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="5" selection-start="6140" selection-end="6140" vertical-scroll-proportion="-4.32" vertical-offset="3842" max-vertical-offset="5075">
+            <state line="203" column="26" selection-start="7370" selection-end="7370" vertical-scroll-proportion="0.55197656" vertical-offset="4398" max-vertical-offset="5150">
               <folding>
                 <element signature="e#3579#4006#0" expanded="false" />
               </folding>
@@ -61,13 +61,14 @@
         <option value="$PROJECT_DIR$/../game02 - 副本/src/MainScene.ts" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/../game01/index.html" />
+        <option value="$PROJECT_DIR$/../../../zdz_GitHub/zhongdz.github.com/gameRoom/egret/index.html" />
         <option value="$PROJECT_DIR$/src/MainScene.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="816" />
-    <option name="y" value="43" />
+    <option name="x" value="887" />
+    <option name="y" value="39" />
     <option name="width" value="1169" />
     <option name="height" value="932" />
   </component>
@@ -233,7 +234,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="816" y="43" width="1169" height="932" extended-state="0" />
+    <frame x="887" y="39" width="1169" height="932" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -345,19 +346,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainScene.ts">
+    <entry file="file://$PROJECT_DIR$/../../../zdz_GitHub/zhongdz.github.com/gameRoom/egret/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="5" selection-start="6140" selection-end="6140" vertical-scroll-proportion="-4.32" vertical-offset="3842" max-vertical-offset="5075">
-          <folding>
-            <element signature="e#3579#4006#0" expanded="false" />
-          </folding>
+        <state line="16" column="23" selection-start="623" selection-end="623" vertical-scroll-proportion="0.5722461" vertical-offset="0" max-vertical-offset="1750">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/RESOURCES.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.6488764" vertical-offset="813" max-vertical-offset="1525">
+        <state line="55" column="1" selection-start="1179" selection-end="1179" vertical-scroll-proportion="-40.441177" vertical-offset="0" max-vertical-offset="1525">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainScene.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="26" selection-start="7370" selection-end="7370" vertical-scroll-proportion="0.55197656" vertical-offset="4398" max-vertical-offset="5150">
+          <folding>
+            <element signature="e#3579#4006#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
