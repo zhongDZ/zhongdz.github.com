@@ -1,0 +1,56 @@
+{
+	"resources": [
+		{
+			"name": "bgImage",
+			"type": "image",
+			"url": "assets/bg.png"
+		},
+        {
+            "name": "start_press",
+            "type": "image",
+            "url": "assets/start_press.png"
+        },
+        {
+            "name": "bar",
+            "type": "image",
+            "url": "assets/bar.png"
+        },
+        {
+            "name": "eye_1",
+            "type": "image",
+            "url": "assets/eye/eye_1.png"
+        },
+        {
+            "name": "eye_2",
+            "type": "image",
+            "url": "assets/eye/eye_2.png"
+        },
+        {
+            "name": "eye_3",
+            "type": "image",
+            "url": "assets/eye/eye_3.png"
+        },
+        {
+            "name": "eye_4",
+            "type": "image",
+            "url": "assets/eye/eye_4.png"
+        },
+        {
+            "name": "box_1",
+            "type": "image",
+            "url": "assets/box_1.png"
+        },
+        {
+            "name": "box_2",
+            "type": "image",
+            "url": "assets/box_2.png"
+        }
+
+	],
+	"groups": [
+		{
+			"name": "preload",
+			"keys": "bgImage,start_press,bar,eye_1,eye_2,eye_3,eye_4,box_1,box_2"
+		}
+	]
+}
