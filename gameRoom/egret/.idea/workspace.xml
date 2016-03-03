@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3134c2f3-dc95-44b8-8f89-b6e39f88cc08" name="Default" comment="" />
+    <list default="true" readonly="true" id="6fc154bc-255b-4b7d-b06f-3182849282bc" name="Default" comment="" />
     <ignored path="game02.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,22 +23,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RESOURCES.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/RESOURCES.json">
+      <file leaf-file-name="MainScene.ts" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MainScene.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="1" selection-start="1179" selection-end="1179" vertical-scroll-proportion="-40.441177" vertical-offset="0" max-vertical-offset="1525">
-              <folding />
+            <state line="244" column="5" selection-start="8642" selection-end="8642" vertical-scroll-proportion="0.38901603" vertical-offset="3480" max-vertical-offset="3975">
+              <folding>
+                <element signature="e#3916#4906#0" expanded="false" />
+                <element signature="n#!!block;n#addLeftBox#0;n#mainScene#0" expanded="false" />
+                <element signature="n#!!block;n#spriteMoveFinished#0;n#mainScene#0" expanded="false" />
+                <element signature="n#!!block;n#checkHit#0;n#mainScene#0" expanded="false" />
+                <element signature="n#!!block;n#createBitmapByName#0;n#mainScene#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainScene.ts" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MainScene.ts">
+      <file leaf-file-name="Main.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="26" selection-start="7370" selection-end="7370" vertical-scroll-proportion="0.55197656" vertical-offset="4398" max-vertical-offset="5150">
+            <state line="77" column="12" selection-start="3679" selection-end="3751" vertical-scroll-proportion="-2.0" vertical-offset="1875" max-vertical-offset="2800">
               <folding>
-                <element signature="e#3579#4006#0" expanded="false" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RESOURCES.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resource/RESOURCES.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="102" selection-start="1445" selection-end="1445" vertical-scroll-proportion="-10.029411" vertical-offset="1209" max-vertical-offset="1775">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,24 +68,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Logic.ts" />
-        <option value="$PROJECT_DIR$/src/Main.ts" />
-        <option value="$PROJECT_DIR$/egretProperties.json" />
-        <option value="$PROJECT_DIR$/src/data/SkinData.ts" />
         <option value="$PROJECT_DIR$/resource/RESOURCES.json" />
-        <option value="$PROJECT_DIR$/../game02 - 副本/src/MainScene.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/../game01/index.html" />
-        <option value="$PROJECT_DIR$/../../../zdz_GitHub/zhongdz.github.com/gameRoom/egret/index.html" />
         <option value="$PROJECT_DIR$/src/MainScene.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="887" />
-    <option name="y" value="39" />
+    <option name="x" value="618" />
+    <option name="y" value="45" />
     <option name="width" value="1169" />
-    <option name="height" value="932" />
+    <option name="height" value="935" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -145,65 +152,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
-      <method />
-    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -224,24 +181,25 @@
     <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="false">C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3134c2f3-dc95-44b8-8f89-b6e39f88cc08" name="Default" comment="" />
-      <created>1456800396860</created>
-      <updated>1456800396860</updated>
+      <changelist id="6fc154bc-255b-4b7d-b06f-3182849282bc" name="Default" comment="" />
+      <created>1456978802825</created>
+      <updated>1456978802825</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="887" y="39" width="1169" height="932" extended-state="0" />
+    <frame x="618" y="45" width="1169" height="935" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3208763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11238938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24955752" sideWeight="0.6791237" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -265,106 +223,47 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource/RESOURCES.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainScene.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="25" selection-start="4074" selection-end="4074" vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="3550">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5675">
           <folding>
-            <element signature="e#3579#4006#0" expanded="false" />
+            <element signature="e#3916#4906#0" expanded="false" />
+            <element signature="n#!!block;n#addLeftBox#0;n#mainScene#0" expanded="false" />
+            <element signature="n#!!block;n#spriteMoveFinished#0;n#mainScene#0" expanded="false" />
+            <element signature="n#!!block;n#checkHit#0;n#mainScene#0" expanded="false" />
+            <element signature="n#!!block;n#createBitmapByName#0;n#mainScene#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoadingUI.ts">
+    <entry file="file://$PROJECT_DIR$/resource/RESOURCES.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+        <state line="62" column="102" selection-start="1445" selection-end="1445" vertical-scroll-proportion="-10.029411" vertical-offset="1209" max-vertical-offset="1775">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="5" selection-start="3108" selection-end="3108" vertical-scroll-proportion="-9.36" vertical-offset="691" max-vertical-offset="2125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../html5-documents-master/egret/demo/Fighter/src/fighter/BgMap.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="261" selection-end="261" vertical-scroll-proportion="0.4458162" vertical-offset="0" max-vertical-offset="1900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../egret/xmas_s01e02/src/GamePlay.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="767" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../egret/xmas_s01e02/src/SendTalk.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="56" selection-end="56" vertical-scroll-proportion="0.20215634" vertical-offset="0" max-vertical-offset="742" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../egret/xmas_s01e02/src/Main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="748" column="22" selection-start="30090" selection-end="30090" vertical-scroll-proportion="1.3717421" vertical-offset="17025" max-vertical-offset="75300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/egretProperties.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="203" selection-end="203" vertical-scroll-proportion="0.49157304" vertical-offset="0" max-vertical-offset="825">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.9656652" vertical-offset="675" max-vertical-offset="1725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/egret/game02/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3948498" vertical-offset="975" max-vertical-offset="1725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../game01/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.53648067" vertical-offset="900" max-vertical-offset="1725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../zdz_GitHub/zhongdz.github.com/gameRoom/egret/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="623" selection-end="623" vertical-scroll-proportion="0.5722461" vertical-offset="0" max-vertical-offset="1750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/RESOURCES.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="1" selection-start="1179" selection-end="1179" vertical-scroll-proportion="-40.441177" vertical-offset="0" max-vertical-offset="1525">
-          <folding />
+        <state line="77" column="12" selection-start="3679" selection-end="3751" vertical-scroll-proportion="-2.0" vertical-offset="1875" max-vertical-offset="2800">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainScene.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="26" selection-start="7370" selection-end="7370" vertical-scroll-proportion="0.55197656" vertical-offset="4398" max-vertical-offset="5150">
+        <state line="244" column="5" selection-start="8642" selection-end="8642" vertical-scroll-proportion="0.38901603" vertical-offset="3480" max-vertical-offset="3975">
           <folding>
-            <element signature="e#3579#4006#0" expanded="false" />
+            <element signature="e#3916#4906#0" expanded="false" />
+            <element signature="n#!!block;n#addLeftBox#0;n#mainScene#0" expanded="false" />
+            <element signature="n#!!block;n#spriteMoveFinished#0;n#mainScene#0" expanded="false" />
+            <element signature="n#!!block;n#checkHit#0;n#mainScene#0" expanded="false" />
+            <element signature="n#!!block;n#createBitmapByName#0;n#mainScene#0" expanded="false" />
           </folding>
         </state>
       </provider>

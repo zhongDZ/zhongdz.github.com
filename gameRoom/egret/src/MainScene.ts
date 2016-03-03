@@ -17,6 +17,21 @@ class mainScene extends egret.DisplayObjectContainer {
     beginGame:boolean = false;//开始游戏
     boxArr:any[] = [];//存放箱子
     beginAddBox:boolean = false;
+    scoreNum:number = 0;
+    scoreLabel:egret.TextField = null;
+    addEndDialog:boolean = false;
+
+    private reset(){
+        this.tick = 0;
+        this.canTouchStageL = false;
+        this.canTouchStageR = false;
+        this.beginGame = false;
+        this.boxArr.length = 0;
+        this.scoreNum = 0;
+        this.addEndDialog = false;
+
+        console.log('reset')
+    }
 
     private times:number;
     public constructor() {
@@ -38,19 +53,24 @@ class mainScene extends egret.DisplayObjectContainer {
 
         var _bar = this.createBitmapByName("bar", this.stageW/2, this.stageH/2, null);
         this.addChild(_bar);
-        _bar.scaleY = 4;
         _bar.anchorOffsetX  = _bar.width/2;
         _bar.anchorOffsetY  = _bar.height/2;
 
         var _left = this.createBitmapByName("eye_1",null,null, null);
         this.addChild(_left);
-        _left.x = (this.stageW - _left.width)/2 - 25;
+        _left.x = (this.stageW - _left.width)/2 - 30;
         _left.y = (this.stageH - _left.height)/2;
 
         var _right = this.createBitmapByName("eye_2",null,null, null);
         this.addChild(_right);
-        _right.x = (this.stageW - _right.width)/2 + 25;
+        _right.x = (this.stageW - _right.width)/2 + 30;
         _right.y = (this.stageH - _right.height)/2;
+
+        this.scoreLabel = new egret.TextField();
+        this.scoreLabel.text = "0";
+        this.scoreLabel.x = this.stageW - 50;
+        this.scoreLabel.y = 30;
+        this.addChild(this.scoreLabel);
 
         var _start_press = this.createBitmapByName("start_press",null,null, null);
         this.addChild(_start_press);
@@ -77,6 +97,7 @@ class mainScene extends egret.DisplayObjectContainer {
                 _leftSpr.call(function(){
                     this.canTouchStageL = false;
                 },this);
+                console.log('hit stage L');
             }else{//右边
                 if(this.canTouchStagR)return;
                 this.canTouchStagR = true;
@@ -85,6 +106,7 @@ class mainScene extends egret.DisplayObjectContainer {
                 _rightSpr.call(function(){
                     this.canTouchStagR = false;
                 },this);
+                console.log('hit stage R');
             }
         },this);
 
@@ -116,24 +138,25 @@ class mainScene extends egret.DisplayObjectContainer {
             }
 
             //添加障碍物
-            if(this.tick % 60 == 0 && this.beginGame && this.beginAddBox){
+            if(this.tick % 30 == 0 && this.beginGame && this.beginAddBox){
                 this.addLeftBox();
             }
 
             this.checkHit(_left,_right);
-//            this.checkHit(_right);
+
+            this.scoreLabel.text = ""+this.scoreNum+"";
         },this);
     }
 
     private addLeftBox(){
         //var Rnum:number = 1;
         //Rnum = Math.floor(Math.random()*4 + 1);
-        var Ytemp:number = 50;
+        var Ytemp:number = 30;
         var boxResArr:any[] = [
             {"res" : "box_1","x" : this.stageW/2 - 35,"y" : this.stageH + Ytemp,"y1":0 + Ytemp},
             {"res" : "box_1","x" : this.stageW/2 + 35,"y" : 0 - Ytemp,"y1":this.stageH + Ytemp},
-            {"res" : "box_2","x" : this.stageW/2 - 35,"y" : this.stageH + Ytemp,"y1":0 + Ytemp},
-            {"res" : "box_2","x" : this.stageW/2 + 35,"y" : 0 - Ytemp,"y1":this.stageH + Ytemp}
+            {"res" : "box_2","x" : this.stageW/2 - 38,"y" : this.stageH + Ytemp,"y1":0 + Ytemp},
+            {"res" : "box_2","x" : this.stageW/2 + 38,"y" : 0 - Ytemp,"y1":this.stageH + Ytemp}
         ];
 
         switch(1){
@@ -167,10 +190,11 @@ class mainScene extends egret.DisplayObjectContainer {
         var index = this.boxArr.indexOf(spr);
         if(index > -1){
             this.boxArr.splice(index,1);
+            this.scoreNum++;
         }
     }
 
-    private  checkHit(obj2,obj3){
+    private checkHit(obj2:egret.DisplayObject, obj3:egret.DisplayObject){
         for(var i in this.boxArr){
             var obj1 = this.boxArr[i];
             var rect1:egret.Rectangle = obj1.getBounds();
@@ -182,12 +206,42 @@ class mainScene extends egret.DisplayObjectContainer {
             rect2.y = obj2.y;
             rect3.x = obj3.x;
             rect3.y = obj3.y;
-            if(rect1.intersects(rect2) || rect1.intersects(rect3)){
+            if(rect2.intersects(rect1) || rect3.intersects(rect1)){
                 console.log('game over');
 
                 this.beginGame = false;
+                if(!this.addEndDialog){
+                    this.addEndDialog = true;
+                    this.gameOver();
+                }
             }
         }
+    }
+
+    private gameOver(){
+        var game_over:egret.Bitmap = new egret.Bitmap(RES.getRes("game_over"));
+        game_over.x = (this.stageW - game_over.width)/2;
+        game_over.y = this.stageH + game_over.height;
+        this.addChild(game_over);
+        this.setChildIndex(game_over,10);
+        egret.Tween.get(game_over).to({y:150},500,egret.Ease.circIn).call(function(){
+            console.log('ok');
+        },this);
+
+        var retry_press:egret.Bitmap = new egret.Bitmap(RES.getRes("retry_press"));
+        retry_press.x = (this.stageW - retry_press.width)/2;
+        retry_press.y = this.stageH - 200;
+        this.addChild(retry_press);
+
+        retry_press.touchEnabled = true;
+        retry_press.addEventListener(egret.TouchEvent.TOUCH_TAP,function(){
+            console.log("again");
+            this.reset();
+
+            this.removeChild(retry_press);
+            this.removeChild(game_over);
+            this.createGameScene();
+        },this);
     }
 
     /**

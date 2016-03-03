@@ -44,13 +44,23 @@
             "name": "box_2",
             "type": "image",
             "url": "assets/box_2.png"
+        },
+        {
+            "name": "game_over",
+            "type": "image",
+            "url": "assets/game_over.png"
+        },
+        {
+            "name": "retry_press",
+            "type": "image",
+            "url": "assets/retry_press.png"
         }
 
 	],
 	"groups": [
 		{
 			"name": "preload",
-			"keys": "bgImage,start_press,bar,eye_1,eye_2,eye_3,eye_4,box_1,box_2"
+			"keys": "bgImage,start_press,bar,eye_1,eye_2,eye_3,eye_4,box_1,box_2,game_over,retry_press"
 		}
 	]
 }
