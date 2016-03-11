@@ -1,0 +1,1439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		<title>cc.Scheduler | JsDoc Reference</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="mobileoptimized" content="0" />
+	
+		<link rel="stylesheet" href="../css/all.css" media="all" />
+		<link rel="stylesheet" href="../css/handheld.css" media="only screen and (max-width: 660px)" />
+		<link rel="stylesheet" href="../css/handheld.css" media="handheld" />
+		<link rel="stylesheet" href="../css/screen.css" media="screen and (min-width: 661px)" />
+
+		<script src="../javascript/all.js"></script>
+		<!--[if lt IE 9]>
+			<script src="../javascript/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+
+<div class="content">
+	<div class="innerContent">
+		<article>
+			<header>
+				<h1 class="classTitle">
+					
+					Class <span>cc.Scheduler</span>
+				</h1>
+				
+				<div class="intro">
+					<p class="description summary">
+						
+					</p>
+						
+					
+						<ul class="summary">
+							
+							
+							
+								<li>Defined in: <a href="../symbols/src/_Users_panda_StudyWork_Cocos_cocos2d-js_frameworks_cocos2d-html5_cocos2d_core_CCScheduler.js.html">CCScheduler.js</a></li>
+							
+							<li>Extends <span class="fixedFont">
+								<a href="../symbols/cc.Class.html">cc.Class</a></span></li>
+							
+						</ul>
+					
+				</div>
+			</header>
+			
+			
+				<section>
+					<div class="props">
+						<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class cc.Scheduler.">
+							<caption class="sectionTitle">Class Summary</caption>
+							<thead>
+								<tr>
+									<th scope="col">Constructor Attributes</th>
+									<th scope="col">Constructor Name and Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="attributes">&nbsp;</td>
+									<td class="nameDescription" >
+										<div class="fixedFont">
+											<b><a href="../symbols/cc.Scheduler.html#constructor">cc.Scheduler</a></b>()
+										</div>
+										<div class="description"><p>
+   Scheduler is responsible of triggering the scheduled callbacks.</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			
+			
+			
+				
+				<section>
+					
+						<nav>
+							<div class="props">
+								<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class cc.Scheduler.">
+									<caption class="sectionTitle">Field Summary</caption>
+									
+									<thead>
+										<tr>
+											<th scope="col">Field Attributes</th>
+											<th scope="col">Field Name and Description</th>
+										</tr>
+									</thead>
+									
+									<tbody>
+										
+											<tr>
+												<td class="attributes">&lt;static&gt; &lt;constant&gt; &nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont">
+													cc.Scheduler.<b><a href="../symbols/cc.Scheduler.html#.PRIORITY_SYSTEM">PRIORITY_SYSTEM</a></b>
+													</div>
+													<div class="description">Priority level reserved for system services.</div>
+												</td>
+											</tr>
+										
+									</tbody>
+								</table>
+							</div>
+						</nav>
+					
+					
+					
+						<nav>
+							<dl class="inheritsList">
+							
+							</dl>
+						</nav>
+					
+				</section>
+			
+	<!--
+	#### METHODS SUMMARY
+	-->
+			
+				<section>
+					
+					
+					<div class="props">
+						<h2 class="sectionTitle">Method Summary</h2>
+						
+						
+							<nav>
+								<table class="summaryTable" id="MethodsList" cellspacing="0" summary="A summary of the methods documented in the class cc.Scheduler.">
+									<thead>
+										<tr>
+											<th scope="col">Method Attributes</th>
+											<th scope="col">Method Name and Description</th>
+										</tr>
+									</thead>
+									
+									<tbody>
+										
+										
+											<tr
+												 class='item0'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#getTimeScale">getTimeScale</a></b>()
+													</div>
+													<div class="description">Returns time scale of scheduler</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item1'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#isTargetPaused">isTargetPaused</a></b>(target)
+													</div>
+													<div class="description">Returns whether or not the target is paused</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item2'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#pauseAllTargets">pauseAllTargets</a></b>()
+													</div>
+													<div class="description"><p>
+ Pause all selectors from all targets.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item3'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#pauseAllTargetsWithMinPriority">pauseAllTargetsWithMinPriority</a></b>(minPriority)
+													</div>
+													<div class="description">Pause all selectors from all targets with a minimum priority.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item4'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#pauseTarget">pauseTarget</a></b>(target)
+													</div>
+													<div class="description"><p>
+   Pauses the target.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item5'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#resumeTarget">resumeTarget</a></b>(target)
+													</div>
+													<div class="description">Resumes the target.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item6'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#resumeTargets">resumeTargets</a></b>(targetsToResume)
+													</div>
+													<div class="description">Resume selectors on a set of targets.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item7'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#scheduleCallbackForTarget">scheduleCallbackForTarget</a></b>(target, callback_fn, interval, repeat, delay, paused)
+													</div>
+													<div class="description"><p>
+  The scheduled method will be called every 'interval' seconds.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item8'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#scheduleUpdateForTarget">scheduleUpdateForTarget</a></b>(target, priority, paused)
+													</div>
+													<div class="description"><p>
+   Schedules the 'update' callback_fn for a given target with a given priority.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item9'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#setTimeScale">setTimeScale</a></b>(timeScale)
+													</div>
+													<div class="description"><p>
+   Modifies the time of all scheduled callbacks.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item10'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#unscheduleAllCallbacks">unscheduleAllCallbacks</a></b>()
+													</div>
+													<div class="description"><p>
+     Unschedules all function callbacks from all targets.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item11'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#unscheduleAllCallbacksForTarget">unscheduleAllCallbacksForTarget</a></b>(target)
+													</div>
+													<div class="description">Unschedules all function callbacks for a given target.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item12'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#unscheduleAllCallbacksWithMinPriority">unscheduleAllCallbacksWithMinPriority</a></b>(minPriority)
+													</div>
+													<div class="description"><p>
+   Unschedules all function callbacks from all targets with a minimum priority.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item13'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#unscheduleCallbackForTarget">unscheduleCallbackForTarget</a></b>(target, callback_fn)
+													</div>
+													<div class="description"><p>
+  Unschedule a callback function for a given target.</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item14'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#unscheduleUpdateForTarget">unscheduleUpdateForTarget</a></b>(target)
+													</div>
+													<div class="description">Unschedules the update callback function for a given target</div>
+												</td>
+											</tr>
+										
+											<tr
+												 class='item15'
+											>
+												<td class="attributes">&nbsp;</td>
+												<td class="nameDescription">
+													<div class="fixedFont"><b><a href="../symbols/cc.Scheduler.html#update">update</a></b>(dt)
+													</div>
+													<div class="description">'update' the scheduler.</div>
+												</td>
+											</tr>
+										
+									</tbody>
+								</table>
+							</nav>
+						
+					
+						
+							<nav>
+								<dl class="inheritsList" id="MethodsListInherited">
+								
+								</dl>
+							</nav>
+						
+					</div>
+				</section>
+			
+			
+	<!--
+	#### EVENTS SUMMARY
+	-->
+			
+	<!--
+	#### CONSTRUCTOR DETAILS
+	-->
+			
+				<section>
+					<div class="details props">
+						<div class="innerProps">
+							<h2 class="sectionTitle" id="constructor">
+								Class Detail
+							</h2>
+							
+							<div class="fixedFont">
+								<b>cc.Scheduler</b>()
+							</div>
+							
+							<div class="description">
+								<p>
+   Scheduler is responsible of triggering the scheduled callbacks.<br/>
+   You should not use NSTimer. Instead use this class.<br/>
+   <br/>
+   There are 2 different types of callbacks (selectors):<br/>
+      - update callback: the 'update' callback will be called every frame. You can customize the priority.<br/>
+      - custom callback: A custom callback will be called every frame, or with a custom interval of time<br/>
+      <br/>
+   The 'custom selectors' should be avoided when possible. It is faster, and consumes less memory to use the 'update callback'. *
+</p>
+								
+							</div>
+							
+							
+								
+									<pre class="code">//register a schedule to scheduler
+cc.director.getScheduler().scheduleSelector(callback, this, interval, !this._isRunning);</pre>
+								
+							
+						
+							
+							
+							
+						</div>
+					</div>
+				</section>
+			
+	<!--
+	#### FIELD DETAILS
+	-->
+			
+				<section>
+					<div class="details props">
+						<div class="innerProps">
+							<h2 class="sectionTitle">
+								Field Detail
+							</h2>
+							
+							
+								<div class="fixedFont heading" id=".PRIORITY_SYSTEM">
+									<span class='lighter'>
+									&lt;static&gt; &lt;constant&gt; 
+									</span>
+									
+									<span class="light">{Number}</span>
+									
+									<span class="light">cc.Scheduler.</span><b>PRIORITY_SYSTEM</b>							
+								</div>
+								
+								<div class="description">
+									Priority level reserved for system services.
+									
+									
+									
+								</div>
+								
+								
+									
+								
+								
+							
+						</div>
+					</div>
+				</section>
+			
+	<!--
+	#### METHOD DETAILS
+	-->		
+			
+				<section>
+					<div class="details props">
+						<div class="innerProps">
+							<h2 class="sectionTitle">
+								Method Detail
+							</h2>
+							
+							<ul class="methodDetail" id="MethodDetail">
+								
+								
+									<li 
+										 class='item0'
+									>
+										<div class="fixedFont heading" id="getTimeScale">
+											<span class='lighter'>
+											
+											</span>
+											
+											<span class="light">{Number}</span>
+											
+											<b>getTimeScale</b>()
+										</div>
+										
+										<div class="description">
+											Returns time scale of scheduler
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+										
+										
+											<dl class="detailList nomargin">
+											
+												
+												
+												
+												
+												
+												
+												
+													<dt class="heading">Returns:</dt>
+													
+														<dd><span class="light fixedFont">{Number}</span> </dd>
+													
+												
+												
+												
+												
+												
+											
+											</dl>
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item1'
+									>
+										<div class="fixedFont heading" id="isTargetPaused">
+											<span class='lighter'>
+											
+											</span>
+											
+											<span class="light">{Boolean}</span>
+											
+											<b>isTargetPaused</b>(target)
+										</div>
+										
+										<div class="description">
+											Returns whether or not the target is paused
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+											<dl class="detailList nomargin">
+											
+												
+												
+												
+												
+												
+												
+												
+													<dt class="heading">Returns:</dt>
+													
+														<dd><span class="light fixedFont">{Boolean}</span> </dd>
+													
+												
+												
+												
+												
+												
+											
+											</dl>
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item2'
+									>
+										<div class="fixedFont heading" id="pauseAllTargets">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>pauseAllTargets</b>()
+										</div>
+										
+										<div class="description">
+											<p>
+ Pause all selectors from all targets.<br/>
+ You should NEVER call this method, unless you know what you are doing.
+</p>
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item3'
+									>
+										<div class="fixedFont heading" id="pauseAllTargetsWithMinPriority">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>pauseAllTargetsWithMinPriority</b>(minPriority)
+										</div>
+										
+										<div class="description">
+											Pause all selectors from all targets with a minimum priority. <br/>
+You should only call this with kCCPriorityNonSystemMin or higher.
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>minPriority</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item4'
+									>
+										<div class="fixedFont heading" id="pauseTarget">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>pauseTarget</b>(target)
+										</div>
+										
+										<div class="description">
+											<p>
+   Pauses the target.<br/>
+   All scheduled selectors/update for a given target won't be 'ticked' until the target is resumed.<br/>
+   If the target is not present, nothing happens.
+</p>
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item5'
+									>
+										<div class="fixedFont heading" id="resumeTarget">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>resumeTarget</b>(target)
+										</div>
+										
+										<div class="description">
+											Resumes the target.<br/>
+The 'target' will be unpaused, so all schedule selectors/update will be 'ticked' again.<br/>
+If the target is not present, nothing happens.
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item6'
+									>
+										<div class="fixedFont heading" id="resumeTargets">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>resumeTargets</b>(targetsToResume)
+										</div>
+										
+										<div class="description">
+											Resume selectors on a set of targets.<br/>
+This can be useful for undoing a call to pauseAllCallbacks.
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{Array}</span> <b>targetsToResume</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item7'
+									>
+										<div class="fixedFont heading" id="scheduleCallbackForTarget">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>scheduleCallbackForTarget</b>(target, callback_fn, interval, repeat, delay, paused)
+										</div>
+										
+										<div class="description">
+											<p>
+  The scheduled method will be called every 'interval' seconds.</br>
+  If paused is YES, then it won't be called until it is resumed.<br/>
+  If 'interval' is 0, it will be called every frame, but if so, it recommended to use 'scheduleUpdateForTarget:' instead.<br/>
+  If the callback function is already scheduled, then only the interval parameter will be updated without re-scheduling it again.<br/>
+  repeat let the action be repeated repeat + 1 times, use cc.REPEAT_FOREVER to let the action run continuously<br/>
+  delay is the amount of time the action will wait before it'll start<br/>
+</p>
+											
+											
+											
+											
+										</div>
+										
+										
+											
+												<pre class="code">//register a schedule to scheduler
+cc.director.getScheduler().scheduleCallbackForTarget(this, function, interval, repeat, delay, !this._isRunning );</pre>
+											
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{function}</span> <b>callback_fn</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>interval</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>repeat</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>delay</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{Boolean}</span> <b>paused</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item8'
+									>
+										<div class="fixedFont heading" id="scheduleUpdateForTarget">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>scheduleUpdateForTarget</b>(target, priority, paused)
+										</div>
+										
+										<div class="description">
+											<p>
+   Schedules the 'update' callback_fn for a given target with a given priority.<br/>
+   The 'update' callback_fn will be called every frame.<br/>
+   The lower the priority, the earlier it is called.
+</p>
+											
+											
+											
+											
+										</div>
+										
+										
+											
+												<pre class="code">//register this object to scheduler
+cc.director.getScheduler().scheduleUpdateForTarget(this, priority, !this._isRunning );</pre>
+											
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>priority</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{Boolean}</span> <b>paused</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item9'
+									>
+										<div class="fixedFont heading" id="setTimeScale">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>setTimeScale</b>(timeScale)
+										</div>
+										
+										<div class="description">
+											<p>
+   Modifies the time of all scheduled callbacks.<br/>
+   You can use this property to create a 'slow motion' or 'fast forward' effect.<br/>
+   Default is 1.0. To create a 'slow motion' effect, use values below 1.0.<br/>
+   To create a 'fast forward' effect, use values higher than 1.0.<br/>
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>timeScale</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item10'
+									>
+										<div class="fixedFont heading" id="unscheduleAllCallbacks">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>unscheduleAllCallbacks</b>()
+										</div>
+										
+										<div class="description">
+											<p>
+     Unschedules all function callbacks from all targets. <br/>
+     You should NEVER call this method, unless you know what you are doing.
+ </p>
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item11'
+									>
+										<div class="fixedFont heading" id="unscheduleAllCallbacksForTarget">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>unscheduleAllCallbacksForTarget</b>(target)
+										</div>
+										
+										<div class="description">
+											Unschedules all function callbacks for a given target. This also includes the "update" callback function.
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item12'
+									>
+										<div class="fixedFont heading" id="unscheduleAllCallbacksWithMinPriority">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>unscheduleAllCallbacksWithMinPriority</b>(minPriority)
+										</div>
+										
+										<div class="description">
+											<p>
+   Unschedules all function callbacks from all targets with a minimum priority.<br/>
+   You should only call this with kCCPriorityNonSystemMin or higher.
+</p>
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>minPriority</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item13'
+									>
+										<div class="fixedFont heading" id="unscheduleCallbackForTarget">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>unscheduleCallbackForTarget</b>(target, callback_fn)
+										</div>
+										
+										<div class="description">
+											<p>
+  Unschedule a callback function for a given target.<br/>
+  If you want to unschedule the "update", use unscheudleUpdateForTarget.
+</p>
+											
+											
+											
+											
+										</div>
+										
+										
+											
+												<pre class="code">//unschedule a callback of target
+cc.director.getScheduler().unscheduleCallbackForTarget(function, this);</pre>
+											
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+													<dt>
+														<span class="light fixedFont">{function}</span> <b>callback_fn</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item14'
+									>
+										<div class="fixedFont heading" id="unscheduleUpdateForTarget">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>unscheduleUpdateForTarget</b>(target)
+										</div>
+										
+										<div class="description">
+											Unschedules the update callback function for a given target
+											
+											
+											
+											
+										</div>
+										
+										
+											
+												<pre class="code">//unschedules the "update" method.
+cc.director.getScheduler().unscheduleUpdateForTarget(this);</pre>
+											
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{<a href="../symbols/cc.Class.html">cc.Class</a>}</span> <b>target</b>
+														
+													</dt>
+													<dd></dd>
+												
+											</dl>
+										
+										
+										
+										<div class="hr"></div>
+									</li>
+								
+									<li 
+										 class='item15'
+									>
+										<div class="fixedFont heading" id="update">
+											<span class='lighter'>
+											
+											</span>
+											
+											
+											
+											<b>update</b>(dt)
+										</div>
+										
+										<div class="description">
+											'update' the scheduler. (You should NEVER call this method, unless you know what you are doing.)
+											
+											
+											
+											
+										</div>
+										
+										
+										
+										
+											<dl class="detailList params">
+												<dt class="heading">Parameters:</dt>
+												
+													<dt>
+														<span class="light fixedFont">{Number}</span> <b>dt</b>
+														
+													</dt>
+													<dd>delta time</dd>
+												
+											</dl>
+										
+										
+										
+										
+									</li>
+								
+							</ul>
+						</div>
+					</div>
+				</section>
+			
+			
+	<!--
+	#### EVENT DETAILS
+	-->		
+			
+		</article>
+	</div>
+</div>
+
+		<script type="text/javascript">
+			wbos.CssTools.MediaQueryFallBack.LoadCss('../css/screen.css', '../css/handheld.css', 660);
+			codeview.classFilter.Init();
+
+
+
+            //class tree by Hao Wu
+            var theList = document.getElementById("ClassList");
+            var child, parent;
+            for(var i=0; i < theList.children.length; i++)
+            {
+                child = theList.children[i];
+                extendedFrom = child.getAttribute('extends');
+                if(extendedFrom)
+                {
+                    parent = document.querySelector("[self='"+extendedFrom+"']");
+                    if(parent)
+                    {
+                        if(!parent.ul)
+                        {
+                            var ul = document.createElement('ul');
+                            //ul.style.marginLeft = "0";
+                            parent.appendChild(ul);
+                            parent.ul = ul;
+                        }
+                        parent.ul.appendChild(child);
+                        //console.log(child.getAttribute('self')+" extends "+ extendedFrom);
+                        i--;
+                    }
+                }
+            }
+
+            //expandable list
+            /*
+
+             CollapsibleLists.js
+
+             An object allowing lists to dynamically expand and collapse
+
+             Created by Stephen Morley - http://code.stephenmorley.org/ - and released under
+             the terms of the CC0 1.0 Universal legal code:
+
+             http://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+             */
+
+            // create the CollapsibleLists object
+            var CollapsibleLists =
+                    new function(){
+
+                        /* Makes all lists with the class 'collapsibleList' collapsible. The
+                         * parameter is:
+                         *
+                         * doNotRecurse - true if sub-lists should not be made collapsible
+                         */
+                        this.apply = function(doNotRecurse){
+
+                            // loop over the unordered lists
+                            var uls = document.getElementsByTagName('ul');
+                            for (var index = 0; index < uls.length; index ++){
+
+                                // check whether this list should be made collapsible
+                                if (uls[index].className.match(/(^| )collapsibleList( |$)/)){
+
+                                    // make this list collapsible
+                                    this.applyTo(uls[index], true);
+
+                                    // check whether sub-lists should also be made collapsible
+                                    if (!doNotRecurse){
+
+                                        // add the collapsibleList class to the sub-lists
+                                        var subUls = uls[index].getElementsByTagName('ul');
+                                        for (var subIndex = 0; subIndex < subUls.length; subIndex ++){
+                                            subUls[subIndex].className += ' collapsibleList';
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        };
+
+                        /* Makes the specified list collapsible. The parameters are:
+                         *
+                         * node         - the list element
+                         * doNotRecurse - true if sub-lists should not be made collapsible
+                         */
+                        this.applyTo = function(node, doNotRecurse){
+
+                            // loop over the list items within this node
+                            var lis = node.getElementsByTagName('li');
+                            for (var index = 0; index < lis.length; index ++){
+
+                                // check whether this list item should be collapsible
+                                if (!doNotRecurse || node == lis[index].parentNode){
+
+                                    // prevent text from being selected unintentionally
+                                    if (lis[index].addEventListener){
+                                        lis[index].addEventListener(
+                                                'mousedown', function (e){ e.preventDefault(); }, false);
+                                    }else{
+                                        lis[index].attachEvent(
+                                                'onselectstart', function(){ event.returnValue = false; });
+                                    }
+
+                                    // add the click listener
+                                    if (lis[index].addEventListener){
+                                        lis[index].addEventListener(
+                                                'click', createClickListener(lis[index]), false);
+                                    }else{
+                                        lis[index].attachEvent(
+                                                'onclick', createClickListener(lis[index]));
+                                    }
+
+                                    // close the unordered lists within this list item
+                                    toggle(lis[index]);
+
+                                }
+
+                            }
+                            prettify(node);
+                        };
+
+                        /* Returns a function that toggles the display status of any unordered
+                         * list elements within the specified node. The parameter is:
+                         *
+                         * node - the node containing the unordered list elements
+                         */
+                        function createClickListener(node){
+
+                            // return the function
+                            return function(e){
+
+                                // ensure the event object is defined
+                                if (!e) e = window.event;
+
+                                // find the list item containing the target of the event
+                                var li = (e.target ? e.target : e.srcElement);
+                                while (li.nodeName != 'LI') li = li.parentNode;
+
+                                // toggle the state of the node if it was the target of the event
+                                if (li == node) toggle(node);
+
+                            };
+
+                        }
+
+                        /* Opens or closes the unordered list elements directly within the
+                         * specified node. The parameter is:
+                         *
+                         * node - the node containing the unordered list elements
+                         */
+                        function toggle(node){
+
+                            // determine whether to open or close the unordered lists
+                            var open = node.className.match(/(^| )collapsibleListClosed( |$)/);
+
+                            // loop over the unordered list elements with the node
+                            var uls = node.getElementsByTagName('ul');
+                            for (var index = 0; index < uls.length; index ++){
+
+                                // find the parent list item of this unordered list
+                                var li = uls[index];
+                                while (li.nodeName != 'LI') li = li.parentNode;
+
+                                // style the unordered list if it is directly within this node
+                                if (li == node) uls[index].style.display = (open ? 'block' : 'none');
+
+                            }
+
+                            // remove the current class from the node
+                            node.className =
+                                    node.className.replace(
+                                            /(^| )collapsibleList(Open|Closed)( |$)/, '');
+
+                            // if the node contains unordered lists, set its class
+                            if (uls.length > 0){
+                                node.className += ' collapsibleList' + (open ? 'Open' : 'Closed');
+                            }
+                            prettify(node);
+
+                        }
+                        function prettify(node)
+                        {
+                            /*//find all last child and applie the .lastchild
+                            var test = node.querySelector('li:last-child');
+                            if(test)
+                            {
+                                if(test.className.indexOf('lastChild') == -1)
+                                {
+                                    test.className += " lastChild";
+                                    test.className.replace('contents','');
+                                }
+                            }
+                            if(node.parentNode.className == "classList")
+                            {
+                                if(node.className.indexOf('contents') == -1)
+                                {
+                                    node.className += " contents";
+                                }
+                                if(node.parentNode.lastChild == node)
+                                {
+                                    if(node.className.indexOf('lastChild') == -1)
+                                    {
+                                        node.className += " lastChild";
+                                        node.className.replace('contents', '');
+                                    }
+                                }
+
+                            }*/
+                        }
+                        //prettify(node);
+                        window.mytoggle = toggle;
+                    }();
+
+            CollapsibleLists.applyTo(document.getElementsByClassName('classList')[0]);
+            mytoggle(document.querySelector("li[self='cc.Class']"));//.className = "collapsibleListOpen";
+            //document.querySelector('.classList>li:last-child').className += " none";
+            //document.querySelector('.classList>li:last-child').className.replace('contents', '');
+            //document.querySelector('.classList>li:first-child').className += " root";
+        </script>
+	</body>
+</html>
+
