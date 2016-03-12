@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>puzzle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<script type="text/javascript">
+    document.ccConfig = {
+        "debugMode"     : 1,
+        "frameRate"     : 60,
+        "id"            : "gameCanvas",
+        "renderMode"    : 1,
+        "jsList"        : []
+    };
+</script>
+<body  style="background-color:#000">
+    <canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+    <script type="text/javascript" src="./../lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+    
+    <script type="text/javascript">
+        var g_resources = [];
+        var res = {
+            beginBg:"res/beginBg.jpg",
+            beginBtn:"res/beginBtn.png",
+
+            ruleBg:"res/ruleBg.jpg",
+            ruleBtn:"res/ruleBtn.png",
+
+            gameBg:"res/gameBg.jpg",
+            again:"res/again.png",
+            more:"res/more.png",
+
+            main:"res/main.png",
+
+            gameEnd:"res/gameEnd.jpg",
+
+            loadingpage:"res/loadingpage.jpg"
+        };
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+        var g_loadingPage = "res/loadingpage.jpg";
+        var g_link = "http://www.zuiku.com/";
+        window.onload = function(){
+            resourceCallBack();
+        }
+    </script>
+
+    <script type="text/javascript" src="game.min.js" charset="UTF-8"></script>
+</body>
+</html>
