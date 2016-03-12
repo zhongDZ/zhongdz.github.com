@@ -24,7 +24,7 @@
             position: absolute;
             top: 250px;
         }
-        .gameList,.biaoqian,.line{
+        .gameList,.myMark,.line,.myResolve,.aboutMe{
             width: 900px;
             margin: 0 auto;
         }
@@ -34,6 +34,10 @@
             color: #b9bac4;
             text-align: center;
             background-color: #F0F4F7;
+        }
+        .warn{
+            max-width: 900px;
+            margin:0 auto;
         }
         /*＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
         .clear {
@@ -493,9 +497,10 @@ body.no-scroll {
                    <div class="nav-collapse collapse">
                         <ul class="nav" id="test"> 
                             <li class="active"><a next-data="about">首页</a></li>
-                            <li><a next-data="about0">我的博客</a></li>
-                            <li><a next-data="about1">我的游戏</a></li> 
-                            <li><a next-data="about2">关于我</a></li> 
+                            <li><a next-data="about0">我的游戏</a></li>
+                            <li><a next-data="about1">我的笔记</a></li>
+                            <li><a next-data="about2">项目解析</a></li>
+                            <li><a next-data="about3">个人简历</a></li> 
                             <!-- <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">帮助<b class="caret"></b></a>
                               <ul class="dropdown-menu">
@@ -513,6 +518,12 @@ body.no-scroll {
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="warn">
+        <div class="alert fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>你好！</strong>此网页纯属练习所用，处于不断的完善当中。不喜勿喷，谢谢！</div>
     </div>
 
     <div id="myCarousel" class="carousel slide" style="max-width:900px;margin:0 auto;">
@@ -552,7 +563,7 @@ body.no-scroll {
     <div class="line" style="margin-top:30px;">
         <div class="progress">
           <div class="bar bar-success" style="width: 32%;">------</div>
-          <div class="bar bar-warning" style="width: 36%;">game list</div>
+          <div class="bar bar-warning" style="width: 36%;">我的游戏</div>
           <div class="bar bar-danger" style="width: 32%;">------</div>
         </div>
     </div>
@@ -605,16 +616,18 @@ body.no-scroll {
     <div class="line" style="margin-top:30px;">
         <div class="progress">
           <div class="bar bar-success" style="width: 32%;">------</div>
-          <div class="bar bar-warning" style="width: 36%;">describle</div>
+          <div class="bar bar-warning" style="width: 36%;">我的笔记</div>
           <div class="bar bar-danger" style="width: 32%;">------</div>
         </div>
     </div>
 
-    <div class="biaoqian" id="about1">
+    <div class="myMark" id="about1">
         <div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
-              <li class=""><a href="#home" data-toggle="tab">首页</a></li>
-              <li class="active"><a href="#profile" data-toggle="tab">1</a></li>
+              
+              <li class="active"><a href="#myHtml" data-toggle="tab">html</a></li>
+              <li class=""><a href="#myCss" data-toggle="tab">css</a></li>
+              <li class=""><a href="#myJs" data-toggle="tab">javascript</a></li>
               <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">2<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -624,96 +637,63 @@ body.no-scroll {
               </li> -->
             </ul>
             <div id="myTabContent" class="tab-content">
-              <div class="tab-pane fade" id="home">
+              <div class="tab-pane fade active in" id="myHtml">
                 <p>asdfsdf</p>
                 <h2>asfds</h2>
               </div>
-              <div class="tab-pane fade active in" id="profile">
-                <div id="main">
-                  <h2>我的简历</h2>
-                  <!-- <ul id="download-nav">
-                      <li><a href="#" id="print">打印</a></li>
-                      <li><a href="aaa.doc" id="download">下载</a></li>
-                  </ul> -->
-                  <table width="714" border="0" cellpadding="0" cellspacing="0" class="resume">
-                      <tbody>
-                          <tr>
-                              <td width="120" valign="center" class="resume-tit">姓&nbsp;名</td>
-                              <td width="112" valign="center">鐘德宗</td>
-                              <td width="120" valign="center" class="resume-tit">英文名</td>
-                              <td width="125" valign="center">D zone</td>
-                              <td width="111" rowspan="5" align="center">
-                                  <img src="mysite/images/headView.png" width="110" title="前端开发者鐘德宗" alt="前端开发者鐘德宗">
-                              </td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">民&nbsp;族</td>
-                              <td width="112" valign="center">汉&nbsp;族</td>
-                              <td width="120" valign="center" class="resume-tit">性别</td>
-                              <td valign="center">男</td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">出生日期</td>
-                              <td width="112" valign="center">1990-09-02</td>
-                              <td width="120" valign="center" class="resume-tit">居住地</td>
-                              <td valign="center">深圳</td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">学&nbsp;历</td>
-                              <td width="112" valign="center">本科</td>
-                              <td width="120" valign="center" class="resume-tit">身高、体重</td>
-                              <td valign="center">170CM、56KG</td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">专&nbsp;业</td>
-                              <td width="112" valign="center">软件工程</td>
-                              <td width="120" valign="center" class="resume-tit">工作经验</td>
-                              <td valign="center">3年</td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">毕业院校</td>
-                              <td colspan="2" valign="center">华南理工大学广州学院</td>
-                              <td valign="center" class="resume-tit">婚姻状况</td>
-                              <td valign="center">未婚</td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">求职意向</td>
-                              <td colspan="2" valign="center">h5游戏开发</td>
-                              <td valign="center" class="resume-tit">目前状态</td>
-                              <td valign="center">在职</td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">联系电话</td>
-                              <td>18680281221</td>
-                              <td class="resume-tit">邮箱</td>
-                              <td colspan="2">
-                                  <a href="mailto:zhongdezong@163.com">zhongdezong@163.com</a>
-                              </td>
-                          </tr>
-                          <tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">语言能力</td>
-                              <td colspan="4">普通话：标准；客家话：精通；</td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">专业技能</td>
-                              <td colspan="4">
-                                  <p>1.掌握JavaScript语言、善用cocos2d-js、create-js、lufylegend、enchantjs、egret 等框架。</p>
-                                  <p>2.熟练运用Photoshop、Sublime text等常用制作软件。</p>
-                                  <p>3.了解nodejs + grunt前端自动化构件工具和seajs模块化</p>
-                                  <p>4.熟悉git和svn 团队协同开发工具和前端抓包调试工具</p>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td valign="center" class="resume-tit">教育经历</td>
-                              <td colspan="4">
-                                  <p>1.2009/09&nbsp;–&nbsp;2013/06&nbsp;华南理工大学广州学院&nbsp;&nbsp;|&nbsp;&nbsp;计算机系&nbsp;|&nbsp;&nbsp;软件工程&nbsp;&nbsp;|&nbsp;&nbsp;全日制本科</p>
-                                  <p>2.2006/09&nbsp;–&nbsp;2009/06&nbsp;梅州蕉岭中学&nbsp;&nbsp;|&nbsp;&nbsp;区重点高中&nbsp;</p>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
+              <div class="tab-pane fade" id="myCss">
+                <p>asdfsdf</p>
+                <h2>asfds</h2>
               </div>
+              <div class="tab-pane fade" id="myCss">
+                <p>asdfsdf</p>
+                <h2>asfds</h2>
+              </div>
+             <!--  <div class="tab-pane fade" id="dropdown1">
+                <p>这里是一段文字</p>
+              </div>
+              <div class="tab-pane fade" id="dropdown2">
+                <p>这里是一段文字</p>
+              </div> -->
+            </div>
+          </div>
+    </div>
+
+    <div class="line" style="margin-top:30px;">
+        <div class="progress">
+          <div class="bar bar-success" style="width: 32%;">------</div>
+          <div class="bar bar-warning" style="width: 36%;">项目解析</div>
+          <div class="bar bar-danger" style="width: 32%;">------</div>
+        </div>
+    </div>
+
+    <div class="myResolve" id="about2">
+        <div class="bs-docs-example">
+            <ul id="myTab" class="nav nav-tabs">
+              
+              <li class="active"><a href="#project1" data-toggle="tab">project1</a></li>
+              <li class=""><a href="#project2" data-toggle="tab">project2</a></li>
+              <li class=""><a href="#project3" data-toggle="tab">project3</a></li>
+              <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">2<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class=""><a href="#dropdown1" data-toggle="tab">1</a></li>
+                  <li class=""><a href="#dropdown2" data-toggle="tab">2</a></li>
+                </ul>
+              </li> -->
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="project1">
+                <p>asdfsdf</p>
+                <h2>asfds</h2>
+              </div>
+              <div class="tab-pane fade" id="project2">
+                <p>asdfsdf</p>
+                <h2>asfds</h2>
+              </div>
+              <div class="tab-pane fade" id="project3">
+                <p>asdfsdf</p>
+                <h2>asfds</h2>
               </div>
              <!--  <div class="tab-pane fade" id="dropdown1">
                 <p>这里是一段文字</p>
@@ -728,13 +708,101 @@ body.no-scroll {
     <div class="line" id="about2" style="margin-top:30px;">
         <div class="progress">
           <div class="bar bar-success" style="width: 32%;">------</div>
-          <div class="bar bar-warning" style="width: 36%;">footer</div>
+          <div class="bar bar-warning" style="width: 36%;">我的简历</div>
           <div class="bar bar-danger" style="width: 32%;">------</div>
         </div>
     </div>
 
+    <div class="aboutMe" id="about3">
+        <div id="main">
+            <h2>我的简历</h2>
+            <!-- <ul id="download-nav">
+              <li><a href="#" id="print">打印</a></li>
+              <li><a href="aaa.doc" id="download">下载</a></li>
+            </ul> -->
+            <table width="714" border="0" cellpadding="0" cellspacing="0" class="resume">
+                <tbody>
+                  <tr>
+                      <td width="120" valign="center" class="resume-tit">姓&nbsp;名</td>
+                      <td width="112" valign="center">鐘德宗</td>
+                      <td width="120" valign="center" class="resume-tit">英文名</td>
+                      <td width="125" valign="center">D zone</td>
+                      <td width="111" rowspan="5" align="center">
+                          <img src="mysite/images/headView.png" width="110" title="前端开发者鐘德宗" alt="前端开发者鐘德宗">
+                      </td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">民&nbsp;族</td>
+                      <td width="112" valign="center">汉&nbsp;族</td>
+                      <td width="120" valign="center" class="resume-tit">性别</td>
+                      <td valign="center">男</td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">出生日期</td>
+                      <td width="112" valign="center">1990-09-02</td>
+                      <td width="120" valign="center" class="resume-tit">居住地</td>
+                      <td valign="center">深圳</td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">学&nbsp;历</td>
+                      <td width="112" valign="center">本科</td>
+                      <td width="120" valign="center" class="resume-tit">身高、体重</td>
+                      <td valign="center">170CM、56KG</td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">专&nbsp;业</td>
+                      <td width="112" valign="center">软件工程</td>
+                      <td width="120" valign="center" class="resume-tit">工作经验</td>
+                      <td valign="center">3年</td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">毕业院校</td>
+                      <td colspan="2" valign="center">华南理工大学广州学院</td>
+                      <td valign="center" class="resume-tit">婚姻状况</td>
+                      <td valign="center">未婚</td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">求职意向</td>
+                      <td colspan="2" valign="center">h5游戏开发</td>
+                      <td valign="center" class="resume-tit">目前状态</td>
+                      <td valign="center">在职</td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">联系电话</td>
+                      <td>18680281221</td>
+                      <td class="resume-tit">邮箱</td>
+                      <td colspan="2">
+                          <a href="mailto:zhongdezong@163.com">zhongdezong@163.com</a>
+                      </td>
+                  </tr>
+                  <tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">语言能力</td>
+                      <td colspan="4">普通话：标准；客家话：精通；</td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">专业技能</td>
+                      <td colspan="4">
+                          <p>1.掌握JavaScript语言、善用cocos2d-js、create-js、lufylegend、enchantjs、egret 等框架。</p>
+                          <p>2.熟练运用Photoshop、Sublime text等常用制作软件。</p>
+                          <p>3.了解nodejs + grunt前端自动化构件工具和seajs模块化</p>
+                          <p>4.熟悉git和svn 团队协同开发工具和前端抓包调试工具</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td valign="center" class="resume-tit">教育经历</td>
+                      <td colspan="4">
+                          <p>1.2009/09&nbsp;–&nbsp;2013/06&nbsp;华南理工大学广州学院&nbsp;&nbsp;|&nbsp;&nbsp;计算机系&nbsp;|&nbsp;&nbsp;软件工程&nbsp;&nbsp;|&nbsp;&nbsp;全日制本科</p>
+                          <p>2.2006/09&nbsp;–&nbsp;2009/06&nbsp;梅州蕉岭中学&nbsp;&nbsp;|&nbsp;&nbsp;区重点高中&nbsp;</p>
+                      </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <footer class="mfooter" role="contentinfo">
-      <p>© Copyright 2016 <a>鐘德宗</a> - All Rights Reserved</p>
+      <p>© Copyright 2016 <a href="http://zhongdz.github.io/">鐘德宗</a> - All Rights Reserved</p>
       <p>Created by zhongdezong</p>
     </footer>
 
