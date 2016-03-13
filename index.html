@@ -14,6 +14,10 @@
         }
         body{
             background: #f2f2f2;
+            /*background:url(mysite/images/bg.jpg) repeat center center;*/
+        }
+        html{
+            /*background:url(mysite/images/bg.jpg) repeat center center;*/
         }
         .myBanner{
             width: 900px;
@@ -38,6 +42,18 @@
         .warn{
             max-width: 900px;
             margin:0 auto;
+        }
+        #rtt {
+            width:50px; 
+            height:50px; 
+            background:url('mysite/images/rrt.png'); 
+            background-size:cover; 
+            position:fixed; 
+            right:50px; 
+            bottom:50px; 
+            border-radius: 5px; 
+            z-index:1000; 
+            display:none;
         }
         /*＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
         .clear {
@@ -628,6 +644,7 @@ body.no-scroll {
               <li class="active"><a href="#myHtml" data-toggle="tab">html</a></li>
               <li class=""><a href="#myCss" data-toggle="tab">css</a></li>
               <li class=""><a href="#myJs" data-toggle="tab">javascript</a></li>
+              <li class=""><a href="#myCode" data-toggle="tab">myCode</a></li>
               <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">2<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -646,6 +663,10 @@ body.no-scroll {
                 <h2>asfds</h2>
               </div>
               <div class="tab-pane fade" id="myCss">
+                <p>asdfsdf</p>
+                <h2>asfds</h2>
+              </div>
+              <div class="tab-pane fade" id="myCode">
                 <p>asdfsdf</p>
                 <h2>asfds</h2>
               </div>
@@ -801,10 +822,14 @@ body.no-scroll {
         </div>
     </div>
 
+
+
     <footer class="mfooter" role="contentinfo">
       <p>© Copyright 2016 <a href="http://zhongdz.github.io/">鐘德宗</a> - All Rights Reserved</p>
       <p>Created by zhongdezong</p>
     </footer>
+
+    <div id='rtt'></div>
 
     <script src="mysite/js/jquery/r1.9/jquery.js" type="text/javascript"></script>
     <script src="mysite/js/bootstrap/r.2/bootstrap.js" type="text/javascript"></script>
@@ -815,6 +840,42 @@ body.no-scroll {
                 if($("#"+_t+"").offset() == undefined)return;
                 $("html,body").animate({scrollTop:($("#"+_t+"").offset().top - $(window).scrollTop())},1000);
             });
+        });
+
+        function myEvent(obj,ev,fn){
+            if(obj.attachEvent){
+                obj.attachEvent('on'+ev,fn);
+            }else{
+                obj.addEventListener(ev,fn,false);
+            }
+        }
+        myEvent(window,'load',function(){
+            var oRTT=document.getElementById('rtt');
+            var pH=document.documentElement.clientHeight;
+            var timer=null;
+            var scrollTop;
+            window.onscroll=function(){
+                scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                if(scrollTop>=pH){
+                    oRTT.style.display='block';
+                }else{
+                    oRTT.style.display='none';
+                }
+                return scrollTop;
+            };
+            oRTT.onclick=function(){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    var now=scrollTop;
+                    var speed=(0-now)/10;
+                    speed=speed>0?Math.ceil(speed):Math.floor(speed);
+                    if(scrollTop==0){
+                        clearInterval(timer);
+                    }
+                    document.documentElement.scrollTop=scrollTop+speed;
+                    document.body.scrollTop=scrollTop+speed;
+                }, 30);
+            }
         });
     </script>
 </body>

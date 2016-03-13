@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>翻翻看</title>
+<style>
+	body{background-color:#FFF;margin:0;padding:0;overflow:hidden;background-size:100%;width:100%;height:100%;}
+	#game{margin:auto;position:absolute;left:50%;top:0;width:640px;height:100%;}
+	#container{position:relative;width:100%;background-size:100% 100%;height:100%;}
+</style>
+</head>
+<body>
+
+	<div id="container" class="homeBg">
+		<div><canvas id="game">您的浏览器不支持HTML5</canvas></div>
+	</div>
+
+	<script>
+		var _cfgHome = {
+		    img: {
+			    manifest: [
+					{src : 'images/start-icon.png',id : 'startIcon'},
+					{src:'images/home-bg.jpg', id:"homeBG"}]
+		    }
+		};
+		var _cfgGame = {		
+			img: {
+				manifest: [
+					{src:'images/1.jpg', id:"1"}, 
+					{src:'images/2.jpg', id:"2"}, 
+					{src:'images/3.jpg', id:"3"}, 
+					{src:'images/4.jpg', id:"4"}, 
+					{src:'images/5.jpg', id:"5"}, 
+					{src:'images/back.jpg', id:"back"}, 
+					{src:"images/ready.png", id:"ready"},
+					{src:"images/go.png", id:"go"},
+					{src:"images/gamebg.jpg", id:"gameBg"},
+					{src:"images/timebar.png", id:"timebar"}]
+			}
+		};
+	</script>
+	<script type="text/javascript" src="./../lib/createjs-2013.12.12.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="./game.min.js"></script>
+</script>
+</body>
+</html>
