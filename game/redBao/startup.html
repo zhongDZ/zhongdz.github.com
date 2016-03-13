@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<script type="text/javascript">
+    document.ccConfig = {
+        "debugMode"     : 1,
+        "frameRate"     : 60,
+        "id"            : "gameCanvas",
+        "renderMode"    : 1,
+        "jsList"        : []
+    };
+</script>
+<body  style="background-color:#000">
+    <canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+    <script type="text/javascript" src="./../lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+    
+    <script type="text/javascript">
+        var res = {
+            main_bg:"res/mainBg.jpg",//游戏主界面背景
+            begin_bg:"res/beginBg.jpg",//开始页面背景
+            time_loading:"res/timeloading.png",//事件loading条
+            begin_but:"res/beginbut.png",//开始按钮
+            playagain:"res/playagain.png",//再来一遍按钮
+            refresh_but:"res/refresh.png",//刷新按钮
+            top_bar:"res/topBar.jpg",//上方栏
+            envelope_bome:"res/envelopebome.png",//红包爆开
+            envelope_firebome:"res/firebome.png",//红包爆开
+            envelope_fie:"res/fire.png",//红包火
+            envelope_star:"res/star.png",//红包星
+            envelope_sameall:"res/sameall.png",//红包星
+
+            envelope_freshl:"res/freshl.png",//红包星
+            envelope_freshh:"res/freshh.png",//红包星
+
+            combo_num:"res/number.png",//开始按钮外旋转圈
+            combo_bg:"res/COMBObg.png",
+            combo_word:"res/COMBO.png",
+
+            round_1:"res/round1.png",//开始按钮外旋转圈
+            round_2:"res/round2.png",
+            round_3:"res/round3.png",
+
+            blue_envelope:"res/blueEnvelope.png",
+            green_envelope:"res/greenEnvelope.png",
+            red_envelope:"res/redEnvelope.png",
+            yello_envelope:"res/yelloEnvelope.png",
+            pink_envelope:"res/pinkEnvelope.png",
+            zi_envelope:"res/ziEnvelope.png"
+        };
+        var g_resources = [];
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+        window.onload = function(){
+            resourceCallBack();
+        }
+    </script>
+    <script type="text/javascript" src="game.min.js" charset="UTF-8"></script>
+</body>
+</html>
