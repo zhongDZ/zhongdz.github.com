@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<script type="text/javascript">
+    document.ccConfig = {
+        "debugMode"     : 1,
+        "frameRate"     : 60,
+        "id"            : "gameCanvas",
+        "renderMode"    : 1,
+        "jsList"        : []
+    };
+</script>
+<body>
+<canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+<script type="text/javascript" src="./../lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+<script type="text/javascript">
+
+    var g_resources = [];
+    var res = {
+        beginbut:"res/beginbut.png",
+        _bottom:"res/bottom.jpg",
+        playagain:"res/playagain.png",
+        round1:"res/round1.png",
+        round2:"res/round2.png",
+        round3:"res/round3.png",
+        rule:"res/rule.png",
+        shouye:"res/shouye.png",
+        time_bg2:"res/t_2.png",
+        thx:"res/thx.png",
+        topbar:"res/topbar.jpg",
+        test:"res/111.jpg",
+        again:"res/again.png",
+        back:"res/back.png",
+        more:"res/more.png",
+        guize:"res/guize.png",
+        loadingpage:"res/loadingpage.jpg"
+    };
+    
+
+    for (var i in res) {
+        g_resources.push(res[i]);
+    }
+
+    var g_link = "#";
+
+    window.onload = function(){
+        resourceCallBack();
+    }
+</script>
+
+<script type="text/javascript" src="game.min.js" charset="UTF-8"></script>
+
+</body>
+</html>
