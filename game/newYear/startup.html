@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>贴窗花</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<script type="text/javascript">
+    document.ccConfig = {
+        "debugMode"     : 1,
+        "frameRate"     : 60,
+        "id"            : "gameCanvas",
+        "renderMode"    : 1,
+        "jsList"        : []
+    };
+</script>
+<body  style="background-color:#000">
+    <canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+    <script type="text/javascript" src="./../lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+    
+    <script type="text/javascript">
+        var g_resources = [];
+        var res = {
+            beginBg:"res/beginBg.jpg",
+            gameBg:"res/gameBg.jpg",
+            beginBtn:"res/beginBtn.png",
+
+            know:"res/know.png",
+            rule:"res/rule.jpg",
+
+            hit:"res/hit.png",
+
+            topBar:"res/topBar.png",
+
+            type1:"res/type1.png",
+            type2:"res/type2.png",
+            type3:"res/type3.png",
+            type4:"res/type4.png",
+            type5:"res/type5.png",
+            type6:"res/type6.png",
+
+            spr1:"res/spr1.png",
+            spr2:"res/spr2.png",
+            spr3:"res/spr3.png",
+            spr4:"res/spr4.png",
+            spr5:"res/spr5.png",
+            spr6:"res/spr6.png",
+
+            tip1:"res/tip1.png",
+            tip2:"res/tip2.png",
+            tip3:"res/tip3.png",
+            topBarBg:"res/topBarBg.png",
+
+            loadingpage:"res/loadingpage.jpg"
+        };
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+
+        var g_loadingPage = "res/loadingpage.jpg";
+        window.onload = function(){
+            resourceCallBack();
+        }
+    </script>
+
+    <script type="text/javascript" src="game.min.js" charset="UTF-8"></script>
+</body>
+</html>
