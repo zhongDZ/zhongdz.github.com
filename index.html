@@ -124,20 +124,20 @@
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade active in" id="myHtml">
-                <p>asdfsdf</p>
-                <h2>asfds</h2>
+                <p>暂无</p>
+                <h2>暂无</h2>
               </div>
               <div class="tab-pane fade" id="myCss">
-                <p>asdfsdf</p>
-                <h2>asfds</h2>
+                <p>css</p>
+                <h2>css</h2>
               </div>
-              <div class="tab-pane fade" id="myCss">
-                <p>asdfsdf</p>
-                <h2>asfds</h2>
+              <div class="tab-pane fade" id="myJs">
+                <p>javascript</p>
+                <h2>javascript</h2>
               </div>
               <div class="tab-pane fade" id="myCode">
-                <p>asdfsdf</p>
-                <h2>asfds</h2>
+                <p>code</p>
+                <h2>code</h2>
               </div>
              <!--  <div class="tab-pane fade" id="dropdown1">
                 <p>这里是一段文字</p>
@@ -174,16 +174,16 @@
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade active in" id="project1">
-                <p>asdfsdf</p>
-                <h2>asfds</h2>
+                <p>project1</p>
+                <h2>project1</h2>
               </div>
               <div class="tab-pane fade" id="project2">
-                <p>asdfsdf</p>
-                <h2>asfds</h2>
+                <p>project2</p>
+                <h2>project2</h2>
               </div>
               <div class="tab-pane fade" id="project3">
-                <p>asdfsdf</p>
-                <h2>asfds</h2>
+                <p>project3</p>
+                <h2>project3</h2>
               </div>
              <!--  <div class="tab-pane fade" id="dropdown1">
                 <p>这里是一段文字</p>
@@ -314,6 +314,8 @@
             }
         }
         myEvent(window,'load',function(){
+            innerGameList();
+
             var oRTT=document.getElementById('rtt');
             var pH=document.documentElement.clientHeight;
             var timer=null;
@@ -346,8 +348,6 @@
                 if($("#"+_t+"").offset() == undefined)return;
                 $("html,body").animate({scrollTop:($("#"+_t+"").offset().top - $(window).scrollTop())},1000);
             });
-
-            innerGameList();
         });
     </script>
 </body>
