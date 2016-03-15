@@ -36,7 +36,7 @@ html{
 #rtt {
     width:50px; 
     height:50px; 
-    background:url('mysite/images/rrt.png'); 
+    background:url('../images/rrt.png'); 
     background-size:cover; 
     position:fixed; 
     right:50px; 
@@ -94,7 +94,7 @@ body.no-scroll {
     padding-bottom: 30px;
     min-height: 600px;
     clear: both;
-    background: url(mysite/images/paper.jpg) left top #F2EDB4;
+    background: url(../images/paper.jpg) left top #F2EDB4;
     position: relative;
     z-index: 11;
     box-shadow: 5px 5px 8px #888
