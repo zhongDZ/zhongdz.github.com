@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10滴水</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body  style="background-color:#000">
+    <canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+    <script type="text/javascript" src="../lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+    
+    <script type="text/javascript">
+        var g_resources = [];
+        var res = {
+            logo : "../common/logo.png",
+            logoRound : "../common/logoRound.png",
+
+            game_bg:"res/game_bg.png",
+
+            background: "res/images/background.png",
+            images_plist: "res/images/images.plist",
+            images_png: "res/images/images.png",
+            font_fnt: "res/fonts/font.fnt",
+            font_png: "res/fonts/font.png",
+            game_bg: "res/game_bg.png",
+            grid: "res/grid.png",
+            successWindow: "res/successWindow.png",
+            waterdrops_png: "res/waterdrops.png",
+            waterdrops_plist: "res/waterdrops.plist",
+            voice_add_drops: "res/audio/add_drops.ogg",
+            voice_drop_break: "res/audio/drop_break.ogg",
+            voice_inwater: "res/audio/inwater.ogg",
+            voice_hit_water: "res/audio/hit_water.ogg",
+            voice_press: "res/audio/press.wav",
+
+
+            loadingpage:"res/loadingpage.jpg"
+        };
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+        window.onload = function(){
+            resourceCallBack();
+        }
+    </script>
+
+    <script type="text/javascript" src="js/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/StartScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/LocalStorageUtil.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/ThemeScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/CheckpointScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/GameScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/WaterBombSprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/WaterDropSprite.js" charset="UTF-8"></script>
+</body>
+</html>
