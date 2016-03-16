@@ -1,0 +1,76 @@
+{
+    "status": 200,
+    "quest": [
+        { 
+            "title": "testaaa", 
+            "detail": "hogehoge" 
+        }
+    ],
+    "charactors": [
+        {
+            "id"           : 0,
+            "name"         : "",
+            "detail"       : "", 
+            "hp"           : 100,
+            "attack"       : 10,
+            "defence"      : 10,
+            "eye_sight"    : 100,
+            "walk_speed"   : 3,
+            "image"        : "sprite/chara001.png",
+            "image_width"  : 33.3,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 1,
+            "name"         : "",
+            "detail"       : "", 
+            "hp"           : 100,
+            "attack"       : 10,
+            "defence"      : 10,
+            "eye_sight"    : 100,
+            "walk_speed"   : 3,
+            "image"        : "sprite/chara001.png",
+            "image_width"  : 33.3,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 2,
+            "name"         : "",
+            "detail"       : "", 
+            "hp"           : 100,
+            "attack"       : 10,
+            "defence"      : 10,
+            "eye_sight"    : 100,
+            "walk_speed"   : 3,
+            "image"        : "sprite/chara002.png",
+            "image_width"  : 33.3,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 3,
+            "name"         : "",
+            "detail"       : "", 
+            "hp"           : 100,
+            "attack"       : 10,
+            "defence"      : 10,
+            "eye_sight"    : 100,
+            "walk_speed"   : 3,
+            "image"        : "sprite/chara003.png",
+            "image_width"  : 33.3,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 4,
+            "name"         : "",
+            "detail"       : "", 
+            "hp"           : 100,
+            "attack"       : 10,
+            "defence"      : 10,
+            "eye_sight"    : 100,
+            "walk_speed"   : 3,
+            "image"        : "sprite/chara004.png",
+            "image_width"  : 33.3,
+            "image_height" : 46.75
+        }
+    ]
+}

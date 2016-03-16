@@ -1,0 +1,123 @@
+{
+    "status": 200,
+    "quest": [
+        { 
+            "title": "testaaa", 
+            "detail": "hogehoge" 
+        }
+    ],
+    "enemies": [
+        {
+            "id"           : 0,
+            "name"         : "デビルLv1",
+            "detail"       : "", 
+            "hp"           : 50,
+            "attack"       : 5,
+            "defence"      : 10,
+            "eye_sight"    : 30,
+            "walk_speed"   : 0.8,
+            "type"         : "normal",
+            "image"        : "sprite/devil_001.png",
+            "image_width"  : 66.6,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 1,
+            "name"         : "デビルLv2",
+            "detail"       : "", 
+            "hp"           : 80,
+            "attack"       : 10,
+            "defence"      : 10,
+            "eye_sight"    : 30,
+            "walk_speed"   : 1,
+            "type"         : "normal",
+            "image"        : "sprite/devil_001.png",
+            "image_width"  : 66.6,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 2,
+            "name"         : "デビルLv3",
+            "detail"       : "", 
+            "hp"           : 100,
+            "attack"       : 15,
+            "defence"      : 10,
+            "eye_sight"    : 30,
+            "walk_speed"   : 1,
+            "type"         : "normal",
+            "image"        : "sprite/devil_001.png",
+            "image_width"  : 66.6,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 3,
+            "name"         : "デビルBoss",
+            "detail"       : "", 
+            "hp"           : 300,
+            "attack"       : 30,
+            "defence"      : 10,
+            "eye_sight"    : 100,
+            "walk_speed"   : 1,
+            "type"         : "normal",
+            "image"        : "sprite/devil_002.png",
+            "image_width"  : 66.6,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 4,
+            "name"         : "ドラゴンLv1",
+            "detail"       : "", 
+            "hp"           : 50,
+            "attack"       : 20,
+            "defence"      : 10,
+            "eye_sight"    : 30,
+            "walk_speed"   : 0.8,
+            "type"         : "bullet",
+            "image"        : "sprite/dragon_black.png",
+            "image_width"  : 50,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 5,
+            "name"         : "ドラゴンLv2",
+            "detail"       : "", 
+            "hp"           : 50,
+            "attack"       : 25,
+            "defence"      : 10,
+            "eye_sight"    : 30,
+            "walk_speed"   : 0.8,
+            "type"         : "bullet",
+            "image"        : "sprite/dragon_black.png",
+            "image_width"  : 50,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 6,
+            "name"         : "ドラゴンLv3",
+            "detail"       : "", 
+            "hp"           : 50,
+            "attack"       : 35,
+            "defence"      : 10,
+            "eye_sight"    : 30,
+            "walk_speed"   : 0.8,
+            "type"         : "bullet",
+            "image"        : "sprite/dragon_black.png",
+            "image_width"  : 50,
+            "image_height" : 46.75
+        },
+        {
+            "id"           : 7,
+            "name"         : "ドラゴンBoss",
+            "detail"       : "", 
+            "hp"           : 1200,
+            "attack"       : 80,
+            "defence"      : 10,
+            "eye_sight"    : 30,
+            "walk_speed"   : 0.2,
+            "type"         : "bullet",
+            "image"        : "sprite/dragon_red.png",
+            "image_width"  : 50,
+            "image_height" : 46.75
+        }
+    ]
+}
