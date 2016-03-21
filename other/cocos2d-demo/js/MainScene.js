@@ -24,7 +24,7 @@ var MainScene = cc.Scene.extend({
           var layer = new EventMyLayer();
         }
 
-        if(true){
+        if(!true){
           //粒子系统
           // var layer = new DemoSnow();
           var layer = new DemoExplosion();
@@ -63,6 +63,11 @@ var MainScene = cc.Scene.extend({
           // var layer = new TestLayer();
 
           var layer = new TestListView();
+        }
+
+        //场景转换的效果
+        if(true){
+          var layer = new ccuiLayer();
         }
 
         this.addChild(layer);

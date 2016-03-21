@@ -44,6 +44,9 @@ var res = {
 
     test1:"res/test.png",
 
+    start_png:"res/start.png",
+    mario09_png:"res/mario09.png",
+
     loadingpage:"res/loadingpage.jpg"
 };
 for (var i in res) {

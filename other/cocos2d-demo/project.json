@@ -2,6 +2,6 @@
     "debugMode"     : 1,
     "frameRate"     : 60,
     "id"            : "gameCanvas",
-    "renderMode"    : 1,
-    "jsList"        : ["js/res.js","js/config.js","js/loading.js","js/sprite.js","js/event.js","js/particle.js","res/demo/demo.js","res/demo/rocker.js","js/ui.js","js/editBox.js","js/scrollView.js","js/diySprRect.js","js/listView.js","js/diy_scrollView.js"]
+    "renderMode"    : 2,
+    "jsList"        : ["js/res.js","js/config.js","js/loading.js","js/sprite.js","js/event.js","js/particle.js","res/demo/demo.js","res/demo/rocker.js","js/ui.js","js/editBox.js","js/scrollView.js","js/diySprRect.js","js/listView.js","js/diy_scrollView.js","js/ccuiTest.js"]
 }
