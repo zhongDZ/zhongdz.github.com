@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "name": "Minesweeper",
+  "description": "Minesweeper on Cocos2d-JS test task for XIM",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Angly Cat",
+    "url": "https://github.com/zeird"
+  },
+  "default_locale": "en",
+  "installs_allowed_from": [
+    "*"
+  ],
+  "orientation": "portrait-primary",
+  "fullscreen": "true"
+}

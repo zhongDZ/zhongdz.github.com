@@ -1,0 +1,8 @@
+{
+	"-W100": true,
+	"globals": {
+		"cc": true,
+		"helper": true,
+		"mines": true
+	}
+}
