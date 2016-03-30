@@ -1,0 +1,38 @@
+div#detail {
+	display: none;
+    position: absolute;
+    	top:0;
+    	left: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.detail_article {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+img.article_img,.code_img {
+    width: 100%;
+}
+
+.dcode{
+	position: relative;
+	width: 40%;
+	left: 5%;
+}
+.dtext{
+	position: absolute;
+	width: 50%;
+	right: 5%;
+	float: right;
+    bottom: 10%;
+	line-height: 25px;
+}
+.back_btn{
+	position: relative;
+	width: 30%;
+	left: 33%;
+	/* bottom: -10px; */
+}
