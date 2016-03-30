@@ -12,6 +12,18 @@ var glbalScene = null;
 var _Layer9 = null;
 var _Layer10 = null;
 var showZW = false;
+var bgColor = [
+        "#ffffff",
+        "#57BDDA",
+        "#F6E688",
+        "#C0E086",
+        "#FF7670",
+        "#E3B220",
+        "#FF7670",
+        "#FF7670",
+        "#E9324B",
+        "#ffffff"
+    ]
 var desArr = [
     res.describle1,
     res.describle2,
@@ -42,6 +54,8 @@ var gameScene = cc.Scene.extend({
 
         this.initTouch();
         this.initBottom();
+
+        document.body.style.backgroundColor = "white";
     },
     init:function(){
         var size = cc.director.getWinSize();
@@ -121,6 +135,8 @@ var gameScene = cc.Scene.extend({
             this.sceneList[index].visible = true;
             this.sceneList[index].removeAction();
             this.sceneList[index].initAction();
+
+            document.body.style.backgroundColor = bgColor[index];
         }
     },
     initBottom:function(){
@@ -605,6 +621,8 @@ var Layer8 = cc.Layer.extend({
                         _Layer9.y = 0;
                         glbalScene.addChild(_Layer9,100);
                         menu.y = size.height/2 - 250;
+
+                        document.body.style.backgroundColor = "#E9324B";
                     }
                 },100);
 
@@ -676,6 +694,7 @@ var Layer9 = cc.Layer.extend({
                 glbalScene.removeChild(_Layer9);
 
                 showZW = false;
+                document.body.style.backgroundColor = "#FF7670";
         },this);
         var backMenu = new cc.Menu(backItem);
         backMenu.x = size.width/2;
@@ -704,6 +723,8 @@ var Layer10 = cc.Layer.extend({
                 // glbalScene.removeChild(_Layer10);
                 var dialog = document.getElementById('getInfo');
                 dialog.style.display = "block";
+
+
         },this);
         var menu = new cc.Menu(menuItem);
         menu.x = size.width/2;
@@ -712,6 +733,8 @@ var Layer10 = cc.Layer.extend({
 
         var menuItem1 = new cc.MenuItemSprite(new cc.Sprite(res.goBack),new cc.Sprite(res.goBack),function(){
                 glbalScene.removeChild(_Layer10);
+
+                document.body.style.backgroundColor = "#E9324B";
         },this);
         var menu1 = new cc.Menu(menuItem1);
         menu1.x = size.width/2;
@@ -802,6 +825,8 @@ var TouchSpr = cc.Sprite.extend({
     onTouchDispose : function(){//处理点击
         var self = this.target;
         console.log(this.getType())
+
+        document.body.style.backgroundColor = "#ffffff";
         
 
         _Layer10 = new Layer10(this.getType());

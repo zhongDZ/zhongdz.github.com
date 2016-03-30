@@ -118,7 +118,7 @@ function resourceCallBack(){
     cc.game.onStart = function(){
         cc.view.adjustViewPort(true);
         if(thisismobile){
-            cc.view.setDesignResolutionSize(600, 1000, cc.ResolutionPolicy.EXACT_FIT);
+            cc.view.setDesignResolutionSize(600, 1000, cc.ResolutionPolicy.SHOW_ALL);
         }else{
             cc.view.setDesignResolutionSize(600, 1000, cc.ResolutionPolicy.SHOW_ALL);
         }
