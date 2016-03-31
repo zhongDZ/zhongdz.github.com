@@ -12,12 +12,14 @@ var MainScene = cc.Scene.extend({
     onEnter: function () {//此方法是场景初始化完成即将展示的消息回调
         this._super();//调用构造函数，确保Scene被正确初始化
         this.initUI();
-        this.addTouch();
+        // this.addTouch();
         this.initHideEvent();
         curScene = this;
         initMusic();
         playMusic(true);
        // this.addAccel();
+
+       this.loadListener();
     },
     initUI: function () {
         var bg = new cc.Sprite(res.layer3);
@@ -87,6 +89,46 @@ var MainScene = cc.Scene.extend({
         }
         else {
             this.arrow.visible = false;
+        }
+    },
+    loadListener : function(){
+        var listener = cc.EventListener.create({
+            event           : cc.EventListener.TOUCH_ONE_BY_ONE,
+            target          : this,
+            swallowTouches  : true,
+            onTouchBegan    : this.onTouchBegan,
+            onTouchMoved    : this.onTouchMoved,
+            onTouchEnded    : this.onTouchEnded
+        });
+        cc.eventManager.addListener(listener, this);
+    },
+    onTouchBegan: function (touch, event) {
+        var self = this.target;
+        self.startPosY = touch.getLocation().y;
+        var locationInNode = self.convertToNodeSpace(touch.getLocation());
+        var size = self.getContentSize();
+        var rect = cc.rect(0, 0, size.width, size.height);
+        if (!cc.rectContainsPoint(rect, locationInNode)) {
+            return false;
+        }
+        return true;
+    },
+    onTouchMoved : function (touch, event) {
+        var self = this.target;
+    },
+    onTouchEnded : function (touch, event) {
+        console.log("isSuccess")
+        var self = this.target;
+        if (musicPlayStatus) {
+            playMusic(true);
+        }
+        if (canChangePage) {
+            var delta = touch.getLocation().y - self.startPosY;
+            if (delta > 15 && self.currentIndex < self.sceneList.length - 1) {
+                self.changePage(++self.currentIndex, true);
+            } else if (delta < -15 && self.currentIndex > 0) {
+                self.changePage(--self.currentIndex, false);
+            }
         }
     },
     addTouch: function () {
