@@ -52,9 +52,9 @@ var MainScene = cc.Scene.extend({
         this.addChild(this.animLayer);
         this.sceneList.push(new Layer1());
         this.sceneList.push(new Layer2());
-        this.sceneList.push(new Layer3());
-        this.sceneList.push(new Layer4());
-        this.sceneList.push(new Layer5());
+        // this.sceneList.push(new Layer3());
+        // this.sceneList.push(new Layer4());
+        // this.sceneList.push(new Layer5());
         for (var i = 0; i < this.sceneList.length; i++) {
             var scene = this.sceneList[i];
             scene.anchorX = 0;
