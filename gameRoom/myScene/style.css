@@ -1,0 +1,422 @@
+
+.dib{
+    display: inline-block;
+}
+.pr {
+    position: relative;
+}
+
+.tc {
+    text-align: center;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.mt20{
+    margin-top: 20px;
+}
+.invsible{
+    visibility: hidden;
+}
+ul {
+    -webkit-padding-start: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+}
+.hide{
+    display: none!important;
+}
+
+.anim{
+    -webkit-animation:moveIn forwards 0.8s 1;
+
+}
+.animOut{
+    -webkit-animation:moveOut forwards 0.3s 1;
+}
+@-webkit-keyframes moveIn{
+    0%{
+        opacity: 0.25;
+    }
+    100%{
+        top:0;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes moveOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        top:0;
+        opacity: 0;
+    }
+}
+.alertAnimIn{
+    -webkit-animation:alertIn forwards 0.3s 1;
+}
+.alertAnimOut{
+    -webkit-animation:alertOut forwards 0.3s 1;
+}
+@-webkit-keyframes alertOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        top:0;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes alertIn{
+    0%{
+        -webkit-transform:scale(0.25);
+    }
+    95%{
+        -webkit-transform:scale(1.05);
+    }
+    100%{
+        -webkit-transform:scale(1);
+    }
+}
+@-webkit-keyframes alertOut{
+    0%{
+        -webkit-transform:scale(1);
+    }
+    100%{
+        -webkit-transform:scale(0.25);
+    }
+}
+.regBg {
+    background: url("res/background.jpg") no-repeat;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    /*min-width: 380px;*/
+    /*min-height: 600px;*/
+    overflow: scroll;
+    position: relative;
+    background-size: cover;
+    /*top: 600px;*/
+}
+.alertArea{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+}
+
+@media screen and (max-width: 400px) {
+    ul li {
+        list-style-type: none;
+        margin-top: 1.5%;
+    }
+    .logo{
+        width: 80px;
+    }
+    .alertBorder{
+        margin-top: 120px;
+        background:url("res/black.png");
+        width: 100%;
+        height: 185px;
+        text-align: center;
+    }
+    .alertText{
+        margin-top: 40px;
+        width: 90%;
+        display: inline-block;
+        min-height: 50px;
+        color: #ffffff;
+        font-size: 1.2em;
+    }
+    .okBtn{
+        margin-top:20px;
+        background: url("res/confirm.png");
+        width: 126px;
+        height: 36px;
+        background-size: cover;
+    }
+    .regPage{
+        /*transform:scale(0.5);*/
+        height: 100%;
+        width: 100%;
+        -webkit-box-align:center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+    }
+    .closeBtn{
+        width: 33px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .regList {
+
+    }
+
+    .inputItem {
+        border-radius: 4px;
+        width: 50%;
+        /*height: 35px;*/
+        font-size: 1.2em;
+    }
+
+    .inputItem_normal {
+        border: 1px solid #5b5b5b;
+    }
+
+    .inputItem_error {
+        border: 1px solid #ce2a2a;
+        background: #ffe5e5;
+    }
+
+    .tPoint {
+        color: #ff0000;
+        font-size: 15px;
+    }
+
+    .tName {
+        font-size: 1.3em;
+    }
+    .tTips_area{
+        margin-top:5%;
+    }
+    .tTips{
+        font-size: 0.8em;
+        text-align: left;
+        display: inline-block;
+    }
+    p{
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    .tTips_second{
+        text-indent: 2em;
+        margin-top: 2%;
+    }
+    .btnArea{
+        margin-top: 5% ;
+    }
+    .submitBtn{
+        background: url("res/submit.png") no-repeat;
+        width: 252px;
+        height: 71px;
+        -webkit-user-select: none;
+        -webkit-transform: scale(0.8);
+    }
+}
+@media screen and (min-width: 401px) and (max-width:700px) {
+    ul li {
+        list-style-type: none;
+        margin-top: 2.5%;
+    }
+    .regPage{
+        /*transform:scale(0.5);*/
+        height: 100%;
+        width: 100%;
+        -webkit-box-align:center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+    }
+    .alertBorder{
+        margin-top: 220px;
+        background:url("res/black.png");
+        width: 100%;
+        height: 277px;
+        text-align: center;
+    }
+    .alertText{
+        margin-top: 90px;
+        width: 90%;
+        display: inline-block;
+        min-height: 80px;
+        color: #ffffff;
+        font-size: 1.5em;
+    }
+    .okBtn{
+        margin-top:40px;
+        background: url("res/confirm.png");
+        width: 187px;
+        height: 54px;
+        background-size: cover;
+    }
+    .closeBtn{
+        width: 44px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    .regList {
+
+    }
+    .logo{
+        width: 140px;
+    }
+    .inputItem {
+        border-radius: 4px;
+        width: 50%;
+        height: 40px;
+        font-size: 2em;
+    }
+
+    .inputItem_normal {
+        border: 1px solid #5b5b5b;
+    }
+
+    .inputItem_error {
+        border: 1px solid #ce2a2a;
+        background: #ffe5e5;
+    }
+
+    .tPoint {
+        color: #ff0000;
+        font-size: 15px;
+    }
+
+    .tName {
+        font-size: 1.5em;
+    }
+    .tTips_area{
+        margin-top:20px;
+    }
+    .tTips{
+        font-size: 1.2em;
+        text-align: left;
+        display: inline-block;
+    }
+    p{
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    .tTips_second{
+        text-indent: 2em;
+        margin-top: 2%;
+    }
+    .btnArea{
+        margin-top: 5% ;
+    }
+    .submitBtn{
+        background: url("res/submit.png") no-repeat;
+        width: 252px;
+        height: 71px;
+        -webkit-user-select: none;
+    }
+}
+@media screen and (min-width: 700px) {
+    ul li {
+        list-style-type: none;
+        margin-top: 5%;
+    }
+    .logo{
+        width: 180px;
+    }
+    .regPage{
+        /*transform:scale(0.5);*/
+        height: 100%;
+        width: 100%;
+        -webkit-box-align:center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+    }
+    .regList {
+
+    }
+
+    .alertBorder{
+        margin-top: 220px;
+        background:url("res/black.png");
+        width: 100%;
+        height: 371px;
+        text-align: center;
+        -webkit-user-select:none;
+    }
+    .alertText{
+        margin-top: 120px;
+        width: 90%;
+        display: inline-block;
+        min-height: 80px;
+        color: #ffffff;
+        font-size: 2.5em;
+    }
+    .okBtn{
+        margin-top:40px;
+        background: url("res/confirm.png");
+        width: 252px;
+        height: 71px;
+        background-size: cover;
+    }
+    .closeBtn{
+        width: 66px;
+        position: absolute;
+        right:30px;
+        top: 30px;
+    }
+    .inputItem {
+        border-radius: 4px;
+        width: 50%;
+        /*height: 40px;*/
+        font-size: 3em;
+    }
+
+    .inputItem_normal {
+        border: 1px solid #5b5b5b;
+    }
+
+    .inputItem_error {
+        border: 1px solid #ce2a2a;
+        background: #ffe5e5;
+    }
+
+    .tPoint {
+        color: #ff0000;
+        font-size: 15px;
+    }
+
+    .tName {
+        font-size: 3em;
+    }
+    .tTips_area{
+        margin-top:5%;
+    }
+    .tTips{
+        font-size: 2em;
+        text-align: left;
+        display: inline-block;
+    }
+    p{
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    .tTips_second{
+        text-indent: 2em;
+        margin-top: 2%;
+    }
+    .btnArea{
+        margin-top: 6% ;
+    }
+    .submitBtn{
+        background: url("res/submit.png") no-repeat;
+        width: 252px;
+        height: 71px;
+        -webkit-user-select: none;
+        -webkit-transform: scale(1.3);
+    }
+}
