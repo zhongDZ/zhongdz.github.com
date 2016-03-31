@@ -38,7 +38,7 @@ var MainScene = cc.Scene.extend({
         this.addChild(this.arrow, 1);
 
         this.menuItemToggle = new cc.MenuItemToggle(new cc.MenuItemImage("#music.png"), new cc.MenuItemImage("#music_sel.png"), this.toggleMusicCallback, this);
-        this.menuItemToggle.setPosition(cc.pAdd(cc.visibleRect.right, cc.p(-this.menuItemToggle.width / 2 - 30, 140)));
+        this.menuItemToggle.setPosition(cc.pAdd(cc.visibleRect.right, cc.p(-this.menuItemToggle.width / 2 - 30, 420)));
         var togglemenu = new cc.Menu(this.menuItemToggle);
         togglemenu.anchorX = 0;
         togglemenu.anchorY = 0;
