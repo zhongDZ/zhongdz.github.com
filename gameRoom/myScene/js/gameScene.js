@@ -22,7 +22,7 @@ var MainScene = cc.Scene.extend({
        this.loadListener();
     },
     initUI: function () {
-        var bg = new cc.Sprite(res.layer3);
+        var bg = new cc.Sprite(res.layer4);
         bg.anchorX = 0;
         bg.anchorY = 0;
         bg.scaleX = cc.winSize.width / bg.width;
@@ -213,16 +213,16 @@ var Layer1 = cc.Layer.extend({
         this.accLayer.y = 0;
         this.addChild(this.accLayer);
 
-        this.logo = new cc.Sprite("#logo.png");
+        this.logo = new cc.Sprite(res.first_logo);
         this.logo.scale = 0;
         this.logo.setPosition(cc.pAdd(cc.visibleRect.center, cc.p(0, this.logo.height / 3 * 2)));
         this.addChild(this.logo);
 
-        this.leftFont = new cc.Sprite("#font_left.png");
+        this.leftFont = new cc.Sprite(res.first_1);
         this.leftFont.setPosition(cc.pAdd(cc.visibleRect.left, cc.p(-this.leftFont.width / 2, -this.leftFont.height / 2)));
         this.addChild(this.leftFont);
 
-        this.rightFont = new cc.Sprite("#font_right.png");
+        this.rightFont = new cc.Sprite(res.first_2);
         this.rightFont.setPosition(cc.pAdd(cc.visibleRect.right, cc.p(this.rightFont.width / 2, -this.rightFont.height / 2)));
         this.addChild(this.rightFont);
 
@@ -344,7 +344,7 @@ var Layer2 = cc.Layer.extend({
         this.accLayer.addChild(this.blockRightUp);
 
 
-        this.fontLogo = new cc.Sprite("#font.png");
+        this.fontLogo = new cc.Sprite(res.font1);
         this.fontLogo.setPosition(cc.pAdd(cc.visibleRect.center, cc.p(0, 0)));
         this.fontLogo.setScale(0);
         this.addChild(this.fontLogo);
@@ -457,7 +457,7 @@ var Layer3 = cc.Layer.extend({
         this.firstPoint.scale = 0;
         this.line.addChild(this.firstPoint);
 
-        this.firstText = new cc.Sprite("#morning font.png");
+        this.firstText = new cc.Sprite(res.des1);
         this.firstText.setPosition(cc.p(this.firstPoint.x + this.firstPoint.width / 2 + 20 + this.firstText.width, this.firstPoint.y - 50));
         this.firstText.opacity = 0;
         this.line.addChild(this.firstText);
@@ -467,7 +467,7 @@ var Layer3 = cc.Layer.extend({
         this.secondPoint.scale = 0;
         this.line.addChild(this.secondPoint);
 
-        this.secondText = new cc.Sprite("#Afternoon font.png");
+        this.secondText = new cc.Sprite(res.des2);
         this.secondText.setPosition(cc.p(this.secondPoint.x - this.firstPoint.width / 2 - 20 - this.secondText.width, this.secondPoint.y - 20));
         this.secondText.opacity = 0;
         this.line.addChild(this.secondText);
@@ -477,7 +477,7 @@ var Layer3 = cc.Layer.extend({
         this.thirdPoint.scale = 0;
         this.line.addChild(this.thirdPoint);
 
-        this.thirdText = new cc.Sprite("#all day font.png");
+        this.thirdText = new cc.Sprite(res.des3);
         this.thirdText.setPosition(cc.p(this.thirdPoint.x + this.thirdPoint.width / 2 + 20 + this.thirdText.width, this.thirdPoint.y - 22));
         this.thirdText.opacity = 0;
         this.line.addChild(this.thirdText);
@@ -590,7 +590,7 @@ var Layer4 = cc.Layer.extend({
         this.greenDot.runAction(anim);
 
         this.timeAngle = new cc.Sprite("#light_2.png");
-        this.time = new cc.Sprite("#time.png");
+        this.time = new cc.Sprite(res.time1);
         this.time.setPosition(cc.p(this.time.width - 18, this.time.height / 2 - 23));
         this.timeAngle.addChild(this.time);
         this.timeAngle.setPosition(cc.p(this.greenDot.x + this.greenDot.width / 2 + this.timeAngle.width / 2 + 4, this.greenDot.y + 11));
@@ -677,11 +677,11 @@ var Layer5 = cc.Layer.extend({
         this.rightDown.setPosition(cc.pAdd(cc.visibleRect.bottomRight, cc.p(this.rightDown.width / 2, this.rightDown.height * 3 / 2)));
         this.accLayer.addChild(this.rightDown);
 
-        this.code = new cc.Sprite("#code.png");
+        this.code = new cc.Sprite(res.code);
         this.code.setPosition(cc.pAdd(cc.visibleRect.top, cc.p(0, this.code.height / 2)));
         this.addChild(this.code);
 
-        this.text = new cc.Sprite("#focus.png");
+        this.text = new cc.Sprite(res.des1);
         this.text.setPosition(cc.pAdd(cc.visibleRect.left, cc.p(-this.text.width / 2, -20)));
         this.addChild(this.text);
 
