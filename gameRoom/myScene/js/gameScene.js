@@ -583,6 +583,10 @@ var Layer4 = cc.Layer.extend({
         this.accLayer.addChild(this.map);
         this.map.setPosition(cc.pAdd(cc.visibleRect.top, cc.p(0, this.map.height / 2)));
 
+        this.sharelogo = new cc.Sprite(res.sharelogo);
+        this.sharelogo.setPosition(cc.p(320, 750));
+        this.addChild(this.sharelogo);
+
         this.greenDot = new cc.Sprite("#destination_1.png");
         this.map.addChild(this.greenDot);
         this.greenDot.setPosition(cc.p(145, 305));
@@ -596,6 +600,8 @@ var Layer4 = cc.Layer.extend({
         this.timeAngle.setPosition(cc.p(this.greenDot.x + this.greenDot.width / 2 + this.timeAngle.width / 2 + 4, this.greenDot.y + 11));
         this.map.addChild(this.timeAngle);
         this.timeAngle.scale = 0;
+
+
 
         this.registerBtn = new cc.MenuItemImage("#button_normal.png", "#button_hover.png", this.registerClick, this);
         this.registerBtn.setPosition(cc.pAdd(cc.visibleRect.bottom, cc.p(0, -this.registerBtn.height / 2)));
@@ -677,9 +683,10 @@ var Layer5 = cc.Layer.extend({
         this.rightDown.setPosition(cc.pAdd(cc.visibleRect.bottomRight, cc.p(this.rightDown.width / 2, this.rightDown.height * 3 / 2)));
         this.accLayer.addChild(this.rightDown);
 
-        this.code = new cc.Sprite(res.code);
+        this.code = new cc.Sprite(res.sharelogo);
         this.code.setPosition(cc.pAdd(cc.visibleRect.top, cc.p(0, this.code.height / 2)));
         this.addChild(this.code);
+
 
         this.text = new cc.Sprite(res.des1);
         this.text.setPosition(cc.pAdd(cc.visibleRect.left, cc.p(-this.text.width / 2, -20)));
