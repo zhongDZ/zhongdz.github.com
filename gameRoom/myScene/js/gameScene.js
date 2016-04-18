@@ -22,7 +22,7 @@ var MainScene = cc.Scene.extend({
        this.loadListener();
     },
     initUI: function () {
-        var bg = new cc.Sprite(res.layer4);
+        var bg = new cc.Sprite(res.layer3);
         bg.anchorX = 0;
         bg.anchorY = 0;
         bg.scaleX = cc.winSize.width / bg.width;
