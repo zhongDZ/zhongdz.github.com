@@ -1,0 +1,7 @@
+.popup{ background: rgba(0,0,0,.7);z-index: 9999}
+.boxItem{  border-radius: 10px; background-color:#f5f5f5; width: 560px; left: 40px; top:50%; position: absolute;  }
+.boxItem .title{ width: 100%; height:80px; background-color: #ffb000; color: #fff; font: bold 36px/80px 'Microsoft YaHei'; text-align: center; border-radius:10px 10px 0 0   }
+.boxItem .close{ width: 70px; height: 70px; background-color: #f5f5f5; border-radius: 100%; position: absolute; right: -10px; top: -10px; }
+.boxItem .close:after{ content: ''; display: block; position: absolute; width:44px; height: 6px; left:13px; top:32px; background-color:#ffb000 ; -webkit-transform: rotate(45deg);transform: rotate(45deg);border-radius: 6px; }
+.boxItem .close:before{ content: ''; display: block; position: absolute; width:6px; height: 44px; left:32px; top:13px; background-color:#ffb000 ; -webkit-transform: rotate(45deg);transform: rotate(45deg);border-radius: 6px;  }
+.boxItem .content div{ font: 24px/1.5em 'Microsoft YaHei'; }

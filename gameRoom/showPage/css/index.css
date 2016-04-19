@@ -1,0 +1,116 @@
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{padding: 0; margin: 0; box-sizing: border-box;  -webkit-text-size-adjust: none;-webkit-appearance: none;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+table{border-collapse: collapse; border-spacing: 0;}
+fieldset, img{border: 0;}
+address, caption, cite, code, dfn, em, strong, th, var{font-weight: normal; font-style: normal;}
+ol, ul{list-style: none;}
+caption, th{text-align: left;}
+a{ text-decoration: none;}
+h1, h2, h3, h4, h5, h6{font-weight: normal; font-size: 100%;}
+q:before, q:after{content: '';}
+abbr, acronym{border: 0;}
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+.cf:after,
+.cf:before{ content: ''; display: table; }
+.cf:after{ clear: both; }
+.cf{ zoom:1; }
+.fl{float: left; display: inline;}
+.fr{float: right; display: inline;}
+.dis_none{ display: none;}
+body, html{height:100%; width:100%;position: relative; overflow: hidden; background: #000; }
+section{ position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; width: 100%; height: 100%;}
+.centerImg{ width: 100%; position: absolute; left: 0; background-position: center; background-repeat: no-repeat}
+.btn:active{-webkit-transform: scale(1.1);}
+.moveDiv{ overflow: hidden;}
+/*音乐控制*/
+#musicCtrl{z-index:20;position: fixed;}
+.mLt{left: 20px; top: 20px; }
+.mRt{right: 20px; top: 20px; }
+.mLb{left: 20px; bottom: 20px; }
+.mRb{right: 20px; bottom: 20px; }
+.pos-a{ position: absolute;}
+
+.pt-page>img{ position: absolute; }
+
+.page1{ background:url("../images/p1/bg.png") top no-repeat #f7cb55}
+.p11{ top: 14.4%; left: 103px;}
+.p12{ top:36.5%; left: 0;}
+.anim .p11{animation:1s bounceInDown both; -webkit-animation:1s bounceInDown both; }
+.anim .p12{animation:1s .5s bounceInUp both; -webkit-animation:1s .5s bounceInUp both; }
+
+.page2{ background:url("../images/p2/bg.png") top no-repeat  #59aad3}
+.p21{ top:6.4%; left: 51px}
+.p22{ top:31.0%; left: 242px;}
+.p23{ top:44.7%; left: 128px;}
+.p24{ top: 44.7%; left: 343px;}
+.p25{ top: 66.7%; left: 28px;}
+.p26{ top: 66.7%; left: 239px;}
+.p27{ top: 66.7%; left: 456px;}
+
+.anim .p21{animation:1s bounceInDown both; -webkit-animation:1s bounceInDown both; }
+.anim .p22{animation:1s .2s bounceInUp both; -webkit-animation:1s .2s bounceInUp both; }
+.anim .p23{animation:1s .4s bounceInUp both; -webkit-animation:1s .4s bounceInUp both; }
+.anim .p24{animation:1s .6s bounceInUp both; -webkit-animation:1s .6s bounceInUp both; }
+.anim .p25{animation:1s .8s bounceInUp both; -webkit-animation:1s .8s bounceInUp both; }
+.anim .p26{animation:1s 1s bounceInUp both; -webkit-animation:1s 1s bounceInUp both; }
+.anim .p27{animation:1s 1.2s bounceInUp both; -webkit-animation:1s 1.2s bounceInUp both; }
+
+
+.page3{ background:url("../images/p3/bg.png") top no-repeat  #b770bd}
+.p31{ top:8.5%; left: 63px}
+.p32{ top:27.9%; left: 62px;}
+.p33{ top:45.3%; left:62px;}
+.p34{ top:62.9%; left:62px;}
+.p35{ top:80.4%; left:62px;}
+
+.anim .p31{animation:1s bounceInDown both; -webkit-animation:1s bounceInDown both; }
+.anim .p32{animation:1s .2s fadeInLeft both; -webkit-animation:1s .2s fadeInLeft both; }
+.anim .p33{animation:1s .4s fadeInRight both; -webkit-animation:1s .4s fadeInRight both; }
+.anim .p34{animation:1s .6s fadeInLeft both; -webkit-animation:1s .6s fadeInLeft both; }
+.anim .p35{animation:1s .8s fadeInRight both; -webkit-animation:1s .8s fadeInRight both; }
+
+.page4{ background:url("../images/p4/bg.png") top no-repeat   #b4db4c}
+.p41{ top:8.0%; left: 117px}
+.p42{ top:27.4%; left: 40px;}
+.p43{ top:87.8%; left: 179px;}
+
+.anim .p41{animation:1s rotateIn both; -webkit-animation:1s rotateIn both; }
+.anim .p42{animation:1s .2s flipInY both; -webkit-animation:1s .2s flipInY both; }
+.anim .p43{animation:1s .4s fadeInUp both; -webkit-animation:1s .4s fadeInUp both; }
+
+
+.page5{ background: url("../images/p5/bg.png") no-repeat center #9b99a7; }
+.p51{ top:9.6%; left: 43px}
+.p52{ top:33.4%; left: 41px;}
+.p53{ top:33.4%; left: 41px;}
+
+.anim .p51{animation:1s lightSpeedIn both; -webkit-animation:1s lightSpeedIn both; }
+.anim .p52{animation:1s .4s zoomIn both; -webkit-animation:1s .4s zoomIn both; }
+.anim .p53{animation:1s .2s zoomIn both; -webkit-animation:1s .2s zoomIn both; }
+
+.page6{ background: url("../images/p6/bg.png") no-repeat center #dabf7e; }
+.p61{top:8.6%; left: 96px }
+.p62{top:25.7%; left: 232px }
+.p63{top:35.9%; left: 86px }
+
+.anim .p61{animation:1s flipInX both; -webkit-animation:1s flipInX both; }
+.anim .p62{animation:1s .4s flipInY both; -webkit-animation:1s .4s flipInY both; }
+.anim .p63{animation:1s .2s bounceInUp both; -webkit-animation:1s .2s bounceInUp both; }
+
+
+.page7{  background:url("../images/p7/bg.png") no-repeat right bottom #3a3a3a;}
+.p71{ top:8.0%; left: 0}
+.p72{ top:38%; left: 0;}
+.p73{ top:41.9%; left: 304px;}
+
+.anim .p71{animation:1s fadeInLeft both; -webkit-animation:1s fadeInLeft both; }
+.anim .p72{animation:1s .4s fadeIn both; -webkit-animation:1s .4s fadeIn both; }
+.anim .p73{animation:1s .2s fadeInRight both; -webkit-animation:1s .2s fadeInRight both; }
+
+@media screen and ( max-height: 832px) {
+
+
+}
