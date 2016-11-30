@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         files: [
           {expand: true, cwd: 'dev/view/<%=game_name%>', src: ['*.html'], dest: 'project/view/<%=game_name%>'},
           {expand: true, cwd: 'dev/lib/js', src: ['**/*.js'], dest: 'project/lib/js'},
-          {expand: true, cwd: 'dev/static/common', src: ['**/*.{css,js,mp3}'], dest: 'project/static/common'}
+          {expand: true, cwd: 'dev/static/common', src: ['**/*.{css,js,mp3,ogg,wav,fnt,plist}'], dest: 'project/static/common'}
         ]
       },
       image: {
