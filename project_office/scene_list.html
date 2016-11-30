@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>场景页</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="stylesheet" href="css/sm.min.css">
+  <link rel="stylesheet" href="css/sm-extend.min.css">
+  <link rel="stylesheet" href="css/scene-index.css">
+
+  </head>
+  <body>
+    <div class="page" id="page-index">
+      <header class="bar bar-nav">
+      <a class="icon icon-home pull-left open-panel" data-panel=".panel-left" href="./index.html"></a>
+        <h1 class="title">场景列表</h1>
+      </header>
+      <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+          <span class="icon icon-home"></span>
+          <span class="tab-label">主页</span>
+        </a>
+        <a class="tab-item" href="#">
+          <span class="icon icon-emoji"></span>
+          <span class="tab-label">别点我</span>
+          <span class="badge">99</span>
+        </a>
+        <a class="tab-item" href="https://zhongdz.github.io/zhongdz/">
+          <span class="icon icon-me"></span>
+          <span class="tab-label">我</span>
+        </a>
+      </nav>
+      <div class="content infinite-scroll infinite-scroll-bottom " id='page-index' data-distance="100">
+
+        <!-- title -->
+        <div class="mg_head_title _white"><span class="new-game-line">|</span>&nbsp;我的场景</div>
+
+        <div class="list-block media-list rewrite-0 game_list_parent">
+            <ul class="list-container">
+                <!--list:列表-->
+                <li>
+                    <a href="javascript:;" class="external color-desc"></a>
+                    <div class="item-content">
+                      <a href="javascript:;" class="external color-desc">
+                          <div class="item-media default-logo-enterprise-normal">
+                              <img class="default-logo-enterprise" src="./ress/type-icon.png">
+                          </div>
+                      </a>
+                      <div class="item-inner all_game_info hold_bold">
+                        <a href="javascript:;" class="external color-desc">
+                        <!-- 1 -->
+                        <div class="item-title-row">
+                            <div class="item-title color-title"><span class="h2">太极熊猫</span></div>
+                        </div>
+                        </a>
+                        <!-- 2 -->
+                        <div class="item-title-row"><a href="javascript:;" class="external color-desc">
+                            <div class="item-title">
+                                <span class="space-r-05rem">益智</span>
+                            </div>
+                            </a><div><a href="javascript:;" class="external color-desc">
+                                </a><a href="#" class="button all_game_button">进入</a>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="item-title-row">
+                            <div class="item-title">
+                                <span class="icon_zan"></span>
+                                <span class="zan_num">1000000次</span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 加载提示符 -->
+        <div class="infinite-scroll-preloader">
+            <div class="preloader"></div>
+        </div>
+      </div>
+    </div>
+    
+    <script type='text/javascript' src='js/zepto.min.js'></script>
+    <script type="text/javascript">
+        //禁用sui路由功能
+        $.config = {router: false}
+    </script>
+    <script type='text/javascript' src='js/sm.min.js'></script>
+    <script type='text/javascript' src='js/sm-extend.min.js'></script>
+    <script type='text/javascript' src='js/juicer-min.js'></script>
+    <script type='text/javascript' src='js/scene-index.js'></script>
+    <!-- <script src="js/sm-city-picker.js"></script> -->
+    <!--首页职位列表模板-->
+    <script type="text/html" id="tpl_home_position_list">
+        <li>
+          <a href="javascript:;" class="external color-desc"></a>
+          <div class="item-content">
+            <a href="javascript:;" class="external color-desc">
+                <div class="item-media default-logo-enterprise-normal">
+                    <img class="default-logo-enterprise" src="./ress/type-icon.png">
+                </div>
+            </a>
+            <div class="item-inner all_game_info hold_bold">
+              <a href="javascript:;" class="external color-desc">
+              <!-- 1 -->
+              <div class="item-title-row">
+                  <div class="item-title color-title"><span class="h2">太极熊猫</span></div>
+              </div>
+              </a>
+              <!-- 2 -->
+              <div class="item-title-row"><a href="javascript:;" class="external color-desc">
+                  <div class="item-title">
+                      <span class="space-r-05rem">益智</span>
+                  </div>
+                  </a><div><a href="javascript:;" class="external color-desc">
+                      </a><a href="#" class="button all_game_button">进入</a>
+                  </div>
+              </div>
+              <!-- 3 -->
+              <div class="item-title-row">
+                  <div class="item-title">
+                      <span class="icon_zan"></span>
+                      <span class="zan_num">1000000次</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </li>
+    </script>
+</body>
+</html>
