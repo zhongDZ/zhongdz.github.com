@@ -1,0 +1,485 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background: #f2f2f2;
+    /*background:url(mysite/images/bg.jpg) repeat center center;*/
+}
+html{
+    /*background:url(mysite/images/bg.jpg) repeat center center;*/
+}
+.myBanner{
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+}
+._middle{
+    position: absolute;
+    top: 250px;
+}
+.gameList,.myMark,.line,.myResolve,.aboutMe{
+    width: 900px;
+    margin: 0 auto;
+}
+.mfooter{
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #b9bac4;
+    text-align: center;
+    background-color: #F0F4F7;
+}
+.warn{
+    max-width: 900px;
+    margin:0 auto;
+}
+#rtt {
+    width:50px; 
+    height:50px; 
+    background:url('../images/rrt.png'); 
+    background-size:cover; 
+    position:fixed; 
+    right:50px; 
+    bottom:50px; 
+    border-radius: 5px; 
+    z-index:1000; 
+    display:none;
+}
+/*＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
+.clear {
+    clear: both
+}
+
+body.no-scroll {
+    overflow: hidden
+}
+#download-nav {
+    position: absolute;
+    left: 780px;
+    margin-top: 0;
+    z-index: 12
+}
+
+#download-nav li {
+    margin-bottom: 8px
+}
+
+#download-nav li a {
+    padding-left: 40px;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    color: #000
+}
+
+#download-nav li a:hover {
+    color: #090
+}
+
+#print {
+    background: url(/images/print.png) no-repeat left center
+}
+
+#download {
+    background: url(/images/download.png) no-repeat left center
+}
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 777px;
+    padding-left: 105px;
+    padding-top: 47px;
+    padding-bottom: 30px;
+    min-height: 600px;
+    clear: both;
+    background: url(../images/paper.jpg) left top #F2EDB4;
+    position: relative;
+    z-index: 11;
+    box-shadow: 5px 5px 8px #888
+}
+
+#main h2 {
+    line-height: 30px;
+    font-size: 17px;
+    margin-bottom: 10px
+}
+
+.resume {
+    width: 610px;
+    border: 1px solid #699;
+    border-collapse: collapse;
+    position: relative;
+    table-layout: fixed
+}
+
+.resume a {
+    color: #090
+}
+
+.resume a:hover {
+    text-decoration: underline
+}
+
+.resume tr td {
+    border: 1px solid #699;
+    background: #F3F3F3;
+    height: 30px;
+    padding: 1px 4px
+}
+
+.resume tr td p {
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 22px
+}
+
+.resume tr td p strong {
+    font-weight: 700
+}
+
+.resume-tit {
+    background: #E0E0E0!important;
+    font-weight: 700;
+    text-align: center;
+    width: 120px
+}
+
+#footer {
+    background: url(/images/footer.png) no-repeat center top;
+    width: 760px;
+    padding-left: 23px;
+    padding-top: 200px;
+    overflow: hidden;
+    margin-left: 170px;
+    text-align: center;
+    line-height: 40px
+}
+/*#experience-nav {
+    position: absolute;
+    background: url(/images/bq.png) no-repeat;
+    width: 105px;
+    height: 212px;
+    padding: 25px 35px;
+    left: 827px;
+    margin-top: 0;
+    z-index: 12
+}
+
+#experience-nav li {
+    cursor: pointer;
+    width: 97px;
+    height: 26px;
+    line-height: 26px;
+    text-align: left
+}
+
+#experience-nav li a {
+    font-size: 14px
+}*/
+
+
+
+/*#main .tag {
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px
+}
+
+#main .tag a {
+    padding: 4px 12px
+}*/
+
+/*.work-list {
+    width: 612px
+}
+
+.work-list h3 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    position: absolute;
+    width: 611px;
+    text-align: center;
+    display: none
+}
+
+.work-list img {
+    width: 610px;
+    margin-bottom: -4px
+}
+
+.work-list li {
+    background: url(/images/21.gif) no-repeat center center #FFF;
+    box-shadow: 5px 5px 8px #888;
+    border: 1px solid #333;
+    min-height: 200px;
+    margin-bottom: 30px
+}*/
+
+/*#visit {
+    color: #FFF;
+    font-size: 14px;
+    margin-left: 20px;
+    text-decoration: underline
+}
+
+#visit:hover {
+    color: #FF4646
+}*/
+
+
+/*.big-pic {
+    background: url(/images/21.gif) no-repeat center center #FFF;
+    position: absolute;
+    z-index: 100;
+    border: 2px solid #f0f0f0;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 650px;
+    min-height: 300px
+}*/
+
+/*#work-list {
+    width: 630px
+}*/
+
+/*.waterfall {
+    margin-left: -20px
+}
+.waterfall li {
+    background: #FFF;
+    box-shadow: 5px 5px 8px #888;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    min-height: 120px;
+    padding: 5px;
+    width: 175px
+}
+
+.waterfall li img {
+    width: 175px;
+    margin: 0 10px
+}
+
+.waterfall li h3 {
+    margin: 0 10px;
+    line-height: 30px
+}*/
+
+/*#experience,#jquery-ui-experience {
+    width: 600px
+}
+
+#experience dl,#jquery-ui-experience {
+    padding-bottom: 10px
+}
+
+#experience dl dt,#jquery-ui-experience dl dt {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    background: url(/images/002.gif) no-repeat left center;
+    padding-left: 20px
+}
+
+#experience dl dt.cur,#jquery-ui-experience dl dt.cur {
+    text-decoration: underline
+}
+
+#experience dl dt strong {
+    color: red;
+    font-weight: 700
+}
+
+#experience dl dd,#jquery-ui-experience dl dd {
+    line-height: 24px;
+    background: #fff;
+    border: 1px solid #666;
+    padding: 10px
+}
+
+#experience dl dd a:hover {
+    color: red
+}
+
+#experience dl dd textarea {
+    padding: 5px;
+    width: 450px;
+    height: 200px
+}
+
+#experience dl dd button {
+    margin-left: 5px;
+    padding: 0 6px;
+    line-height: 20px;
+    color: #FFF;
+    cursor: pointer;
+    background: #69a916;
+    border: 1px solid #659b1b;
+    border-radius: 2px
+}
+
+#experience dl dd button:hover {
+    background: #48730d
+}
+
+#experience dl dd .hiddenContent {
+    display: none
+}
+
+#jquery-ui-experience .eg {
+    font-size: 12px;
+    margin: 8px 1%;
+    padding: 10px 20px;
+    border: 1px dashed #333;
+    background: #F5F5F5
+}
+
+#jquery-ui-experience dl dd table,#experience dl dd table {
+    margin: 10px auto 15px;
+    width: 98%
+}
+
+#jquery-ui-experience dl dd table caption,#experience dl dd table caption {
+    line-height: 34px;
+    font-weight: 700;
+    font-size: 14px
+}
+
+#jquery-ui-experience dl dd table tr th {
+    padding: 5px
+}
+
+#jquery-ui-experience dl dd table tr td,#experience dl dd table tr td {
+    padding: 5px
+}*/
+
+/*#links {
+    width: 600px
+}
+
+#links dl {
+    margin-bottom: 30px;
+    float: left
+}
+
+#links dl dt {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    clear: both
+}
+
+#links dl dd {
+    line-height: 34px;
+    font-size: 14px;
+    width: 280px;
+    float: left
+}
+
+#links dl dd a:hover {
+    padding-left: 4px
+}*/
+
+/*#book {
+    margin: -47px 0 -30px -105px;
+    min-height: 1040px;
+    background: #F5F0B6
+}
+
+#book h2 {
+    height: 39px;
+    margin: 0;
+    padding: 45px 0 0 105px;
+    background: url(/images/bookshelftop.jpg) no-repeat left top;
+    color: #000!important
+}
+
+#book ul {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0 0 0 40px;
+    background: url(/images/bookshelfmiddle.jpg) repeat-y left top
+}
+
+#book ul li {
+    height: 160px;
+    line-height: 160px;
+    vertical-align: bottom;
+    width: 110px;
+    float: left;
+    margin: 17px 14px 0;
+    padding-bottom: 19px
+}
+
+#book ul li a {
+    display: block;
+    height: 160px;
+    line-height: 160px
+}
+
+#book ul li img {
+    width: 110px;
+    vertical-align: bottom;
+    box-shadow: 5px 0 6px #333
+}*/
+
+/*#blackBg {
+    background: #000;
+    left: 0;
+    top: 0;
+    opacity: .8;
+    width: 100%;
+    position: absolute;
+    z-index: 80
+}*/
+
+/*#bookIntro {
+    display: none;
+    background: #F9F9F9;
+    position: absolute;
+    z-index: 100;
+    width: 180px;
+    border: 10px solid #F9F9F9;
+    margin-left: -100px;
+    left: 50%;
+    box-shadow: 6px 6px 8px #000
+}
+
+#bookIntro p {
+    line-height: 26px
+}
+
+#bookIntro #close {
+    float: right;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    color: #FFF;
+    background: #333;
+    border-radius: 22px;
+    text-align: center;
+    font-family: Arial,Helvetica,sans-serif
+}
+
+#bookIntro #close:hover {
+    background: #666
+}
+
+#bookIntro #pdfDownload {
+    font-weight: 700;
+    color: red
+}
+
+#bookIntro #pdfDownload:hover {
+    text-decoration: underline
+}*/
+
