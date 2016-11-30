@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
     banner: '',
-    game_name : 'diaoyu1',//项目名字
+    game_name : 'flybird',//项目名字
     //清除目录
     clean: {
       all: ['project/view/<%=game_name%>/**', 'project/*.*'],
