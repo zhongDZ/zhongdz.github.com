@@ -1,0 +1,16 @@
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.rar
+*.zip
+.idea
+bin
+/node_modules
+/Gruntfile.js
+/package.json
+/gruntCfg.json
+

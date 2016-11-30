@@ -1,0 +1,24 @@
+{
+  "requirejs": {
+    "main": {
+      "options": {
+        "baseUrl": "",
+        "paths": {
+          "$": "src/zepto",
+          "_": "src/game",
+          "B": "src/scene",
+          "Test": "src/Test"
+        },
+        "web": {
+          "include": [
+            "$",
+            "_",
+            "B",
+            "Test"
+          ],
+          "out": "dest/libs.min.js"
+        }
+      }
+    }
+  }
+}

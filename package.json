@@ -1,0 +1,40 @@
+{
+  "name": "grunt-test",
+  "version": "1.0.0",
+  "title" : "test_title",
+  "description": "test",
+  "homepage" : "test_homepage",
+  "licenses" : "test_licenses",
+  "author" : {
+    "name" : "zhongdezong"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "devDependencies":{
+    "matchdep": "latest",
+    "shelljs": "latest",
+    "ngmshell": "latest",
+    "grunt": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-htmlmin": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-usemin": "latest",
+    "grunt-rev" : "latest",
+    "grunt-contrib-levin-usemin" : "latest",
+    "connect-livereload": "latest"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "bugs": {
+    "url": "www.baidu.com"
+  }
+}
