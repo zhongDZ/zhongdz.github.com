@@ -189,11 +189,10 @@ var MyScene = cc.Scene.extend({
             //if(game.time==0)cc.director.runScene(new EndScene());
             // if(game.time == 0){console.log("end");this.unscheduleUpdate();}
             if(game.time==0){
-	        	$('.outTime').show();
-	            $('.outTimeTip').html('正在提交分数,请稍后...');
-	            game.resetGame();
-                var beginScene = new BeginScene();
-                cc.director.runScene(new BeginScene());
+	        	$('.middlePage').removeClass('hide');
+	            // game.resetGame();
+                // var beginScene = new BeginScene();
+                // cc.director.runScene(new BeginScene());
             }
         }
 
