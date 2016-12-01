@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
     banner: '',
-    game_name : 'ten',//项目名字
+    game_name : '<%=pkg.project_name%>',//项目名字
     //清除目录
     clean: {
       all: ['project/view/<%=game_name%>/**', 'project/*.*'],
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
       },
       js: {
         src: [
-          "dev/lib/js/cocos2d/r3.1/lite_version/*.js",
+          "dev/lib/js/<%=pkg.base_root[pkg.base_root_index]%>/*.js",
           "dev/lib/js/zepto_iscroll_fastclick/*.js",
           "dev/static/common/js/*.js"
         ],

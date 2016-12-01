@@ -1,4 +1,10 @@
 {
+  "project_name" : "diaoyu",
+  "base_root_index" : "1",
+  "base_root" : [
+      "cocos2d/r3.1/lite_version",
+      "createjs"
+  ],
   "name": "grunt-test",
   "version": "1.0.0",
   "title" : "test_title",
