@@ -1,6 +1,6 @@
 {
-  "project_name" : "diaoyu",
-  "base_root_index" : "1",
+  "project_name" : "xxl",
+  "base_root_index" : "0",
   "base_root" : [
       "cocos2d/r3.1/lite_version",
       "createjs"

@@ -1,0 +1,218 @@
+/*
+/*reset*/body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{padding: 0;margin: 0;box-sizing: border-box;-webkit-text-size-adjust: none;-webkit-appearance: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+table{border-collapse: collapse;border-spacing: 0;}
+fieldset, img{border: 0;}
+address, caption, cite, code, dfn, em, strong, th, var{font-weight: normal;font-style: normal;}
+ol, ul{list-style: none;}
+caption, th{text-align: left;}
+a{text-decoration: none;}
+h1, h2, h3, h4, h5, h6{font-weight: normal;font-size: 100%;}
+q:before, q:after{content: '';}
+abbr, acronym{border: 0;}*/
+div{font-family: 'Microsoft YaHei';}
+.cf:after,
+.cf:before{content: '';display: table;}
+.cf:after{clear: both;}
+.cf{zoom: 1;}
+.fl{float: left;display: inline;}
+.fr{float: right;display: inline;}
+.dis_none{display: none;}
+body, html{height: 100%;width: 100%;position: relative;overflow: hidden; background: #000;}
+.section{position: absolute;left: 0;top: 0;overflow: hidden;width: 640px; margin:0 auto; height: 100%;}
+input, textarea{outline: none;}
+select{ -webkit-appearance: none;appearance: none;}
+.popBox>div>img{
+    position: absolute;
+}
+/**:not(input,textarea){-webkit-touch-callout: none;-webkit-user-select: none;}*/
+
+.hide{ display: none;}
+
+/*音乐控制*/
+.mLt{left: 20px;top: 20px;}
+.mRt{right: 20px;top: 20px;}
+.mLb{left: 20px;bottom: 20px;}
+.mRb{right: 20px;bottom: 20px;}
+
+.mAnim > img:last-of-type {
+  transform: rotateZ(30deg);
+    -webkit-transform: rotateZ(30deg);
+}
+.mAnim > img:first-of-type{ -webkit-animation: mAnim 2s linear infinite ;animation: mAnim 2s linear infinite ; background-position: -51px 0;}
+@-webkit-keyframes mAnim {
+    from{ -webkit-transform: rotate(0deg);}
+    to{ -webkit-transform: rotate(360deg);}
+}
+@keyframes mAnim {
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+#musicCtrl{
+  background-repeat: no-repeat;
+  z-index:9999;
+  position: fixed;
+}
+.music1 {
+  position: absolute;
+  right: -28px;
+    top: 5.5px;
+    transition: transform .4s;
+    -webkit-transition: -webkit-transform .4s;
+    transform-origin: 29px 9px;
+    -webkit-transform-origin: 29px 9px;
+}
+
+/*中态*/
+.middleContentParent{
+  width: 480px;
+  height: 320px;
+  position: absolute;
+  left: 60px;
+  top: 350px;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 25px;
+}
+.middleContentTip{
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 26px;
+  text-align: center;
+  position: absolute;
+  left: 140px;
+  top: 180px;
+  color: white;
+}
+.middleChild{
+	width: 120px;
+	height: 80px;
+	position: absolute;
+	top: 120px;
+	left: 180px;
+}
+@-webkit-keyframes rotate_pacman_half_up {
+  0% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg); }
+
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg); } 
+}
+
+@keyframes rotate_pacman_half_up {
+  0% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg); }
+
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg); } 
+}
+
+@-webkit-keyframes rotate_pacman_half_down {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } 
+}
+
+@keyframes rotate_pacman_half_down {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); } 
+}
+
+@-webkit-keyframes pacman-balls {
+  75% {
+    opacity: 0.7; }
+
+  100% {
+    -webkit-transform: translate(-100px, -6.25px);
+            transform: translate(-100px, -6.25px); } 
+}
+
+@keyframes pacman-balls {
+  75% {
+    opacity: 0.7; }
+
+  100% {
+    -webkit-transform: translate(-100px, -6.25px);
+            transform: translate(-100px, -6.25px); } 
+}
+.pacman {
+position: relative; }
+.pacman > div:nth-child(2) {
+-webkit-animation: pacman-balls 1s 0s infinite linear;
+        animation: pacman-balls 1s 0s infinite linear; }
+.pacman > div:nth-child(3) {
+-webkit-animation: pacman-balls 1s 0.33s infinite linear;
+        animation: pacman-balls 1s 0.33s infinite linear; }
+.pacman > div:nth-child(4) {
+-webkit-animation: pacman-balls 1s 0.66s infinite linear;
+        animation: pacman-balls 1s 0.66s infinite linear; }
+.pacman > div:nth-child(5) {
+-webkit-animation: pacman-balls 1s 0.99s infinite linear;
+        animation: pacman-balls 1s 0.99s infinite linear; }
+.pacman > div:first-of-type {
+	width: 0px;
+	height: 0px;
+	border-right: 25px solid transparent;
+	border-top: 25px solid #fff;
+	border-left: 25px solid #fff;
+	border-bottom: 25px solid #fff;
+	border-radius: 25px;
+	-webkit-animation: rotate_pacman_half_up 0.5s 0s infinite;
+	        animation: rotate_pacman_half_up 0.5s 0s infinite; 
+}
+.pacman > div:nth-child(2) {
+	width: 0px;
+	height: 0px;
+	border-right: 25px solid transparent;
+	border-top: 25px solid #fff;
+	border-left: 25px solid #fff;
+	border-bottom: 25px solid #fff;
+	border-radius: 25px;
+	-webkit-animation: rotate_pacman_half_down 0.5s 0s infinite;
+	        animation: rotate_pacman_half_down 0.5s 0s infinite;
+	margin-top: -50px; 
+}
+.pacman > div:nth-child(3), .pacman > div:nth-child(4), .pacman > div:nth-child(5), .pacman > div:nth-child(6) {
+	background-color: #fff;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	margin: 2px;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	-webkit-transform: translate(0, -6.25px);
+	    -ms-transform: translate(0, -6.25px);
+	        transform: translate(0, -6.25px);
+	top: 25px;
+	left: 100px;
+}
+/*中态*/
