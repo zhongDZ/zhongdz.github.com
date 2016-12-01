@@ -140,6 +140,8 @@
           {'imgurl' : './ress/type-icon.png', 'num' : 111},
           {'imgurl' : './ress/type-icon.png', 'num' : 111},
           {'imgurl' : './ress/type-icon.png', 'num' : 111},
+          {'imgurl' : './ress/type-icon.png', 'num' : 111},
+          {'imgurl' : './ress/type-icon.png', 'num' : 111},
           {'imgurl' : './ress/type-icon.png', 'num' : 111}
       ]
       var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm'); //i g m是指分别用于指定区分大小写的匹配、全局匹配和多行匹配。
@@ -151,9 +153,27 @@
           });
           $('.infinite-scroll-bottom .list-container').append(source);
       }
-      for(var i = 0; i < data.length; i++){
-        addListItem(i)
-      }
+
+      var len = data.length;
+      var aa = 2;
+      var canContinue = true;
+
+      setInterval(function(){
+        if(aa < len){
+          len = len -aa;
+        }else{
+          aa = len;
+          len = 0;
+        }
+        if(canContinue){
+          if(len == 0){
+            canContinue = false;
+          }
+          for(var i = 0; i < aa; i++){
+            addListItem(i)
+          }
+        }
+      }, 1000);
     </script>
 </body>
 </html>
