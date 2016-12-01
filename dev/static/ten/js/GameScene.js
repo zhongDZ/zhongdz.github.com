@@ -64,7 +64,7 @@ var GameLayer = cc.Layer.extend({
     },
     parseCheckpointConfig: function (themeIndex, checkpointIndex, createWaterDrop) {
         var _this = this;
-        cc.loader.loadJson("res/Theme" + themeIndex + "/checkpoint" + checkpointIndex + ".json", function (err, data) {
+        cc.loader.loadJson(root_path + "/Theme" + themeIndex + "/checkpoint" + checkpointIndex + ".json", function (err, data) {
             if (err) {
                 return cc.log("load failed");
             } else {

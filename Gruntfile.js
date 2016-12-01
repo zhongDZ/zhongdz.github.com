@@ -20,13 +20,13 @@ module.exports = function (grunt) {
       src: {
         files: [
           {expand: true, cwd: 'dev/view/<%=game_name%>', src: ['*.html'], dest: 'project/view/<%=game_name%>'},
-          {expand: true, cwd: 'dev/lib/js', src: ['**/*.js'], dest: 'project/lib/js'},
+          // {expand: true, cwd: 'dev/lib/js', src: ['**/*.js'], dest: 'project/lib/js'},
           {expand: true, cwd: 'dev/static/common', src: ['**/*.{css,js,mp3,ogg,wav,fnt,plist}'], dest: 'project/static/common'}
         ]
       },
       image: {
         files: [
-          {expand: true, cwd: 'dev/static/<%=game_name%>', src: ['res/**/*.{png,jpg,jpeg,gif,mp3}'], dest: 'project/static/<%=game_name%>'}
+          {expand: true, cwd: 'dev/static/<%=game_name%>', src: ['res/**/*.{png,jpg,jpeg,gif,mp3,ogg,wav,fnt,plist,json}'], dest: 'project/static/<%=game_name%>'}
         ]
       }
     },
@@ -45,6 +45,14 @@ module.exports = function (grunt) {
         ],
         // dest: "project/html/js/game.min.js"
         dest: "project/static/<%=game_name%>/js/game.min.js"
+      },
+      js: {
+        src: [
+          "dev/lib/js/cocos2d/r3.1/lite_version/*.js",
+          "dev/lib/js/zepto_iscroll_fastclick/*.js",
+          "dev/static/common/js/*.js"
+        ],
+        dest: "project/static/<%=game_name%>/js/lib.min.js"
       },
       css:{
         src: [

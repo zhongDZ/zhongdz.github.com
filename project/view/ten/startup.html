@@ -69,27 +69,28 @@
     
     <script type="text/javascript">
         var g_resources = [];
+        var root_path = "../../static/ten/res";
         var res = {
-            game_bg:"../../static/ten/res/game_bg.png",
+            game_bg: root_path + "/game_bg.png",
 
-            background: "../../static/ten/res/images/background.png",
-            images_plist: "../../static/ten/res/images/images.plist",
-            images_png: "../../static/ten/res/images/images.png",
-            font_fnt: "../../static/ten/res/fonts/font.fnt",
-            font_png: "../../static/ten/res/fonts/font.png",
-            game_bg: "../../static/ten/res/game_bg.png",
-            grid: "../../static/ten/res/grid.png",
-            successWindow: "../../static/ten/res/successWindow.png",
-            waterdrops_png: "../../static/ten/res/waterdrops.png",
-            waterdrops_plist: "../../static/ten/res/waterdrops.plist",
-            voice_add_drops: "../../static/ten/res/audio/add_drops.ogg",
-            voice_drop_break: "../../static/ten/res/audio/drop_break.ogg",
-            voice_inwater: "../../static/ten/res/audio/inwater.ogg",
-            voice_hit_water: "../../static/ten/res/audio/hit_water.ogg",
-            voice_press: "../../static/ten/res/audio/press.wav",
+            background:  root_path + "/images/background.png",
+            images_plist:  root_path + "/images/images.plist",
+            images_png:  root_path + "/images/images.png",
+            font_fnt:  root_path + "/fonts/font.fnt",
+            font_png:  root_path + "/fonts/font.png",
+            game_bg:  root_path + "/game_bg.png",
+            grid:  root_path + "/grid.png",
+            successWindow:  root_path + "/successWindow.png",
+            waterdrops_png:  root_path + "/waterdrops.png",
+            waterdrops_plist:  root_path + "/waterdrops.plist",
+            voice_add_drops:  root_path + "/audio/add_drops.ogg",
+            voice_drop_break:  root_path + "/audio/drop_break.ogg",
+            voice_inwater:  root_path + "/audio/inwater.ogg",
+            voice_hit_water:  root_path + "/audio/hit_water.ogg",
+            voice_press:  root_path + "/audio/press.wav",
 
 
-            loadingpage:"../../static/ten/res/loadingpage.jpg"
+            loadingpage: root_path + "/loadingpage.jpg"
         };
         for (var i in res) {
             g_resources.push(res[i]);
@@ -99,11 +100,8 @@
             resourceCallBack();
         }
     </script>
-
-    <script src="../../lib/js/cocos2d/r3.1/full_version/cocos2d_full.js" charset="UTF-8"></script>
-    <!-- <script src="../../lib/js/zepto_iscroll_fastclick/lib.min.js"></script> -->
-    <!-- <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
-    <script src="../../static/common/js/getData.js" charset="UTF-8"></script>
+    
+    <script src="../../static/ten/js/lib.min.js"></script>
 
     
     <script src="../../static/ten/js/game.min.js"></script>
