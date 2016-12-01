@@ -181,7 +181,7 @@ window.onload = function(){
 
     TOOL.media({
        // musicSrc : '',
-       musicSrc:"/html/static/xxl/res/vo/bgmusic.mp3",
+       musicSrc:"../../static/common/vo/bg_music.mp3",
        musicPlaySrc:"/html/static/xxl/res/img/mPlay.png",
        musicPauseSrc:"/html/static/xxl/res/img/mPaused.png"
     });
