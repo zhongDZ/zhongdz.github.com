@@ -104,7 +104,7 @@
           <div class="item-content">
             <a href="javascript:;" class="external color-desc">
                 <div class="item-media default-logo-enterprise-normal">
-                    <img class="default-logo-enterprise" src="./ress/type-icon.png">
+                    <img class="default-logo-enterprise" src="[imgurl]">
                 </div>
             </a>
             <div class="item-inner all_game_info hold_bold">
@@ -133,6 +133,27 @@
             </div>
           </div>
         </li>
+    </script>
+
+    <script type="text/javascript">
+      var data = [
+          {'imgurl' : './ress/type-icon.png', 'num' : 111},
+          {'imgurl' : './ress/type-icon.png', 'num' : 111},
+          {'imgurl' : './ress/type-icon.png', 'num' : 111},
+          {'imgurl' : './ress/type-icon.png', 'num' : 111}
+      ]
+      var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm'); //i g m是指分别用于指定区分大小写的匹配、全局匹配和多行匹配。
+
+      function addListItem(_index) {
+          var html = document.getElementById("tpl_home_position_list").innerHTML;
+          var source = html.replace(reg, function (node, key) {
+            return data[_index][key];
+          });
+          $('.infinite-scroll-bottom .list-container').append(source);
+      }
+      for(var i = 0; i < data.length; i++){
+        addListItem(i)
+      }
     </script>
 </body>
 </html>
