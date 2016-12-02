@@ -10,4 +10,5 @@
 .idea
 bin
 /node_modules
+/local
 #/dev

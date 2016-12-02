@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>findLogo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script>
+(function(design, selectors){
+var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+var scale = width / design;
+
+var style = '<style type="text/css">\n';
+
+for(var i = 0; i < selectors.length; i++){
+    style += selectors[i].selector + '{\n'
+          + '     -moz-transform-origin: ' + selectors[i].origin + ';\n'
+          + '  -webkit-transform-origin: ' + selectors[i].origin + ';\n'
+          + '          transform-origin: ' + selectors[i].origin + ';\n'
+          + '     -moz-transform: scale(' + scale + ');\n'
+          + '  -webkit-transform: scale(' + scale + ');\n'
+          + '          transform: scale(' + scale + ');\n'
+          + '}\n';
+}
+
+style += '</style>\n';
+
+document.open();
+document.write(style);
+document.close();
+})(640, [{"selector": ".f-popup .f-popup-box", "origin": "50% 50% 0"}, {"selector": ".mainbox", "origin": "0 0 0"}]);
+</script>
+</head>
+<body id="main">
+<!-- <img src="./test.jpg" width="100%" height="100%"> -->
+<style type="text/css">
+  *{
+    padding: 0px;
+    margin: 0px;
+  }
+  .f-popup {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0,0,0,.5);*/
+  }
+  .f-popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    overflow:hidden;
+    width:556px;
+    height:920px;
+    margin:-460px 0 0 -278px;
+    /*border:1px solid red;*/
+    background:url(./contentBg1.png) no-repeat;
+  }
+  #main{
+    width: 100%;
+    height: 100%;
+    /*background: url(./test.jpg) no-repeat;*/
+    background: url(./tmBg.png) repeat center center;
+    background-size: cover;
+    /*background-color: rgba(231,40,73,1);*/
+    /*background-color: rgba(125,125,125,125);*/
+    overflow: hidden;
+  }
+  .closeBtn{
+    width: 50px;
+    height: 50px;
+    margin-top: 40px;
+    float: right;
+  }
+  ul{
+    width: 500px;
+    height: 670px;
+    border: 1px solid red;
+    margin-left: 28px;
+    margin-top: 218px;
+    overflow: scroll;
+  }
+  li{
+    position: relative;
+    width: 100%;
+    height: 48px;
+    border: 1px solid blue;
+    margin-top: 2px;
+  }
+  li:nth-child(even){
+    background-color: red;
+  }
+  li:nth-child(odd){
+    background-color: blue;
+  }
+</style>
+<style type="text/css">
+  
+  /** ipad / ipad mini **/
+  @media screen and (max-height: 1024px) {
+      .wrapper{
+          -webkit-transform: scale(0.98) translate(-50%, -50%);
+                  transform: scale(0.98) translate(-50%, -50%);
+      }
+  }
+  /** nexus 6 **/
+  @media screen and (max-height: 960px) {
+      .wrapper{
+          -webkit-transform: scale(0.92) translate(-50%, -50%);
+                  transform: scale(0.92) translate(-50%, -50%);
+      }
+  }
+  /** iphone 6s **/
+  @media screen and (max-height: 736px) {
+      .wrapper{
+          -webkit-transform: scale(0.698) translate(-50%, -50%);
+                  transform: scale(0.698) translate(-50%, -50%);
+      }
+  }
+  /** nexus 6 **/
+  @media screen and (max-height: 659px) {
+      .wrapper{
+          -webkit-transform: scale(0.622) translate(-50%, -50%);
+                  transform: scale(0.622) translate(-50%, -50%);
+      }
+  }
+  /** iphone 6 **/
+  @media screen and (max-height: 627px) {
+      .wrapper{
+          -webkit-transform: scale(0.59) translate(-50%, -50%);
+                  transform: scale(0.59) translate(-50%, -50%);
+      }
+  }
+  /** iphone 5 **/
+  @media screen and (max-height: 568px) {
+      .wrapper{
+          -webkit-transform: scale(0.50) translate(-50%, -50%);
+                  transform: scale(0.50) translate(-50%, -50%);
+      }
+  }
+  /** nexus 4 **/
+  @media screen and (max-height: 567px) {
+      .wrapper{
+          -webkit-transform: scale(0.53) translate(-50%, -50%);
+                  transform: scale(0.53) translate(-50%, -50%);
+      }
+  }
+  @media screen and (max-height: 533px) {
+      .wrapper{
+          -webkit-transform: scale(0.49) translate(-50%, -50%);
+                  transform: scale(0.49) translate(-50%, -50%);
+      }
+  }
+  /** iphone 4 **/
+  @media screen and (max-height: 480px) {
+      .wrapper{
+          -webkit-transform: scale(0.44) translate(-50%, -50%);
+                  transform: scale(0.44) translate(-50%, -50%);
+      }
+  }
+</style>
+<!-- <div class="mainbox" style="background:url(./test.jpg) no-repeat center center; width:640px; height:1024px;"></div> -->
+<div class="f-popup">
+  <div class="f-popup-box">
+    <div class="closeBtn">
+      <img src="./close.png" width="100%" height="100%">
+    </div>
+    <ul >
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+var _dom = document.getElementById('main');
+// _dom.style.width = 
+</script>
+</body>
+</html>
