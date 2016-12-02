@@ -9,5 +9,5 @@
 *.zip
 .idea
 bin
-#/node_modules
+/node_modules
 #/dev
