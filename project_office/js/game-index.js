@@ -71,10 +71,22 @@ var wlHomeListOperation = function() {
                     return;
                 }
 
-                //do something
-                var result = [1, 1, 1];
-                // 添加新条目
-                addItems(result, lastIndex);
+                // //do something
+                // var result = [1, 1, 1];
+                // // 添加新条目
+                // addItems(result, lastIndex);
+                
+                var data = [
+                    {'imgurl' : './ress/type-icon.png', 'num' : 111},
+                    {'imgurl' : './ress/type-icon.png', 'num' : 111},
+                    {'imgurl' : './ress/type-icon.png', 'num' : 111}
+                ]
+
+                if(data.length != 0 && data != undefined){
+                  for(var i = 0; i < data.length; i++){
+                    addListItem(i)
+                  }
+                }
 
 
                 // 更新最后加载的序号
@@ -85,36 +97,15 @@ var wlHomeListOperation = function() {
         });
     };
 
-    var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm'); //i g m是指分别用于指定区分大小写的匹配、全局匹配和多行匹配。
 
-      function addListItem(_index) {
-          var html = document.getElementById("tpl_home_position_list").innerHTML;
-          var source = html.replace(reg, function (node, key) {
-            return data[_index][key];
-          });
-          $('.infinite-scroll-bottom .list-container').append(source);
-      }
-
-      var len = data.length;
-      var aa = 2;
-      var canContinue = true;
-
-      setInterval(function(){
-        if(aa < len){
-          len = len -aa;
-        }else{
-          aa = len;
-          len = 0;
-        }
-        if(canContinue){
-          if(len == 0){
-            canContinue = false;
-          }
-          for(var i = 0; i < aa; i++){
-            addListItem(i)
-          }
-        }
-      }, 1000);
+    function addListItem(_index) {
+        var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm'); //i g   m是指分别用于指定区分大小写的匹配、全局匹配和多行匹配。
+        var html = document.getElementById("tpl_home_position_list").innerHTML;
+        var source = html.replace(reg, function (node, key) {
+          return data[_index][key];
+        });
+        $('.infinite-scroll-bottom .list-container').append(source);
+    }
 
     return {
         init: function() {
@@ -134,4 +125,4 @@ var wlHomeListOperation = function() {
     }
 };
 
-// wlHomeListOperation().init();
+wlHomeListOperation().init();
