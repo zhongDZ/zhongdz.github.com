@@ -75,7 +75,7 @@ var wlHomeListOperation = function() {
                 // var result = [1, 1, 1];
                 // // 添加新条目
                 // addItems(result, lastIndex);
-                
+
                 var data = [
                     {'imgurl' : './ress/type-icon.png', 'num' : 111},
                     {'imgurl' : './ress/type-icon.png', 'num' : 111},
@@ -107,7 +107,7 @@ var wlHomeListOperation = function() {
         $('.infinite-scroll-bottom .list-container').append(source);
     }
 
-    return {
+    return { 
         init: function() {
             //预先加载数据
             getResumeList();
