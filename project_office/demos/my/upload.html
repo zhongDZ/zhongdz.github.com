@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SUI移动版</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" href="../../css/sm.min.css">
+<script type='text/javascript' src='../../js/zepto.min.js'></script>
+<script type='text/javascript' src='../../js/lrz.min.js'></script>
+<script type='text/javascript' src='../../js/qrcode.js'></script>
+<link rel="stylesheet" href="../../css/sm-extend.min.css">
+<script>
+//图片上传预览    IE是用了滤镜。
+function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+    var param = { width:width, height:height, top:0, left:0 };
+
+    if( width>maxWidth || height>maxHeight ){
+        rateWidth = width / maxWidth;
+        rateHeight = height / maxHeight;
+
+        if( rateWidth > rateHeight ){
+            param.width = maxWidth;
+            param.height = height / rateWidth;
+        }else{
+            param.width = width / rateHeight;
+            param.height = maxHeight;
+        }
+    }
+
+    param.left = (maxWidth - param.width) / 2;
+    param.top = (maxHeight - param.height) / 2;
+
+    return param;
+}
+
+
+function previewImage(file) {
+    var MAXWIDTH = 100;
+    var MAXHEIGHT = 200;
+    var div = document.getElementById('preview');
+    if (file.files && file.files[0]) {
+        div.innerHTML = '<img id=imghead>';
+        var img = document.getElementById('imghead');
+        img.onload = function () {
+            img.style.height = 'auto';
+        };
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            img.src = evt.target.result;
+        };
+        reader.readAsDataURL(file.files[0]);
+    }
+    else //兼容IE
+    {
+        var sFilter = 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+        file.select();
+        var src = document.selection.createRange().text;
+        div.innerHTML = '<img id=imghead>';
+        var img = document.getElementById('imghead');
+        img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+        var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+        status = ('rect:' + rect.top + ',' + rect.left + ',' + rect.width + ',' + rect.height);
+        div.innerHTML = "<div id=divhead style='width:" + rect.width + "px;height:" + rect.height + "px;margin-top:" + rect.top + "px;" + sFilter + src + "\"'></div>";
+    }
+}
+</script>
+
+  </head>
+  <body>
+  
+<div id="page-toast" class="page">
+ 
+  <div class="content">
+
+    <div class="list-block">
+      <div data-title='标题' id="t"></div>
+      <form id="form1" method="POST" action="">
+    <ul>
+        <li>
+          <div class="item-content">
+            <div class="item-inner " >
+              <div class="item-title label">ajax上传且缩略</div>
+                <div class="item-input">
+              <a id="imgup" onclick="document.getElementById('headimgurl').click();"  class="qrcode-img">
+                            <img onclick="document.getElementById('headimgurl').click();" id="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAArQAAAK0BVE7WMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAINSURBVGiB7ZqhbhtBEIY/rxJSEhJSEhLJO6RSFeCVpT6Dn6EkIAUpSEEKHOCCFrggBS0w8TP0JaolVSWTXWBSYmJSYmKpVzLRlSRN472sb+VPsiz9Oms/nebGd3vTsd3eNET/UqybUvM9RP8JQKz7DDzRfBai/6j5NXCgeQjRf9D8PfBU858h+ivNR8CR5osQ/VvNLwHR/FeI/rXmF8AzzVch+leanwMnmq9D9Kdi3RTb7U2rqqLNH9vtTQ2FYACfWyIBvlNVVW6JJJRTWmLdJLfEpoh1EwPs5xZJwH45pQXMckskYLbrWtuG0XumViPWXRvqG782c1BOaQGhyQVE+gOR/qDJNYDQeNcS634AhOifN7lOOaUl1o1zS2yKWDc2wGFukQQcllNawDy3RALmu661bXRstze62Xv6X0T6A6rfo38cZvU73m1irkL49vVBHtaNDPWmWZs52tvk13oG7zyLj3mNLJpc4JFY7LrWtmHEumFuiU0R64YGOM4tkoDjckoLWOaWSMCy+a6lj7kP/de+L+Vs0Ok7vFYj1l0a6heRbUaK6lqr3BIJWJVzsecWSIXRSYJWI9adG+pxiDZzUk5pAevcEglY77rWtmHEurPcEpsi1p3tARdiHSH6LxpOqKchbhtA+3vQbEy9oz8P0b/T/LYBtCH1U+kyRP9G8/sMoK1D9Kc38oDT/MUfWiNHL+7nup4AAAAASUVORK5CYII=" alt=""/>
+                            </a>
+              
+             <div style="display:none;"><input  type="file" name='headimgurl' accept="image/*" id='headimgurl' ></div>
+                <input type="hidden"  name="headimgurl1" id="headimgurl1" value=""></div>
+           <script>
+$(function(){
+ var f = document.querySelector('#headimgurl');
+f.onchange = function () {
+    lrz(this.files[0], {
+        width:400,
+       
+        // 压缩开始
+        before: function() {
+            console.log('压缩开始');
+        },
+        // 压缩失败
+        fail: function(err) {
+            console.error(err);
+        },
+        // 压缩结束（不论成功失败）
+        always: function() {
+            console.log('压缩结束');
+        },
+        // 压缩成功
+        done: function (results) {
+              console.log(results);
+         var data = {
+                    base64: results.base64,
+                    size: results.base64.length // 校验用，防止未完整接收
+                };
+          $.ajax({
+                url: "1.php",
+                type: 'POST',
+                data: data,
+                dataType: 'json',
+                error: function (data) {
+                  if(data.error==1){
+                    alert('格式错误只支持jpg,png,gif');
+                    }else if(data.error==2){
+                    alert("写入文件失败,可能超时或文件过大");
+                    }else if(data.error==3){
+                    alert("文件不能超过1MB");
+                    }else{
+                    alert("上传遇到未知错误");
+                    }
+                },
+                success: function (result) {
+                var img = $("#img")[0];
+                img.src =result.src;
+                img.width = 100;
+                img.height = 100;
+                
+                $("#headimgurl1").val(result.src1);
+                }
+            }); 
+        results.base64 = null;
+          //return false;         
+        }
+    });
+}
+})
+ </script>
+            </div>
+          </div>
+        </li>
+     <li>
+ <li  >
+          <div class="item-content" >
+            <div class="item-inner " >
+              <div class="item-title label">仅仅预览普通上传</div>
+              <div class="item-input">
+                            <a class="qrcode-img" id="preview" onclick="document.getElementById('id_qrcode_img').click();">
+                            <img onclick="document.getElementById('id_qrcode_img').click();" id="imghead" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAArQAAAK0BVE7WMAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAINSURBVGiB7ZqhbhtBEIY/rxJSEhJSEhLJO6RSFeCVpT6Dn6EkIAUpSEEKHOCCFrggBS0w8TP0JaolVSWTXWBSYmJSYmKpVzLRlSRN472sb+VPsiz9Oms/nebGd3vTsd3eNET/UqybUvM9RP8JQKz7DDzRfBai/6j5NXCgeQjRf9D8PfBU858h+ivNR8CR5osQ/VvNLwHR/FeI/rXmF8AzzVch+leanwMnmq9D9Kdi3RTb7U2rqqLNH9vtTQ2FYACfWyIBvlNVVW6JJJRTWmLdJLfEpoh1EwPs5xZJwH45pQXMckskYLbrWtuG0XumViPWXRvqG782c1BOaQGhyQVE+gOR/qDJNYDQeNcS634AhOifN7lOOaUl1o1zS2yKWDc2wGFukQQcllNawDy3RALmu661bXRstze62Xv6X0T6A6rfo38cZvU73m1irkL49vVBHtaNDPWmWZs52tvk13oG7zyLj3mNLJpc4JFY7LrWtmHEumFuiU0R64YGOM4tkoDjckoLWOaWSMCy+a6lj7kP/de+L+Vs0Ok7vFYj1l0a6heRbUaK6lqr3BIJWJVzsecWSIXRSYJWI9adG+pxiDZzUk5pAevcEglY77rWtmHEurPcEpsi1p3tARdiHSH6LxpOqKchbhtA+3vQbEy9oz8P0b/T/LYBtCH1U+kyRP9G8/sMoK1D9Kc38oDT/MUfWiNHL+7nup4AAAAASUVORK5CYII=" alt=""/>
+                            </a><div style="display:none;"><input id="id_qrcode_img" name="qrcode_img" onchange="previewImage(this)" type="file" accept="image/*"/> </div>
+                </div>             
+                            
+           </div>
+          </div>
+        </li>
+     <li>    
+     
+     
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">数字</div>
+              <div class="item-input">
+                <input type="number" placeholder="number" name="phone" id="phone" value="">
+              </div>
+            </div>
+          </div>
+        </li> 
+             <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">手机号</div>
+              <div class="item-input">
+                <input type="tel" placeholder="tel" name="phone" id="phone" value="">
+              </div>
+            </div>
+          </div>
+        </li> 
+          <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">网址</div>
+              <div class="item-input">
+                <input type="email" placeholder="url" name="phone" id="phone" value=""  required='必填'>
+              </div>
+            </div>
+          </div>
+        </li> 
+          <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">邮箱</div>
+              <div class="item-input">
+                <input type="number" placeholder="email" name="phone" id="phone" value="">
+              </div>
+            </div>
+          </div>
+        </li> 
+        
+            <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title label">生成二维码</div>
+              <div class="item-input">
+                <a href='javascript:;' class='external'  id='qr'>生成</a>
+                
+                <a href="javascript:;" class='external'  onclick="$('#qrcode').fadeIn();"  id='qr'>显示</a>
+                <div id="qrcode" class="dialog" style="display: none;">
+    <div class='back'><a onclick="$('#qrcode').hide();"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAKWSURBVGiB7ZrBThRBEIZ/eBpfQQEv3gmEBNCoM8vBhJM3Y4KyHHkMNPHqyZNHAy/hgRMcICYmcNWUh92Nhkz/U91d1TOMU0ldtrer/i89Xd1bs0sigv/JlrsWUNpG4KHbCDx0G4GHbiNwg+0DuABwCeC1r5wk2wDwHcAVgGO0MYlIm9+1d4o5pXynQd9bNicFuC/QTbAiIl9ygX8FAk87hH0W0CQispULvEKCH3YA+5Toqdvma5M87gn0LtGxp4kRk4xBTwvAssd4oo0Tm3S1I2gGW8XESkm+RpJ7VO9tkq+OjZcqohS0KWwOMIQ/3haFjBWol6lxc0V5HVkusBbAbSv9PiFe6AaVDWsF3AYds6fZnq0stFoBQ0QeEbFHivnsBvXCSqclcNtKTxNha0uN1sAQfmQ1FTJWoExhvYAh+rs3W1n1dTHGl0TcXrWsADgNjO1h1kX5GhivAHz0EOUJDHDokNUAPthLmZl3E+8MwGrE9ydwhAXKdC0X0OfkOz8APAdw4i2mVJv2DHzlvgH4VEJIKeBtAG/I+DqAgyJKnI6lf53dje9ayt27F+ew5pz9Hfh8el+BGewTEXlAxt0ag16w2u5i7DW0l8Bszza1Uhm0+Z62hmXdxZrMY52To74Cs5VlsBpos5W2grXqLlp1TlyB2cqm/MRje/qga2Cv7uJDEjerenvBVjmi5s56ZMl7OlVMboHSOitkSXs6RQS7QVWGsBro6MfbEtalBzV3s7eW9wF24ax6q6G1ybLfvBt59j8RNElYgaoKwpqstCZByOoOYBfO9vQrNje1xTNBgYYbsVMAa4GxTTZRA3wN4HbuPzFrop9EiPOyBfQl/uq7AfCZTfJuxPfOxn/TDt1G4KHbCDx0+wNTPX20Nl434AAAAABJRU5ErkJggg=="></a></div>
+    <div class="dialog-cnt">
+        <div class="dialog-bd"  >
+            <div id="qrcodeimg"></div>
+            <div>
+                <p style="color: white;font-size: 1em;">1. 长按二维码加粉</p>
+                <p style="color: white;font-size: 1em;">2. 添加时注明：来自小猪导航</p>
+                <p style="color: white;font-size: 1em;">3. 陌生人聊天注意财产安全，谨防受骗</p>
+            </div>
+        </div>
+    </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+          
+    </ul>
+    
+</form>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+
+   
+   
+   
+  </div>
+</div>
+<script type='text/javascript' src='../../js/sm.min.js'></script>
+<script type='text/javascript' src='../../js/sm-extend.min.js'></script>
+<script >
+
+$("#qr").click(function(){
+$("#qrcodeimg").empty().qrcode({render:"image",ecLevel:"L",size:300,background:"#fff",fill:"#000",text:'测试'});
+
+});
+var title = $('#t').data("title");
+$('#t').html(title);
+
+$('#t').data('x',1);
+</script>
+
+
+  </body>
+</html>

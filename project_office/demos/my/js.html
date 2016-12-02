@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SUI移动版</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" href="../../css/sm.min.css">
+<script type='text/javascript' src='../../js/zepto.min.js'></script>
+
+
+<link rel="stylesheet" href="../../css/sm-extend.min.css">
+
+  </head>
+  <body>
+  
+<div id="page-toast" class="page">
+  <header class="bar bar-nav">
+  <a class="button button-link button-nav pull-left back" href="/demos">
+      <span class="icon icon-left"></span>
+      返回 
+    </a>
+    <h1 class="title">标题</h1>
+  </header>
+  <div class="content">
+
+<div id="q"></div>
+<script>
+var data={
+    name:"李太白",
+    word:"你还好吗",
+    friend:[
+        "杜甫",
+        "白居易"
+    ]
+}
+var tplHTML='<div><%=name%> 说<%=word%>。</div>'+
+            '<div>他的朋友:<ul>'+
+            '<% for(var i=0;i<friend.length;i++){ %>'+
+            '<li><%=friend[i]%></li>'+
+            '<% } %></ul></div>';
+var dest=$.tpl(tplHTML,data);
+$("#q").html(dest);
+</script>  
+      
+<div id="content"></div>
+
+
+<script id="test" type="text/html">
+<% if (isAdmin) {   %>
+
+<h1><%=title%></h1>
+<ul>
+    <% for (var i = 0; i < list.length; i ++) {   %>
+        <li>索引 <%= i + 1 %> ：<%=list[i] %></li>
+    <% } %>
+</ul>
+
+<% } %>
+</script>
+
+<script>
+var data1 = {
+	title: '基本例子',
+	isAdmin: true,
+	list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+};
+var tpl = document.getElementById('test').innerHTML;
+var desc1=$.tpl(tpl,data1);
+ document.getElementById('content').innerHTML = desc1;
+
+</script>
+
+   
+   
+   
+  </div>
+</div>
+<script type='text/javascript' src='../../js/sm.min.js'></script>
+<script type='text/javascript' src='../../js/sm-extend.min.js'></script>
+  </body>
+</html>

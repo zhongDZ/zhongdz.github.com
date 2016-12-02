@@ -1,0 +1,105 @@
+._border{
+  border: 1px solid red;
+}
+._white{
+  background-color: white;
+}
+._bottom{
+  padding-bottom: 10px;      
+}
+.row .col-40{
+  width: 25% ;
+}
+.btn_block{
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+.btn_block p{
+  text-align: center;
+  margin: 0;
+}
+.mg_head_title{
+  font-size: 1rem;
+  padding: 0.2rem 0.8rem;
+  margin-top: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+/**/
+li{
+  list-style: none;
+}
+.new_game_box{
+  padding: .5rem .5rem;
+  position: relative;
+  overflow: hidden;
+  font-size: .85rem;
+}
+.new_game_box_group{
+  list-style: none;
+  padding: 0;
+  font-size: 0;
+  position: relative;
+}
+.new_game_box_group_item{
+  width: 25%;
+  height: 6.5rem;
+  padding: .3rem;
+  font-size: .85rem;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  color: #0088ce;
+}
+.type{
+  height: 3.4rem;
+  width: 3.4rem;
+  line-height: 3.4rem;
+  margin: 0 auto .3rem auto;
+}
+.type-icon{
+  background: url(./ress/type-icon.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.into_btn_radius{
+  border-radius: 0.8rem;
+}
+.new_game_parent p{
+      margin: 1rem 0.6rem;
+}
+.button{
+  border: 1px solid #0894ec;
+  color: #0894ec;
+  line-height: 1.25rem;
+  padding: 0 .5rem;
+  margin: 0;
+  height: 1.35rem;
+  font-size: .7rem;
+}
+
+.default-logo-enterprise-normal{
+    width: 3.5rem;
+    height: 4.5rem;
+}
+.default-logo-enterprise{
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.hold_bold{
+  /*border: 1px solid rgba(0,0,0,0);*/
+}
+.item-title-row .item-title span{
+  padding-left: 0.5rem;
+}
+.icon_zan{
+    background: url('../ress/icon_zan.png') no-repeat center;
+    background-size: 30px 30px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
