@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>钓鱼</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script type="text/javascript">
+        (function(design, selectors){
+            var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var scale = width / design;
+
+            var style = '<style type="text/css">\n';
+
+            for(var i = 0; i < selectors.length; i++){
+              style += selectors[i].selector + '{\n'
+                    + '     -moz-transform-origin: ' + selectors[i].origin + ';\n'
+                    + '  -webkit-transform-origin: ' + selectors[i].origin + ';\n'
+                    + '          transform-origin: ' + selectors[i].origin + ';\n'
+                    + '     -moz-transform: scale(' + scale + ');\n'
+                    + '  -webkit-transform: scale(' + scale + ');\n'
+                    + '          transform: scale(' + scale + ');\n'
+                    + '}\n';
+            }
+
+            style += '</style>\n';
+
+            document.open();
+            document.write(style);
+            document.close();
+        })(640, [{"selector": ".popBox", "origin": "50% 50% 0"}]);
+    </script>
+    <script type="text/javascript">
+        document.ccConfig = {
+            "debugMode"     : 1,
+            "frameRate"     : 60,
+            "id"            : "gameCanvas",
+            "renderMode"    : 1,
+            "jsList"        : []
+        };
+        var system = {
+            
+        }
+    </script>
+    
+    <link rel="stylesheet" href="../../static/diaoyu/css/game.min.css">
+</head>
+
+<body  style="margin: 0;background-color: #000000;overflow:hidden;">
+
+
+  	<div class="canvasHolder" >
+  		<canvas id="Canvas"  style="position: absolute; overflow:hidden;width: 100%;height: 100%"></canvas>
+  	</div>
+
+    <!-- 加载 -->
+    <div class="popParent hide loadingPage">
+      <div class="popBox">
+        <div class="loadingBox">
+          <p><img class="" src=""></p>
+
+          <span class="U-1">U</span>
+          <span class="U-2">L</span>
+          <span class="U-3">.</span>
+          <span class="U-4">C</span>
+          <span class="U-5">O</span>
+          <span class="U-6">M</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 活动说明 -->
+    <div class="popParent hide rulePage">
+      <div class="popBox">
+        <div class="ruleContentParent commonContentParent">
+            <img src="../../static/diaoyu/res/img/close.png" class="rule_close_btn">
+            <div id="rule_wrapper" class="ruleContent">
+              <div>
+                <img src="../../static/diaoyu/res/img/ruleContent.png">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 排行榜 -->
+    <div class="popParent hide phbPage">
+      <div class="popBox">
+        <div class="phbContentParent commonContentParent">
+            <img src="../../static/diaoyu/res/img/close.png" class="phb_close_btn">
+            <div id="phb_wrapper" class="phbContent">
+                <ul>
+                    <!-- <li>
+                        <span>1</span>
+                        <span>
+                            <img src="../../static/diaoyu/res/img/head.jpg" class="headImg">
+                        </span>
+                        <span>昵称5个字</span>
+                        <span>1000分</span>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="myScore">
+                 <span class="myScore_num">---</span>
+                 <span class="myScore_name">---</span>
+                 <span class="myScore_score">---</span>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 奖品明细 -->
+    <div class="popParent hide prizePage">
+      <div class="popBox">
+        <div class="prizeContentParent commonContentParent">
+          <img src="../../static/diaoyu/res/img/close.png" class="prize_close_btn">
+          <div id="prize_wrapper" class="prizeContent">
+            <div>
+              <img src="../../static/diaoyu/res/img/prizeContent.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 登记信息 -->
+    <div class="popParent hide infoPage">
+      <div class="popBox">
+        <div class="infoContentParent">
+          <img src="../../static/diaoyu/res/img/close.png" class="info_close_btn">
+          <div class="inofContent">
+            <input class="user_name inputCommon" name="名字" placeholder='用户名' />
+            <input class="user_phone inputCommon" name="电话" placeholder='电话号码' />
+          </div>
+          <img src="../../static/diaoyu/res/img/submit.png" class="info_send_btn">
+        </div>
+      </div>
+    </div>
+
+    <!-- 中态 -->
+    <div class="popParent hide middlePage">
+      <div class="popBox">
+        <div class="middleContentParent">
+          <div class="pacman middleChild">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="middleContentTip">
+            主银，骚等...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 结束页 -->
+    <div class="popParent hide endPage">
+      <div class="popBox">
+        <div class="endContentParent commonContentParent" data-type="1">
+          <div class="endContent">
+            <span class="endContent_num">排名：第--名</span>
+            <span class="endContent_score">成绩：---分</span>
+            <span class="endContent_best">历史最佳：---分</span>
+          </div>
+          <img src="../../static/diaoyu/res/img/lottery.png" alt="" class="lottery" />
+          <img src="../../static/diaoyu/res/img/playAgain.png" alt="" class="playAgain" />
+          <img src="../../static/diaoyu/res/img/seeMore.png" alt="" class="seeMore" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 提示页 -->
+    <div class="popParent hide alertPage">
+      <div class="popBox">
+        <div class="alertContentParent">
+          <div class="alertContent">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 分享页 -->
+    <div class="popParent hide sharePage">
+      <div class="popBox">
+        <div>
+          <img src="../../static/diaoyu/res/img/shareTxt.png" alt="" class="shareTxt" />
+        </div>
+      </div>
+    </div>
+
+    <!--音乐控制-->
+    <div id="musicCtrl" class="mRb mAnim">
+        <img src="" alt="" />
+        <img class="music1" src="../../static/diaoyu/res/img/music1.png" alt="" />
+    </div>
+
+
+    <script src="../../static/diaoyu/js/lib.min.js"></script>
+
+    <script src="../../static/diaoyu/js/game.min.js"></script>
+</body>
+</html>

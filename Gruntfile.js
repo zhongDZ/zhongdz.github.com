@@ -172,7 +172,7 @@ module.exports = function (grunt) {
   grunt.registerTask('prod', [
     'copy',                 //复制文件
     'concat',               //合并文件
-    // 'imagemin',             //图片压缩
+    'imagemin',             //图片压缩
     'cssmin',               //CSS压缩
     'uglify',               //JS压缩
     // 'rev',                  //重置文件名
