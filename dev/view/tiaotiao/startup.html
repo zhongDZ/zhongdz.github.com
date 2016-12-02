@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>find</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script type="text/javascript">
+        (function(design, selectors){
+            var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var scale = width / design;
+
+            var style = '<style type="text/css">\n';
+
+            for(var i = 0; i < selectors.length; i++){
+              style += selectors[i].selector + '{\n'
+                    + '     -moz-transform-origin: ' + selectors[i].origin + ';\n'
+                    + '  -webkit-transform-origin: ' + selectors[i].origin + ';\n'
+                    + '          transform-origin: ' + selectors[i].origin + ';\n'
+                    + '     -moz-transform: scale(' + scale + ');\n'
+                    + '  -webkit-transform: scale(' + scale + ');\n'
+                    + '          transform: scale(' + scale + ');\n'
+                    + '}\n';
+            }
+
+            style += '</style>\n';
+
+            document.open();
+            document.write(style);
+            document.close();
+        })(640, [{"selector": ".popBox", "origin": "50% 50% 0"}]);
+    </script>
+    <script type="text/javascript">
+        document.ccConfig = {
+            "debugMode"     : 1,
+            "frameRate"     : 60,
+            "id"            : "gameCanvas",
+            "renderMode"    : 1,
+            "jsList"        : []
+        };
+        var system = {
+            version : '',//资源版本号
+            wx_id : '<%=user_me.id%>',//用户微信openid
+            nick_name : '<%=user_me.name%>',//用户微信名
+            share_open_id : '<%=user_share.id%>',//分享者的openId
+            share_nick_name : '<%=user_share.name%>',//分享者的微信名
+            share_url : '<%=share_url%>',//分享链接
+            share_title : '<%=share_title%>',//分享标题
+            share_title_end : '<%=share_title%>',//分享标题
+            share_desc : '<%=share_desc%>',//分享描述
+            share_desc_end : '<%=share_desc%>',//分享描述
+            share_icon : '<%=share_icon%>',//分享icon
+
+            is_share_page : '<%=is_share_page%>',//是否为分享页：false 非，true 是  (bool)
+            is_user_info : '<%=is_user_info%>',//是否已录入用户信息：false没有，true有（bool）
+
+            ajaxStartGameURL : '/games/<%=game_name%>/startGame',//开启游戏接口
+            ajaxUserInfoURL : '/games/<%=game_name%>/userInfo',//提交用户信息接口
+            ajaxDoingGameURL : '/games/<%=game_name%>/doingGame',//提交成绩接口
+            ajaxRankingListURL : '/games/<%=game_name%>/rankingList',//排行榜接口
+            ajaxGetPrizeListURL : '/games/<%=game_name%>/getPrizeList',//奖品列表接口
+            ajaxGetPrizeURL : '/games/<%=game_name%>/getPrize'//领取奖品接口
+        }
+    </script>
+</head>
+<body  style="background-color:#000">
+    <canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+    <!-- build:js ../../static/tiaotiao/js/lib.min.js -->
+    <script src="../../lib/js/cocos2d/r3.1/lite_version/cocos2d.js" charset="UTF-8"></script>
+    <script src="../../lib/js/zepto_iscroll_fastclick/lib.min.js"></script>
+    <!-- <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+    <script src="../../static/common/js/getData.js" charset="UTF-8"></script>
+    <!-- endbuild -->
+    
+    <script type="text/javascript">
+        var g_resources = [];
+        var res = {
+            bg: "../../static/tiaotiao/res/bg.png",
+            images_png: "../../static/tiaotiao/res/images.png",
+            images_plist: "../../static/tiaotiao/res/images.plist",
+            number84: "../../static/tiaotiao/res/number84.fnt",
+            number84_0: "../../static/tiaotiao/res/number84_0.png",
+            die_ogg: "../../static/tiaotiao/res/die.ogg",
+            jumpL_ogg: "../../static/tiaotiao/res/jumpL.ogg",
+            jumpR_ogg: "../../static/tiaotiao/res/jumpL.ogg"
+        };
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+        window.onload = function(){
+            resourceCallBack();
+        }
+    </script>
+    
+    <!-- build:js ../../static/tiaotiao/js/game.min.js -->
+    <script type="text/javascript" src="../../static/tiaotiao/js/GameScene.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/sprite/BarSprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/sprite/BoxSprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/sprite/EyeSprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/sprite/FingerSprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/sprite/BackgroundSprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/sprite/ScoreLabel.js" charset="UTF-8"></script>
+
+    <script type="text/javascript" src="../../static/tiaotiao/js/layer/GameOverLayer.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/layer/LeftGameLayer.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/layer/RightGameLayer.js" charset="UTF-8"></script>
+
+
+    <script type="text/javascript" src="../../static/tiaotiao/js/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../static/tiaotiao/js/gameScene.js" charset="UTF-8"></script>
+    <!-- endbuild -->
+</body>
+</html>
