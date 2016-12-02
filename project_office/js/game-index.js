@@ -77,14 +77,14 @@ var wlHomeListOperation = function() {
                 // addItems(result, lastIndex);
 
                 var data = [
-                    {'imgurl' : './ress/type-icon.png', 'num' : 111},
-                    {'imgurl' : './ress/type-icon.png', 'num' : 111},
-                    {'imgurl' : './ress/type-icon.png', 'num' : 111}
-                ]
+                    {'imgurl' : './ress/type-icon.png', 'gamename' : '消消乐', 'category' : '益智', 'gameurl' : 'https://www.baidu.com/'},
+                    {'imgurl' : './ress/type-icon.png', 'gamename' : '消消乐', 'category' : '益智', 'gameurl' : 'https://www.baidu.com/'},
+                    {'imgurl' : './ress/type-icon.png', 'gamename' : '消消乐', 'category' : '益智', 'gameurl' : 'https://www.baidu.com/'}
+                ];
 
                 if(data.length != 0 && data != undefined){
                   for(var i = 0; i < data.length; i++){
-                    addListItem(i)
+                    addListItem(data, i);
                   }
                 }
 
@@ -98,7 +98,7 @@ var wlHomeListOperation = function() {
     };
 
 
-    function addListItem(_index) {
+    function addListItem(data, _index) {
         var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm'); //i g   m是指分别用于指定区分大小写的匹配、全局匹配和多行匹配。
         var html = document.getElementById("tpl_home_position_list").innerHTML;
         var source = html.replace(reg, function (node, key) {
