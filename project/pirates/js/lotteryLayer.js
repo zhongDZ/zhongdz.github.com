@@ -4,6 +4,8 @@ var lotteryLayer = cc.Layer.extend({
 	ctor : function(){
 		this._super();
 
+		cc.spriteFrameCache.addSpriteFrames(res.game_lottery_plist);
+
 		this.init();
 
 		this.initLotteryOther();
@@ -18,43 +20,43 @@ var lotteryLayer = cc.Layer.extend({
 		this.anchorX = this.anchorY = 0.5;
 	},
 	initLotteryOther : function(){
-		var _lottery_turret_left = new getPosSprite(this, res.lottery_turret, 420, 826);
-		var _lottery_turret_right = new getPosSprite(this, res.lottery_turret, 222, 826);
+		var _lottery_turret_left = new sprFactory(this, "lottery_turret.png", 420, 826);
+		var _lottery_turret_right = new sprFactory(this, "lottery_turret.png", 222, 826);
 		_lottery_turret_right.scaleX = -1;
 
-		var _lottery_top = new getPosSprite(this, res.lottery_top, size.width/2, 896);
+		var _lottery_top = new sprFactory(this, "lottery_top.png", size.width/2, 896);
 
-		var _lottery_Turntable_bg1 = new getPosSprite(this, res.lottery_Turntable_bg1, size.width/2, 557);
+		var _lottery_Turntable_bg1 = new sprFactory(this, "lottery_Turntable_bg1.png", size.width/2, 557);
 
-		var _lottery_bar = new getPosSprite(this, res.lottery_bar, size.width/2, 329);
+		var _lottery_bar = new sprFactory(this, "lottery_bar.png", size.width/2, 329);
 		var _lottery_bar_size = _lottery_bar.getBoundingBox();
 		var label_power = this.label_power = new cc.LabelTTF("50/50", "Arial", 24, cc.size(120, 24), cc.TEXT_ALIGNMENT_CENTER);
         label_power.setPosition(_lottery_bar_size.width/2, _lottery_bar_size.height/2);
         label_power.setColor(cc.color(255, 255, 255));
         _lottery_bar.addChild(label_power);
 
-        var _lottery_power = new getPosSprite(this, res.lottery_power, 300, 293);
+        var _lottery_power = new sprFactory(this, "lottery_power.png", 300, 293);
         var label_power_more = this.label_power_more = new cc.LabelTTF("+6", "Arial", 24, cc.size(120, 24), cc.TEXT_ALIGNMENT_CENTER);
         label_power_more.setPosition(size.width/2 + 20, 295);
         label_power.setColor(cc.color(255, 255, 255));
         this.addChild(label_power_more);
 	},
 	initRoundPan : function(){
-		var _lottery_Turntable_bg2 = this._lottery_Turntable_bg2 = new getPosSprite(this, res.lottery_Turntable_bg2, size.width/2, 590);
-		var _lottery_pointer = new getPosSprite(this, res.lottery_pointer, size.width/2, 595);
+		var _lottery_Turntable_bg2 = this._lottery_Turntable_bg2 = new sprFactory(this, "lottery_Turntable_bg2.png", size.width/2, 590);
+		var _lottery_pointer = new sprFactory(this, "lottery_pointer.png", size.width/2, 595);
 
 		var iconArr = [
-			{res : res.lottery_icon1, x : 152, y : 351, rotation : 0},
-			{res : res.lottery_icon2, x : 371, y : 278, rotation : 45},
-			{res : res.lottery_icon3, x : 318, y : 117, rotation : 135},
-			{res : res.lottery_icon4, x : 100, y : 191, rotation : 245},
+			{res : "lottery_icon1.png", x : 152, y : 351, rotation : 0},
+			{res : "lottery_icon2.png", x : 371, y : 278, rotation : 45},
+			{res : "lottery_icon3.png", x : 318, y : 117, rotation : 135},
+			{res : "lottery_icon4.png", x : 100, y : 191, rotation : 245},
 		]
 		for(var i = 0; i < iconArr.length; i++){
-			var _icon = new getPosSprite(_lottery_Turntable_bg2, iconArr[i].res, iconArr[i].x, iconArr[i].y);
+			var _icon = new sprFactory(_lottery_Turntable_bg2, iconArr[i].res, iconArr[i].x, iconArr[i].y);
 			_icon.rotation = iconArr[i].rotation;
 		}
 
-		// var test = new getPosSprite(_lottery_Turntable_bg2, res.test, size.width/2, 595, true);
+		// var test = new sprFactory(_lottery_Turntable_bg2, res.test, size.width/2, 595, true);
 
 		var iconTxt = [
 			{txt : '2000', x : 236, y : 444, rotation : 0},
@@ -88,7 +90,11 @@ var lotteryLayer = cc.Layer.extend({
 		this._lottery_Turntable_bg2.runAction(seq);
 	},
     initLotteryBtn : function(){
-        var lotteryItem = new cc.MenuItemImage(res.lotteryBtn1, res.lotteryBtn2, this.lotteryBtnFun, this);
+        var lotteryItem = new cc.MenuItemSprite(
+        	new cc.Sprite("#lotteryBtn1.png"),
+        	new cc.Sprite("#lotteryBtn2.png"),
+        	this.lotteryBtnFun,
+        	this);
         var lotteryMenu = this.lotteryMenu = new cc.Menu(lotteryItem);
         lotteryMenu.x = size.width/2;
         lotteryMenu.y = 100;
