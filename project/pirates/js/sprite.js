@@ -20,7 +20,9 @@ var Background = cc.Sprite.extend({
     xx:0,
     ctor:function(_res, tick){
         this._super();
-        this.initWithFile(_res);
+        // this.initWithFile(_res);
+        spriteFrame = cc.spriteFrameCache.getSpriteFrame(_res);
+        this.initWithSpriteFrame(spriteFrame);
 
         this.tick = tick;
     },

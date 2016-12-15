@@ -2,6 +2,8 @@ var bgLayer = cc.Layer.extend({
 	ctor : function(){
 		this._super();
 
+    cc.spriteFrameCache.addSpriteFrames(res.game_phb_plist);
+
 		this.init();
 		
 		this.initBg();
