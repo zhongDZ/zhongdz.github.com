@@ -1,0 +1,32 @@
+.lotteryContentParent{
+  width: 560px;
+  height: 500px;
+  z-index: 100;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  top: 47.5%;
+  border-radius: 40%;
+}
+#outer-cont {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+}
+#inner-cont {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+}
+#outer {}
+#inner {}
+#outer img, #inner img {
+    display: block;
+    margin: 0 auto;
+}
+.main img {
+    /*max-width: 100%;
+    border: 0 none;*/
+}
