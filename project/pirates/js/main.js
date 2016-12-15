@@ -119,7 +119,7 @@ function resourceCallBack(){
             // EXACT_FIT
             // FIXED_WIDTH
             // FIXED_HEIGHT
-            cc.view.setDesignResolutionSize(640, 1136, cc.ResolutionPolicy.FIXED_WIDTH);
+            cc.view.setDesignResolutionSize(640, 1136, cc.ResolutionPolicy.SHOW_ALL);
         }else{
             cc.view.setDesignResolutionSize(640, 1136, cc.ResolutionPolicy.SHOW_ALL);
         }
