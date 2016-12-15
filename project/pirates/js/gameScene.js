@@ -13,6 +13,8 @@ var gameScene = cc.Scene.extend({
         this.initLottery();
 
         this.initSelfLand();
+
+        this.initPhb();
     },
     initBg : function(){
         var _bgLayer = new bgLayer();
@@ -45,5 +47,9 @@ var gameScene = cc.Scene.extend({
         self_island.intoMini();
         self_island.tag = childTagName.self_island;
         this.addChild(self_island, zindex.IsLand);
+    },
+    initPhb : function(){
+        this.layer_2 = new listLayer(this, 'dafd');
+        this.addChild(this.layer_2, 100);
     }
 });

@@ -73,7 +73,7 @@
     </div>
 
     <!-- 排行榜 -->
-    <div class="popParent  phbPage">
+    <!-- <div class="popParent  phbPage">
       <div class="popBox">
         <div class="top">
           <img src="./res/phb/rank_icon.png" class="rank_icon">
@@ -84,20 +84,20 @@
         <div class="phbContentParent">
             <div id="phb_wrapper" class="phbContent">
                 <ul>
-                    <!-- <li>
+                    <li>
                         <span>1</span>
                         <span>
                             <img src="http://wx.qlogo.cn/mmopen/p41z82bcTPWp2CcBuSS1ZUSNbUROqNaLUjsqibhMicnddo6AFFKcMD56zV24srtNeKcI8cibEibibSDvK43PBhAKODTwzy5DfxFXe/132" class="headImg">
                         </span>
                         <span>昵称5个字</span>
                         <span>1000分</span>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </div>
         <img src="./res/phb/rank_closeBtn.png" class="rank_closeBtn">
       </div>
-    </div>
+    </div> -->
 
     <!-- 中态 -->
     <div class="popParent hide middlePage">
@@ -192,9 +192,25 @@
           cloud_1: "./res/island/cloud_1.png",
           cloud_2: "./res/island/cloud_2.png",
           cloud_3: "./res/island/cloud_3.png",
+
+          //排行榜
+          top_bg : "./res/phb/top_bg.png",
+          rank_icon : "./res/phb/rank_icon.png",
+          rank_title : "./res/phb/rank_title.png",
+          rank_btn_1 : "./res/phb/rank_btn_1.png",
+          rank_btn_2 : "./res/phb/rank_btn_2.png",
+          rank_closeBtn : "./res/phb/rank_closeBtn.png",
+          NO1 : "./res/phb/NO1.png",
+          NO2 : "./res/phb/NO2.png",
+          NO3 : "./res/phb/NO3.png",
+          listBg : "./res/phb/listBg.png",
+          defaultHead : "./res/phb/defaultHead.jpg",
       };
       for (var i in res) {
           g_resources.push(res[i]);
+      }
+      window.onload = function(){
+        resourceCallBack();
       }
   </script>
   
@@ -204,6 +220,7 @@
   <script type="text/javascript" src="js/topLayer.js" charset="UTF-8"></script>
   <script type="text/javascript" src="js/menuLayer.js" charset="UTF-8"></script>
   <script type="text/javascript" src="js/lotteryLayer.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="js/listLayer.js" charset="UTF-8"></script>
 
   <script type="text/javascript" src="js/selfIsLand.js" charset="UTF-8"></script>
   <script type="text/javascript" src="js/gameScene.js" charset="UTF-8"></script>
@@ -211,7 +228,7 @@
   
   <!-- <script type="text/javascript" src="js/jquery.min.js" charset="UTF-8"></script>
   <script src="http://rap.taobao.org/rap.plugin.js?projectId=11181"></script>-->
-  <script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+  <!--<script type="text/javascript" src="js/index.js" charset="UTF-8"></script>-->
 </html>
 
     
