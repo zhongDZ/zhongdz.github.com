@@ -1,0 +1,12 @@
+{
+	"main" : "index.html",
+	"name" : "Sanguo TD",
+	"description": "This is a game that is similar to a tower defence game. You can play 15 levels is this game. You will play different Sanguo characters and call other our-side characters to fight with enemies.",
+	"version" : "1",
+	"window": {
+		"title" : "Sanguo TD",
+		"toolbar" : false,
+		"frame" : true,
+		"fullscreen" : true
+	}
+}

@@ -1,0 +1,60 @@
+/* deal */
+/* deal */
+.barStyle{
+    height: 2.2rem;
+}
+.barStyle a{
+    line-height: 1.2rem !important;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    padding: 0.2rem 0.4rem !important;
+    margin-top: 0.3rem;
+}
+.barStyle a:before{
+    margin-left: -0.2rem;
+    color: white;
+}
+.barStyle .title{
+    line-height: 2.2rem !important;
+    font-size: 1.2rem;
+    font-family: "微软雅黑";
+}
+.whiteColor{
+    background-color: white;
+}
+.wl-home-search-condition + .content{
+    top: 4.1rem;
+}
+/* deal */
+.custom_condition{
+    margin-top: 40px;
+}
+.left0{
+    margin-left: 0rem !important;
+}
+.list-container{
+    background-color: #f2f2f2 !important;
+}
+.list-container li{
+    margin-top: 20px;
+}
+.card_bottom_parent a:nth-child(1){
+    color: red;
+}
+.card_bottom_parent span{
+    font-size: 24px;
+}
+.card_bottom_parent a:nth-child(2){
+    margin-left: -8rem;
+}
+.card_bottom_parent a:nth-child(3){
+    width: 3.5rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    /*background-color: #0099ff;*/
+    border: 1px solid #0894ec;
+    color: #0894ec;
+    padding-left: 1rem;
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>萌哥游戏平台</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="./bower_components/msui/v0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="./bower_components/msui/v0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/wl.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/home-mgb.css">
+</head>
+
+<body>
+    <div class="page-group">
+        <!-- 默认主页-->
+        <section class="page page-current" id="home_page">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav barStyle">
+                <!-- <a class="icon icon-left pull-left open-panel"></a> -->
+                <h1 class="title">萌哥游戏</h1>
+            </header>
+            
+            <!-- 添加 class infinite-scroll 和 data-distance  向下无限滚动可不加infinite-scroll-bottom类，这里加上是为了和下面的向上无限滚动区分-->
+            <div class="bannerTop content infinite-scroll infinite-scroll-bottom" id="" data-distance="100">
+                <div class="wl-home-banner white_color">
+                    <div class="swiper-container" id="swiper_container" style="display: none;">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="javascript:;"><img src="./assets/img/banner-test.jpg"></a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="javascript:;"><img src="./assets/img/banner-test.jpg"></a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="javascript:;"><img src="./assets/img/banner-test.jpg"></a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="content-block white_color contentBtnMargin">
+                  <div class="row white_color btn_parent">
+                    <div class="col-40 left-col">
+                        <a href="./home-mgb-fuli.html">
+                            <div class="row-btn-1">
+                                <img src="./assets/img/icon-gift.png" width="100%" height="100%">
+                            </div>
+                            <p>礼包福利</p>
+                        </a>
+                    </div>
+                    <div class="col-40 middle-col" data-url="2">
+                        <a href="./home-mgb-room.html">
+                            <!-- 左右边框 -->
+                            <!-- <div class="middle-col-border"> -->
+                                <div class="row-btn-1">
+                                    <img src="./assets/img/icon-game.png" width="100%" height="100%">
+                                </div>
+                            <!-- </div> -->
+                            <p>微游集合</p>
+                        </a>
+                    </div>
+                    <div class="col-40 right-col" data-url="3">
+                        <a href="./home-mgb-card.html">
+                            <div class="row-btn-1">
+                                <img src="./assets/img/icon-self.png" width="100%" height="100%">
+                            </div>
+                            <p>我的游戏</p>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mg_head_title white_color"><span class="new-game-line">|</span>&nbsp;最新游戏</div>
+                <div class="wl-resume-panel white_color new_game_parent">
+                    <div class="wl-resume-panel-body">
+                        <ul class="resume-skill-group">
+                            <li class="resume-skill-item">
+                                <div class="type type-icon type-icon-1"></div>
+                                <p><a href="http://gameadmin.jjzy520.com:8090/html/view/flybird/startup.html" class="button go_into_radius">进入</a></p>
+                            </li>
+                            <li class="resume-skill-item">
+                                <div class="type type-icon type-icon-2"></div>
+                                <p><a href="http://gameadmin.jjzy520.com:8090/html/view/xxl/startup.html" class="button go_into_radius">进入</a></p>
+                            </li>
+                            <li class="resume-skill-item">
+                                <div class="type type-icon type-icon-3"></div>
+                                <p><a href="http://gameadmin.jjzy520.com:8090/html/view/fatpig/startup.html" class="button go_into_radius">进入</a></p>
+                            </li>
+                            <li class="resume-skill-item">
+                                <div class="type type-icon type-icon-4"></div>
+                                <p><a href="http://gameadmin.jjzy520.com:8090/html/view/jump/startup.html" class="button go_into_radius">进入</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mg_head_title white_color"><span class="preference-game-line">|</span>&nbsp;游戏专场</div>
+                <div class="wl-resume-panel game_preference">
+                    <div class="wl-resume-panel-body">
+                        <ul class="resume-skill-group">
+                            <li class="resume-skill-item game_preference_li">
+                                <div class="type type-icon game_preference_icon game_preference_icon_1"></div>
+                                <div class="game_preference_name">翻翻看</div>
+                                <div class="game_preference_into">
+                                    <p><a href="http://gameadmin.jjzy520.com:8090/html/view/2cat/startup.html" class="button">进入</a></p>
+                                </div>
+                            </li>
+                            <li class="resume-skill-item game_preference_li">
+                                <div class="type type-icon game_preference_icon game_preference_icon_2"></div>
+                                <div class="game_preference_name">垂钓之乐</div>
+                                <div class="game_preference_into">
+                                    <p><a href="http://gameadmin.jjzy520.com:8090/html/view/diaoyu/startup.html" class="button">进入</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mg_head_title white_color"><span class="all-game-line">|</span>&nbsp;所有游戏<!-- <span class="moreGame _border">更多游戏<a class="icon icon-right pull-right open-panel"></a></span> --></div>
+
+                <div class="list-block media-list rewrite-0 game_list_parent">
+                    <ul class="list-container">
+                        <!--list:职位列表-->
+                        <li>
+                            <a href="javascript:;" class="external color-desc">
+                                <div class="item-content">
+                                    <div class="item-media default-logo-enterprise-normal">
+                                        <img class="default-logo-enterprise" src="./assets/img/all_icon_1.png">
+                                    </div>
+                                    <div class="item-inner all_game_info">
+                                        <!-- 1 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title color-title"><span class="h2">围住小偷</span></div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                <span class="space-r-05rem">45款礼包 256.88M</span>
+                                            </div>
+                                            <div>
+                                                <a href="http://gameadmin.jjzy520.com:8090/html/view/cat/startup.html" class="button all_game_button">进入</a>
+                                            </div>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                <span class="icon_zan"></span>
+                                                <span class="zan_num">1000000次</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="external color-desc">
+                                <div class="item-content">
+                                    <div class="item-media default-logo-enterprise-normal">
+                                        <img class="default-logo-enterprise" src="./assets/img/all_icon_2.png">
+                                    </div>
+                                    <div class="item-inner all_game_info">
+                                        <!-- 1 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title color-title"><span class="h2">棍棒英雄</span></div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                <span class="space-r-05rem">45款礼包 256.88M</span>
+                                            </div>
+                                            <div>
+                                                <a href="http://gameadmin.jjzy520.com:8090/html/view/hero/startup.html" class="button all_game_button">进入</a>
+                                            </div>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                <span class="icon_zan"></span>
+                                                <span class="zan_num">1000000次</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="external color-desc">
+                                <div class="item-content">
+                                    <div class="item-media default-logo-enterprise-normal">
+                                        <img class="default-logo-enterprise" src="./assets/img/all_icon_3.png">
+                                    </div>
+                                    <div class="item-inner all_game_info">
+                                        <!-- 1 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title color-title"><span class="h2">收集水滴</span></div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                <span class="space-r-05rem">45款礼包 256.88M</span>
+                                            </div>
+                                            <div>
+                                                <a href="http://gameadmin.jjzy520.com:8090/html/view/ten/startup.html" class="button all_game_button">进入</a>
+                                            </div>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                <span class="icon_zan"></span>
+                                                <span class="zan_num">1000000次</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+                <!--与导航的距离-->
+                <!-- <div class="div-bar-height">
+                </div> -->
+            </div>
+            <!-- 导航 -->
+            <!-- <nav class="bar bar-tab">
+                <a class="tab-item external" href="javascript:;">
+                    <span class="wl-ico wl-ico-nav wl-icon-home"></span>
+                    <span class="tab-label">主页</span>
+                </a>
+                <a class="tab-item external" href="javascript:;">
+                    <span class="wl-ico wl-ico-nav wl-icon-resume"></span>
+                    <span class="tab-label">简历</span>
+                </a>
+                <a class="tab-item external" href="javascript:;">
+                    <span class="wl-ico wl-ico-nav wl-icon-me"></span>
+                    <span class="tab-label">我的</span>
+                </a>
+            </nav> -->
+        </section>
+    </div>
+
+    <!--首页职位列表模板-->
+    <script type="text/html" id="tpl_home_position_list">
+        <li>
+            <a href="javascript:;" class="external color-desc">
+                <div class="item-content">
+                    <div class="item-media default-logo-enterprise-normal">
+                        <img class="default-logo-enterprise" src="">
+                    </div>
+                    <div class="item-inner all_game_info">
+                        <!-- 1 -->
+                        <div class="item-title-row">
+                            <div class="item-title color-title"><span class="h2">游戏的名字</span></div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="item-title-row">
+                            <div class="item-title">
+                                <span class="space-r-05rem">游戏的简介</span>
+                            </div>
+                            <div>
+                                <a href="#" class="button new_game_into_color button-fill">进入</a>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="item-title-row">
+                            <div class="item-title">
+                                <span class="icon_zan"></span>
+                                <span class="zan_num">1000000次</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </script>
+    <!-- public:start -->
+    <script type='text/javascript' src='./bower_components/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type="text/javascript">
+        //禁用sui路由功能
+        $.config = {router: false}
+    </script>
+    <script type='text/javascript' src='./bower_components/msui/v0.6.2/js/sm.js' charset='utf-8'></script>
+    <script type='text/javascript' src='./bower_components/msui/v0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <!-- public:end -->
+    <!-- juicer模板引擎插件 -->
+    <script type="text/javascript" src="./bower_components/juicer/juicer-min.js"></script>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
+    <script type="text/javascript">
+        //banner 幻灯片
+        $(function(){
+                $("#swiper_container").show();
+                $(".swiper-container").swiper({loop: true,autoplay: 3000, });
+	    });
+        //滚动加载数据
+        // wlHomeListOperation().init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="stage1" tilewidth="32" tileheight="32">
+  <image source="stage1.png" trans="ff00ff" width="256" height="3584"/>
+ </tileset>
+ <layer name="圖塊層 1" width="50" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztw0ENAAAMA6FzWf9OJmJfSFg1VVVVVVX19QBCLf3U
+  </data>
+ </layer>
+ <layer name="圖塊層 2" width="50" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt2MkNgDAMBVHSTepkCTukZCZNgLDmSXP3vzqn7vdygA2SFF1PA400UaGZFlppo50OOumim+oXx0qSJEmSpFdF+PG2DQ800Qis
+  </data>
+ </layer>
+</map>

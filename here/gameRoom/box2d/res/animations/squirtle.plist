@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>squirtle_dance_01.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{0, 0}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_01</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_02.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{48, 0}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_02</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_03.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{96, 0}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_03</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_04.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{144, 0}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_04</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_05.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{0, 48}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_05</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_06.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{48, 48}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_06</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_07.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{96, 48}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_07</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_08.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{144, 48}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_08</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_09.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{0, 96}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_09</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_10.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{48, 96}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_10</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_11.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{96, 96}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_11</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_12.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{144, 96}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_12</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_13.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{0, 144}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_13</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_14.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{48, 144}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_14</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_15.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{96, 144}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_15</string>
+			</array>
+		</dict>
+		<key>squirtle_dance_16.png</key>
+		<dict>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>textureRect</key>
+			<string>{{144, 144}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, 0}</string>
+			<key>textureRotated</key>
+			<false/>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>aliases</key>
+			<array>
+				<string>squirtle_dance_16</string>
+			</array>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>3</integer>
+		<key>size</key>
+		<string>{192, 192}</string>
+	</dict>
+</dict>
+</plist>
