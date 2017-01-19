@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta equiv="Expires" content="0">
+    <title></title>
+    <script type="text/javascript">
+        (function(design, selectors){
+            var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var scale = width / design;
+
+            var style = '<style type="text/css">\n';
+
+            for(var i = 0; i < selectors.length; i++){
+              style += selectors[i].selector + '{\n'
+                    + '     -moz-transform-origin: ' + selectors[i].origin + ';\n'
+                    + '  -webkit-transform-origin: ' + selectors[i].origin + ';\n'
+                    + '          transform-origin: ' + selectors[i].origin + ';\n'
+                    + '     -moz-transform: scale(' + scale + ');\n'
+                    + '  -webkit-transform: scale(' + scale + ');\n'
+                    + '          transform: scale(' + scale + ');\n'
+                    + '}\n';
+            }
+
+            style += '</style>\n';
+
+            document.open();
+            document.write(style);
+            document.close();
+        })(640, [{"selector": ".popBox", "origin": "50% 50% 0"}]);
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript">
+        var system = {
+            'gameId' : '',//游戏id
+            'awardId':'',//抽奖id
+            'custNbr' : '',//客户编号
+            'deviceId' : '',//设备号
+            'prizeDataUrl' : '',//中奖记录请求地址
+            'startGameUrl' : '',//开始游戏地址
+            'sendDataUrl' : '',//发送信息地址
+        }
+    </script>
+    <style type="text/css">
+        /* 开始页 */
+        .beginPage{
+            background:url("images/bg.jpg") top no-repeat rgb(255, 109, 0);
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body >
+    <!-- 首页 -->
+    <div class="popParent beginPage">
+      <div class="popBox">
+        <div class="commonContentParent beginPageParent">
+            <img src="./images/title.png" class="title tada animated infinite">
+            <img src="./images/recordBg.png" class="recordBg ">
+
+            <img src="./images/bottomTip.png" class="bottomTip">
+            <img src="./images/tipBtn.png" class="tipBtn">
+            <img src="./images/recordBtn.png" class="recordBtn">
+            <img src="./images/ruleBtn.png" class="ruleBtn">
+        </div>
+
+        <div id="scratch" class="scratch center">
+            <div id="card" class="card">
+                <img src="./images/p-1.png" width="100%" height="100%">
+            </div>
+        </div>
+
+        <img src="./images/start.png" class="center start">
+
+        <img src="./images/handTip.gif" class="center handTip hide">
+
+        <img src="./images/canTouch.png" class="center canTouch">
+      </div>
+    </div>
+
+    <!-- 活动规则 -->
+    <div class="popParent rulePage hide">
+      <div class="popBox">
+        <div class="commonContentParent ruletPageParent">
+            <img src="./images/ruleContent.png" class="ruleContent">
+        </div>
+      </div>
+    </div>
+
+    <!-- 抽奖记录弹窗 -->
+    <div class="popParent recordPage hide">
+      <div class="popBox">
+        <div class="commonContentParent recordPageParent">
+            <div class="middleContent">
+                <img src="./images/prizeBg.png" class="prizeBg">
+                <ul class="lotteryRecList center">
+                    <!-- <li>
+                        <span class='row1 color-5a commonRow'>111</span>
+                        <span class='row2 color-red commonRow'>中奖</span>
+                        <span class='row3 color-5a commonRow'>11/21 17:55:33</span>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div class="paging center">
+                <a href="javascript:;" id="prepage" class="pre">上一页</a>
+                <span>1/1</span>
+                <a id="nextpage" href="javascript:;" class="next">下一页</a>
+            </div>
+
+            <img src="./images/closeBtn.png" class="closeBtn normal-btn">
+        </div>
+      </div>
+    </div>
+
+    <!-- 公共提示 -->
+    <div class="popParent tipPage hide">
+      <div class="popBox">
+        <div class="commonContentParent tipPageParent">
+            <img src="./images/tipContent.png" class="center tipContent">
+            <div class="center tipTxt">
+                这里是一段提示语
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 中奖 -->
+    <div class="popParent prizePage hide">
+      <div class="popBox">
+        <div class="prizeContenttParent">
+            <img src="./images/shine.png" class="shine center mAnim">
+            <img src="./images/prizeContent.png" class="prizeContent center">
+            <img src="./images/prize.png" class="prize center">
+
+            <img src="./images/getInfo.png" class="getInfo center">
+        </div>
+      </div>
+    </div>
+
+    <!-- 填写个人信息 -->
+    <div class="popParent infoPage hide">
+      <div class="popBox">
+        <div class="infoPageParent">
+            <div class="center infoContent">
+                <input type='text' name="name" class="commonInput name" placeholder="姓名"/>
+                <input type='text' name="phone" class="commonInput phone" maxlength='11' placeholder="手机号码"/>
+            </div>
+            <img src="./images/infoBg.png" class="infoBg center">
+            <img src="./images/send.png" class="send center">
+        </div>
+      </div>
+    </div>
+    
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/lucky-card.js"></script>
+    <script src="./js/fastclick.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

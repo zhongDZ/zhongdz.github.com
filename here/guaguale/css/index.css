@@ -1,0 +1,336 @@
+/*reset*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{padding: 0; margin: 0; box-sizing: border-box;  -webkit-text-size-adjust: none;-webkit-appearance: none;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+table{border-collapse: collapse; border-spacing: 0;}
+fieldset, img{border: 0;}
+address, caption, cite, code, dfn, em, strong, th, var{font-weight: normal; font-style: normal;}
+ol, ul{list-style: none;}
+caption, th{text-align: left;}
+a{ text-decoration: none;}
+h1, h2, h3, h4, h5, h6{font-weight: normal; font-size: 100%;}
+q:before, q:after{content: '';}
+abbr, acronym{border: 0;}
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+.cf:after,
+.cf:before{ content: ''; display: table; }
+.cf:after{ clear: both; }
+.cf{ zoom:1; }
+.fl{float: left; display: inline;}
+.fr{float: right; display: inline;}
+.dis_none{ display: none;}
+body, html{height:100%; width:100%;position: relative; overflow: hidden; background: #000; }
+section{ position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; width: 100%; height: 100%;}
+.centerImg{ width: 100%; position: absolute; left: 0; background-position: center; background-repeat: no-repeat}
+.btn:active{-webkit-transform: scale(1.1);}
+.moveDiv{ overflow: hidden;}
+/*音乐控制*/
+#musicCtrl{z-index:20;position: fixed;}
+.mLt{left: 20px; top: 20px; }
+.mRt{right: 20px; top: 20px; }
+.mLb{left: 20px; bottom: 20px; }
+.mRb{right: 20px; bottom: 20px; }
+.pos-a{ position: absolute;}
+
+/*.page1{ background:url("../images/p1/bg.png") top no-repeat #f7cb55}
+.p11{ top: 14.4%; left: 103px;}
+.p12{ top:36.5%; left: 0;}
+.anim .p11{animation:1s bounceInDown both; -webkit-animation:1s bounceInDown both; }
+.anim .p12{animation:1s .5s bounceInUp both; -webkit-animation:1s .5s bounceInUp both; }*/
+
+/* *********************************************公共*************************************************** */
+.popParent{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+.popBox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  overflow:hidden;
+  width : 600px;
+  height : 1050px;
+  margin : -525px 0 0 -300px;
+}
+.commonContentParent{
+  width: 560px;
+  height: 1000px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  background-size: 560px 1000px;
+  z-index: 100;
+}
+.hide{
+	display: none;
+}
+.popParent img{
+	position: absolute;
+}
+.border{
+	border: 1px solid red;
+}
+.center{
+  position:absolute;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.mAnim{ -webkit-animation: mAnim 2s linear infinite ;animation: mAnim 2s linear infinite ;}
+@-webkit-keyframes mAnim {
+    from{ -webkit-transform: rotate(0deg);}
+    to{ -webkit-transform: rotate(360deg);}
+}
+@keyframes mAnim {
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
+/* *********************************************刮刮卡*************************************************** */
+.card {
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+    background: #FAFAFA;
+}
+.card img{
+	position: static;
+}
+.scratch {
+    width: 400px;
+    height: 230px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 50%;
+    top: 31%;
+    z-index: 10000;
+}
+#cover{ position: absolute; top:0; left:0;}
+.canTouch{
+	left: 50%;
+	top: 28%;
+	z-index: 10000;
+}
+/* *********************************************首页*************************************************** */
+.title{
+	left: 50px;
+	top: 0%;
+	z-index: 1;
+}
+.recordBg{
+	left: 60px;
+	top: 28%;
+}
+.bottomTip{
+	left: 15px;
+	bottom: 0%;
+}
+.tipBtn{
+	left: 80px;
+	top: 57%;
+}
+.recordBtn{
+	right: 80px;
+	top: 57%;
+}
+.ruleBtn{
+	right: 40px;
+	top: 71%;
+}
+.start{
+	left: 50%;
+	top: 37%;
+	z-index: 100001;
+}
+.handTip{
+	left: 50%;
+	top: 40%;
+	z-index: 100001;
+}
+/* *********************************************活动规则*************************************************** */
+.ruleContent{
+	left: 7.5px;
+	top: 10%;
+}
+/* *********************************************中奖记录*************************************************** */
+.color-red {
+  color: #ff0000;
+}
+.color-5a {
+  color: #5a5a5a;
+}
+.color-9b {
+  color: #9b9b9b;
+}
+.recordPageParent{
+	top: -80px;
+}
+.prizeBg{
+	left: 0px;
+	top: 10%;
+}
+.middleContent{
+	width: 545px;
+	height: 976px;
+	position: absolute;
+	left: 7.5px;
+	top: 0%;
+}
+.lotteryRecList{
+	width: 450px;
+	height: 500px;
+	left: 50%;
+	top: 33.5%;
+	font-size: 24px;
+	border-top: 1px solid rgb(0, 0, 0);
+}
+.lotteryRecList li{
+	width: 450px;
+	height: 50px;
+	float: left;
+	border-bottom: 1px dashed rgb(0, 0, 0);
+}
+.commonRow{
+	display: block;
+	height: 50px;
+  	text-align: center;
+ 	line-height: 50px;
+}
+.lotteryRecList .row1 {
+  display: inline-block;
+  width: 20%;
+}
+.lotteryRecList .row2 {
+  display: inline-block;
+  text-align: center;
+  width: 32%;
+}
+.lotteryRecList .row3 {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+}
+.upBtn{
+	left: 115px;
+	top: 87%;
+}
+.nextBtn{
+	right: 115px;
+	top: 87%;
+}
+.closeBtn{
+	left: 172.5px;
+	top: 93.5%;
+}
+.recordPageNum{
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	bottom: 9%;
+	text-align: center;
+	line-height: 20px;
+	font-size: 20px;
+}
+.paging {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  text-align: center;
+}
+.paging .pre,
+.paging .next {
+  display: inline-block;
+  width: 95px;
+  height: 40px;
+  line-height: 40px;
+  background: #fc8d2a;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
+}
+.paging span {
+  margin: 0 15px;
+  font-size: 20px;
+}
+/* *********************************************提示*************************************************** */
+.tipPage{
+	z-index: 1000000000000;
+}
+.tipContent{
+	left: 50%;
+	top: 10%;
+}
+.tipTxt{
+	width: 380px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 32%;
+	text-align: center;
+	font-size: 32px;
+
+}
+/* *********************************************中奖*************************************************** */
+.shine{
+	left: 11.5%;
+	top: -2%;
+}
+.prizeContent{
+	left: 50%;
+	top: 10%;
+}
+.prize{
+	left: 50%;
+	top: 38%;
+}
+.chuizi{
+	left: 90%;
+	bottom: 2%;
+}
+.getInfo{
+	left: 50%;
+	bottom: 22%;
+	z-index: 1000;
+}
+/* *********************************************确认发送信息*************************************************** */
+.infoBg{
+	left: 50%;
+	top: 18%;
+}
+.send{
+	left: 50%;
+	top: 55%;
+}
+.infoContent{
+	width: 440px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 26%;
+	z-index: 10;
+}
+.commonInput{
+	width: 320px;
+	height: 65px;
+	position: absolute;
+	left: 15%;
+	font-size: 24px;
+	padding-left: 10px;
+	border-radius: 8px;
+}
+.name{
+	top: 18%;
+}
+.phone{
+	top: 45%;
+}
