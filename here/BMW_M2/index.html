@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta equiv="Expires" content="0">
+    <title>BMW M2</title>
+    <script type="text/javascript">
+        var phoneWidth = parseInt(window.screen.width),
+                phoneScale = phoneWidth / 640, 
+                ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+
+        var sysParam = {
+
+        };
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body >
+<!--loading-->
+<section class="loding" id="loading">
+    <div class="loadingBox">
+        <p><img class="loadroll" src="images/loading.gif"></p>
+        <p>Loading...</p>
+        <span class="l-1">i</span>
+        <span class="l-2">-</span>
+        <span class="l-3">l</span>
+        <span class="l-4">z</span>
+        <span class="l-5">.</span>
+        <span class="l-6">c</span>
+        <span class="l-7">n</span>
+    </div>
+</section>
+
+<!--首页-->
+<section id="page">
+
+    <section class="pt-page page1 slide">
+        <img src="images/p1/p1.png" class="p11">
+        <img src="images/p1/p2.png" class="p12">
+        <p class="p13">年轻就</p>
+        <img src="images/p1/p4.png" class="p14">
+        <img src="images/p1/p5.png" class="p15">
+    </section>
+
+    <section class="pt-page page2 ">
+        <img src="images/p2/p1.png" class="p21">
+        <img src="images/p2/p2.png" class="p22">
+        <img src="images/p2/p3.png" class="p23">
+        <img src="images/p2/p4.png" class="p24">
+        <img src="images/p2/p5.png" class="p25">
+        <img src="images/p2/p6.png" class="p26">
+        <img src="images/p2/p78.png" class="p27">
+        <img src="images/p2/p78.png" class="p28">
+        <img src="images/p2/p9.png" class="p29 dis_none">
+        <img src="images/p2/p10.png" class="p210 dis_none">
+    </section>
+
+    <section class="pt-page page3  ">
+        <img src="images/p3/p1.png" class="p31">
+        <img src="images/p3/p2.png" class="p32">
+        <img src="images/p3/p3.png" class="p33">
+        <img src="images/p3/p4.png" class="p34">
+        <img src="images/p3/p5.png" class="p35">
+        <img src="images/p3/p6.png" class="p36">
+        <img src="images/p3/p6.png" class="p36">
+    </section>
+
+    <section class="pt-page page4 ">
+        <img src="images/p4/p1.png" class="p41">
+        <img src="images/p4/p2.png" class="p42">
+        <img src="images/p4/p3.png" class="p43">
+        <img src="images/p4/p4.png" class="p44">
+        <img src="images/p4/p5.png" class="p45">
+        <img src="images/p4/p6.png" class="p46">
+        <img src="images/p4/p7.png" class="p47 dis_none">
+    </section>
+
+    <section class="pt-page page5 ">
+        <img src="images/p5/p1.png" class="p51">
+        <img src="images/p5/p2.png" class="p52">
+        <img src="images/p5/p3.png" class="p53">
+        <img src="images/p5/p4.png" class="p54">
+        <img src="images/p5/p5.png" class="p55">
+        <img src="images/p5/p6.png" class="p56">
+        <img src="images/p5/p78.png" class="p57">
+        <img src="images/p5/p78.png" class="p58">
+        <img src="images/p5/p9.png" class="p59 dis_none">
+        <img src="images/p5/p10.png" class="p510 dis_none">
+    </section>
+
+    <section class="pt-page page6 ">
+        <img src="images/p6/p1.png" class="p61">
+        <img src="images/p6/p2.png" class="p62">
+        <p class="p63">游刃锋芒间</p>
+        <img src="images/p6/p4.png" class="p64">
+
+        <div class="infoPop dis_none">
+            <input class="name" placeholder="姓名"></input>
+            <input class="phone" placeholder="电话"></input>
+            <input class="address" placeholder="地址"></input>
+            <input type="submit" class="subBtn"></input>
+        </div>
+    </section>
+
+</section>
+    <img src="images/move.png" class="bottomMove bottomMoveAni">
+    <!--音乐控制-->
+    <div id="musicCtrl" class="mRt mAnim">
+        <img src="images/music2.png" alt="" />
+        <img class="music1" src="images/music1.png" alt="" />
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            $("#loading").addClass("hide");
+            setTimeout(function(){
+                $("#loading").detach();
+                $(".page1").addClass("anim")
+            },100)
+        }
+    </script>
+</body>
+</html>
