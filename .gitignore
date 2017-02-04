@@ -11,4 +11,5 @@
 bin
 /node_modules
 /local
+/project_office/demos
 #/dev
