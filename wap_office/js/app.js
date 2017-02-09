@@ -7,7 +7,7 @@
     function init() {
         setRouter();
         sliceTime();
-        addBaiduAnaly();
+        // addBaiduAnaly();
 
         window.ISSUES = window.ISSUES || null;
     }
