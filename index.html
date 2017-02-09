@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
+    <title>home</title>
+    <link rel="shortcut icon" href="img/favicon1.ico" />
+    <link rel="stylesheet" type="text/css" href="./wap_office/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./wap_office/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./wap_office/css/nprogress.css" />
+    <link rel="stylesheet" type="text/css" href="./wap_office/css/zenburn.css" />
+</head>
+<body class="font-hei">
+    <div id="logo">
+        <a href="#/">zhong.github.io</a>
+    </div>
+
+    <div id="container"></div>
+
+    <script id="index" type="text/html">
+        <div id="home">
+            <div class="avatar"><a href="javascript:void(0);"></a></div>
+            <h1>钟德宗</h1>
+            <div class="link">
+                <a href="#/all">全部</a>
+                <a href="#/archive">归档</a>
+                <a href="#/tags">标签</a>
+                <a href="http://zhongdz.github.io/project_office/">作品</a>
+            </div>
+        </div>
+    </script>
+
+    <script id="all" type="text/html">
+        <div class="list">
+            <h2 class="category">全部</h2>
+            {{each list as value i}}
+                <ul>
+                    <li class="list-post">
+                        <span class="date-long">{{value.created_at | slice: 10}}</span>
+                        <a href="#post/{{value.number}}">
+                            {{value.title}}
+                        </a>
+                    </li>
+                </ul>
+            {{/each}}
+        </div>
+    </script>
+
+    <script id="archive" type="text/html">
+        <div class="list">
+            {{each list as listValue listIndex}}
+                {{each listValue as yearValue yearIndex}}
+                    <h2 class="category">{{yearIndex}}</h2>
+                    <ul>
+                        {{each yearValue as titleValue titleIndex}}
+                            <li class="list-post">
+                                <span class="date-long">{{titleValue.created_at | slice: 10}}</span>
+                                 <a href="#post/{{titleValue.number}}">
+                                    {{titleValue.title}}
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            {{/each}}
+        </div>
+    </script>
+
+    <script id="tags" type="text/html">
+        <div class="list">
+            {{each list as value i}}
+                <h2 class="category">{{i}}</h2>
+                <ul>
+                    {{each value as titleValue titleIndex}}
+                        <li class="list-post">
+                            <span class="date-long">{{titleValue.created_at | slice: 10}}</span>
+                            <a href="#post/{{titleValue.number}}">
+                                {{titleValue.title}}
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/each}}
+        </div>
+    </script>
+
+    <script id="post" type="text/html">
+        <div class="article">
+            <h1 class="article-title">{{title}}</h1>
+            <p class="article-time">{{created_at | slice: 10}}</p>
+            <div id="article" class="article-desc article-content"></div>
+        </div>
+        <div id="ds" class="article"></div>
+    </script>
+
+    <script type="text/javascript" src="./wap_office/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="./wap_office/js/lib/director.min.js"></script>
+    <script type="text/javascript" src="./wap_office/js/lib/artTemplate.min.js"></script>
+    <script type="text/javascript" src="./wap_office/js/lib/nprogress.js"></script>
+    <script type="text/javascript" src="./wap_office/js/lib/marked.min.js"></script>
+    <script type="text/javascript" src="./wap_office/js/lib/highlight.min.js"></script>
+    <script type="text/javascript" src="./wap_office/js/config.js"></script>
+    <script type="text/javascript" src="./wap_office/js/lib/embed.js"></script>
+    <script type="text/javascript" src="./wap_office/js/app.js"></script>
+</body>
+</html>
