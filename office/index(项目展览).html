@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="css/sm.min.css">
+  <link rel="stylesheet" href="css/sm-extend.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div class="page" id="page-index">
+      <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-right open-popup" data-popup=".popup-about">
+          关于
+          <span class="icon icon-menu"></span>
+        </a>
+        <h1 class="title">钟德宗</h1>
+      </header>
+      <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+          <span class="icon icon-home"></span>
+          <span class="tab-label">主页</span>
+        </a>
+        <!-- <a class="tab-item" href="#">
+          <span class="icon icon-emoji"></span>
+          <span class="tab-label">别点我</span>
+          <span class="badge">99</span>
+        </a> -->
+        <a class="tab-item" href="./preference.html">
+          <span class="icon icon-share"></span>
+          <span class="tab-label">教程</span>
+        </a>
+        <a class="tab-item" href="./preference.html">
+          <span class="icon icon-code"></span>
+          <span class="tab-label">笔记</span>
+        </a>
+        <a class="tab-item" href="./preference.html">
+          <span class="icon icon-me"></span>
+          <span class="tab-label">关于我</span>
+        </a>
+      </nav>
+      <div class="content infinite-scroll infinite-scroll-bottom " id='page-index' data-distance="100">
+        <!-- banner -->
+        <div class="swiper-container swiper-container-horizontal _white _bottom" data-space-between="10" data-pagination=".swiper-pagination">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active" style="width: 375px; margin-right: 10px;"><img src="./ress/1.jpg" alt="" style="width: 100%"></div>
+            <div class="swiper-slide swiper-slide-next" style="width: 375px; margin-right: 10px;"><img src="./ress/2.jpg" alt="" style="width: 100%"></div>
+            <div class="swiper-slide" style="width: 375px; margin-right: 10px;"><img src="./ress/3.jpg" alt="" style="width: 100%"></div>
+          </div>
+          <div class="swiper-pagination"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+        </div>
+        <!-- button -->
+        <!-- <div class="content-block btn_block _white">
+            <div class="row" style="margin:auto;">
+              <div class="col-40" style="margin-left:0px;">
+                  <a href="./game_list.html">
+                      <div>
+                          <img src="./ress/icon-1.png" width="100%" height="100%">
+                      </div>
+                      <p>项目</p>
+                  </a>
+              </div>
+              <div class="col-40" style="margin-left:2rem;">
+                  <a href="./scene_list.html">
+                      <div class="middle-col-border">
+                          <div>
+                              <img src="./ress/icon-2.png" width="100%" height="100%">
+                          </div>
+                      </div>
+                      <p>教程</p>
+                  </a>
+              </div>
+              <div class="col-40" style="float:right;margin-right:0px;">
+                  <a href="http://zhongdz.github.io/wap_office/">
+                      <div>
+                          <img src="./ress/icon-3.png" width="100%" height="100%">
+                      </div>
+                      <p>文章</p>
+                  </a>
+              </div>
+            </div>
+        </div> -->
+
+        <!-- title -->
+        <div class="mg_head_title _white"><span class="new-game-line">|</span>&nbsp;游戏列表</div>
+
+        <div class="list-block media-list rewrite-0 game_list_parent">
+            <ul class="list-container">
+                <!--list:列表-->
+                <li>
+                    <a href="javascript:;" class="external color-desc"></a>
+                    <div class="item-content">
+                      <a href="javascript:;" class="external color-desc">
+                          <div class="item-media default-logo-enterprise-normal">
+                              <img class="default-logo-enterprise" src="./ress/type-icon.png">
+                          </div>
+                      </a>
+                      <div class="item-inner all_game_info hold_bold">
+                        <a href="javascript:;" class="external color-desc">
+                        <!-- 1 -->
+                        <div class="item-title-row">
+                            <div class="item-title color-title"><span class="h2">水果消消乐</span></div>
+                        </div>
+                        </a>
+                        <!-- 2 -->
+                        <div class="item-title-row"><a href="javascript:;" class="external color-desc">
+                            <div class="item-title">
+                                <span class="space-r-05rem">益智</span>
+                            </div>
+                            </a><div><a href="javascript:;" class="external color-desc">
+                                </a><a href="http://zhongdz.github.io/project/view/xxl/startup.html" class="button all_game_button">进入</a>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="item-title-row">
+                            <div class="item-title">
+                                <span class="icon_zan"></span>
+                                <span class="zan_num">1000000次</span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 加载提示符 -->
+        <div class="infinite-scroll-preloader">
+            <div class="preloader"></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup-about">
+      <header class="bar bar-nav">
+        <a class="button button-link button-nav pull-right close-popup">
+          关闭
+        </a>
+        <h1 class="title">关于本站</h1>
+      </header>
+      <div class="content">
+        <div class="content-inner">
+          <div class="content-block">
+            <p>本站是基于sui开发个人游戏作品展示平台</p>
+            <p>邮箱: zhongdezong@163.com</p>
+            <p>微信: zhongdezong</p>
+            <p>Q Q: 785861210</p>
+            
+            <p><a class="button close-popup">确定</a></p>
+
+            <p class="about_bottom">©2016&nbsp;钟德宗&nbsp;</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <script type='text/javascript' src='js/zepto.min.js'></script>
+    <script type="text/javascript">
+        //禁用sui路由功能
+        $.config = {router: false}
+    </script>
+    <script type='text/javascript' src='js/sm.min.js'></script>
+    <script type='text/javascript' src='js/sm-extend.min.js'></script>
+    <script type='text/javascript' src='js/juicer-min.js'></script>
+    <script type='text/javascript' src='js/index.js'></script>
+    <!-- <script src="js/sm-city-picker.js"></script> -->
+    <!--首页职位列表模板-->
+    <script type="text/html" id="tpl_home_position_list">
+        <li>
+          <a href="javascript:;" class="external color-desc"></a>
+          <div class="item-content">
+            <a href="javascript:;" class="external color-desc">
+                <div class="item-media default-logo-enterprise-normal">
+                    <img class="default-logo-enterprise" src="./ress/type-icon.png">
+                </div>
+            </a>
+            <div class="item-inner all_game_info hold_bold">
+              <a href="javascript:;" class="external color-desc">
+              <!-- 1 -->
+              <div class="item-title-row">
+                  <div class="item-title color-title"><span class="h2">太极熊猫</span></div>
+              </div>
+              </a>
+              <!-- 2 -->
+              <div class="item-title-row"><a href="javascript:;" class="external color-desc">
+                  <div class="item-title">
+                      <span class="space-r-05rem">益智</span>
+                  </div>
+                  </a><div><a href="javascript:;" class="external color-desc">
+                      </a><a href="#" class="button all_game_button">进入</a>
+                  </div>
+              </div>
+              <!-- 3 -->
+              <div class="item-title-row">
+                  <div class="item-title">
+                      <span class="icon_zan"></span>
+                      <span class="zan_num">1000000次</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </li>
+    </script>
+</body>
+</html>
