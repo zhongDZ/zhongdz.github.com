@@ -9,10 +9,39 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/nprogress.css" />
     <link rel="stylesheet" type="text/css" href="css/zenburn.css" />
+
+    <style type="text/css">
+        .link{
+            position: fixed;
+            bottom: 0%;
+            left: 50%;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(146, 146, 146, 0.09);
+
+            -webkit-transform : translateX(-50%);
+            -ms-transform : translateX(-50%);
+            transform : translateX(-50%);
+        }
+        .link a{
+            display: block;
+            width: 25%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 24px;
+            border-radius: 10px;
+            float: left;
+            text-align: center;
+            position: relative;
+        }
+        #logo a{
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body class="font-hei">
     <div id="logo">
-        <a href="#/">zhong.github.io</a>
+        <a href="#/">文章</a>
     </div>
 
     <div id="container"></div>
@@ -25,7 +54,7 @@
                 <a href="#/all">全部</a>
                 <a href="#/archive">归档</a>
                 <a href="#/tags">标签</a>
-                <a href="http://zhongdz.github.io/project_office/">作品</a>
+                <a href="../index.html">home</a>
             </div>
         </div>
     </script>
