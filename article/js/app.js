@@ -108,7 +108,7 @@
      */
     function showAllTemplate() {
         var html = template('all', window.ISSUES);
-        $('#container').html(html);
+        $('#container').html($('#index').html() + html);
     }
 
     /**
@@ -151,7 +151,7 @@
         };
 
         var html = template('archive', data);
-        $('#container').html(html);
+        $('#container').html($('#index').html() + html);
     }
 
     /**
@@ -192,7 +192,7 @@
         };
 
         var html = template('tags', data);
-        $('#container').html(html);
+        $('#container').html($('#index').html() + html);
     }
 
     /**
@@ -219,7 +219,7 @@
         $(document).scrollTop(0);
         $('#container').html(html);
         $('#article').html(marked(post.body));
-        // addVisits(post.number);
+        addVisits(post.number);
         highlight();
         toggleDuoshuoComments('#ds', post.number);
     }
