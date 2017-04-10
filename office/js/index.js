@@ -34,7 +34,7 @@ var wlHomeListOperation = function() {
      */
     function getResumeList() {
         $.ajax({
-            url: '',
+            url: ' ',
             type: 'POST',
             dataType: 'json',
             data: {},
