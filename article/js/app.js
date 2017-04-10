@@ -24,7 +24,7 @@
             'post/:postId': showArticle
         };
         var router = Router(routes);
-        router.init('/');
+        router.init('all');
     }
 
     /**
