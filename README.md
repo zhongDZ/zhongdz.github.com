@@ -24,3 +24,6 @@
 
 #### 在线浏览地址：https://zhongdz.github.io/openSource/game_2048/startup.html
 #### 源码地址(欢迎star)：https://github.com/zhongDZ/openSource
+
+ ### 资源懒加载
+ - [弱网情况或者资源过多导致加载过慢，页面白屏时间过长解决方案](https://github.com/zhongDZ/zhongdz.github.com/issues/26)
