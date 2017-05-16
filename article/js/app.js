@@ -219,7 +219,7 @@
         $(document).scrollTop(0);
         $('#container').html(html);
         $('#article').html(marked(post.body));
-        addVisits(post.number);
+        // addVisits(post.number);
         highlight();
         toggleDuoshuoComments('#ds', post.number);
     }
