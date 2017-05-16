@@ -1,0 +1,9 @@
+_site
+.coffeehintrc
+.jshintrc
+img/Thumbs.db
+.DS_Store
+._.DS_Store
+node_modules
+.sass-cache
+.ruby-version

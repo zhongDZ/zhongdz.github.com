@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body class="preload">
+    <div class="top"></div>
+    <div class="profile" style="background-image: url({{ site.background }});">
+        <img src="http://www.gravatar.com/avatar/{{ site.gravatar_hash }}?s=140" class="img-circle" />
+        <h3>{{ site.name }}</h3>
+        <p>{{ site.description }}</p>
+        <ul class="social">
+            {% if site.github %}
+            <a type="button" href="http://github.com/{{ site.github }}">
+                <i class="fa fa-github"></i>
+            </a>
+            {% endif %} {% if site.twitter %}
+            <a type="button" href="http://twitter.com/{{ site.twitter }}">
+                <i class="fa fa-twitter"></i>
+            </a>
+            {% endif %} {% if site.linkedin %}
+            <a type="button" href="http://linkedin.com/in/{{ site.linkedin }}">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            {% endif %} {% if site.pinterest %}
+            <a type="button" href="http://pinterest.com/{{ site.pinterest }}">
+                <i class="fa fa-pinterest"></i>
+            </a>
+            {% endif %} {% if site.facebook %}
+            <a type="button" href="http://facebook.com/{{ site.facebook }}">
+                <i class="fa fa-facebook"></i>
+            </a>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="posts">
+        {{ content }}
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementsByTagName("BODY")[0].classList.remove("preload");
+    }
+</script>
+</html>

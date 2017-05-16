@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<div class="content post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-date">
+    <time>{{ page.date | date_to_string }}</time>
+  </div>
+  {{ content }}
+</div>
+{% if site.disqus_shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
