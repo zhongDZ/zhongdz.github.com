@@ -1,0 +1,22 @@
+{% if page.previous or page.next %}
+<nav class="article-nav clearfix">
+ {% if page.previous %}
+ <div class="prev" >
+ <a href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">
+  <strong>{{ lang.prev-post }}</strong><br/>
+  <span>
+  {% if page.previous.title %}{{ page.previous.title }}{% else %}(no title){% endif %}</span>
+</a>
+</div>
+{% endif %}
+{% if page.next %}
+<div class="next">
+<a href="{{ site.baseurl }}{{ page.next.url }}"  title="{{ page.next.title }}">
+ <strong>{{ lang.next-post }}</strong><br/> 
+ <span>{% if page.next.title %}{{ page.next.title }}{% else %}(no title){% endif %}
+</span>
+</a>
+</div>
+{% endif %}
+</nav>
+{% endif %}

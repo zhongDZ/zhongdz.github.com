@@ -1,0 +1,26 @@
+<footer class="article-footer clearfix">
+{% include _partial/post/catetags.html %}
+{% if index == false and site.share_button %}
+	<div class="article-share" id="share">
+	{% if site.jiathis.enable %}
+	<div class="share-jiathis">
+	{% include _partial/post/jiathis.html %}
+	 </div>
+	{% else %}
+	  <div data-url="{{ site.url }}{{ site.baseurl }}{{ item.url }}" data-title="{% if item.title %}{{ item.title }} | {% endif %}{{ site.title }}" data-tsina="{{ site.author.tsina }}" class="share clearfix">
+	  </div>
+	{% endif %}
+	</div>
+{% endif %}
+{% if index %}
+<div class="comments-count">
+	{% if (site.disqus_shortname or site.disqus_shortname) and !site.duoshuo_shortname %}
+	  	<span></span>
+		<a href="{{ site.baseurl }}{{ item.url }}#disqus_thread" class="comments-count-link">Comments</a>
+	{% elsif site.duoshuo_shortname %}
+	  	<span></span>
+		<a href="{{ site.baseurl }}{{ item.url }}#comments" class="ds-thread-count comments-count-link" data-thread-key="{{ item.id }}" data-count-type="comments">&nbsp;</a>
+	{% endif %}
+</div>
+{% endif %}
+</footer>

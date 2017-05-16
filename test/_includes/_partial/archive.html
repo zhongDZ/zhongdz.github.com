@@ -1,0 +1,108 @@
+<!--
+<%
+var title = '';
+var icon = '';
+if (page.category){
+  title = page.category;
+  icon = 'category';
+};
+if (page.tag){
+  title = page.tag;
+  icon = 'tag';
+};
+if (page.archive){
+  icon = 'archive';
+  if (page.year) title = page.year+  (page.month ? '/' + page.month : '');
+  else title = __('archive_a');
+};
+%>
+-->
+
+{% if page.layout == 'archives' %}
+{% assign title = lang.archive_a %}
+{% assign icon = 'archive' %}
+{% endif %}
+
+{% if page.layout == 'categories' %}
+{% assign title = lang.categories %}
+{% assign icon = 'category' %}
+{% endif %}
+
+{% if page.layout == 'tags' %}
+{% assign title = lang.tags %}
+{% assign icon = 'tag' %}
+{% endif %}
+
+<div class="archive-title" >
+  <h2 class="{{ icon }}-icon"><span class='archive-folder'>{{ title }}</span></h2>
+  {% if page.layout == 'archives' %}
+  <div class="archiveslist archive-float clearfix">
+    {% assign count = 1 %}
+    {% for post in site.posts  %}
+    {% capture this_date %}{{ post.date }}{% endcapture %}
+    {% capture next_date %}{{ post.previous.date }}{% endcapture %}
+    {% capture this_date_str %}{{ this_date | date: "%Y-%m" }}{% endcapture %}
+    {% capture next_date_str %}{{ next_date | date: "%Y-%m" }}{% endcapture %}
+    {% if this_date_str != next_date_str %}
+    <ul class="archive-list">
+    <li class="archive-list-item">
+    <a class="archive-list-link" href="#{{ this_date | date: "%Y-%m" }}">{{ this_date | date: lang.archive_date }}</a>
+    <span class="archive-list-count">{{ count }}</span>
+    {% assign count = 1 %}
+    {% else %}
+    {% assign count = count | plus: 1 %}
+    {% endif %}
+        
+    </li>
+    {% endfor %}
+    </ul>
+ </div>
+  {% endif %}
+  {% if page.layout == 'categories' %}
+  
+  <ul class="archive-list">
+  <div class="archiveslist archive-float clearfix">
+    {% for category in site.categories  %}
+    <li class="archive-list-item">
+    <a class="archive-list-link" href="#{{ category[0] }}">{{ category[0] }}</a>
+    <span class="archive-list-count">{{ category[1] | size }}</span>
+    </li>
+    {% endfor %}
+ </div>
+ </ul>
+ {% endif %}
+ 
+  {% if page.layout == 'tags' %}
+  
+  <ul class="archive-list">
+  <div class="archiveslist archive-float clearfix">
+    {% for tag in site.tags  %}
+    <li class="archive-list-item">
+    <a class="archive-list-link" href="#{{ tag[0] }}">{{ tag[0] }}</a>
+    <span class="archive-list-count">{{ tag[1] | size }}</span>
+    </li>
+    {% endfor %}
+ </div>
+ </ul>
+ {% endif %}
+ 
+</div>
+<div id="main" class="archive-part clearfix">
+  <div id="archive-page">
+  {% for post in site.posts %}
+  {% assign item = post %}
+  {% assign index = true %}
+  {% include _partial/article_row.html %}
+  {% endfor %}
+<!--
+<% if (page.total > 1){ %>
+  <nav id="page-nav" class="clearfix archive-nav">
+    <%- paginator({
+      prev_text: '<span></span>Prev',
+      next_text: 'Next<span></span>'
+    }) %>
+  </nav>
+<% } %>
+-->
+  </div>
+</div>

@@ -1,0 +1,46 @@
+{% if site.index.expand == true %}
+    {% if page.layout == 'photo' and item.photos and item.photos | size != 0 %}
+	    {% include _partial/post/gallery.html %}
+    {% endif %}
+    <article class="post-expand {{ item.layout }}" itemprop="articleBody"> 
+        {% include _partial/post/header.html %}
+    <div class="article-content">
+        {% if item.excerpt and index %}
+        {{ item.excerpt }}
+        {% else %}
+        {{ item.content }}
+        {% endif %}
+        
+        <p class="article-more-link">
+          {% if item.excerpt and index and site.index.excerpt_link %}
+            <a href="{{ site.baseurl }}{{ item.url }}#more">{{ site.index.excerpt_link }}</a>
+          {% endif %}
+       </p>
+    </div>
+    {% assign index = true %}
+    {% include _partial/post/footer.html %}
+    </article>
+{% else %}
+<section class="post" itemscope itemprop="blogitem">
+  {% if item.link %}
+    <a href="{{ item.link }}" target="_blank"> 
+  {% else %}
+    <a href="{{ site.baseurl }}{{ item.url }}" title="{{ item.title }}" itemprop="url">
+  {% endif %}
+    <h1 itemprop="name">{{ item.title }}</h1>
+    {% if desc %}
+     {% if item.description %}
+      <p itemprop="description" >{{ item.description }}</p>
+      {% elsif item.excerpt %}
+       <p itemprop="description" >{{ item.excerpt | slice: 0, 140 }}</p>
+      {% else %}
+           <p itemprop="description" >{{ item.content | slice: 0, 140 }}</p>
+      {% endif %}
+    {% endif %}
+    <time datetime="{{ item.date }}" itemprop="datePublished">{{ item.date | date: "%F" }}</time>
+  </a>
+</section>
+{% endif %}
+
+
+

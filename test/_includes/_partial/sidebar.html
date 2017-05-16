@@ -1,0 +1,20 @@
+<div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+{% if table && (item.toc != false) && site.toc.aside %}
+  <div id="toc" class="toc-aside toc-content">
+ {% if item.list_number == false %}
+ <!--<%- toc(item.content,{list_number:false}) %>-->
+ {% else %}
+ <!--<%- toc(item.content) %>-->
+ {% endif %}
+  </div>
+{% endif %}
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+{% for widget in site.widgets %}
+  {% include _widget/{{widget}}.html %}
+{% endfor %}
+
+</aside>
+</div>

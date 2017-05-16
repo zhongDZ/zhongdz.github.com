@@ -1,0 +1,17 @@
+<header class="article-info clearfix">
+  <h1 itemprop="name">
+    {% if item.link %}
+      <a href="{{ item.link }}" target="_blank" title="{{ item.title }}">{{ item.title }}</a>{% else %}
+      <a href="{{ site.baseurl }}{{ item.url }}" title="{{ item.title }}" itemprop="url">{{ item.title }}</a>{% endif %}
+  </h1>
+  <p class="article-author">By
+       {% if site.author.google_plus %}
+		<a href="https://plus.google.com/{{ site.author.google_plus }}?rel=author" title="{{ site.author.name }}" target="_blank" itemprop="author">{{ site.author.name }}</a>
+		{% else %}
+		<a href="{{ site.baseurl }}/about" title="{{ site.author.name }}" target="_blank" itemprop="author">{{ site.author.name }}</a>
+		{% endif %}
+  <p class="article-time">
+    <time datetime="{{ item.date }}" itemprop="datePublished"> {{ lang.datepublished }} {{ item.date | date: "%F" }}</time>
+    
+  </p>
+</header>

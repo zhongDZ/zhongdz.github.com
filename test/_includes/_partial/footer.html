@@ -1,0 +1,71 @@
+<div id="footer" >
+	{% if site.author_img %}
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	{% endif %}
+	{% if site.author.intro_line1 or site.author.intro_line2 %}
+	<section class="info">
+		<p> {{ site.author.intro_line1 }} <br/>
+			{{ site.author.intro_line2 }}</p>
+	</section>
+	 {% endif %}
+	<div class="social-font" class="clearfix">
+		{% if site.author.weibo %}
+		<a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" class="icon-weibo" title="微博"></a>
+		{% endif %}
+		{% if site.author.github %}
+		<a href="https://github.com/{{ site.author.github }}" target="_blank" class="icon-github" title="github"></a>
+		{% endif %}
+		{% if site.author.stackoverflow %}
+		<a href="http://stackoverflow.com/users/{{ site.author.stackoverflow }}" target="_blank" class="icon-stack-overflow" title="stackoverflow"></a>
+		{% endif %}
+		{% if site.author.twitter %}
+		<a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" class="icon-twitter" title="twitter"></a>
+		{% endif %}
+		{% if site.author.facebook %}
+		<a href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank" class="icon-facebook" title="facebook"></a>
+		{% endif %}
+		{% if site.author.linkedin %}
+		<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		{% endif %}
+		{% if site.author.douban %}
+		<a href="https://www.douban.com/people/{{ site.author.douban }}" target="_blank" class="icon-douban" title="豆瓣"></a>
+		{% endif %}
+		{% if site.author.zhihu %}
+		<a href="http://www.zhihu.com/people/{{ site.author.zhihu }}" target="_blank" class="icon-zhihu" title="知乎"></a>
+		{% endif %}
+		{% if site.author.google_plus %}
+		<a href="https://plus.google.com/{{ site.author.google_plus }}?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
+		{% endif %}
+		{% if site.author.email %}
+		<a href="mailto:{{ site.author.email }}" target="_blank" class="icon-email" title="Email Me"></a>
+		{% endif %}
+	</div>
+	<!--
+			<%  Array.prototype.S=String.fromCharCode(2);
+			  Array.prototype.in_array=function(e){
+    			var r=new RegExp(this.S+e+this.S);
+    			return (r.test(this.S+this.join(this.S)+this.S));
+				};
+				var cc = new Array('by','by-nc','by-nc-nd','by-nc-sa','by-nd','by-sa','zero'); %>
+		<% if (cc.in_array(theme.creative_commons) ) { %>
+				<div class="cc-license">
+          <a href="http://creativecommons.org/licenses/<%= theme.creative_commons %>/4.0" class="cc-opacity" target="_blank">
+            <img src="<%- config.root %>img/cc-<%= theme.creative_commons %>.svg" alt="Creative Commons" />
+          </a>
+        </div>
+    <% } %>
+				-->
+
+		<p class="copyright">
+		Powered by <a href="http://jekyllrb.com" target="_blank" title="jekyll">jekyll</a> and Theme by <a href="https://github.com/simpleyyt/jekyll-jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		{% if site.author.name %}
+		<a href="{{ site.root }}about" target="_blank" title="{{ site.author.name }}">{{ site.author.name }}</a>
+		{% else %}
+		<a href="{{ site.root }}" title="{{ site.title }}">{{ site.title }}</a>
+		{% endif %}
+		
+		</p>
+</div>

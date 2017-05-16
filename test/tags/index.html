@@ -1,0 +1,4 @@
+---
+layout: tags
+type: tags
+---

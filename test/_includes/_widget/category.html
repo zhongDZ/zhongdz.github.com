@@ -1,0 +1,12 @@
+{% if site.categories | size != 0 %}
+<div class="categorieslist">
+	<p class="asidetitle">{{ lang.categories }}</p>
+		<ul>
+		{% for item in site.categories %}
+		  {% if item[1] | size != 0 %}
+			<li><a href="{{ site.baseurl }}/categories/#{{ item[0] }}" title="{{ item[0] }}">{{ item[0] }}<sup>{{ item[1] | size }}</sup></a></li>
+		  {% endif %}
+		{% endfor %}
+		</ul>
+</div>
+{% endif %}

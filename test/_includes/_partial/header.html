@@ -1,0 +1,45 @@
+<div>
+		    {% if site.imglogo.enable && site.imglogo.src %}
+			<div id="imglogo">
+				<a href="{{ site.baseurl }}/"><img src="{{ site.assets }}/{{ site.imglogo.src }}" alt="{{ site.title }}" title="{{ site.title }}"/></a>
+			</div>
+			{% endif %}
+			<div id="textlogo">
+				<h1 class="site-name"><a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a></h1>
+				<h2 class="blog-motto">{% if site.tagline %}{{ site.tagline }}{% endif %}</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 {% for m in site.menu %}
+						<li><a href="{{ site.baseurl }}{{ m[1] }}">{{ m[0] }}</a></li>
+					{% endfor %}
+					<li>
+ 					{% if site.google_cse.enable %}
+					<form class="search" action="{{ site.baseurl }}/search/" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="{{ lang.search }}" />
+					</form>
+					{% elsif site.baidu_search.enable %}
+						<form class="search" action="{{ site.baidu_search.site }}" target="_blank">
+							<label>Search</label>
+						<input name="s" type="hidden" value= {{ site.baidu_search.id }} ><input type="text" name="q" size="30" placeholder="{{ lang.search }}"><br>
+						</form>
+					{% elsif site.tinysou_search.enable %}
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="{{ lang.search }}"><br>
+						</form>
+					{% else %}
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="{{ lang.search }}" />
+						<input type="hidden" name="q" value="site:{{ site.baseurl | replace: 'http://', '' | replace: 'https://', '' }}">
+					</form>
+					{% endif %}
+					</li>
+				</ul>
+			</nav>	
+</div>

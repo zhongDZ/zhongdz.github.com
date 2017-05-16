@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html {% if site.language %}lang="{{ site.language }}"{% endif %}>
+<head>
+  <meta charset="UTF-8">
+    {% assign title = page.title %}
+    {% if page.layout == 'archives' %}
+    {% assign title = lang.archive_a %}
+    {% endif %}
+    {% if page.layout == 'categories' %}
+    {% assign title = lang.categories %}
+    {% endif %}
+    {% if page.layout == 'tags' %}
+    {% assign title = lang.tags %}
+    {% endif %}
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    {% if site.author.name %}
+    <meta name="author" content="{{ site.author.name }}">
+    {% endif %}
+
+    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    <!--<%- open_graph({twitter_id: theme.author.twitter, google_plus: theme.author.google_plus}) %>-->
+    
+    <meta name="description" content="page.description">
+    {% if page.layout == 'post' %}
+    <meta property="og:type" content="article">
+    {% else %}
+    <meta property="og:type" content="website">
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:url" content="{{ site.baseurl }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="page.description">
+    <meta name="twitter:creator" content="@{{ site.author.twitter }}">
+    <link rel="publisher" href="{{ site.author.google_plus }}">
+
+    {% if site.rss %}
+    <link rel="alternative" href="{{ site.rss }}" title="{{ site.title }}" type="application/atom+xml">
+    {% endif %}
+    {% if site.favicon %}
+    <link rel="icon" href="{{ site.assets }}/{{ site.favicon }}">
+    {% endif %}
+    {% if site.apple_icon %}
+    <link rel="apple-touch-icon" href="{{ site.assets }}/{{ site.apple_icon }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.assets }}/{{ site.apple_icon }}">
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ site.assets }}/css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.assets }}/css/highlight.css" type="text/css">
+    {% if site.banner_img %}
+    <style>
+        body >header {
+            background: url("{{ site.assets }}/{{ site.banner_img }}") center #2ca6cb;
+        }
+    </style>
+    {% endif %}
+</head>

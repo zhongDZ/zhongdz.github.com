@@ -1,0 +1,23 @@
+<div id="main" class="{{ item.layout }}" itemscope itemprop="blogPost">
+  {% if page.layout == 'photo' and item.photos and item.photos | size != 0 %}
+	{% include _partial/post/gallery.html %}
+  {% endif %}
+	<article itemprop="articleBody"> 
+	{% include _partial/post/header.html %}
+	<div class="article-content">
+		{% if table and site.toc.article %}
+		<div id="toc" class="toc-article toc-content" style="display: none;">
+		{% if item.list_number == false %}
+		<!--<%- toc(item.content,{list_number:false}) %>-->
+		{% else %}
+			<!--<%- toc(item.content) %>-->
+		{% endif %}
+		</div>
+		{% endif %}
+		{{ content }}  
+	</div>
+	{% include _partial/post/footer.html %}   
+	</article>
+	{% include _partial/post/pagination.html %}
+	{% include _partial/post/comment.html %}
+</div>  

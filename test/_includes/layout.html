@@ -1,0 +1,72 @@
+{% if page.layout == 'post' or page.layout == 'photo' %}
+ {% include _partial/head.html %}
+  <body>
+    <header>
+        {% include _partial/header.html %}
+    </header>
+    <div id="container">
+      {{ content }}
+      {% assign item = page %}
+      {% assign table = true %}
+      {% include _partial/sidebar.html %}
+    </div>
+    <footer>{% include _partial/footer.html %}</footer>
+    {% include _partial/after_footer.html %}
+  </body>
+</html>
+{% elsif page.layout == 'page' %}
+    {% include _partial/head.html %}
+      <body>
+        <header>
+          {% include _partial/header.html %}
+        </header>
+        <div id="container">
+          {{ content }}
+        </div>
+        <footer>{% include _partial/footer.html %}</footer>
+        {% include _partial/after_footer.html %}
+      </body>
+     </html>
+{% elsif page.layout == 'search' %}
+{% include _partial/head.html %}
+    <body>
+      <header>
+        {% include _partial/header.html %}
+      </header>
+      <div id="container">
+      {% include _partial/search.html %}
+      </div>
+      <footer>{% include _partial/footer.html %}</footer>
+      {% include _partial/after_footer.html %}
+    </body>
+   </html>
+{% elsif page.layout == 'categories' or page.layout == 'tags' or page.layout == 'archives' %}
+  {% include _partial/head.html %}
+    <body>
+      <header>
+        {% include _partial/header.html %}
+      </header>
+      <div id="container">
+        {{ content }}
+      </div>
+      <footer>{% include _partial/footer.html %}</footer>
+      {% include _partial/after_footer.html %}
+    </body>
+   </html>
+{% else %}
+        {% include _partial/head.html %}
+  <body>
+    <header>
+        {% include _partial/header.html %}
+    </header>
+    <div id="container">
+      {{ content }}
+      {% assign item = page %}
+      {% assign table = false %}
+      {% include _partial/sidebar.html %}
+    </div>
+    <footer>{% include _partial/footer.html %}</footer>
+    {% include _partial/after_footer.html %}
+  </body>
+ </html>
+{% endif %}

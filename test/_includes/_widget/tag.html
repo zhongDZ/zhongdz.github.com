@@ -1,0 +1,12 @@
+{% if site.tags | size != 0 %}
+<div class="tagslist">
+	<p class="asidetitle">{{ lang.tags }}</p>
+		<ul class="clearfix">
+		{% for item in site.tags %}
+			{% if item[1] | size != 0 %}
+				<li><a href="{{ site.baseurl }}/tags/#{{ item[0] }}" title="{{ item[0] }}">{{ item[0] }}<sup>{{ item[1] | size }}</sup></a></li>
+			{% endif %}
+		{% endfor %}
+		</ul>
+</div>
+{% endif %}
