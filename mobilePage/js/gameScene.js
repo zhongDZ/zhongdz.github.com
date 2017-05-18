@@ -9,50 +9,23 @@ var beginScene = cc.Scene.extend({
 
         this.init();
 
-        this.initContent();
+        this.initTopPageView();
+
+        this.initBottomScroll();
 
         this.initTopBtn();
 
-        this.initPageView();
+        this.initRecommendPageView();
     },
     init:function(){
-        var gameMain  = new cc.Sprite(res.gameMain);
+        var gameMain  = new cc.Sprite();
+        gameMain.setTextureRect(cc.rect(0, 0, 640, 1024))
+        gameMain.setColor(cc.color(255, 255, 255));
         gameMain.x = size.width/2;
         gameMain.y = size.height/2;
         this.addChild(gameMain,0);
     },
-    initTopBtn : function(){
-        var scrollContentCs = this.scrollContent.getContentSize();
-        var btnContainar = new cc.Sprite();
-        btnContainar.setTextureRect(cc.rect(0, 0, 640, 200))
-        btnContainar.setColor(cc.color(255, 255, 255));
-        btnContainar.x = scrollContentCs.width/2;
-        btnContainar.y = scrollContentCs.height - 100;
-        this.scrollContent.addChild(btnContainar);
-
-        var btnContainarCs = btnContainar.getContentSize();
-        var btnY = btnContainarCs.height/2;
-        var centerX = size.width/2;
-        this.top_btn_1 = new sprite(btnContainar, res.top_btn_1, centerX - 240, btnY);
-
-        this.top_btn_2 = new sprite(btnContainar, res.top_btn_2, centerX - 80, btnY);
-
-        this.top_btn_3 = new sprite(btnContainar, res.top_btn_3, centerX + 80, btnY);
-
-        this.top_btn_4 = new sprite(btnContainar, res.top_btn_4, centerX + 240, btnY);
-
-        //分割线
-        var Draw = new cc.DrawNode();
-        var lineY = 0;
-        Draw.drawSegment(
-           cc.p(0, lineY),// 起点
-           cc.p(size.width, lineY), // 终点
-           1, // 线粗
-           cc.color(0, 0, 0, 50) // 颜色
-        );
-        btnContainar.addChild(Draw);
-    },
-    initPageView : function(){
+    initTopPageView : function(){
         // 页面   
         var pageView = this.pageView = new ccui.PageView();  
         this.pageView.setTouchEnabled(true);  
@@ -90,7 +63,7 @@ var beginScene = cc.Scene.extend({
             break;  
         }  
     },
-    initContent : function(){
+    initBottomScroll : function(){
         var scrollView = new ccui.ScrollView();
         scrollView.setDirection(ccui.ScrollView.DIR_BOTH);
         scrollView.setTouchEnabled(true);
@@ -106,7 +79,7 @@ var beginScene = cc.Scene.extend({
         var scrollContent = this.scrollContent = new cc.Sprite();
         scrollContent.setTextureRect(cc.rect(0, 0, 640, 1000));
         scrollContent.setColor(cc.color.WHITE);
-        var scrollContentCs = scrollContent.getContentSize();
+        var scrollContentCs = this.scrollContentCs = scrollContent.getContentSize();
         scrollView.setInnerContainerSize(cc.size(scrollContentCs.width, scrollContentCs.height));
 
         scrollContent.x = scrollContentCs.width/2 + 0;
@@ -134,6 +107,77 @@ var beginScene = cc.Scene.extend({
             case ccui.ScrollView.EVENT_BOUNCE_RIGHT:break;
             default:break;
         }
+    },
+    initTopBtn : function(){
+        var btnContainar = new cc.Sprite();
+        btnContainar.setTextureRect(cc.rect(0, 0, 640, 200))
+        btnContainar.setColor(cc.color(255, 255, 255));
+        btnContainar.x = this.scrollContentCs.width/2;
+        btnContainar.y = this.scrollContentCs.height - 100;
+        this.scrollContent.addChild(btnContainar);
+
+        var btnContainarCs = btnContainar.getContentSize();
+        var btnY = btnContainarCs.height/2;
+        var centerX = size.width/2;
+        this.top_btn_1 = new sprite(btnContainar, res.top_btn_1, centerX - 240, btnY);
+
+        this.top_btn_2 = new sprite(btnContainar, res.top_btn_2, centerX - 80, btnY);
+
+        this.top_btn_3 = new sprite(btnContainar, res.top_btn_3, centerX + 80, btnY);
+
+        this.top_btn_4 = new sprite(btnContainar, res.top_btn_4, centerX + 240, btnY);
+
+        //分割线
+        var Draw = new cc.DrawNode();
+        var lineY = 0;
+        Draw.drawSegment(
+           cc.p(0, lineY),// 起点
+           cc.p(size.width, lineY), // 终点
+           1, // 线粗
+           cc.color(0, 0, 0, 50) // 颜色
+        );
+        btnContainar.addChild(Draw);
+    },
+    initRecommendPageView : function(){
+        // 页面   
+        var pageView = this.pageView = new ccui.PageView();  
+        this.pageView.setTouchEnabled(true);  
+        this.pageView.setContentSize(size.width, 300);
+        pageView.x = 0;
+        pageView.y = this.scrollContentCs.height - 500;
+  
+        for (var i = 0; i < 2; i++) {  
+            // 组织pageview  
+            var layout = new ccui.Layout();  
+            layout.setContentSize(size.width, 300);  
+            
+            this.initRecommendChild(layout);
+  
+            // 加入到pageview  
+            this.pageView.addPage(layout);  
+        }  
+  
+        this.pageView.addEventListener(this.pageViewEvent, this);  
+  
+        this.scrollContent.addChild(pageView); 
+    },
+    initRecommendChild : function(_n){
+        var layoutRect = _n.getContentSize();
+        var img = new ccui.ImageView();
+        img.loadTexture("res/recommend.png");
+        img.x = layoutRect.width/2;
+        img.y = layoutRect.height/2;
+        _n.addChild(img);
+
+        var icon_title = new cc.Sprite(res.icon_title);
+        icon_title.x = 120;
+        icon_title.y = 280;
+        img.addChild(icon_title);
+
+        var _icon = new cc.Sprite(res.game_icon_1);
+        _icon.x = 100;
+        _icon.y = 180;
+        img.addChild(_icon);
     }
 });
 
