@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script>
+      document.ccConfig = {
+          "debugMode"     : 1,
+          "frameRate"     : 60,
+          "id"            : "gameCanvas",
+          "renderMode"    : 1,
+          "jsList"        : []
+      };
+    </script>
+</head>
+<body  style="background-color:#fff">
+    <canvas id="gameCanvas"   width="480" height="800"></canvas>
+
+    <script src="./js/lib/cocos2d-js-v3.1.js" charset="UTF-8"></script>
+    <script src="./js/lib/lib.min.js" charset="UTF-8"></script>
+    <script> 
+        var g_resources = [];
+        var res = {
+            loadingpage: "./res/loadingpage.png",
+            gameMain: "./res/gameMain.jpg",
+            banner_01: "./res/banner_01.png",
+            banner_02: "./res/banner_02.png",
+            banner_03: "./res/banner_03.png",
+            top_btn_1: "./res/top_btn_1.png",
+            top_btn_2: "./res/top_btn_2.png",
+            top_btn_3: "./res/top_btn_3.png",
+            top_btn_4: "./res/top_btn_4.png",
+            content: "./res/content.png",
+        };
+        for (var i in res) {
+            g_resources.push(res[i]);
+        }
+
+        window.onload = function(){
+          resourceCallBack();
+        }
+    </script>
+    <script src="./js/main.js" charset="UTF-8"></script>
+    <script src="./js/gameScene.js" charset="UTF-8"></script>
+</body>
+</html>
