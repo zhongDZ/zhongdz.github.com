@@ -16,6 +16,8 @@ var beginScene = cc.Scene.extend({
         this.initTopBtn();
 
         this.initRecommendPageView();
+
+        this.initWelfare();
     },
     init:function(){
         var gameMain  = new cc.Sprite();
@@ -134,7 +136,7 @@ var beginScene = cc.Scene.extend({
            cc.p(0, lineY),// 起点
            cc.p(size.width, lineY), // 终点
            1, // 线粗
-           cc.color(0, 0, 0, 50) // 颜色
+           cc.color(0, 0, 0, 25) // 颜色
         );
         btnContainar.addChild(Draw);
     },
@@ -145,13 +147,29 @@ var beginScene = cc.Scene.extend({
         this.pageView.setContentSize(size.width, 300);
         pageView.x = 0;
         pageView.y = this.scrollContentCs.height - 500;
-  
-        for (var i = 0; i < 2; i++) {  
+
+        var iconData = [
+            [
+                {res : res.game_icon_1, iconX : 95, iconY : 190, gameName : 'Name', url : 'http://www.baidu.com'},
+                {res : res.game_icon_2, iconX : 245, iconY : 190, gameName : 'Name', url : 'http://www.baidu.com'},
+                {res : res.game_icon_3, iconX : 395, iconY : 190, gameName : 'Name', url : 'http://www.baidu.com'},
+                {res : res.game_icon_4, iconX : 545, iconY : 190, gameName : 'Name', url : 'http://www.baidu.com'},
+            ],
+            [
+                {res : res.game_icon_5, iconX : 95, iconY : 190, gameName : 'Name', url : 'http://www.baidu.com'},
+            ]
+        ]
+        
+        for (var i = 0; i < iconData.length; i++) {  
             // 组织pageview  
             var layout = new ccui.Layout();  
-            layout.setContentSize(size.width, 300);  
+            layout.setContentSize(size.width, 300);
+
+            var icon_title = new sprite(layout, res.icon_title, 100, 280);
             
-            this.initRecommendChild(layout);
+            for(var j = 0; j < iconData[i].length; j++){
+                this.initRecommendChild(layout, iconData[i][j]);
+            }
   
             // 加入到pageview  
             this.pageView.addPage(layout);  
@@ -161,7 +179,7 @@ var beginScene = cc.Scene.extend({
   
         this.scrollContent.addChild(pageView); 
     },
-    initRecommendChild : function(_n){
+    initRecommendChild : function(_n, _data){
         var layoutRect = _n.getContentSize();
         var img = new ccui.ImageView();
         img.loadTexture("res/recommend.png");
@@ -169,15 +187,68 @@ var beginScene = cc.Scene.extend({
         img.y = layoutRect.height/2;
         _n.addChild(img);
 
-        var icon_title = new cc.Sprite(res.icon_title);
-        icon_title.x = 120;
-        icon_title.y = 280;
-        img.addChild(icon_title);
+        this.initGameIcon(img, _data);
 
-        var _icon = new cc.Sprite(res.game_icon_1);
-        _icon.x = 100;
-        _icon.y = 180;
-        img.addChild(_icon);
+        //分割线
+        var Draw = new cc.DrawNode();
+        var lineY = 0;
+        Draw.drawSegment(
+           cc.p(0, lineY),// 起点
+           cc.p(size.width, lineY), // 终点
+           1, // 线粗
+           cc.color(0, 0, 0, 25) // 颜色
+        );
+        _n.addChild(Draw);
+    },
+    initGameIcon : function(_n, _data){
+        var _icon = new sprite(_n, _data.res, _data.iconX, _data.iconY, 2, function(){
+            window.location.href = _data.url;
+        });
+
+        this.setTxtSpr(_icon, _data.gameName, 32, cc.size(100, 32), 60, -15);
+    },
+    initWelfare : function(){
+        var welfareContainer = new cc.Sprite();
+        welfareContainer.setTextureRect(cc.rect(0, 0, 640, 255));
+        welfareContainer.setColor(cc.color.WHITE);
+        welfareContainer.x = this.scrollContentCs.width/2;
+        welfareContainer.y = this.scrollContentCs.height - 630;
+        this.scrollContent.addChild(welfareContainer);
+
+        var welfare_icon_1 = new sprite(welfareContainer, res.welfare_icon_1, 160, 127.5, 2, function(){
+            window.location.href = "#";
+        });
+        welfare_icon_1.scale = 0.8;
+
+        var welfare_icon_2 = new sprite(welfareContainer, res.welfare_icon_2, 480, 63, 2, function(){
+            window.location.href = "#";
+        });
+        welfare_icon_2.scale = 0.8;
+
+        var welfare_icon_3 = new sprite(welfareContainer, res.welfare_icon_3, 480, 192, 2, function(){
+            window.location.href = "#";
+        });
+        welfare_icon_3.scale = 0.8;
+
+        //分割线
+        var Draw = new cc.DrawNode();
+        var lineY = 0;
+        Draw.drawSegment(
+           cc.p(0, lineY),// 起点
+           cc.p(size.width, lineY), // 终点
+           1, // 线粗
+           cc.color(0, 0, 0, 25) // 颜色
+        );
+        welfareContainer.addChild(Draw);
+    },
+    setTxtSpr : function(n, _txt, _size, c_size, _x, _y){
+        var _txt = new cc.LabelTTF(_txt, "Arial", _size, c_size, cc.TEXT_ALIGNMENT_CENTER);
+        _txt.fillStyle = cc.color.RED;
+        _txt.x = _x;
+        _txt.y = _y;
+        n.addChild(_txt);
+
+        return _txt;
     }
 });
 
