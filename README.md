@@ -25,7 +25,7 @@
 ### nodejs搭建web项目教程
  - [教程一（创建helloworld）](https://github.com/zhongDZ/zhongdz.github.com/issues/46)
  - [教程二 (用express项目生成工具)](https://github.com/zhongDZ/zhongdz.github.com/issues/47)
- - [教程三 （接入mysql）](https://github.com/zhongDZ/zhongdz.github.com/issues/48)
+ - [教程三（接入mysql）](https://github.com/zhongDZ/zhongdz.github.com/issues/48)
 ----------------------------------------------------------------------------------------------------------
  ### 资源懒加载
  - [弱网情况或者资源过多导致加载过慢，页面白屏时间过长解决方案](https://github.com/zhongDZ/zhongdz.github.com/issues/26)
