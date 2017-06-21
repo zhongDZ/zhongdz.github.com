@@ -26,7 +26,7 @@
  - [教程二（用express项目生成工具）](https://github.com/zhongDZ/zhongdz.github.com/issues/47)
  - [教程三（接入mysql）](https://github.com/zhongDZ/zhongdz.github.com/issues/48)
  - [教程三（接入mysql后整合数据库模块）](https://github.com/zhongDZ/zhongdz.github.com/issues/50)
- - [源码地址(换衣star)](https://github.com/zhongDZ/openSource)
+ - [源码地址(欢迎star)](https://github.com/zhongDZ/openSource)
 ----------------------------------------------------------------------------------------------------------
  ### 资源懒加载
  - [弱网情况或者资源过多导致加载过慢，页面白屏时间过长解决方案](https://github.com/zhongDZ/zhongdz.github.com/issues/26)
