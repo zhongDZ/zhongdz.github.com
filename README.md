@@ -28,5 +28,19 @@
  - [教程三（接入mysql后整合数据库模块）](https://github.com/zhongDZ/zhongdz.github.com/issues/50)
  - [源码地址(欢迎star)](https://github.com/zhongDZ/openSource)
 ----------------------------------------------------------------------------------------------------------
+### vue2.0+vue-router项目教程
+- [教程](https://github.com/zhongDZ/zhongdz.github.com/issues/51)
+- [源码地址](https://github.com/zhongDZ/openSource)
+##### 运行
+```js
+cd project //进入道项目目录
+npm install //安装依赖
+npm run dev //启动项目
+npm run build //打包项目
+```
+----------------------------------------------------------------------------------------------------------
  ### 资源懒加载
  - [弱网情况或者资源过多导致加载过慢，页面白屏时间过长解决方案](https://github.com/zhongDZ/zhongdz.github.com/issues/26)
+ 
+ 
+
