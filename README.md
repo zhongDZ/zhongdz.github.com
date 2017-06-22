@@ -30,7 +30,7 @@
 ----------------------------------------------------------------------------------------------------------
 ### vue2.0+vue-router项目教程
 - [教程](https://github.com/zhongDZ/zhongdz.github.com/issues/51)
-- [源码地址](https://github.com/zhongDZ/openSource)
+- [源码地址(欢迎star)](https://github.com/zhongDZ/openSource)
 ##### 运行
 ```js
 cd project //进入道项目目录
