@@ -9,7 +9,7 @@
 - index.html 个人首页入口
 - package.json grunt打包依赖配置文件
 ----------------------------------------------------------------------------------------------------------
-- [个人首页](https://zhongdz.github.io/)
+- [个人首页](https://zhongxuanrui.github.io/)
 
 - [笔记](https://zhongdz.github.io/article/index.html#all)
 
