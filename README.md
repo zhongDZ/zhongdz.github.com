@@ -13,7 +13,7 @@
 
 - [笔记](https://zhongdz.github.io/article/index.html#all)
 
-- [前端自动化构建工具](https://github.com/zhongDZ/gruntTest)
+- [前端自动化构建工具](https://github.com/zhongDZ/openSource)
 ----------------------------------------------------------------------------------------------------------
 ### html5游戏教程(2048 基于cocos2d-js V3.1版本)
   - [教程一](https://github.com/zhongDZ/zhongdz.github.com/issues/30)
