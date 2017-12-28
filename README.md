@@ -4,9 +4,9 @@
 - mobilePage （使用cocos2d-js-3.1框架开发一个个人游戏展示平台，目前正在开发中...）
 - project 基于grunt打包配置的项目目录
 - .gitignore git忽略文件
-- .Gruntfile.js grunt项目打包文件
+- Gruntfile.js grunt项目打包文件
 - gruntCfg.json grunt二次修改配置文件
-- index.html 个人首页入口
+- index.html 旧版个人笔记首页入口
 - package.json grunt打包依赖配置文件
 ----------------------------------------------------------------------------------------------------------
 - [个人首页](https://zhongxuanrui.github.io/)
