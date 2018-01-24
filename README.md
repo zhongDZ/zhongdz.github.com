@@ -40,6 +40,6 @@ npm run build //打包项目
 ```
 ----------------------------------------------------------------------------------------------------------
 ### html5游戏教程（黑白块基于Egret 5.1.1版本）
-- [教程]()
+- [教程](https://zhongxuanrui.github.io/2018/01/24/%E3%80%8AEgret%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B%E9%BB%91%E7%99%BD%E5%9D%97%E5%BC%80%E5%8F%91%E3%80%8B/)
 - [在线浏览地址](https://zhongdz.github.io/openSource/black_white_block/index.html)
 - [源码地址(欢迎star)black_white_block](https://github.com/zhongDZ/openSource)
