@@ -19,18 +19,18 @@
   - [教程一](https://github.com/zhongDZ/zhongdz.github.com/issues/30)
   - [在线浏览地址](https://zhongdz.github.io/openSource/game_2048/startup.html)
   - [教程二](https://github.com/zhongDZ/zhongdz.github.com/issues/31)
-  - [源码地址(欢迎star)](https://github.com/zhongDZ/openSource)
+  - [源码地址(欢迎star)game_2048](https://github.com/zhongDZ/openSource)
 ----------------------------------------------------------------------------------------------------------
 ### nodejs搭建web项目教程
  - [教程一（创建helloworld）](https://github.com/zhongDZ/zhongdz.github.com/issues/46)
  - [教程二（用express项目生成工具）](https://github.com/zhongDZ/zhongdz.github.com/issues/47)
  - [教程三（接入mysql）](https://github.com/zhongDZ/zhongdz.github.com/issues/48)
  - [教程三（接入mysql后整合数据库模块）](https://github.com/zhongDZ/zhongdz.github.com/issues/50)
- - [源码地址(欢迎star)](https://github.com/zhongDZ/openSource)
+ - [源码地址(欢迎star)project_nodejs_demo](https://github.com/zhongDZ/openSource)
 ----------------------------------------------------------------------------------------------------------
 ### vue2.0+vue-router项目教程
 - [教程](https://github.com/zhongDZ/zhongdz.github.com/issues/51)
-- [源码地址(欢迎star)](https://github.com/zhongDZ/openSource)
+- [源码地址(欢迎star)vue2.0_vue-router_demo](https://github.com/zhongDZ/openSource)
 ##### 运行
 ```js
 cd project //进入道项目目录
@@ -38,8 +38,8 @@ npm install //安装依赖
 npm run dev //启动项目
 npm run build //打包项目
 ```
- 
-
- 
- 
-
+----------------------------------------------------------------------------------------------------------
+### html5游戏教程（黑白块基于Egret 5.1.1版本）
+- [教程]()
+- [在线浏览地址](https://zhongdz.github.io/openSource/black_white_block/index.html)
+- [源码地址(欢迎star)black_white_block](https://github.com/zhongDZ/openSource)
