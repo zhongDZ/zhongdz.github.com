@@ -26,6 +26,11 @@
 - [在线浏览地址](https://zhongdz.github.io/openSource/black_white_block/index.html)
 - [源码地址(欢迎star)](https://github.com/zhongDZ/openSource/tree/master/black_white_block)
 ----------------------------------------------------------------------------------------------------------
+### html5游戏教程（像素小鸟基于Phaser v2.4.4版本）
+- [教程](https://zhongxuanrui.github.io/2018/01/11/phaserjs%E6%95%99%E7%A8%8B%E4%B8%80%E4%B9%8B%E5%83%8F%E7%B4%A0%E5%B0%8F%E9%B8%9F/)
+- [在线浏览地址](https://zhongdz.github.io/openSource/FlappyBird/index.html)
+- [源码地址(欢迎star)](https://github.com/zhongDZ/openSource/tree/master/FlappyBird)
+----------------------------------------------------------------------------------------------------------
 ### nodejs搭建web项目教程
  - [教程一（创建helloworld）](https://zhongxuanrui.github.io/2017/06/20/nodejs-%E6%95%99%E7%A8%8B%E4%B8%80/)
  - [教程二（用express项目生成工具）](https://zhongxuanrui.github.io/2017/06/20/nodejs-%E6%95%99%E7%A8%8B%E4%BA%8C/)
@@ -43,3 +48,13 @@ npm install //安装依赖
 npm run dev //启动项目
 npm run build //打包项目
 ```
+----------------------------------------------------------------------------------------------------------
+>最近计划
+ - 1.用createjs框架写一个小项目+教程
+ - 2.用cocosCreater编辑器写一个项目
+ - 3.用layabox框架写一个小项目+教程
+ - 4.用threejs框架写一个小项目+教程
+ - 5.写cocos2d-js系列教程
+----------------------------------------------------------------------------------------------------------
+学习过程中如发现有错误，恳请告知修改！
+开源不为别的，只求能够帮助更多的新手。共勉！加油！
